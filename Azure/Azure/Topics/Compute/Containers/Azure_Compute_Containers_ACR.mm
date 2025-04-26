@@ -1,0 +1,1641 @@
+<map version="freeplane 1.9.8">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<node TEXT="AZURE:&#xa;COMPUTE RESOURCES&#xa;- CONTAINER-RELATED&#xa;SERVICES:&#xa;AZURE CONTAINER&#xa;REGISTRY (ACR)" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1655006373215" COLOR="#000000" BACKGROUND_COLOR="#ffff8a" STYLE="oval" MAX_WIDTH="20 cm">
+<font NAME="SansSerif" SIZE="16" BOLD="true"/>
+<hook NAME="MapStyle" background="#ffffdb">
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#808080ff,#808080ff,#808080ff,#808080ff" fit_to_viewport="false"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ID="ID_600724273" MAX_WIDTH="600 px" COLOR="#000000" STYLE="as_parent">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_600724273" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#ccffff" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#002080"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important">
+<icon BUILTIN="yes"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<hook NAME="AutomaticEdgeColor" COUNTER="29" RULE="ON_BRANCH_CREATION"/>
+<edge STYLE="sharp_bezier" COLOR="#bbb75e" WIDTH="4"/>
+<node TEXT="ACR TASKS" POSITION="right" ID="ID_62369117" CREATED="1654954882896" MODIFIED="1658229131194" LINK="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tasks-overview" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#815fa9" WIDTH="4"/>
+<node TEXT="Build" ID="ID_606019224" CREATED="1654996269311" MODIFIED="1655006373341" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Container" ID="ID_968190112" CREATED="1654996271831" MODIFIED="1655006373344" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Images" ID="ID_1884334523" CREATED="1654996274434" MODIFIED="1655006373345" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="In" ID="ID_1630458255" CREATED="1654996279111" MODIFIED="1655006373347" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Azure" ID="ID_1961930821" CREATED="1654996280487" MODIFIED="1655006373348" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Either" ID="ID_1957142878" CREATED="1654996291656" MODIFIED="1655006373351" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="On Demand" ID="ID_1072387940" CREATED="1654996294106" MODIFIED="1655006373352" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Automated" ID="ID_1074484863" CREATED="1654996297216" MODIFIED="1655006373354" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Triggers" ID="ID_664310526" CREATED="1654996300455" MODIFIED="1655006373357" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Source Code Updates" ID="ID_179652584" CREATED="1654996306365" MODIFIED="1655006373372" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Base Image Updates" ID="ID_547553931" CREATED="1654996311725" MODIFIED="1655006373374" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Schedule" ID="ID_1471093987" CREATED="1655002145747" MODIFIED="1655006373375" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Patch" ID="ID_396862098" CREATED="1655002102594" MODIFIED="1655006373388" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="OS" ID="ID_853707994" CREATED="1655002109334" MODIFIED="1655006373390" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Framework" ID="ID_217450683" CREATED="1655002111707" MODIFIED="1655006373391" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="For" ID="ID_1691968652" CREATED="1655002117363" MODIFIED="1655006373392" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Docker" ID="ID_1298348337" CREATED="1655002119213" MODIFIED="1655006373393" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Containers" ID="ID_1697945962" CREATED="1655002122722" MODIFIED="1655006373395" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="For" ID="ID_951808728" CREATED="1654997079654" MODIFIED="1655006373407" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Automated" ID="ID_84474852" CREATED="1654997100294" MODIFIED="1655006373410" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Image" ID="ID_818816486" CREATED="1654997081498" MODIFIED="1655006373413" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_782929870" CREATED="1654997084094" MODIFIED="1655006373417" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Test" ID="ID_1996720081" CREATED="1654997086750" MODIFIED="1655006373419" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Push" ID="ID_33096520" CREATED="1654997089038" MODIFIED="1655006373421" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Deploy" ID="ID_1088688865" CREATED="1654997091801" MODIFIED="1655006373423" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Works With" ID="ID_936788099" CREATED="1655002055405" MODIFIED="1655006373439" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Images" ID="ID_674766352" CREATED="1655002058781" MODIFIED="1655006373442" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Windows" ID="ID_384149215" CREATED="1655002077269" MODIFIED="1655006373443" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Linux" ID="ID_1223915174" CREATED="1655002078981" MODIFIED="1655006373445" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Azure Resource Manager" ID="ID_485554436" CREATED="1655002082838" MODIFIED="1655006373447" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Source Code&#xa;Context" ID="ID_752754993" CREATED="1655002407223" MODIFIED="1655006373458" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Where" ID="ID_1138498514" CREATED="1655002422926" MODIFIED="1655006373460" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Source Code" ID="ID_28092258" CREATED="1655002425452" MODIFIED="1655006373461" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="For" ID="ID_1021037846" CREATED="1655002429044" MODIFIED="1655006373463" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Building" ID="ID_52245309" CREATED="1655002432416" MODIFIED="1655006373464" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Image" ID="ID_447544343" CREATED="1655002435843" MODIFIED="1655006373465" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Artifact" ID="ID_1381845836" CREATED="1655002444715" MODIFIED="1655006373466" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="EG" ID="ID_1726585059" CREATED="1655002452733" MODIFIED="1655006373468" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Git" ID="ID_703941546" CREATED="1655002454094" MODIFIED="1655006373471" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Local File System" ID="ID_1898301731" CREATED="1655002455948" MODIFIED="1655006373472" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Types" ID="ID_961334109" CREATED="1655002160189" MODIFIED="1655006373504" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Quick Task" ID="ID_1029918875" CREATED="1655002169077" MODIFIED="1661036871011" LINK="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tasks-overview#quick-task" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="On-demand" ID="ID_1025491802" CREATED="1655002239506" MODIFIED="1655006373522" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Container Image" ID="ID_1150592983" CREATED="1655002243355" MODIFIED="1655006373524" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Single" ID="ID_1402667881" CREATED="1655002251083" MODIFIED="1655006373525" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Build" ID="ID_1032395870" CREATED="1655002252955" MODIFIED="1655006373526" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Push" ID="ID_1628656887" CREATED="1655002255214" MODIFIED="1655006373527" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="To" ID="ID_836924756" CREATED="1655002257671" MODIFIED="1655006373528" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="ACR" ID="ID_116801662" CREATED="1655002258928" MODIFIED="1655006373528" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Doesn&apos;t Require" ID="ID_433051086" CREATED="1655002276103" MODIFIED="1655006373530" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Docker Installation" ID="ID_1984576847" CREATED="1655002281129" MODIFIED="1655006373531" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Local" ID="ID_1553551" CREATED="1655002290176" MODIFIED="1655006373532" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="az acr build" ID="ID_258749961" CREATED="1655002527503" MODIFIED="1655006373537" LINK="https://docs.microsoft.com/en-us/cli/azure/acr#az-acr-build" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Azure CLI" ID="ID_1403865770" CREATED="1655002536795" MODIFIED="1655006373538" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Takes" ID="ID_1469690968" CREATED="1655002572900" MODIFIED="1655006373540" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Context" ID="ID_171603568" CREATED="1655002577424" MODIFIED="1655006373541" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Files" ID="ID_1780793675" CREATED="1655002581550" MODIFIED="1655006373542" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="To Build" ID="ID_1055753697" CREATED="1655002583670" MODIFIED="1655006373542" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Sends" ID="ID_1425650290" CREATED="1655002592503" MODIFIED="1655006373544" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Context" ID="ID_1145630860" CREATED="1655002600912" MODIFIED="1655006373545" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="To" ID="ID_1323319549" CREATED="1655002603608" MODIFIED="1655006373546" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="ACR Tasks" ID="ID_725047701" CREATED="1655002604698" MODIFIED="1655006373546" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Builds" ID="ID_1382817630" CREATED="1655002619309" MODIFIED="1655006373547" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Image" ID="ID_1301166688" CREATED="1655002622006" MODIFIED="1655006373548" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Pushes" ID="ID_1898658960" CREATED="1655002624084" MODIFIED="1655006373550" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Image" ID="ID_621251721" CREATED="1655002628757" MODIFIED="1655006373551" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="To" ID="ID_95409651" CREATED="1655002631582" MODIFIED="1655006373553" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="ACR" ID="ID_984448216" CREATED="1655002634152" MODIFIED="1655006373554" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="By Default" ID="ID_857796572" CREATED="1655002638109" MODIFIED="1655006373555" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Equivalent" ID="ID_1983826973" CREATED="1655002295227" MODIFIED="1655006373556" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="docker build" ID="ID_615448404" CREATED="1655002299576" MODIFIED="1655006373557" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="docker push" ID="ID_685728859" CREATED="1655002303637" MODIFIED="1655006373558" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Allows" ID="ID_1771402934" CREATED="1655002660001" MODIFIED="1655006373560" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Verify" ID="ID_1819359419" CREATED="1655002662562" MODIFIED="1655006373561" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_836328147" CREATED="1655002666666" MODIFIED="1655006373562" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Catch" ID="ID_1314843140" CREATED="1655002672098" MODIFIED="1655006373563" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Problems" ID="ID_1587979984" CREATED="1655002673852" MODIFIED="1655006373563" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Before" ID="ID_29768816" CREATED="1655002676617" MODIFIED="1655006373565" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Committing" ID="ID_1122006546" CREATED="1655002680505" MODIFIED="1655006373566" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Code" ID="ID_42172944" CREATED="1655002683634" MODIFIED="1655006373567" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Automatically&#xa;Triggered Task" ID="ID_1626061634" CREATED="1655002180200" MODIFIED="1655006373590" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Triggers" ID="ID_1513351747" CREATED="1654996300455" MODIFIED="1655006373600" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Source Code Updates" ID="ID_984077787" CREATED="1654996306365" MODIFIED="1655006373606" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Triggers" ID="ID_931263056" CREATED="1655002759325" MODIFIED="1655006373611" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Either" ID="ID_1143645789" CREATED="1655002740053" MODIFIED="1655006373613" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_407737370" CREATED="1655002747052" MODIFIED="1655006373615" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Multi-step Task" ID="ID_154225411" CREATED="1655002749764" MODIFIED="1655006373617" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="On" ID="ID_514498519" CREATED="1655002768430" MODIFIED="1655006373621" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Either" ID="ID_861272384" CREATED="1655002811105" MODIFIED="1655006373624" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Commit" ID="ID_1080608601" CREATED="1655002789802" MODIFIED="1655006373625" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Source Code" ID="ID_1065354531" CREATED="1655002771982" MODIFIED="1655006373627" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Pull Request" ID="ID_806766634" CREATED="1655002794265" MODIFIED="1655006373629" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Create" ID="ID_353252459" CREATED="1655002801156" MODIFIED="1655006373630" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Update" ID="ID_1553865305" CREATED="1655002803889" MODIFIED="1655006373631" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Specify" ID="ID_278577698" CREATED="1655002885803" MODIFIED="1655006373634" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Git Repository" ID="ID_131770911" CREATED="1655002891405" MODIFIED="1655006373637" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Optionally" ID="ID_1832299744" CREATED="1655002921121" MODIFIED="1655006373640" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Branch" ID="ID_515006023" CREATED="1655002897388" MODIFIED="1655006373642" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Dockerfile" ID="ID_1414589186" CREATED="1655002900915" MODIFIED="1655006373643" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Base Image Updates" ID="ID_1503535056" CREATED="1654996311725" MODIFIED="1655006373650" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="ACR Task" ID="ID_1897221312" CREATED="1655002934794" MODIFIED="1655006373656" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Tracks" ID="ID_1843920274" CREATED="1655002937566" MODIFIED="1655006373660" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Base Image" ID="ID_164552120" CREATED="1655002945887" MODIFIED="1655006373664" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Application Image" ID="ID_935791803" CREATED="1655002956847" MODIFIED="1655006373665" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="It Builds" ID="ID_442032844" CREATED="1655003021014" MODIFIED="1655006373666" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Depends On" ID="ID_1598368520" CREATED="1655003025575" MODIFIED="1655006373667" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="In" ID="ID_1064845782" CREATED="1655003065939" MODIFIED="1655006373670" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="ACR" ID="ID_250551795" CREATED="1655003069027" MODIFIED="1655006373671" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Other Registries" ID="ID_1776774112" CREATED="1655003075300" MODIFIED="1655006373673" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="EG" ID="ID_1289449657" CREATED="1655003081972" MODIFIED="1655006373675" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Docker Hub" ID="ID_149085596" CREATED="1655003083004" MODIFIED="1655006373676" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="If" ID="ID_1023299238" CREATED="1655002988569" MODIFIED="1655006373679" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Updated" ID="ID_966257729" CREATED="1655002990433" MODIFIED="1655006373681" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Rebuilds" ID="ID_1032097587" CREATED="1655003096852" MODIFIED="1655006373684" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Automatically" ID="ID_475232358" CREATED="1655003093684" MODIFIED="1655006373685" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Application Image" ID="ID_1193130668" CREATED="1655002956847" MODIFIED="1655006373687" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Depending On Base Image" ID="ID_366569403" CREATED="1655003142576" MODIFIED="1655006373688" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Schedule" ID="ID_361646954" CREATED="1655002145747" MODIFIED="1655006373691" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Via" ID="ID_1597768102" CREATED="1655003157974" MODIFIED="1655006373693" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Timer Triggers" ID="ID_1990622805" CREATED="1655003160686" MODIFIED="1655006373695" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="For" ID="ID_756418329" CREATED="1655003172415" MODIFIED="1655006373697" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Scheduled" ID="ID_1016136920" CREATED="1655003176742" MODIFIED="1655006373699" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node ID="ID_1098284067" CREATED="1655003224915" MODIFIED="1655006373700" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Maintenance
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Tests" ID="ID_219847832" CREATED="1655003226367" MODIFIED="1655006373701" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="On" ID="ID_1824523003" CREATED="1655003239218" MODIFIED="1655006373704" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Images" ID="ID_409705023" CREATED="1655003240507" MODIFIED="1655006373706" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Container Workloads" ID="ID_1797655516" CREATED="1655003194027" MODIFIED="1655006373707" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="az acr task create" ID="ID_1845337633" CREATED="1655002848382" MODIFIED="1655006373709" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Azure CLI" ID="ID_1671863108" CREATED="1655002861659" MODIFIED="1655006373711" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Multi-step Tasks" ID="ID_1531328073" CREATED="1654996536709" MODIFIED="1655006373722" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Multiple" ID="ID_373312097" CREATED="1655002484249" MODIFIED="1655006373725" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Steps" ID="ID_1772043592" CREATED="1655002490122" MODIFIED="1655006373730" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_1759243108" CREATED="1655003392855" MODIFIED="1655006373732" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Push" ID="ID_1629386847" CREATED="1655003394557" MODIFIED="1655006373733" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Run" ID="ID_413731877" CREATED="1655003396030" MODIFIED="1655006373735" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Container" ID="ID_853231109" CREATED="1655003399503" MODIFIED="1655006373738" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Containers" ID="ID_1786903777" CREATED="1655002493129" MODIFIED="1655006373740" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Defined" ID="ID_1043535991" CREATED="1655003261429" MODIFIED="1655006373742" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Via" ID="ID_1501940913" CREATED="1655003264463" MODIFIED="1655006373744" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="YAML File" ID="ID_508588890" CREATED="1655003265595" MODIFIED="1655006373747" LINK="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tasks-reference-yaml" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Allow" ID="ID_256865512" CREATED="1654996547140" MODIFIED="1655006373750" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Parallelize" ID="ID_1624225392" CREATED="1654996551134" MODIFIED="1655006373753" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Multiple" ID="ID_911209215" CREATED="1654996564854" MODIFIED="1655006373756" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Container Images" ID="ID_1410521858" CREATED="1654996578995" MODIFIED="1655006373759" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_1825394648" CREATED="1654996594286" MODIFIED="1655006373760" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Test" ID="ID_1446100419" CREATED="1654996613687" MODIFIED="1655006373762" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+<node TEXT="Patch" ID="ID_1535109233" CREATED="1654996615527" MODIFIED="1655006373764" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="EG" ID="ID_377359444" CREATED="1655003423640" MODIFIED="1655006373770" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Web Application" ID="ID_901367757" CREATED="1655003427427" MODIFIED="1655006373776" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Image" ID="ID_1181656556" CREATED="1655003441660" MODIFIED="1655006373779" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_975959412" CREATED="1655003437539" MODIFIED="1655006373781" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Container" ID="ID_1291088034" CREATED="1655003448531" MODIFIED="1655006373782" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Run" ID="ID_521217904" CREATED="1655003445827" MODIFIED="1655006373783" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Test Image" ID="ID_274271040" CREATED="1655003460576" MODIFIED="1655006373784" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_759705864" CREATED="1655003457156" MODIFIED="1655006373786" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Test" ID="ID_330377488" CREATED="1655003537854" MODIFIED="1655006373789" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Run" ID="ID_1711440024" CREATED="1655003466608" MODIFIED="1655006373792" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Test Container" ID="ID_515017951" CREATED="1655003468353" MODIFIED="1655006373794" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Tests" ID="ID_9175832" CREATED="1655003472568" MODIFIED="1655006373796" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Running" ID="ID_23325137" CREATED="1655003476922" MODIFIED="1655006373798" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Web Application Container" ID="ID_760692679" CREATED="1655003479993" MODIFIED="1655006373799" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="If Tests Pass" ID="ID_469877197" CREATED="1655003486897" MODIFIED="1655006373801" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Build" ID="ID_1211099382" CREATED="1655003494722" MODIFIED="1655006373804" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Helm Chart Archive Package" ID="ID_1961986619" CREATED="1655003497139" MODIFIED="1655006373805" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="helm upgrade" ID="ID_306136168" CREATED="1655003547347" MODIFIED="1655006373807" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+<node TEXT="Using" ID="ID_1466419404" CREATED="1655003554259" MODIFIED="1655006373809" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<arrowlink DESTINATION="ID_1961986619" STARTINCLINATION="39 pt;0 pt;" ENDINCLINATION="-13.5 pt;24 pt;"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#815fa9" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="USEFUL&#xa;COMMANDS" POSITION="right" ID="ID_1114085091" CREATED="1655005765995" MODIFIED="1655006373866" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#8080b3" WIDTH="4"/>
+<node TEXT="Create&#xa;Registry" ID="ID_370313257" CREATED="1655004312550" MODIFIED="1655006373882" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Azure CLI" FOLDED="true" ID="ID_1885731059" CREATED="1655004325642" MODIFIED="1655006373900" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="EG" FOLDED="true" ID="ID_645665683" CREATED="1655004341685" MODIFIED="1655006373903" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node ID="ID_892425174" CREATED="1655004336962" MODIFIED="1655006373910" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>az acr create</b>&nbsp;--resource-group &lt;resourceGroupName&gt; \
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;--name &lt;myContainerRegistry&gt; --sku Basic
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Registry Name" FOLDED="true" ID="ID_239411740" CREATED="1655004371575" MODIFIED="1655006373913" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Requirements" FOLDED="true" ID="ID_1050481292" CREATED="1655004377416" MODIFIED="1655006373916" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Globally Unique" FOLDED="true" ID="ID_1960238857" CREATED="1655004380784" MODIFIED="1655006373918" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Within" FOLDED="true" ID="ID_989126896" CREATED="1655004385081" MODIFIED="1655006373920" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Azure" ID="ID_92936366" CREATED="1655004387450" MODIFIED="1655006373921" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Characters" FOLDED="true" ID="ID_1655687862" CREATED="1655004489959" MODIFIED="1655006373924" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Alphanumeric" ID="ID_1940439017" CREATED="1655004496273" MODIFIED="1658656728087" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" WIDTH="2"/>
+</node>
+<node TEXT="Lowercase" ID="ID_455418300" CREATED="1655004500848" MODIFIED="1658656730314" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Length" FOLDED="true" ID="ID_392881828" CREATED="1655004431062" MODIFIED="1655006373930" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="5-50 Characters" ID="ID_1205198490" CREATED="1655004434184" MODIFIED="1655006373931" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Build and Push Image" ID="ID_1948321983" CREATED="1655006096117" MODIFIED="1655006373935" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="To" FOLDED="true" ID="ID_914534063" CREATED="1655006256004" MODIFIED="1655006373937" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Registry" ID="ID_345136264" CREATED="1655006169835" MODIFIED="1655006373939" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Azure CLI" FOLDED="true" ID="ID_982901429" CREATED="1655004325642" MODIFIED="1655006373942" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="EG" FOLDED="true" ID="ID_1591408445" CREATED="1655004341685" MODIFIED="1655006373944" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node ID="ID_1896253462" CREATED="1655004336962" MODIFIED="1655006373953" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>az acr build</b>&nbsp;--image sample/hello-world:v1&nbsp;&nbsp;\
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;--registry &lt;myContainerRegistry&gt; \
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;--file Dockerfile .
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="List Repositories" ID="ID_1445383514" CREATED="1655006149963" MODIFIED="1655006373957" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="In" FOLDED="true" ID="ID_805967855" CREATED="1655006181387" MODIFIED="1655006373958" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Registry" ID="ID_1845949148" CREATED="1655006182572" MODIFIED="1655006373960" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Azure CLI" FOLDED="true" ID="ID_764653347" CREATED="1655004325642" MODIFIED="1655006373962" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="EG" FOLDED="true" ID="ID_528315572" CREATED="1655004341685" MODIFIED="1655006373964" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node ID="ID_614013405" CREATED="1655004336962" MODIFIED="1655006373971" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>az acr repository list</b>&nbsp;--name &lt;myContainerRegistry&gt; --output table
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="List Tags" ID="ID_149340477" CREATED="1655006210133" MODIFIED="1655006373973" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="In" FOLDED="true" ID="ID_672974583" CREATED="1655006214958" MODIFIED="1655006373974" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Repository" ID="ID_81088183" CREATED="1655006216357" MODIFIED="1655006373975" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Azure CLI" FOLDED="true" ID="ID_658345017" CREATED="1655004325642" MODIFIED="1655006373978" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="EG" FOLDED="true" ID="ID_1751652485" CREATED="1655004341685" MODIFIED="1655006373980" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node ID="ID_1134396608" CREATED="1655004336962" MODIFIED="1655006373990" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>az acr repository show-tags</b>&nbsp;--name &lt;myContainerRegistry&gt; \
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;--repository sample/hello-world --output table
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Run Image" ID="ID_837868696" CREATED="1655006240693" MODIFIED="1655006373991" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="In" FOLDED="true" ID="ID_996752140" CREATED="1655006181387" MODIFIED="1655006373994" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Registry" ID="ID_783767840" CREATED="1655006182572" MODIFIED="1655006373996" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Azure CLI" FOLDED="true" ID="ID_72656545" CREATED="1655004325642" MODIFIED="1655006373998" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="EG" FOLDED="true" ID="ID_46004895" CREATED="1655004341685" MODIFIED="1655006374000" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node ID="ID_1737742871" CREATED="1655004336962" MODIFIED="1655006374006" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>az acr run</b>&nbsp;--registry &lt;myContainerRegistry&gt; \
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;--cmd '$Registry/sample/hello-world:v1' /dev/null
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="USE CASES" POSITION="left" ID="ID_958558686" CREATED="1654996351863" MODIFIED="1655006374027" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#679a67" WIDTH="4"/>
+<node TEXT="Scalable&#xa;Orchestration Systems" ID="ID_1862205622" CREATED="1654996355833" MODIFIED="1655006374042" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Manage" FOLDED="true" ID="ID_730622891" CREATED="1654996368984" MODIFIED="1655006374046" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Containers" FOLDED="true" ID="ID_301112000" CREATED="1654996372544" MODIFIED="1655006374048" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Across" FOLDED="true" ID="ID_1450140504" CREATED="1654996376855" MODIFIED="1655006374051" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Host Clusters" FOLDED="true" ID="ID_1692505244" CREATED="1654996379759" MODIFIED="1655006374053" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="EG" FOLDED="true" ID="ID_827443193" CREATED="1654996390363" MODIFIED="1655006374057" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Kubernetes" ID="ID_777409872" CREATED="1654996391373" MODIFIED="1655006374059" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+<node TEXT="DC/OS" ID="ID_127237915" CREATED="1654996394940" MODIFIED="1655006374060" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+<node TEXT="Docker Swarm" ID="ID_612944866" CREATED="1654996399315" MODIFIED="1655006374062" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Azure Services" ID="ID_234300307" CREATED="1654996414981" MODIFIED="1655006374066" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Supporting" FOLDED="true" ID="ID_1593785174" CREATED="1654996428088" MODIFIED="1655006374068" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Applications" FOLDED="true" ID="ID_286989373" CREATED="1654996431145" MODIFIED="1655006374071" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="At Scale" FOLDED="true" ID="ID_1881885840" CREATED="1654996439939" MODIFIED="1655006374073" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Running" ID="ID_1289406183" CREATED="1654996443498" MODIFIED="1655006374075" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+<node TEXT="Building" ID="ID_830662068" CREATED="1654996445490" MODIFIED="1655006374077" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="EG" FOLDED="true" ID="ID_1460404476" CREATED="1654996451314" MODIFIED="1655006374079" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Azure Kubernetes Service" FOLDED="true" ID="ID_340278928" CREATED="1654996453746" MODIFIED="1655006374081" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="AKS" ID="ID_407169413" CREATED="1654996463530" MODIFIED="1655006374082" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="App Service" ID="ID_1698987047" CREATED="1654996466162" MODIFIED="1655006374083" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+<node TEXT="Batch" ID="ID_1547722489" CREATED="1654996473814" MODIFIED="1655006374085" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+<node TEXT="Service Fabric" ID="ID_896728475" CREATED="1654996475622" MODIFIED="1655006374088" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="CI/CD Pipelines" ID="ID_485878032" CREATED="1654996487838" MODIFIED="1655006374092" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Can Push" FOLDED="true" ID="ID_973255083" CREATED="1654996493494" MODIFIED="1655006374094" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="To" FOLDED="true" ID="ID_57718094" CREATED="1654996498425" MODIFIED="1655006374096" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="AKR" ID="ID_875007588" CREATED="1654996499559" MODIFIED="1655006374097" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="EG" FOLDED="true" ID="ID_1680913590" CREATED="1654996511063" MODIFIED="1655006374099" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+<node TEXT="Azure Pipelines" ID="ID_55518063" CREATED="1654996512408" MODIFIED="1655006374101" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+<node TEXT="Jenkins" ID="ID_355861460" CREATED="1654996516340" MODIFIED="1655006374102" COLOR="#000000" BACKGROUND_COLOR="#aedda5" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#679a67" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="SERVICE TIERS" POSITION="left" ID="ID_1488350117" CREATED="1654996629402" MODIFIED="1655006374136" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#53bb6b" WIDTH="4"/>
+<node TEXT="Basic" ID="ID_837995625" CREATED="1654996634723" MODIFIED="1655006374142" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Programmatic&#xa;Capabilities" ID="ID_920160711" CREATED="1654996652396" MODIFIED="1655006374151" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Same" ID="ID_1206301953" CREATED="1654996670236" MODIFIED="1655006374153" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="As" ID="ID_550856517" CREATED="1654996674481" MODIFIED="1655006374155" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Standard" ID="ID_186079963" CREATED="1654996676777" MODIFIED="1655006374156" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+<node TEXT="Premium" ID="ID_196112355" CREATED="1654996679002" MODIFIED="1655006374158" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Low" ID="ID_588485735" CREATED="1654996688770" MODIFIED="1655006374159" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Storage" ID="ID_461127888" CREATED="1654996701965" MODIFIED="1655006374161" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+<node TEXT="Image Throughput" ID="ID_1373120389" CREATED="1654996703690" MODIFIED="1655006374162" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Standard" ID="ID_761132341" CREATED="1654996636404" MODIFIED="1655006374163" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Suitable" ID="ID_671203247" CREATED="1654996725847" MODIFIED="1655006374166" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Most Production" ID="ID_782871667" CREATED="1654996730865" MODIFIED="1655006374167" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Premium" ID="ID_1762233637" CREATED="1654996638628" MODIFIED="1655006374173" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="For" ID="ID_1469583504" CREATED="1654996740785" MODIFIED="1655006374174" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="High-volume" ID="ID_381974917" CREATED="1654996743230" MODIFIED="1655006374175" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Includes" ID="ID_1843614612" CREATED="1654996750195" MODIFIED="1655006374180" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="High" ID="ID_970342173" CREATED="1654996753968" MODIFIED="1655006374182" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Storage" ID="ID_1559444973" CREATED="1654996701965" MODIFIED="1655006374183" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+<node TEXT="Image Throughput" ID="ID_1184961552" CREATED="1654996703690" MODIFIED="1655006374184" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Geo-replication" ID="ID_957168140" CREATED="1654996768228" MODIFIED="1661035365055" LINK="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-geo-replication" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Single Registry" ID="ID_929655820" CREATED="1654996783090" MODIFIED="1655006374188" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Multiple Regions" ID="ID_398772048" CREATED="1654996788447" MODIFIED="1655006374189" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Content Trust" ID="ID_471277977" CREATED="1654996799185" MODIFIED="1661035404104" LINK="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-content-trust" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="For" ID="ID_63139480" CREATED="1654996803345" MODIFIED="1655006374192" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Image Tag Signing" ID="ID_1126474427" CREATED="1654996806954" MODIFIED="1661034765159" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Private Link" ID="ID_1421955487" CREATED="1654996815401" MODIFIED="1661035381042" LINK="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-private-link" COLOR="#000000" BACKGROUND_COLOR="#a2ffd0" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Endpoints" ID="ID_1321393692" CREATED="1654996822155" MODIFIED="1655006374198" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Private" ID="ID_1787780341" CREATED="1654996825277" MODIFIED="1655006374200" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Restricts" ID="ID_105554859" CREATED="1654996829791" MODIFIED="1655006374202" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Access" ID="ID_1530758167" CREATED="1654996832765" MODIFIED="1655006374206" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="To" ID="ID_287787619" CREATED="1654996837141" MODIFIED="1655006374207" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+<node TEXT="Registry" ID="ID_275189859" CREATED="1654996838221" MODIFIED="1655006374209" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#53bb6b" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="SUPPORTED&#xa;IMAGES &amp; ARTIFACTS" POSITION="left" ID="ID_1138486650" CREATED="1654996937922" MODIFIED="1655006374241" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#49a69f" WIDTH="4"/>
+<node TEXT="Images" ID="ID_1076266727" CREATED="1654996849367" MODIFIED="1655006374245" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+<node TEXT="Docker-compatible" ID="ID_827129969" CREATED="1654996853952" MODIFIED="1655006374246" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+</node>
+<node TEXT="Read-only" ID="ID_1651285533" CREATED="1654996869932" MODIFIED="1655006374247" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+</node>
+<node TEXT="Grouped" ID="ID_94762573" CREATED="1654996880468" MODIFIED="1655006374256" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+<node TEXT="In" ID="ID_1336690281" CREATED="1654996882387" MODIFIED="1655006374257" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+<node TEXT="Repository" ID="ID_79629837" CREATED="1654996883491" MODIFIED="1655006374257" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Either" ID="ID_649880712" CREATED="1654996897140" MODIFIED="1655006374258" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+<node TEXT="Windows" ID="ID_719022767" CREATED="1654996898540" MODIFIED="1655006374259" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+</node>
+<node TEXT="Linux" ID="ID_1735467586" CREATED="1654996900243" MODIFIED="1655006374261" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Related Content" ID="ID_910633538" CREATED="1654996980718" MODIFIED="1655006374262" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+<node TEXT="EG" ID="ID_840508061" CREATED="1654996988875" MODIFIED="1655006374263" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+<node TEXT="Helm Charts" ID="ID_1709422227" CREATED="1654996990508" MODIFIED="1655006374263" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="OCI Images" ID="ID_89748845" CREATED="1654997000140" MODIFIED="1655006374267" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+<node TEXT="Open Container Initiative&#xa;Image Format Specification" ID="ID_656219984" CREATED="1654997021861" MODIFIED="1655006374278" LINK="https://github.com/opencontainers/image-spec/blob/master/spec.md" COLOR="#000000" BACKGROUND_COLOR="#6fdcff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#49a69f" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="STORAGE" POSITION="left" ID="ID_1645491008" CREATED="1654999642417" MODIFIED="1655006374294" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#6198bc" WIDTH="4"/>
+<node TEXT="Features" ID="ID_1591782997" CREATED="1655000680741" MODIFIED="1655006374310" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Encryption-at-rest" ID="ID_1540194484" CREATED="1655000684078" MODIFIED="1655006374317" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Tiers" ID="ID_128305230" CREATED="1655000692061" MODIFIED="1655006374318" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="All" ID="ID_1853926411" CREATED="1655000694189" MODIFIED="1655006374318" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Images" ID="ID_1514701908" CREATED="1655000701420" MODIFIED="1655006374320" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="In" ID="ID_1882268164" CREATED="1655000706623" MODIFIED="1655006374321" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Registry" ID="ID_932085541" CREATED="1655000707716" MODIFIED="1655006374322" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="All" ID="ID_1071503230" CREATED="1655000709821" MODIFIED="1655006374323" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Automatic" ID="ID_327946495" CREATED="1655000735777" MODIFIED="1655006374326" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Encryption" ID="ID_1109531317" CREATED="1655000767899" MODIFIED="1655006374327" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="When" ID="ID_1077391728" CREATED="1655000739078" MODIFIED="1655006374328" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Image" ID="ID_323575882" CREATED="1655000741143" MODIFIED="1655006374329" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Stored" ID="ID_1102731468" CREATED="1655000744301" MODIFIED="1655006374330" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Decryption" ID="ID_1216151479" CREATED="1655000772375" MODIFIED="1655006374332" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="When" ID="ID_451579077" CREATED="1655000776278" MODIFIED="1655006374333" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Pull" ID="ID_1707393097" CREATED="1655000780095" MODIFIED="1655006374335" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Image" ID="ID_1960386307" CREATED="1655000783936" MODIFIED="1655006374336" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Via" ID="ID_842653624" CREATED="1655000810469" MODIFIED="1655006374337" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Either" ID="ID_1243861115" CREATED="1655000792871" MODIFIED="1655006374340" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Manually" ID="ID_1270328993" CREATED="1655000800595" MODIFIED="1655006374341" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Application" ID="ID_22913615" CREATED="1655000804483" MODIFIED="1655006374341" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Regional Storage" ID="ID_1892723692" CREATED="1655000817716" MODIFIED="1655006374347" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Storage" ID="ID_369601202" CREATED="1655000828846" MODIFIED="1655006374350" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="In" ID="ID_952580963" CREATED="1655000836780" MODIFIED="1655006374351" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Region" ID="ID_1749390243" CREATED="1655000837995" MODIFIED="1655006374352" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Registry" ID="ID_49946411" CREATED="1655000839613" MODIFIED="1655006374353" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Created In" ID="ID_1761267876" CREATED="1655000844170" MODIFIED="1655006374354" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Can Store" ID="ID_1371702482" CREATED="1655000878638" MODIFIED="1655006374357" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="In" ID="ID_1694792799" CREATED="1655000901065" MODIFIED="1655006374359" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Paired Region" ID="ID_364328196" CREATED="1655000903015" MODIFIED="1655006374361" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Same" ID="ID_1879889698" CREATED="1655000909296" MODIFIED="1655006374362" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Geography" ID="ID_300798709" CREATED="1655000911151" MODIFIED="1655006374363" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Except" ID="ID_1475396328" CREATED="1655000923667" MODIFIED="1655006374364" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Regions" ID="ID_1886821535" CREATED="1655000940416" MODIFIED="1655006374365" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Brazil South" ID="ID_615726653" CREATED="1655000927212" MODIFIED="1655006374366" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Southeast Asia" ID="ID_900020895" CREATED="1655000931936" MODIFIED="1655006374367" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="NOT Recovered" ID="ID_1264339807" CREATED="1655001667994" MODIFIED="1655006374369" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<icon BUILTIN="messagebox_warning"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Automatically" ID="ID_1878645254" CREATED="1655001675650" MODIFIED="1655006374370" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="In" ID="ID_161683506" CREATED="1655001683755" MODIFIED="1655006374371" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Regional Outage" ID="ID_1289820475" CREATED="1655001685655" MODIFIED="1655006374373" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Geo-replication" ID="ID_1295010690" CREATED="1655000964260" MODIFIED="1655006374375" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Premium Tier" ID="ID_652070689" CREATED="1655001738837" MODIFIED="1661035468052" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" WIDTH="2"/>
+</node>
+<node TEXT="Across" ID="ID_704784133" CREATED="1655000970330" MODIFIED="1655006374378" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Mulitple Regions" ID="ID_1269524607" CREATED="1655000985556" MODIFIED="1655006374379" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Different" ID="ID_534366632" CREATED="1655000994109" MODIFIED="1655006374381" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Geographies" ID="ID_65810679" CREATED="1655001001646" MODIFIED="1655006374381" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Optional" ID="ID_736926896" CREATED="1655001018919" MODIFIED="1655006374382" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="For" ID="ID_1605378159" CREATED="1655001022935" MODIFIED="1655006374384" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Latency" ID="ID_254972095" CREATED="1655001026783" MODIFIED="1655006374385" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Reduction" ID="ID_1819285532" CREATED="1655001034251" MODIFIED="1655006374386" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="Resiliency" ID="ID_939740224" CREATED="1655001642101" MODIFIED="1655006374387" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="If" ID="ID_1855231626" CREATED="1655001649502" MODIFIED="1655006374389" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Regional Outage" ID="ID_571458331" CREATED="1655001654206" MODIFIED="1655006374390" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Zone Redundancy" ID="ID_1306910267" CREATED="1655001722127" MODIFIED="1655006374393" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Premium Tier" ID="ID_287575244" CREATED="1655001738837" MODIFIED="1655006374393" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Registry" ID="ID_1068439711" CREATED="1655001750629" MODIFIED="1655006374395" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Replicated" ID="ID_1172624417" CREATED="1655001757919" MODIFIED="1655006374397" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="To" ID="ID_449040554" CREATED="1655001761358" MODIFIED="1655006374399" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="3 Availability Zones" ID="ID_678681221" CREATED="1655001764831" MODIFIED="1655006374400" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="In" ID="ID_464530074" CREATED="1655001778505" MODIFIED="1655006374401" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Each" ID="ID_1838775876" CREATED="1655001779905" MODIFIED="1655006374403" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Enabled Region" ID="ID_1694144639" CREATED="1655001782587" MODIFIED="1655006374403" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Minimum" ID="ID_434400609" CREATED="1655001795097" MODIFIED="1655006374405" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Storage Limit" ID="ID_439623738" CREATED="1655001819166" MODIFIED="1655006374410" LINK="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-skus#service-tier-features-and-limits" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Depends On" ID="ID_588109199" CREATED="1655001839977" MODIFIED="1655006374411" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Tier" ID="ID_164586931" CREATED="1655001844399" MODIFIED="1655006374411" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+<node TEXT="No Limit" ID="ID_1105104046" CREATED="1655001867795" MODIFIED="1655006374415" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Numbers" ID="ID_1615556006" CREATED="1655001873365" MODIFIED="1655006374419" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Repositories" ID="ID_286526691" CREATED="1655001879789" MODIFIED="1655006374420" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Images" ID="ID_1008722542" CREATED="1655001887280" MODIFIED="1655006374422" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Layers" ID="ID_1247423697" CREATED="1655001894001" MODIFIED="1655006374423" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Tags" ID="ID_688695334" CREATED="1655001896665" MODIFIED="1655006374424" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Only" ID="ID_703200845" CREATED="1655001899400" MODIFIED="1655006374425" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="On" ID="ID_808692275" CREATED="1655001901586" MODIFIED="1655006374427" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Amount" ID="ID_956352714" CREATED="1655001902888" MODIFIED="1655006374428" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Storage" ID="ID_997046816" CREATED="1655001905160" MODIFIED="1655006374429" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Used" ID="ID_506184378" CREATED="1655001907506" MODIFIED="1655006374429" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Delete" ID="ID_1839799646" CREATED="1655001947511" MODIFIED="1655006374432" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Unused" ID="ID_141730727" CREATED="1655001953382" MODIFIED="1655006374433" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Repositories" ID="ID_661606604" CREATED="1655001959582" MODIFIED="1655006374435" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Tags" ID="ID_942918126" CREATED="1655001964527" MODIFIED="1655006374436" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Images" ID="ID_1309382286" CREATED="1655001966103" MODIFIED="1655006374437" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="To" ID="ID_1872169705" CREATED="1655001978331" MODIFIED="1655006374439" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Avoid" ID="ID_1039896343" CREATED="1655001981010" MODIFIED="1655006374440" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Hitting" ID="ID_1965336216" CREATED="1655001991543" MODIFIED="1655006374441" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Limit" ID="ID_404644587" CREATED="1655001994107" MODIFIED="1655006374442" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+<node TEXT="Improve" ID="ID_448909310" CREATED="1655001997796" MODIFIED="1655006374443" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Performance" ID="ID_1327786040" CREATED="1655002000565" MODIFIED="1655006374444" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

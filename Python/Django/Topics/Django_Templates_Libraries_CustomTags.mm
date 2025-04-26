@@ -1,0 +1,463 @@
+<map version="0.8.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254736664513" ID="Freemind_Link_1453579525" MODIFIED="1255212781656" TEXT="DJANGO TEMPLATES:&#xa;TEMPLATE LIBRARIES&#xa;      - CUSTOM TAGS">
+<font BOLD="true" NAME="SansSerif" SIZE="16"/>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254745735687" ID="Freemind_Link_1986291828" MODIFIED="1255212781671" POSITION="left" STYLE="bubble" TEXT="EXAMPLE">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254745739718" ID="Freemind_Link_541845525" MODIFIED="1255212781687" TEXT="Displays">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254745746312" FOLDED="true" ID="Freemind_Link_1693945533" MODIFIED="1255212781687" TEXT="Current Date">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254745760859" FOLDED="true" ID="Freemind_Link_564919607" MODIFIED="1255212781687" TEXT="EG">
+<node COLOR="#000000" CREATED="1254745779000" ID="Freemind_Link_1124722592" MODIFIED="1255212781687" STYLE="fork" TEXT="&lt;p&gt;The time is {% current_time &quot;%Y-%m-%d %I:%M %p&quot; %}.&lt;/p&gt;"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254742423136" ID="Freemind_Link_1089427181" MODIFIED="1255212781687" POSITION="left" STYLE="bubble" TEXT="REQUIRE">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254744026809" ID="Freemind_Link_1746224115" MODIFIED="1255212781687" TEXT="Node Class">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254743992636" FOLDED="true" ID="Freemind_Link_1650272171" MODIFIED="1255212781687" TEXT="Derived From">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254742571127" ID="Freemind_Link_801743532" MODIFIED="1255212781687" TEXT="django.template.Node Class"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254744091561" FOLDED="true" ID="Freemind_Link_896331360" MODIFIED="1255212781703" TEXT="Contains">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254745368068" FOLDED="true" ID="Freemind_Link_793356044" MODIFIED="1255212781703" TEXT="__init__( ) Method">
+<node COLOR="#000000" CREATED="1254745443882" FOLDED="true" ID="Freemind_Link_1989817632" MODIFIED="1255212781703" STYLE="fork" TEXT="Stores">
+<node CREATED="1254745462305" ID="Freemind_Link_1188955742" MODIFIED="1254745465430" TEXT="Tag Contents"/>
+<node CREATED="1254745470383" FOLDED="true" ID="Freemind_Link_1233059368" MODIFIED="1254745472367" TEXT="During">
+<node CREATED="1254745388928" ID="Freemind_Link_1081266674" MODIFIED="1254745391787" TEXT="Compilation"/>
+</node>
+<node CREATED="1254745479524" FOLDED="true" ID="Freemind_Link_1527541944" MODIFIED="1254745480711" TEXT="For">
+<node CREATED="1254745481649" FOLDED="true" ID="Freemind_Link_1317826731" MODIFIED="1254745484727" TEXT="Retrieval">
+<node CREATED="1254745485977" FOLDED="true" ID="Freemind_Link_1244333282" MODIFIED="1254745492118" TEXT="During">
+<node CREATED="1254745493321" ID="Freemind_Link_1302703940" MODIFIED="1254745495602" TEXT="Rendering"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1254745522744" FOLDED="true" ID="Freemind_Link_447294067" MODIFIED="1255212781703" STYLE="fork" TEXT="Errors">
+<node CREATED="1254745527541" FOLDED="true" ID="Freemind_Link_174654765" MODIFIED="1254745529056" TEXT="May">
+<node CREATED="1254745529853" FOLDED="true" ID="Freemind_Link_358448671" MODIFIED="1254745531260" TEXT="Raise">
+<node CREATED="1254745531994" ID="Freemind_Link_834690530" MODIFIED="1254745533978" TEXT="Exceptions"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254744094639" FOLDED="true" ID="Freemind_Link_33277001" MODIFIED="1255212781703" TEXT="render( ) Method">
+<node COLOR="#000000" CREATED="1254744186330" FOLDED="true" ID="Freemind_Link_1469826867" MODIFIED="1255212781703" STYLE="fork" TEXT="Errors">
+<node CREATED="1254744190393" FOLDED="true" ID="Freemind_Link_1899005008" MODIFIED="1254744199815" TEXT="Must">
+<node CREATED="1254744200596" FOLDED="true" ID="Freemind_Link_1181314343" MODIFIED="1254744201627" TEXT="Fail">
+<node CREATED="1254744202409" ID="Freemind_Link_521214940" MODIFIED="1254744204580" TEXT="Silently"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1254908003421" FOLDED="true" ID="Freemind_Link_1703150466" MODIFIED="1255212781703" STYLE="fork" TEXT="Returns">
+<node CREATED="1254908006453" FOLDED="true" ID="Freemind_Link_1285759578" MODIFIED="1254908008265" TEXT="String">
+<node CREATED="1254908009640" ID="Freemind_Link_1222785339" MODIFIED="1254908011078" TEXT="Always"/>
+<node CREATED="1254908020109" FOLDED="true" ID="Freemind_Link_1668678284" MODIFIED="1254908023015" TEXT="Empty String">
+<node CREATED="1254908023968" FOLDED="true" ID="Freemind_Link_1178623823" MODIFIED="1254908024937" TEXT="If">
+<node CREATED="1254908025718" ID="Freemind_Link_1015791966" MODIFIED="1254908029421" TEXT="Nothing To Return"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254745701795" FOLDED="true" ID="Freemind_Link_366977141" MODIFIED="1255212781703" TEXT="EG">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254745704202" ID="Freemind_Link_213794302" MODIFIED="1255212781703" TEXT="import datetime&#xa;&#xa;class CurrentTimeNode(template.Node):&#xa;    def __init__(self, format_string):&#xa;        self.format_string = str(format_string)&#xa;&#xa;    def render(self, context):&#xa;        now = datetime.datetime.now()&#xa;        return now.strftime(self.format_string)"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254742427199" ID="Freemind_Link_949454887" MODIFIED="1255212781718" TEXT="Compilation Function">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254742533860" FOLDED="true" ID="Freemind_Link_1551168345" MODIFIED="1255212781718" TEXT="Arguments">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254742743463" FOLDED="true" ID="Freemind_Link_1731232273" MODIFIED="1255212781718" TEXT="parser">
+<node COLOR="#000000" CREATED="1254742544673" FOLDED="true" ID="Freemind_Link_1662600604" MODIFIED="1255212781718" STYLE="fork" TEXT="Parser Object">
+<node CREATED="1254742678241" ID="Freemind_Link_337907985" MODIFIED="1254742721556" TEXT="Template Parser"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254742748401" FOLDED="true" ID="Freemind_Link_1541567161" MODIFIED="1255212781718" TEXT="token">
+<node COLOR="#000000" CREATED="1254742816920" FOLDED="true" ID="Freemind_Link_607915942" MODIFIED="1255212781718" STYLE="fork" TEXT="Token">
+<node CREATED="1254742819779" FOLDED="true" ID="Freemind_Link_999603037" MODIFIED="1254742948941" TEXT="Currently">
+<node CREATED="1254742949612" FOLDED="true" ID="Freemind_Link_539067522" MODIFIED="1254742952050" TEXT="Being">
+<node CREATED="1254742952925" ID="Freemind_Link_1312369260" MODIFIED="1254742957535" TEXT="Parsed"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1254743068930" FOLDED="true" ID="Freemind_Link_1078534426" MODIFIED="1255212781718" STYLE="fork" TEXT="token.contents">
+<node CREATED="1254742552876" ID="Freemind_Link_355635430" MODIFIED="1254742567486" TEXT="Tag Contents"/>
+</node>
+<node COLOR="#000000" CREATED="1254743151214" FOLDED="true" ID="Freemind_Link_415059984" MODIFIED="1255212781718" STYLE="fork" TEXT="token.split_contents( )">
+<node CREATED="1254743171402" FOLDED="true" ID="Freemind_Link_1402856711" MODIFIED="1254743173965" TEXT="Splits">
+<node CREATED="1254743181809" ID="Freemind_Link_1580122115" MODIFIED="1254743185981" TEXT="Tag Contents"/>
+<node CREATED="1254743187856" FOLDED="true" ID="Freemind_Link_1365928464" MODIFIED="1254743189294" TEXT="On">
+<node CREATED="1254743189965" ID="Freemind_Link_388796006" MODIFIED="1254743192340" TEXT="Spaces"/>
+</node>
+</node>
+<node CREATED="1254743196044" FOLDED="true" ID="Freemind_Link_155862260" MODIFIED="1254743199825" TEXT="Quoted Strings">
+<node CREATED="1254743200653" ID="Freemind_Link_72237363" MODIFIED="1254743211060" TEXT="NOT Split"/>
+</node>
+<node CREATED="1254743151214" FOLDED="true" ID="Freemind_Link_1077798050" MODIFIED="1254743268109" TEXT="token.split_contents( )[0]">
+<node CREATED="1254743269672" ID="Freemind_Link_1193789637" MODIFIED="1254743336971" TEXT="Tag Name"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254742568487" FOLDED="true" ID="Freemind_Link_1946375044" MODIFIED="1255212781734" TEXT="Returns">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254743987386" FOLDED="true" ID="Freemind_Link_1757057703" MODIFIED="1255212781734" TEXT="Node Object">
+<node COLOR="#000000" CREATED="1254743992636" FOLDED="true" ID="Freemind_Link_113203404" MODIFIED="1255212781734" STYLE="fork" TEXT="Instance Of">
+<node CREATED="1254742571127" FOLDED="true" ID="Freemind_Link_254366507" MODIFIED="1254745315379" TEXT="Node Class">
+<node CREATED="1254745862643" ID="Freemind_Link_636406691" MODIFIED="1254745866596" TEXT="Previously Defined"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254744142453" FOLDED="true" ID="Freemind_Link_1245825535" MODIFIED="1255212781734" TEXT="Errors">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254744144657" FOLDED="true" ID="Freemind_Link_44657557" MODIFIED="1255212781734" TEXT="Syntax Errors">
+<node COLOR="#000000" CREATED="1254744149907" FOLDED="true" ID="Freemind_Link_43178738" MODIFIED="1255212781734" STYLE="fork" TEXT="Raise">
+<node CREATED="1254744166485" ID="Freemind_Link_821498843" MODIFIED="1254744180205" TEXT="django.template.TemplateSyntaxError"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254745814298" FOLDED="true" ID="Freemind_Link_706737180" MODIFIED="1255212781734" TEXT="EG">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254745816408" ID="Freemind_Link_107476970" MODIFIED="1255212781734" TEXT="from django import template&#xa;&#xa;register = template.Library()&#xa;&#xa;def do_current_time(parser, token):&#xa;    try:&#xa;        # split_contents() knows not to split quoted strings.&#xa;        tag_name, format_string = token.split_contents()&#xa;    except ValueError:&#xa;        msg = &apos;%r tag requires a single argument&apos; % token.split_contents()[0]&#xa;        raise template.TemplateSyntaxError(msg)&#xa;    return CurrentTimeNode(format_string[1:-1])"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254739640192" ID="Freemind_Link_1024977480" MODIFIED="1255212781750" POSITION="left" STYLE="bubble" TEXT="REGISTERING">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254739664725" ID="Freemind_Link_662184023" MODIFIED="1255212781750" TEXT="register.tag( &quot;[[tag name]]&quot;, [[compilation function]] )">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254739709166" ID="Freemind_Link_731802153" MODIFIED="1255212781750" TEXT="EG">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254739715120" ID="Freemind_Link_902879466" MODIFIED="1255212781750" TEXT="register.tag( &quot;current_time&quot;, do_current_time )"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254739750045" ID="Freemind_Link_681858082" MODIFIED="1255212781750" TEXT="Python 2.4+">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254739756983" FOLDED="true" ID="Freemind_Link_1712214337" MODIFIED="1255212781750" TEXT="Use">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254739761311" FOLDED="true" ID="Freemind_Link_1981001790" MODIFIED="1255212781750" TEXT="Decorator">
+<node COLOR="#000000" CREATED="1254739764546" FOLDED="true" ID="Freemind_Link_1786184791" MODIFIED="1255212781750" STYLE="fork" TEXT="EG">
+<node CREATED="1254739766687" ID="Freemind_Link_847617924" MODIFIED="1254745670404" TEXT="@register.tag(name=&quot;current_time&quot;)&#xa;def do_current_time(parser, token):&#xa;    # ..."/>
+</node>
+<node COLOR="#000000" CREATED="1254739809362" FOLDED="true" ID="Freemind_Link_120875626" MODIFIED="1255212781765" STYLE="fork" TEXT="name Argument">
+<node CREATED="1254739813940" FOLDED="true" ID="Freemind_Link_1787091483" MODIFIED="1254739816581" TEXT="Defaults To">
+<node CREATED="1254739817315" ID="Freemind_Link_141659544" MODIFIED="1254739820519" TEXT="Function Name"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254903090187" ID="Freemind_Link_23245880" MODIFIED="1255212781765" POSITION="left" STYLE="bubble" TEXT="SETTING TEMPLATE VARIABLE">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254907912296" ID="Freemind_Link_571260473" MODIFIED="1255212781765" TEXT="Node Class">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254907916265" FOLDED="true" ID="Freemind_Link_796941175" MODIFIED="1255212781765" TEXT="render( ) Method">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254907924562" FOLDED="true" ID="Freemind_Link_808221245" MODIFIED="1255212781765" TEXT="Context Object">
+<node COLOR="#000000" CREATED="1254907929656" ID="Freemind_Link_377888699" MODIFIED="1255212781765" STYLE="fork" TEXT="Dictionary Assignment"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254907956250" FOLDED="true" ID="Freemind_Link_914859977" MODIFIED="1255212781765" TEXT="Returns">
+<node COLOR="#000000" CREATED="1254907959437" ID="Freemind_Link_1359206574" MODIFIED="1255212781765" STYLE="fork" TEXT="Empty String"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254908198406" ID="Freemind_Link_1395954956" MODIFIED="1255212781765" TEXT="Variable Name">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254908203359" FOLDED="true" ID="Freemind_Link_757015944" MODIFIED="1255212781765" TEXT="In">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254908207750" ID="Freemind_Link_1742220383" MODIFIED="1255212781765" TEXT="Template"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254908210890" FOLDED="true" ID="Freemind_Link_819653254" MODIFIED="1255212781765" TEXT="Independent">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254908256500" FOLDED="true" ID="Freemind_Link_1940192549" MODIFIED="1255212781765" TEXT="Of">
+<node COLOR="#000000" CREATED="1254908220187" ID="Freemind_Link_1245138881" MODIFIED="1255212781765" STYLE="fork" TEXT="Node Class"/>
+<node COLOR="#000000" CREATED="1254908237671" ID="Freemind_Link_1119794666" MODIFIED="1255212781765" STYLE="fork" TEXT="Compilation Function"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254908267406" FOLDED="true" ID="Freemind_Link_378712416" MODIFIED="1255212781765" TEXT="Via">
+<node COLOR="#000000" CREATED="1254908291781" FOLDED="true" ID="Freemind_Link_523849396" MODIFIED="1255212781765" STYLE="fork" TEXT="Compilation Function">
+<node CREATED="1254908276343" FOLDED="true" ID="Freemind_Link_1731984946" MODIFIED="1254908281312" TEXT="Variable Name">
+<node CREATED="1254908269578" FOLDED="true" ID="Freemind_Link_1371059045" MODIFIED="1254908356031" TEXT="Read">
+<node CREATED="1254908362984" FOLDED="true" ID="Freemind_Link_452326952" MODIFIED="1254908364296" TEXT="From">
+<node CREATED="1254908365000" ID="Freemind_Link_67232400" MODIFIED="1254908368031" TEXT="Context"/>
+</node>
+</node>
+<node CREATED="1254910767578" FOLDED="true" ID="Freemind_Link_1121985244" MODIFIED="1254910771265" TEXT="Pass Into">
+<node CREATED="1254910772156" ID="Freemind_Link_277615777" MODIFIED="1254910779906" TEXT="Node Constructor"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254910913734" FOLDED="true" ID="Freemind_Link_789874029" MODIFIED="1255212781765" TEXT="EG">
+<node COLOR="#000000" CREATED="1254910916453" FOLDED="true" ID="Freemind_Link_682492823" MODIFIED="1255212781765" STYLE="fork" TEXT="Template">
+<node CREATED="1254910935906" ID="Freemind_Link_690204670" MODIFIED="1254910955296" TEXT="{% get_current_time &quot;%Y-%M-%d %I:%M %p&quot; as my_current_time %}&#xa;&lt;p&gt;The current time is {{ my_current_time }}.&lt;/p&gt;"/>
+</node>
+<node COLOR="#000000" CREATED="1254910922312" FOLDED="true" ID="Freemind_Link_1421394649" MODIFIED="1255212781765" STYLE="fork" TEXT="Node Class">
+<node CREATED="1254910960203" ID="Freemind_Link_1528708486" MODIFIED="1254910979593" TEXT="class CurrentTimeNode3(template.Node):&#xa;    def __init__(self, format_string, var_name):&#xa;        self.format_string = str(format_string)&#xa;        self.var_name = var_name&#xa;&#xa;    def render(self, context):&#xa;        now = datetime.datetime.now()&#xa;        context[self.var_name] = now.strftime(self.format_string)&#xa;        return &apos;&apos;"/>
+</node>
+<node COLOR="#000000" CREATED="1254910928765" FOLDED="true" ID="Freemind_Link_40847957" MODIFIED="1255212781781" STYLE="fork" TEXT="Compilation Function">
+<node CREATED="1254910982796" ID="Freemind_Link_945670504" MODIFIED="1254911014578" TEXT="import re&#xa;&#xa;def do_current_time(parser, token):&#xa;    # This version uses a regular expression to parse tag contents.&#xa;    try:&#xa;        # Splitting by None == splitting by spaces.&#xa;        tag_name, arg = token.contents.split(None, 1)&#xa;    except ValueError:&#xa;        msg = &apos;%r tag requires arguments&apos; % token.contents[0]&#xa;        raise template.TemplateSyntaxError(msg)&#xa;&#xa;    m = re.search(r&apos;(.*?) as (\w+)&apos;, arg)&#xa;    if m:&#xa;        fmt, var_name = m.groups()&#xa;    else:&#xa;        msg = &apos;%r tag had invalid arguments&apos; % tag_name&#xa;        raise template.TemplateSyntaxError(msg)&#xa;&#xa;    if not (fmt[0] == fmt[-1] and fmt[0] in (&apos;&quot;&apos;, &quot;&apos;&quot;)):&#xa;        msg = &quot;%r tag&apos;s argument should be in quotes&quot; % tag_name&#xa;        raise template.TemplateSyntaxError(msg)&#xa;&#xa;    return CurrentTimeNode3(fmt[1:-1], var_name)"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254911195843" ID="Freemind_Link_754549087" MODIFIED="1255212781781" POSITION="right" STYLE="bubble" TEXT="BLOCK TAGS">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254911258781" ID="Freemind_Link_510274071" MODIFIED="1255212781781" TEXT="Compilation Function">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911263828" FOLDED="true" ID="Freemind_Link_644166186" MODIFIED="1255212781781" TEXT="For">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911265406" ID="Freemind_Link_1588516566" MODIFIED="1255212781781" TEXT="Start Tag"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911270703" FOLDED="true" ID="Freemind_Link_291029056" MODIFIED="1255212781781" TEXT="Uses">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911276484" FOLDED="true" ID="Freemind_Link_271186757" MODIFIED="1255212781781" TEXT="parser.parse( ) Method">
+<node COLOR="#000000" CREATED="1254911313093" FOLDED="true" ID="Freemind_Link_737588217" MODIFIED="1255212781781" STYLE="fork" TEXT="Argument">
+<node CREATED="1254911319890" FOLDED="true" ID="Freemind_Link_146166167" MODIFIED="1254911322609" TEXT="Tuple">
+<node CREATED="1254911325609" FOLDED="true" ID="Freemind_Link_198476859" MODIFIED="1254911381203" TEXT="Tag Name(s)">
+<node CREATED="1254911332406" FOLDED="true" ID="Freemind_Link_1522738426" MODIFIED="1254911383859" TEXT="Indicating">
+<node CREATED="1254911360718" ID="Freemind_Link_447410397" MODIFIED="1254911364062" TEXT="End Block"/>
+</node>
+<node CREATED="1254911974421" ID="Freemind_Link_556959353" MODIFIED="1254911976484" TEXT="Strings"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1254911387640" FOLDED="true" ID="Freemind_Link_259646878" MODIFIED="1255212781781" STYLE="fork" TEXT="Returns">
+<node CREATED="1254911390593" FOLDED="true" ID="Freemind_Link_68194104" MODIFIED="1254911423156" TEXT="django.template.NodeList Object">
+<node CREATED="1254911424593" FOLDED="true" ID="Freemind_Link_49585417" MODIFIED="1254911426921" TEXT="List">
+<node CREATED="1254911427671" FOLDED="true" ID="Freemind_Link_1795156969" MODIFIED="1254911460234" TEXT="Node Objects">
+<node CREATED="1254911429578" FOLDED="true" ID="Freemind_Link_1363158803" MODIFIED="1254911432093" TEXT="Between">
+<node CREATED="1254911432875" FOLDED="true" ID="Freemind_Link_242359800" MODIFIED="1254911435656" TEXT="Tags">
+<node CREATED="1254911436562" ID="Freemind_Link_257523449" MODIFIED="1254911437687" TEXT="Start"/>
+<node CREATED="1254911437937" ID="Freemind_Link_1847264651" MODIFIED="1254911439015" TEXT="End"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1254911524937" FOLDED="true" ID="Freemind_Link_56091322" MODIFIED="1255212781781" STYLE="fork" TEXT="Does NOT Process">
+<node CREATED="1254911534328" ID="Freemind_Link_1386741201" MODIFIED="1254911539156" TEXT="End Tag"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911517000" FOLDED="true" ID="Freemind_Link_1473601210" MODIFIED="1255212781796" TEXT="parser.delete_first_token( ) Method">
+<node COLOR="#000000" CREATED="1254911572015" FOLDED="true" ID="Freemind_Link_1520801076" MODIFIED="1255212781796" STYLE="fork" TEXT="Deletes">
+<node CREATED="1254911579937" FOLDED="true" ID="Freemind_Link_1845730600" MODIFIED="1254911581562" TEXT="End Tag">
+<node CREATED="1254911582453" FOLDED="true" ID="Freemind_Link_1061355500" MODIFIED="1254911583937" TEXT="Since">
+<node CREATED="1254911584546" FOLDED="true" ID="Freemind_Link_1288008759" MODIFIED="1254911608453" TEXT="Not Processed">
+<node CREATED="1254911588593" FOLDED="true" ID="Freemind_Link_1271318457" MODIFIED="1254911590156" TEXT="By">
+<node CREATED="1254911591734" ID="Freemind_Link_1992570472" MODIFIED="1254911599890" TEXT="parser.parse( )"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911683062" FOLDED="true" ID="Freemind_Link_16963700" MODIFIED="1255212781796" TEXT="Passes">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911685296" FOLDED="true" ID="Freemind_Link_1355321323" MODIFIED="1255212781796" TEXT="NodeList Object">
+<node COLOR="#000000" CREATED="1254911691375" FOLDED="true" ID="Freemind_Link_989786534" MODIFIED="1255212781796" STYLE="fork" TEXT="To">
+<node CREATED="1254911692875" ID="Freemind_Link_1385606736" MODIFIED="1254911701000" TEXT="Node Constructor"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254911707125" ID="Freemind_Link_530668189" MODIFIED="1255212781796" TEXT="Node Class">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911743281" FOLDED="true" ID="Freemind_Link_1100706666" MODIFIED="1255212781796" TEXT="render( ) Method">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911748281" FOLDED="true" ID="Freemind_Link_403757039" MODIFIED="1255212781796" TEXT="Calls">
+<node COLOR="#000000" CREATED="1254911753828" FOLDED="true" ID="Freemind_Link_1964560284" MODIFIED="1255212781796" STYLE="fork" TEXT="NodeList Object render(context) Method">
+<node CREATED="1254911788328" FOLDED="true" ID="Freemind_Link_1494421426" MODIFIED="1254911791281" TEXT="Renders">
+<node CREATED="1254911791953" FOLDED="true" ID="Freemind_Link_1725439498" MODIFIED="1254911795687" TEXT="Each Node">
+<node CREATED="1254911796328" FOLDED="true" ID="Freemind_Link_917781027" MODIFIED="1254911797125" TEXT="In">
+<node CREATED="1254911797640" ID="Freemind_Link_1042471359" MODIFIED="1254911799531" TEXT="NodeList"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254911826000" ID="Freemind_Link_639834149" MODIFIED="1255212781796" TEXT="EG">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911827375" FOLDED="true" ID="Freemind_Link_839603236" MODIFIED="1255212781796" TEXT="{% upper %} Custom Tag">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911841328" FOLDED="true" ID="Freemind_Link_511961927" MODIFIED="1255212781796" TEXT="Capitalizes">
+<node COLOR="#000000" CREATED="1254911845828" FOLDED="true" ID="Freemind_Link_782897799" MODIFIED="1255212781796" STYLE="fork" TEXT="Text">
+<node CREATED="1254911847609" FOLDED="true" ID="Freemind_Link_170551554" MODIFIED="1254911850218" TEXT="Between">
+<node CREATED="1254911850640" FOLDED="true" ID="Freemind_Link_848895852" MODIFIED="1254911852828" TEXT="Tags">
+<node CREATED="1254911853437" ID="Freemind_Link_373761314" MODIFIED="1254911854937" TEXT="Start"/>
+<node CREATED="1254911855312" ID="Freemind_Link_1168707575" MODIFIED="1254911856593" TEXT="End"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911860187" FOLDED="true" ID="Freemind_Link_1058568537" MODIFIED="1255212781796" TEXT="Template">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911866437" ID="Freemind_Link_835125563" MODIFIED="1255212781796" TEXT="{% upper %}&#xa;    This will appear in uppercase, {{ user_name }}.&#xa;{% endupper %}"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911891703" FOLDED="true" ID="Freemind_Link_1172530441" MODIFIED="1255212781796" TEXT="Node Class">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911929531" ID="Freemind_Link_1533334909" MODIFIED="1255212781796" TEXT="class UpperNode(template.Node):&#xa;    def __init__(self, nodelist):&#xa;        self.nodelist = nodelist&#xa;&#xa;    def render(self, context):&#xa;        output = self.nodelist.render(context)&#xa;        return output.upper()"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254911905828" FOLDED="true" ID="Freemind_Link_1950020683" MODIFIED="1255212781796" TEXT="Compilation Function">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1254911937296" ID="Freemind_Link_1995335531" MODIFIED="1255212781796" TEXT="def do_upper(parser, token):&#xa;    nodelist = parser.parse((&apos;endupper&apos;,))&#xa;    parser.delete_first_token()&#xa;    return UpperNode(nodelist)"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1255210434140" ID="Freemind_Link_1366908004" MODIFIED="1255212781796" POSITION="right" STYLE="bubble" TEXT="SIMPLE TAGS">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255210441984" ID="Freemind_Link_530664548" MODIFIED="1255212781796" TEXT="Definition:">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255210448671" FOLDED="true" ID="Freemind_Link_322877333" MODIFIED="1255212781796" TEXT="Single Argument">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210457671" FOLDED="true" ID="Freemind_Link_1839528790" MODIFIED="1255212781796" TEXT="Either">
+<node COLOR="#000000" CREATED="1255210460578" ID="Freemind_Link_1028505652" MODIFIED="1255212781812" STYLE="fork" TEXT="String Literal"/>
+<node COLOR="#000000" CREATED="1255210462000" ID="Freemind_Link_365813327" MODIFIED="1255212781812" STYLE="fork" TEXT="Template Variable"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255210481468" FOLDED="true" ID="Freemind_Link_178247261" MODIFIED="1255212781812" TEXT="Returns">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210485750" ID="Freemind_Link_49073351" MODIFIED="1255212781812" TEXT="String"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255210500937" ID="Freemind_Link_863943561" MODIFIED="1255212781812" TEXT="Creation Short Cut">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255210509593" FOLDED="true" ID="Freemind_Link_482122797" MODIFIED="1255212781812" TEXT="django.template.Library.simple_tag( ) Method">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210549500" FOLDED="true" ID="Freemind_Link_641760067" MODIFIED="1255212781812" TEXT="Argument">
+<node COLOR="#000000" CREATED="1255210552859" FOLDED="true" ID="Freemind_Link_360504066" MODIFIED="1255212781812" STYLE="fork" TEXT="Function">
+<node CREATED="1255210555296" FOLDED="true" ID="Freemind_Link_1672409765" MODIFIED="1255210556703" TEXT="Accepts">
+<node CREATED="1255210557375" ID="Freemind_Link_1478314563" MODIFIED="1255210560546" TEXT="One Argument"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210562078" FOLDED="true" ID="Freemind_Link_909593873" MODIFIED="1255212781812" TEXT="Wraps">
+<node COLOR="#000000" CREATED="1255210566593" FOLDED="true" ID="Freemind_Link_1319574691" MODIFIED="1255212781812" STYLE="fork" TEXT="Input Function">
+<node CREATED="1255210575390" FOLDED="true" ID="Freemind_Link_1969320898" MODIFIED="1255210578281" TEXT="In">
+<node CREATED="1255210578968" ID="Freemind_Link_782625667" MODIFIED="1255210585171" TEXT="render Method"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210587671" FOLDED="true" ID="Freemind_Link_1249262034" MODIFIED="1255212781812" TEXT="Registers">
+<node COLOR="#000000" CREATED="1255210604156" FOLDED="true" ID="Freemind_Link_1962670934" MODIFIED="1255212781812" STYLE="fork" TEXT="Function">
+<node CREATED="1255210608250" FOLDED="true" ID="Freemind_Link_543033258" MODIFIED="1255210611718" TEXT="With">
+<node CREATED="1255210612109" ID="Freemind_Link_801389494" MODIFIED="1255210615453" TEXT="Template System"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210791531" FOLDED="true" ID="Freemind_Link_1012447590" MODIFIED="1255212781812" TEXT="EG">
+<node COLOR="#000000" CREATED="1255210793359" FOLDED="true" ID="Freemind_Link_905208389" MODIFIED="1255212781812" STYLE="fork" TEXT="Rewrite">
+<node CREATED="1255210796687" ID="Freemind_Link_796814037" MODIFIED="1255210799890" TEXT="Earlier Example"/>
+</node>
+<node COLOR="#000000" CREATED="1255210801140" ID="Freemind_Link_117761806" MODIFIED="1255212781812" STYLE="fork" TEXT="def current_time(format_string):&#xa;    try:&#xa;        return datetime.datetime.now().strftime(str(format_string))&#xa;    except UnicodeEncodeError:&#xa;        return &apos;&apos;&#xa;&#xa;register.simple_tag(current_time)"/>
+<node COLOR="#000000" CREATED="1255210850484" FOLDED="true" ID="Freemind_Link_1608351574" MODIFIED="1255212781812" STYLE="fork" TEXT="Python 2.4+">
+<node CREATED="1255210858703" ID="Freemind_Link_1275732324" MODIFIED="1255210874078" TEXT="Decorator Syntax"/>
+<node CREATED="1255210875359" ID="Freemind_Link_1622101440" MODIFIED="1255210903828" TEXT="@register.simple_tag&#xa;def current_time(token):&#xa;    # ..."/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1255210919437" ID="Freemind_Link_776705882" MODIFIED="1255212781828" POSITION="right" STYLE="bubble" TEXT="INCLUSIONS TAGS">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255210943750" ID="Freemind_Link_1604029904" MODIFIED="1255212781828" TEXT="Tag">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255210962984" FOLDED="true" ID="Freemind_Link_680535837" MODIFIED="1255212781828" TEXT="Includes">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210970078" FOLDED="true" ID="Freemind_Link_142582443" MODIFIED="1255212781828" TEXT="Other Tag">
+<node COLOR="#000000" CREATED="1255210973078" ID="Freemind_Link_1058871473" MODIFIED="1255212781828" STYLE="fork" TEXT="Within"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255210992312" ID="Freemind_Link_798441427" MODIFIED="1255212781828" TEXT="Used For">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255210995625" FOLDED="true" ID="Freemind_Link_565799755" MODIFIED="1255212781828" TEXT="Common Interface Style">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211002500" FOLDED="true" ID="Freemind_Link_189966327" MODIFIED="1255212781828" TEXT="Different">
+<node COLOR="#000000" CREATED="1255211013343" FOLDED="true" ID="Freemind_Link_1868702914" MODIFIED="1255212781828" STYLE="fork" TEXT="Pages">
+<node CREATED="1255211015921" FOLDED="true" ID="Freemind_Link_70133285" MODIFIED="1255211103781" TEXT="Performing">
+<node CREATED="1255211018046" FOLDED="true" ID="Freemind_Link_64808623" MODIFIED="1255211021265" TEXT="Different">
+<node CREATED="1255211021921" ID="Freemind_Link_1069202032" MODIFIED="1255211106906" TEXT="Actions"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211082265" FOLDED="true" ID="Freemind_Link_405091123" MODIFIED="1255212781828" TEXT="EG">
+<node COLOR="#000000" CREATED="1255211083421" FOLDED="true" ID="Freemind_Link_50809460" MODIFIED="1255212781828" STYLE="fork" TEXT="Buttons">
+<node CREATED="1255211086312" ID="Freemind_Link_1212085977" MODIFIED="1255211087640" TEXT="Add"/>
+<node CREATED="1255211088046" ID="Freemind_Link_1711935004" MODIFIED="1255211089312" TEXT="Edit"/>
+<node CREATED="1255211089625" ID="Freemind_Link_707217278" MODIFIED="1255211091750" TEXT="Delete"/>
+<node CREATED="1255211114421" FOLDED="true" ID="Freemind_Link_912536024" MODIFIED="1255211116109" TEXT="Actions">
+<node CREATED="1255211116640" FOLDED="true" ID="Freemind_Link_683674776" MODIFIED="1255211118078" TEXT="Depend">
+<node CREATED="1255211118843" FOLDED="true" ID="Freemind_Link_175469188" MODIFIED="1255211119906" TEXT="On">
+<node CREATED="1255211120281" FOLDED="true" ID="Freemind_Link_1496827548" MODIFIED="1255211130703" TEXT="Object">
+<node CREATED="1255211131578" ID="Freemind_Link_582468900" MODIFIED="1255211132593" TEXT="Types"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255211405187" ID="Freemind_Link_964534044" MODIFIED="1255212781828" TEXT="Creating">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255211408562" ID="Freemind_Link_911397218" MODIFIED="1255212781828" TEXT="Template Fragment"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255211432687" FOLDED="true" ID="Freemind_Link_1931525873" MODIFIED="1255212781828" TEXT="Function">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211438531" FOLDED="true" ID="Freemind_Link_1574646113" MODIFIED="1255212781828" TEXT="To Populate">
+<node COLOR="#000000" CREATED="1255211450390" ID="Freemind_Link_23329226" MODIFIED="1255212781828" STYLE="fork" TEXT="Template"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255212314218" FOLDED="true" ID="Freemind_Link_526998631" MODIFIED="1255212781828" TEXT="Returns">
+<node COLOR="#000000" CREATED="1255212317171" FOLDED="true" ID="Freemind_Link_527933995" MODIFIED="1255212781828" STYLE="fork" TEXT="Dictionary">
+<node CREATED="1255212329656" FOLDED="true" ID="Freemind_Link_1849819685" MODIFIED="1255212332125" TEXT="Context For">
+<node CREATED="1255212332828" ID="Freemind_Link_635239169" MODIFIED="1255212347578" TEXT="Template Fragment"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255211453562" FOLDED="true" ID="Freemind_Link_752414334" MODIFIED="1255212781828" TEXT="Register">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255210509593" ID="Freemind_Link_203376991" MODIFIED="1255212781828" TEXT="django.template.Library.inclusion_tag( ) Method"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211616984" FOLDED="true" ID="Freemind_Link_1181327876" MODIFIED="1255212781843" TEXT="Python 2.4+">
+<node COLOR="#000000" CREATED="1255211623812" FOLDED="true" ID="Freemind_Link_339914582" MODIFIED="1255212781843" STYLE="fork" TEXT="Decorator Syntax">
+<node CREATED="1255211628515" ID="Freemind_Link_1311620612" MODIFIED="1255211632765" TEXT="Allowed"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255212377000" ID="Freemind_Link_1170978689" MODIFIED="1255212781843" TEXT="Parent Template Context">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255212384750" FOLDED="true" ID="Freemind_Link_143234587" MODIFIED="1255212781843" TEXT="Accessing">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255212387000" FOLDED="true" ID="Freemind_Link_1558565648" MODIFIED="1255212781843" TEXT="In">
+<node COLOR="#000000" CREATED="1255212388562" ID="Freemind_Link_552408063" MODIFIED="1255212781843" STYLE="fork" TEXT="Inclusion Tag"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211553421" FOLDED="true" ID="Freemind_Link_233845230" MODIFIED="1255212781843" TEXT="Via">
+<node COLOR="#000000" CREATED="1255211555234" FOLDED="true" ID="Freemind_Link_93444142" MODIFIED="1255212781843" STYLE="fork" TEXT="takes_context Argument">
+<node CREATED="1255211568593" ID="Freemind_Link_375647447" MODIFIED="1255211574453" TEXT="inclusion_tag( ) Method"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211580109" FOLDED="true" ID="Freemind_Link_1019245203" MODIFIED="1255212781843" TEXT="Function">
+<node COLOR="#000000" CREATED="1255211589015" FOLDED="true" ID="Freemind_Link_131725943" MODIFIED="1255212781843" STYLE="fork" TEXT="First Argument">
+<node CREATED="1255211593500" FOLDED="true" ID="Freemind_Link_917393436" MODIFIED="1255211596843" TEXT="Must Be">
+<node CREATED="1255211597453" FOLDED="true" ID="Freemind_Link_1507380536" MODIFIED="1255211598671" TEXT="Called">
+<node CREATED="1255211599406" ID="Freemind_Link_1205658906" MODIFIED="1255211604531" TEXT="context"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255211363031" ID="Freemind_Link_162672020" MODIFIED="1255212781843" TEXT="EG">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255211364906" FOLDED="true" ID="Freemind_Link_1788007864" MODIFIED="1255212781843" TEXT="Inclusion Tag">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211383250" FOLDED="true" ID="Freemind_Link_376168015" MODIFIED="1255212781843" TEXT="For">
+<node COLOR="#000000" CREATED="1255211385406" FOLDED="true" ID="Freemind_Link_1473832331" MODIFIED="1255212781843" STYLE="fork" TEXT="Link">
+<node CREATED="1255211387156" ID="Freemind_Link_397479964" MODIFIED="1255211390468" TEXT="Home Page"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255211649750" FOLDED="true" ID="Freemind_Link_1859414078" MODIFIED="1255212781843" TEXT="Function">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211662421" FOLDED="true" ID="Freemind_Link_1707928138" MODIFIED="1255212781843" TEXT="With">
+<node COLOR="#000000" CREATED="1255211664968" ID="Freemind_Link_443804121" MODIFIED="1255212781843" STYLE="fork" TEXT="Register Decorator"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211674968" ID="Freemind_Link_146963885" MODIFIED="1255212781843" TEXT="@register.inclusion_tag(&apos;link.html&apos;, takes_context=True)&#xa;def jump_link(context):&#xa;    return {&#xa;        &apos;link&apos;: context[&apos;home_link&apos;],&#xa;        &apos;title&apos;: context[&apos;home_title&apos;],&#xa;    }"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255211655375" FOLDED="true" ID="Freemind_Link_379421170" MODIFIED="1255212781843" TEXT="Template">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211702078" ID="Freemind_Link_1199738969" MODIFIED="1255212781859" TEXT="Jump directly to &lt;a href=&quot;{{ link }}&quot;&gt;{{ title }}&lt;/a&gt;."/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255211724046" FOLDED="true" ID="Freemind_Link_378604583" MODIFIED="1255212781859" TEXT="Using">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255211727062" ID="Freemind_Link_1066301450" MODIFIED="1255212781859" TEXT="{% jump_link %}"/>
+</node>
+</node>
+</node>
+</node>
+</map>

@@ -1,0 +1,510 @@
+<map version="freeplane 1.8.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="KDENLIVE&#xa;VIDEO EDITING:&#xa;CLIPS" FOLDED="false" ID="ID_1008794020" CREATED="1605398734392" MODIFIED="1609653305945" COLOR="#000000" BACKGROUND_COLOR="#ffff8a" STYLE="oval">
+<font NAME="SansSerif" SIZE="16" BOLD="true"/>
+<hook NAME="MapStyle" background="#ffffdb">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ICON_SIZE="12.0 pt" COLOR="#000000" STYLE="fork">
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important">
+<icon BUILTIN="yes"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10.0 pt" SHAPE_VERTICAL_MARGIN="10.0 pt">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11"/>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<hook NAME="AutomaticEdgeColor" COUNTER="24" RULE="ON_BRANCH_CREATION"/>
+<edge STYLE="sharp_bezier" COLOR="#bbb75e" WIDTH="4"/>
+<node TEXT="DEFINITION" POSITION="left" ID="ID_696234932" CREATED="1605416096141" MODIFIED="1609653306044" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#6198bc" WIDTH="4"/>
+<node TEXT="Original" ID="ID_1770353025" CREATED="1605416110575" MODIFIED="1609653306051" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="Videos" ID="ID_1664166389" CREATED="1605416132458" MODIFIED="1609653306055" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+</node>
+<node TEXT="Audios" ID="ID_703604192" CREATED="1609632040499" MODIFIED="1609653306057" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="MARKERS" POSITION="left" ID="ID_504698550" CREATED="1609632071010" MODIFIED="1609653306111" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="sharp_bezier" COLOR="#8080b3" WIDTH="4"/>
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="Similar" ID="ID_1515739242" CREATED="1609632075567" MODIFIED="1609653306117" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Guides" ID="ID_5786075" CREATED="1609632080815" MODIFIED="1609653306122" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<node TEXT="Differences" ID="ID_1809618898" CREATED="1609632087863" MODIFIED="1609653306123" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Position" ID="ID_1224397484" CREATED="1609632162182" MODIFIED="1609653306128" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Guides" ID="ID_519938174" CREATED="1609632168719" MODIFIED="1609653306131" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Relative To" ID="ID_970015873" CREATED="1609632171670" MODIFIED="1609653306132" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Timeline" ID="ID_1136661461" CREATED="1609632175281" MODIFIED="1609653306134" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Stationary" ID="ID_428553970" CREATED="1609632264059" MODIFIED="1609653306135" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="If" ID="ID_1119933217" CREATED="1609632268419" MODIFIED="1609653306137" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Clip" ID="ID_921372337" CREATED="1609632269771" MODIFIED="1609653306147" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Moves" ID="ID_282135392" CREATED="1609632271467" MODIFIED="1609653306152" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="In" ID="ID_1706013959" CREATED="1609632273595" MODIFIED="1609653306155" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Timeline" ID="ID_494932633" CREATED="1609632274914" MODIFIED="1609653306157" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Markers" ID="ID_1808949282" CREATED="1609632179910" MODIFIED="1609653306159" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Relative To" ID="ID_982660297" CREATED="1609632184222" MODIFIED="1609653306162" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Clip" ID="ID_1652394775" CREATED="1609632188206" MODIFIED="1609653306164" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="In" ID="ID_1057333191" CREATED="1609632193262" MODIFIED="1609653306167" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Project Bin" ID="ID_688528717" CREATED="1609632207003" MODIFIED="1609653306169" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+<node TEXT="Clip Monitor" ID="ID_1201882508" CREATED="1609632234926" MODIFIED="1609653306171" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Even" ID="ID_860117556" CREATED="1609632213810" MODIFIED="1609653306172" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="If" ID="ID_1527507819" CREATED="1609632220547" MODIFIED="1609653306174" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Added" ID="ID_16716870" CREATED="1609632221746" MODIFIED="1609653306176" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="In" ID="ID_524613820" CREATED="1609632229158" MODIFIED="1609653306178" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Timeline" ID="ID_1643060596" CREATED="1609632230374" MODIFIED="1609653306180" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Moves" ID="ID_245072206" CREATED="1609632281306" MODIFIED="1609653306182" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="With" ID="ID_1189005680" CREATED="1609632284315" MODIFIED="1609653306184" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Clip" ID="ID_468279856" CREATED="1609632285781" MODIFIED="1609653306186" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+<node TEXT="If" ID="ID_1771296613" CREATED="1609632268419" MODIFIED="1609653306189" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Clip" ID="ID_149511740" CREATED="1609632269771" MODIFIED="1609653306190" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Moves" ID="ID_1133696276" CREATED="1609632271467" MODIFIED="1609653306192" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="In" ID="ID_1050980622" CREATED="1609632273595" MODIFIED="1609653306194" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Timeline" ID="ID_81329320" CREATED="1609632274914" MODIFIED="1609653306197" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Adding" ID="ID_1872507217" CREATED="1609632322615" MODIFIED="1609653306198" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Timeline" ID="ID_1358732976" CREATED="1609632373230" MODIFIED="1609653306200" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<node TEXT="Clip" ID="ID_1879180297" CREATED="1609632404798" MODIFIED="1609653306204" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Selected" ID="ID_129900776" CREATED="1609653271333" MODIFIED="1609653313902" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<icon BUILTIN="messagebox_warning"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Only" ID="ID_1691605233" CREATED="1609653291546" MODIFIED="1609653306218" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Right Click" ID="ID_1428864320" CREATED="1609632396326" MODIFIED="1609653306220" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Select" ID="ID_842412325" CREATED="1609632426330" MODIFIED="1609653306221" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Markers" ID="ID_390007363" CREATED="1609632407422" MODIFIED="1609653306222" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Clip Monitor" ID="ID_1402215607" CREATED="1609632436275" MODIFIED="1609653306223" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<node TEXT="Position" ID="ID_1999770606" CREATED="1609632478062" MODIFIED="1609653306224" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Playhead" ID="ID_833848308" CREATED="1609632480967" MODIFIED="1609653306225" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Right Click" ID="ID_1165399306" CREATED="1609632485182" MODIFIED="1609653306227" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Select" ID="ID_1121337751" CREATED="1609632489570" MODIFIED="1609653306228" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Markers" ID="ID_219978234" CREATED="1609632407422" MODIFIED="1609653306229" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Clip Menu" ID="ID_1998702050" CREATED="1609632527331" MODIFIED="1609653306231" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<node TEXT="Markers" ID="ID_1230571585" CREATED="1609632536750" MODIFIED="1609653306232" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="Jumping To" ID="ID_1420014838" CREATED="1609632640477" MODIFIED="1609653306239" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="In" ID="ID_1145791319" CREATED="1609632928967" MODIFIED="1609653306242" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<node TEXT="Clip Monitor" ID="ID_497961537" CREATED="1609632436275" MODIFIED="1609653306244" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Keyboard" ID="ID_621453174" CREATED="1609633223521" MODIFIED="1609653306247" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Ctrl+Left" ID="ID_1445137589" CREATED="1609632941266" MODIFIED="1609653306248" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Previous" ID="ID_1792807497" CREATED="1609632949666" MODIFIED="1609653306250" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+<node TEXT="Ctrl+Right" ID="ID_6977924" CREATED="1609632955025" MODIFIED="1609653306251" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Next" ID="ID_1622034559" CREATED="1609632958441" MODIFIED="1609653306252" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+<node TEXT="Right Click" ID="ID_1632775019" CREATED="1609633230774" MODIFIED="1609653306253" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Go To Marker" ID="ID_1323223273" CREATED="1609633246545" MODIFIED="1609653306267" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Select" ID="ID_556722165" CREATED="1609633254774" MODIFIED="1609653306268" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Marker" ID="ID_806474428" CREATED="1609633256366" MODIFIED="1609653306270" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="From" ID="ID_892080027" CREATED="1609633258966" MODIFIED="1609653306271" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="List" ID="ID_1567026440" CREATED="1609633260240" MODIFIED="1609653306273" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Anywhere" ID="ID_331187548" CREATED="1609633264989" MODIFIED="1609653306274" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="In" ID="ID_1028493995" CREATED="1609633268094" MODIFIED="1609653306277" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Clip Monitor" ID="ID_150653809" CREATED="1609633269302" MODIFIED="1609653306278" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Screen" ID="ID_1910390965" CREATED="1609633280985" MODIFIED="1609653306279" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Timeline" ID="ID_442955570" CREATED="1609632373230" MODIFIED="1609653306280" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Clip" ID="ID_1482491793" CREATED="1609632404798" MODIFIED="1609653306281" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Single Click" ID="ID_1376392454" CREATED="1609632396326" MODIFIED="1609653306282" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="On" ID="ID_217098884" CREATED="1609632426330" MODIFIED="1609653306284" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Marker Tag" ID="ID_1177725104" CREATED="1609632407422" MODIFIED="1609653306285" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Editing" ID="ID_263540828" CREATED="1609633104078" MODIFIED="1609653306287" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="In" ID="ID_1831329008" CREATED="1609632928967" MODIFIED="1609653306288" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<node TEXT="Clip Monitor" ID="ID_1156874427" CREATED="1609632436275" MODIFIED="1609653306290" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Playhead" ID="ID_1260670618" CREATED="1609632577678" MODIFIED="1609653306292" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Must Be" ID="ID_886718985" CREATED="1609632584270" MODIFIED="1609653306293" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Exactly" ID="ID_111190969" CREATED="1609632587186" MODIFIED="1609653306295" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="On" ID="ID_441038264" CREATED="1609633092489" MODIFIED="1609653306296" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Marker" ID="ID_1931551089" CREATED="1609632589913" MODIFIED="1609653306297" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Single Clip" ID="ID_852202197" CREATED="1609633368570" MODIFIED="1609653306298" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Marker" ID="ID_1539976049" CREATED="1609633373041" MODIFIED="1609653306300" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Tag" ID="ID_118266022" CREATED="1609633375338" MODIFIED="1609653306301" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Edit" ID="ID_1591628506" CREATED="1609633377457" MODIFIED="1609653306303" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Text" ID="ID_741191674" CREATED="1609633379946" MODIFIED="1609653306305" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="In" ID="ID_786344189" CREATED="1609633382094" MODIFIED="1609653306306" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Text Pane" ID="ID_1392226400" CREATED="1609633424785" MODIFIED="1609653306308" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Left Of" ID="ID_174102556" CREATED="1609633441987" MODIFIED="1609653306311" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Clip Monitor" ID="ID_1056938786" CREATED="1609633445513" MODIFIED="1609653306312" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Timeline" ID="ID_1256675870" CREATED="1609632373230" MODIFIED="1609653306314" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Clip" ID="ID_268791520" CREATED="1609632404798" MODIFIED="1609653306316" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Playhead" ID="ID_1375773526" CREATED="1609632577678" MODIFIED="1609653306317" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Must Be" ID="ID_309825419" CREATED="1609632584270" MODIFIED="1609653306319" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Exactly" ID="ID_1853676127" CREATED="1609632587186" MODIFIED="1609653306320" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="On" ID="ID_1325475695" CREATED="1609633092489" MODIFIED="1609653306321" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Marker" ID="ID_1353342677" CREATED="1609632589913" MODIFIED="1609653306323" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Double Click" ID="ID_1899872212" CREATED="1609632396326" MODIFIED="1609653306326" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="On" ID="ID_240356243" CREATED="1609632426330" MODIFIED="1609653306327" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<node TEXT="Marker Tag" ID="ID_677268006" CREATED="1609632407422" MODIFIED="1609653306330" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Removing" ID="ID_1055719346" CREATED="1609632573698" MODIFIED="1609653306333" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Playhead" ID="ID_741313026" CREATED="1609632577678" MODIFIED="1609653306335" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<node TEXT="Must Be" ID="ID_1502194046" CREATED="1609632584270" MODIFIED="1609653306336" COLOR="#000000" BACKGROUND_COLOR="#cbcbff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Exactly" ID="ID_1670482871" CREATED="1609632587186" MODIFIED="1609653306337" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="On" ID="ID_65289758" CREATED="1609633092489" MODIFIED="1609653306338" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<node TEXT="Marker" ID="ID_480032086" CREATED="1609632589913" MODIFIED="1609653306339" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true">
+<edge STYLE="bezier" COLOR="#8080b3" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="PROXY CLIPS" POSITION="right" ID="ID_683348289" CREATED="1609633540953" MODIFIED="1609653306352" COLOR="#000000" BACKGROUND_COLOR="#c898ff" STYLE="bubble" MAX_WIDTH="30.0 cm">
+<edge STYLE="sharp_bezier" COLOR="#815fa9" WIDTH="4"/>
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+</node>
+</node>
+</map>

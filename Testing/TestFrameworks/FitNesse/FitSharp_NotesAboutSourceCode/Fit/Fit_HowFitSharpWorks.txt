@@ -1,0 +1,829 @@
+How FitSharp Works: Fit
+=======================
+Simon Elms, 29 May 2017
+
+COMMON_PATTERN fitnesse.fitserver.FitServer
+-------------------------------------------
+
+fitSharp.Runner.Program:
+------------------------
+static int Main(string[] arguments)
+{
+	return new Shell(new ConsoleReporter(), new FileSystemModel()).Run(arguments);
+}
+
+fitSharp.Machine.Application.Shell:
+-----------------------------------
+
+//## NOTE: TypeDictionary.GetItem checks if item exists and, if it doesn't, creates it 
+//##	by calling default constructor of type.
+
+readonly Memory memory = new TypeDictionary();
+
+public Shell(ProgressReporter progressReporter, FolderModel folderModel)
+{
+	this.progressReporter = progressReporter;
+	this.folderModel = folderModel;
+}
+
+//## At this point memory not set so will RunInNewDomain and add AppDomainSetup to memoryProcessFlowRow(Tree<Cell> table, int rowNumber)
+public int Run(IList<string> commandLineArguments)
+{
+	try
+	{
+		ParseArguments(commandLineArguments);
+		return !memory.HasItem<AppDomainSetup>()
+			? RunInCurrentDomain()
+			: RunInNewDomain(memory.GetItem<AppDomainSetup>(), commandLineArguments);
+	}
+	catch (System.Exception e)
+	{
+		progressReporter.Write(string.Format("{0}\n", e));
+		return 1;
+	}
+}
+
+//## Parse runs the ArgumentHandlers that have been added to the ArgumentParser.
+//## "a": Authentication: adds item to memory
+//## "c": Command: Invokes a BasicProcessor on each XML element that is a grandchild of the document node
+//## "r": FitNesse Root directory: add items to memory.
+//## "f": Loads config file
+void ParseArguments(IList<string> commandLineArguments)
+{
+	var argumentParser = new ArgumentParser();
+	argumentParser.AddArgumentHandler("a", value => memory.GetItem<AppDomainSetup>().ConfigurationFile = value);
+	argumentParser.AddArgumentHandler("c",
+		value => new SuiteConfiguration(memory).LoadXml(folderModel.GetPageContent(value)));
+	argumentParser.AddArgumentHandler("r", value => memory.GetItem<Settings>().Runner = value);
+	argumentParser.AddArgumentHandler("f", InitializeAndAddFolders);
+	argumentParser.SetUnusedHandler(value => extraArguments.Add(value));
+	argumentParser.Parse(commandLineArguments);
+}
+
+RunInNewDomain(AppDomainSetup appDomainSetup, IList<string> commandLineArguments):
+	Creates new AppDomain "fitSharp.Machine"
+	Calls RunInCurrentDomain(commandLineArguments) in new domain
+	
+RunInCurrentDomain(IList<string> commandLineArguments):
+	ParseArguments(commandLineArguments);
+    return RunInCurrentDomain();
+	
+RunInCurrentDomain():
+	ValidateArguments() - fails if string.IsNullOrEmpty(memory.GetItem<Settings>().Runner) but Runner set in command line (see above) 
+	Execute()
+	
+Execute():
+	var tokens = memory.GetItem<Settings>().Runner.Split(',');  //## fitnesse.fitserver.FitServer (for Fit)
+	Runner = new BasicProcessor().Create(tokens[0]).GetValue<Runnable>();  //## Instance of fitnesse.fitserver.FitServer - see below
+	
+	//## BasicProcessor() : this(new TypeDictionary()) {}
+	//##>>>>>>>>>>>>>>>>>>
+		public BasicProcessor(Memory memory) : base(memory)
+        {
+            operators = new Operators<string, BasicProcessor>(this);
+            AddOperator(new DefaultCompose());
+            AddOperator(new DefaultParse<string, BasicProcessor>());
+            AddOperator(new ParseType<string, BasicProcessor>());
+            AddOperator(new ParseEnum());
+            AddOperator(new ParseNullable());
+        }
+	//##>>>>>>>>>>>>>>>>>>
+	//## BasicProcessor : ProcessorBase<string, BasicProcessor>
+	//## and ProcessorBase<T, P> : Processor<T> where P : class, Processor<T> 
+	//## so BasicProcessor inherits Processor<string>
+	
+	//## new BasicProcessor().Create(tokens[0]) calls (in Processor.cs, ProcessorExtensions class):
+	//##>>>>>>>>>>>>>>>>>>
+	public static TypedValue Create<T>(this Processor<T> processor, NameMatcher memberName, Tree<T> parameters)
+        {
+			//## parameters = new TreeList<T>()
+            return processor.Operate<CreateOperator<T>>(memberName, parameters);
+        }
+	//##>>>>>>>>>>>>>>>>>>
+	//## BasicProcessor doesn't have an Operate method but its base class ProcessorBase<string, BasicProcessor> does:
+	//## O will be CreateOperator<string>
+	//##>>>>>>>>>>>>>>>>>>
+	In ProcessorBase<string, BasicProcessor>:
+		public TypedValue Operate<O>(params object[] parameters) where O : class
+			{
+				//## memberName is parameters[0], parameters[1] is new TreeList<T>()
+				
+				var operationType = typeof (O).Name;
+				var operationName = operationType.Substring(0, operationType.IndexOf("Operator"));  //## "Create"
+				var logging = new OperationLogging(Memory);
+				try
+				{
+					logging.Start(operationName);		//## Inside OperationLogging: Logging logging = memory.GetItem<Logging>();
+					logging.LogParameters(parameters);
+					//## FindOperator will return CreateDefault instance as CreateDefault is the only class with a CanCreate member
+					var candidate = Operators.FindOperator<O>(parameters);
+					//##>>>>>>>>>>>>>>>>>>
+					In Operators:
+						public O FindOperator<O>(object[] parameters) where O : class
+						{
+							var operationType = typeof (O).Name;
+							//## operationName = "Create"
+							var operationName = operationType.Substring(0, operationType.IndexOf("Operator"));
+							
+							//## Values contains CreateDefault operator, added in Operators ctor.
+							//## CreateDefault.CanCreate = true so CreateDefault returned
+							foreach (var candidate in
+								Values<O>().Where(candidate => CanDoOperation(candidate, operationName, parameters)))
+							{
+								return candidate;
+							}
+							throw new ApplicationException(string.Format("No default for {0}", typeof (O).Name));
+							//##>>>>>>>>>>>>>>>>>>
+							static bool CanDoOperation<O>(O candidate, string operationName, object[] parameters)
+							{
+								//## candidate will implement CreateOperator<string>, eg CreateDefault
+								//## operationName = "Create"
+								//## parameters[0] is memberName, parameters[1] is new TreeList<T>()
+								var member = MemberQuery.GetDirectInstance(candidate,
+									new MemberSpecification("Can" + operationName, parameters.Length));
+								//##>>>>>>>>>>>>>>>>>>
+								In MemberQuery:
+								public static RuntimeMember GetDirectInstance(object instance, MemberSpecification specification)
+								{
+									foreach (var member in FindDirectInstance(instance, specification).Value)
+									{
+										return member;
+									}
+									//##>>>>>>>>>>>>>>>>>>
+									public static Maybe<RuntimeMember> FindDirectInstance(object instance, MemberSpecification specification)
+									{
+										return new MemberQuery(specification).FindMember(instance);
+										//##>>>>>>>>>>>>>>>>>>
+										public Maybe<RuntimeMember> FindMember(object instance)
+										{
+											var targetType = instance as Type ?? instance.GetType();
+											return FindBasicMember(instance, targetType)
+												.OrMaybe(() => FindIndexerMember(instance, targetType));
+											//##>>>>>>>>>>>>>>>>>>
+											Maybe<RuntimeMember> FindBasicMember(object instance, Type targetType)
+											{
+												var matcher = new BasicMemberMatcher(instance, specification);
+												return FindMatchingMember(targetType, matcher);
+												//##>>>>>>>>>>>>>>>>>>
+												public Maybe<RuntimeMember> FindMatchingMember(Type targetType, MemberMatcher matcher)
+												{
+													return FindMatchingMember(targetType, BindingFlags.Public, matcher)
+														.OrMaybe(() => FindMatchingMember(targetType, BindingFlags.NonPublic, matcher));
+													//##>>>>>>>>>>>>>>>>>>
+													Maybe<RuntimeMember> FindMatchingMember(Type targetType, BindingFlags accessFlag, MemberMatcher matcher)
+													{
+														//## flags = BindingFlags.Instance | BindingFlags.Static;
+														//## accessFlag = BindingFlags.Public
+														return matcher.Match(targetType.GetMembers(flags | accessFlag | BindingFlags.FlattenHierarchy));
+														//##>>>>>>>>>>>>>>>>>>
+														In BasicMemberMatcher:
+															public Maybe<RuntimeMember> Match(IEnumerable<MemberInfo> members)
+															{
+																foreach (var memberInfo in members)
+																{
+																	var runtimeMemberFactory = RuntimeMemberFactory.MakeFactory(specification, memberInfo);
+																	//##>>>>>>>>>>>>>>>>>>
+																	public static RuntimeMemberFactory MakeFactory(MemberSpecification specification, MemberInfo memberInfo)
+																	{
+																		switch (memberInfo.MemberType)
+																		{
+																			case MemberTypes.Method:
+																				return new MethodMemberFactory(memberInfo, specification);
+																			case MemberTypes.Field:
+																				return new FieldMemberFactory(memberInfo);
+																			case MemberTypes.Property:
+																				return new PropertyMemberFactory(memberInfo);
+																			case MemberTypes.Constructor:
+																				return new ConstructorMemberFactory(memberInfo);
+																			default:
+																				return new UnsupportedMemberFactory(memberInfo);
+																		}
+																	}
+																	//##<<<<<<<<<<<<<<<<<<
+																	if (!runtimeMemberFactory.Matches(specification)) continue;
+																	//##>>>>>>>>>>>>>>>>>>
+																	In MethodMemberFactory:
+																		public override bool Matches(MemberSpecification specification)
+																		{
+																			return Info.IsGenericMethod
+																				? specification.MatchesBaseName(info.Name)
+																				: base.Matches(specification);
+																			//##>>>>>>>>>>>>>>>>>>
+																			In RuntimeMemberFactory:
+																				public virtual bool Matches(MemberSpecification specification)
+																				{
+																					return specification.MatchesGetSetName(info.Name);
+																					//##>>>>>>>>>>>>>>>>>>
+																					In MemberSpecification:
+																						public bool MatchesGetSetName(string name)
+																						{
+																							//## memberName.Name = "CanCreate"
+																							//## IdentifierName ctor sets MatchName = memberName.Name.Trim()
+																							var identifier = new IdentifierName(memberName.Name);
+																							if (identifier.Matches(name)) return true;
+																							//##>>>>>>>>>>>>>>>>>>
+																							In IdentifierName:
+																								//## name = MemberInfo.Name (member of type being checked)
+																								//## Returns true if member of instance has name "CanCreate"
+																								public bool Matches(string name)
+																								{
+																									return name.Contains("_")
+																										? string.Equals(MatchName.Replace("_", string.Empty), name.Replace("_", string.Empty),
+																											StringComparison.OrdinalIgnoreCase)
+																										: string.Equals(MatchName, name, StringComparison.OrdinalIgnoreCase);
+																								}
+																							//##<<<<<<<<<<<<<<<<<<
+																							if (!identifier.MatchName.StartsWith("set") && !identifier.MatchName.StartsWith("get")) return false;
+																							return new IdentifierName(identifier.MatchName.Substring(3)).Matches(name);
+																						}
+																					//##<<<<<<<<<<<<<<<<<<
+																				}
+																			//##<<<<<<<<<<<<<<<<<<
+																		}
+																	//##<<<<<<<<<<<<<<<<<<
+																	var runtimeMember = runtimeMemberFactory.MakeMember(instance);
+																	//##>>>>>>>>>>>>>>>>>>
+																	In MethodMemberFactory:
+																		public override RuntimeMember MakeMember(object instance)
+																		{
+																			return Info.IsGenericMethod
+																				? new MethodMember(specification.MakeGenericMethod(Info), instance)
+																				: new MethodMember(info, instance);
+																		}
+																	//##<<<<<<<<<<<<<<<<<<
+																	if (!Matches(runtimeMember)) continue;
+																	//##>>>>>>>>>>>>>>>>>>
+																	bool Matches(RuntimeMember runtimeMember)
+																	{
+																		return
+																			specification.MatchesParameterCount(runtimeMember) &&
+																			specification.MatchesParameterTypes(runtimeMember) &&
+																			specification.MatchesParameterNames(runtimeMember);
+																	}																
+																	//##<<<<<<<<<<<<<<<<<<
+																	return new Maybe<RuntimeMember>(runtimeMember);
+																}
+																return Maybe<RuntimeMember>.Nothing;
+															}
+														//##<<<<<<<<<<<<<<<<<<
+													}
+													//##<<<<<<<<<<<<<<<<<<
+												}
+												//##<<<<<<<<<<<<<<<<<<
+											}
+											//##<<<<<<<<<<<<<<<<<<
+										}
+										//##<<<<<<<<<<<<<<<<<<
+									}
+									//##<<<<<<<<<<<<<<<<<<
+									throw specification.MemberMissingException(instance.GetType());
+								}
+								//##<<<<<<<<<<<<<<<<<<
+								return member.Invoke(parameters).GetValue<bool>();
+							}
+							//##<<<<<<<<<<<<<<<<<<
+						}
+					//##<<<<<<<<<<<<<<<<<<
+					var member = MemberQuery.GetDirectInstance(candidate,
+						new MemberSpecification(operationName, parameters.Length));
+					//## Calls CreateDefault.Create(memberName, parameters)
+					var result = member.Invoke(parameters).GetValue<TypedValue>();
+					//##>>>>>>>>>>>>>>>>>>
+					In CreateDefault:
+					public TypedValue Create(NameMatcher memberName, Tree<T> parameters)
+						{
+							var runtimeType = Processor.ApplicationUnderTest.FindType(memberName);
+							return parameters.Branches.Count == 0
+								? CreateWithoutParameters(runtimeType)
+								: CreateWithParameters(parameters, runtimeType);
+						}
+					//##>>>>>>>>>>>>>>>>>>	
+					CreateWithoutParameters: returns runtimeType.CreateInstance(); //## fitnesse.fitserver.FitServer
+					//##<<<<<<<<<<<<<<<<<<
+					logging.LogResult(candidate, result);
+					return result;
+				}
+				finally
+				{
+					logging.End();
+				}
+			}
+	//##<<<<<<<<<<<<<<<<<<
+	ExecuteInApartment();
+	
+ExecuteInApartment():
+	Either executes Run() method directly or on a new thread, depending on the value of memory.GetItem<Settings>().ApartmentState
+	
+Run():
+	result = Runner.Run(extraArguments.ToArray(), memory, progressReporter);
+	
+//################################################################################################################################													
+//## We've created an instance of the Runner.  For Fit this is a fitnesse.fitserver.FitServer object
+//################################################################################################################################	
+
+In fitnesse.fitserver.FitServer:
+	public int Run(IList<string> commandLineArguments, Memory memory, ProgressReporter reporter)
+	{
+		this.memory = memory;
+		Run(commandLineArguments);
+		return totalCounts.FailCount;
+	}
+
+	//## ComandLineArguments:
+	//##	0: "C:\\Users\\simone\\Documents\\SimonsDocuments\\IT\\C#\\DemoCode\\FitNesseDEMO\\FitNesseDEMO\\bin\\Debug\\FitNesseDEMO.dll"
+	//##	1: "LONGFORMACUS"
+	//##	2: "49224"
+	//##	3: "3863"
+	public void Run(IList<string> CommandLineArguments)
+	{
+		//## Parses not only the named arguments but also the positional arguments listed above which map to arguments with the 
+		//##	following constant names: ASSEMBLYLIST, HOST, PORT, SOCKET_TOKEN
+		//## For assembly list splits the first positional argument on semi-colons then saves each separately to 
+		//## 	ApplicationUnderTest.assemblies.
+		ParseCommandLineArguments(CommandLineArguments);
+
+		//## If verbose set then ConsoleReporter else NullReporter
+		reporter = MakeReporter();
+
+		clientSocket = new FitSocket(new SocketModelImpl(host, port), reporter);
+		//##>>>>>>>>>>>>>>>>>>
+		public FitSocket(SocketModel socket, ProgressReporter reporter)
+        {
+            socketSession = new SocketSession(socket);
+            this.reporter = reporter;
+            this.socket = socket;
+        }
+		//##<<<<<<<<<<<<<<<<<<
+		EstablishConnection();
+		//##>>>>>>>>>>>>>>>>>>
+		private void EstablishConnection()
+        {
+            reporter.WriteLine("Host:Port:\t" + host + ":" + port);
+            clientSocket.EstablishConnection(Protocol.FormatRequest(socketToken));
+        }
+		//##<<<<<<<<<<<<<<<<<<
+		In fit.Runner.FitSocket:
+		//## request = "GET /?responder=socketCatcher&ticket=3863 HTTP/1.1"  //## Did it 4x, with two different test pages, same every time.
+		public void EstablishConnection(string request)
+			Transmit(request);  
+			//##>>>>>>>>>>>>>>>>>>
+			public void Transmit(string message)
+				{
+					socketSession.Write(message);
+					//##>>>>>>>>>>>>>>>>>>
+					fitSharp.IO.SocketSession.public void Write(string message)
+					{
+						var messageBytes = Encoding.UTF8.GetBytes(message);
+						socket.Send(messageBytes);  //## Sends data to socket.
+					}
+					//##<<<<<<<<<<<<<<<<<<
+				}
+			//##<<<<<<<<<<<<<<<<<<
+			var statusSize = ReceiveInteger();  //## statusSize == 0 is success
+			//##>>>>>>>>>>>>>>>>>>
+			//## ReceiveInteger after Send appears to indicate success or not.  Before Read seems to be the number of bytes available to read.
+			int ReceiveInteger()
+			{
+				return Convert.ToInt32(socketSession.Read(10));
+				//##>>>>>>>>>>>>>>>>>>
+				public string Read(int bytesToRead)
+				{
+					var bytes = new byte[bytesToRead];
+					var bytesReceived = 0;
+					while (bytesReceived < bytesToRead)
+					{
+						bytesReceived += socket.Receive(bytes, bytesReceived, bytesToRead - bytesReceived);
+					}
+					var characters = new char[bytesToRead];
+					var charCount = Encoding.UTF8.GetDecoder().GetChars(bytes, 0, bytesToRead, characters, 0);
+					return new StringBuilder(charCount).Append(characters, 0, charCount).ToString();
+				}
+				//##<<<<<<<<<<<<<<<<<<
+			}
+			//##<<<<<<<<<<<<<<<<<<
+		//## memory is TypeDictionary with two entries:
+		//##	1) fitSharp.Machine.Application.Settings object.  Settings.Runner = "fitnesse.fitserver.FitServer"
+		//##	2) fitSharp.Machine.Engine.ApplicationUnderTest object.  
+		//##		assemblies: 1 only: C:\\Users\\simone\\Documents\\SimonsDocuments\\IT\\C#\\DemoCode\\FitNesseDEMO\\FitNesseDEMO\\bin\\Debug\\FitNesseDEMO.dll
+		//##		namespaces: 1 only: fitSharp.Machine.Engine (text stored in a HashSet)
+		var service = new Service(memory);  //## fit.Service.Service : CellProcessorBase
+		var writer = new StoryTestStringWriter(service)
+			.ForTables(WriteTables)
+			.ForCounts(WriteCounts);
+		//##>>>>>>>>>>>>>>>>>>
+		In fitSharp.Fit.Fixtures.StoryTestStringWriter : StoryTestWriter:
+			public StoryTestStringWriter(CellProcessor processor)
+			{
+				this.processor = processor;	//## Service
+			}
+			
+			public StoryTestStringWriter ForTables(Action<string> handleTables)
+			{
+				this.handleTables = handleTables;
+				return this;
+			}
+			
+			public StoryTestStringWriter ForCounts(Action<TestCounts> handleCounts)
+			{
+				this.handleCounts = handleCounts;
+				return this;
+			}
+		//##<<<<<<<<<<<<<<<<<<
+		In fitnesse.fitserver.FitServer:
+			private void WriteTables(string tables)
+			{
+				reporter.WriteLine("\tTransmitting tables of length " + tables.Length);
+				clientSocket.SendDocument(tables);
+				//##>>>>>>>>>>>>>>>>>>
+				In fit.Runner.FitSocket:
+					public void SendDocument(string document)
+					{
+						socketSession.Write(Protocol.FormatDocument(document));
+						//##>>>>>>>>>>>>>>>>>>
+						In fit.Runner.Protocol:
+							public static string FormatDocument(string document)
+							{
+								//## FormatInteger: Converts int to string and pads left to 10 digits.
+								return FormatInteger(Encoding.UTF8.GetBytes(document).Length) + document;
+							}
+						//##------------------
+						In fitSharp.IO.SocketSession:
+							public void Write(string message)
+							{
+								var messageBytes = Encoding.UTF8.GetBytes(message);
+								socket.Send(messageBytes);	//## Sends data to socket.
+							}
+						//##<<<<<<<<<<<<<<<<<<
+					}
+				//##<<<<<<<<<<<<<<<<<<
+			}
+		//##<<<<<<<<<<<<<<<<<<
+		In fitnesse.fitserver.FitServer:
+			private void WriteCounts(TestCounts counts)
+			{
+				reporter.WriteLine("\tTest Document finished");
+				clientSocket.SendCounts(counts);
+				//##>>>>>>>>>>>>>>>>>>
+				In fit.Runner.FitSocket:
+					public void SendCounts(TestCounts counts)
+					{
+						socketSession.Write(Protocol.FormatCounts(counts));
+						//##>>>>>>>>>>>>>>>>>>
+						In fit.Runner.Protocol:
+							public static String FormatCounts(TestCounts status)
+							{
+								var builder = new StringBuilder();
+								builder.Append(FormatInteger(0));
+								builder.Append(FormatInteger(status.GetCount(TestStatus.Right)));
+								builder.Append(FormatInteger(status.GetCount(TestStatus.Wrong)));
+								builder.Append(FormatInteger(status.GetCount(TestStatus.Ignore)));
+								builder.Append(FormatInteger(status.GetCount(TestStatus.Exception)));
+								return builder.ToString();
+							}
+						//##------------------
+						In fitSharp.IO.SocketSession: Write method as above
+						//##<<<<<<<<<<<<<<<<<<
+					}
+				//##<<<<<<<<<<<<<<<<<<
+
+				totalCounts.TallyCounts(counts);
+				reporter.WriteLine("\tresults: " + counts.Description);
+			}
+		//##<<<<<<<<<<<<<<<<<<
+		var server = new SocketServer(clientSocket, service, reporter, true);
+		//##>>>>>>>>>>>>>>>>>>
+		In fit.Runner.SocketServer ctor:
+			public SocketServer(FitSocket socket, CellProcessor service, ProgressReporter reporter,
+            bool suiteSetUpIsAnonymous)
+			{
+				this.service = service;
+				this.reporter = reporter;
+				this.socket = socket;
+				IMaybeProcessingSuiteSetup = suiteSetUpIsAnonymous;
+			}
+		//##<<<<<<<<<<<<<<<<<<
+		server.ProcessTestDocuments(writer);
+		//##>>>>>>>>>>>>>>>>>>
+		In fit.Runner.SocketServer:
+			//## write is StoryTestStringWriter
+			//## handleTables is fitnesse.fitserver.FitServer.WriteTables
+			//## handleCounts is fitnesse.fitserver.FitServer.WriteCounts
+			public void ProcessTestDocuments(StoryTestWriter writer)
+			{
+				string document;
+
+				while ((document = socket.ReceiveDocument()).Length > 0 && !suiteIsAbandoned)
+				//##>>>>>>>>>>>>>>>>>>
+				In fit.Runner.FitSocket:
+					public string ReceiveDocument()
+					{
+						var documentLength = ReceiveInteger();
+						//##>>>>>>>>>>>>>>>>>>
+						In fit.Runner.FitSocket:
+							int ReceiveInteger()
+							{
+								return Convert.ToInt32(socketSession.Read(10));  //## Calls socket.Receive and gets 10 bytes.
+							}
+						//##<<<<<<<<<<<<<<<<<<
+						//## Gets the entire document.
+						return documentLength == 0 ? "" : socketSession.Read(documentLength);
+					}
+				//##<<<<<<<<<<<<<<<<<<
+				//## Top of while loop
+				{	
+					//## Document 1: (Document 0 is SuiteSetUp, we're interested in the test):
+					/*
+<br/>
+<span class="meta">variable defined: TEST_SYSTEM=FIT</span><br/>
+<span class="meta">variable defined: COMMAND_PATTERN=%m -r fitnesse.fitserver.FitServer %p</span><br/>
+<span class="meta">variable defined: TEST_RUNNER=FitSharp\RunnerW.exe</span><br/>
+<span class="meta">classpath: C:\Users\simone\Documents\SimonsDocuments\IT\C#\DemoCode\FitNesseDEMO\FitNesseDEMO\bin\Debug\FitNesseDEMO.dll</span><br/>
+<br/>
+NOTE: Use <i>Runner.exe</i> as the test runner for normal operation.<br/>
+<i>RunnerW.exe</i> is for debugging.  It will open a Windows Forms application and wait.  This allows the developer time <br/>
+to attach to the running process from Visual Studio with the FitSharp solution loaded.  After attaching to the <br/>
+process click the Go button on the Windows Form to continue execution.<br/>
+<br/>
+Basic demonstration of an ActionFixture.  For more information about ActionFixtures, and writing tests and <br/>
+fixtures that use them, see <a href="http://fitnesse.org/FitNesse.UserGuide.FixtureGallery.BasicFitFixtures.ActionFixture">http://fitnesse.org/FitNesse.UserGuide.FixtureGallery.BasicFitFixtures.ActionFixture</a><br/>
+<br/>
+Note that the test fixture class name is not included in the table in the first row, like with most fixtures.  <br/>
+Instead the first row just includes "ActionFixture" and the full name of the test class, including namespace, <br/>
+is passed as a parameter to the Start method in the second row.<br/>
+<br/>
+<table>
+	<tr>
+		<td colspan="3">ActionFixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">FitNesseDEMO.ActionFixtureTest</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>string1</td>
+		<td>Hello</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>string2</td>
+		<td>World</td>
+	</tr>
+	<tr>
+		<td>press</td>
+		<td colspan="2">Concatenate</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>combined</td>
+		<td>Hello World</td>
+	</tr>
+</table>
+					*/
+
+					reporter.WriteLine("processing document of size: " + document.Length);
+					ProcessTestDocument(document, writer);
+					//##>>>>>>>>>>>>>>>>>>
+					In fit.Runner.SocketServer:
+						//## document as above
+						private void ProcessTestDocument(string document, StoryTestWriter writer)
+						{
+							try
+							{
+								//## service is fit.Service.Service : CellProcessorBase
+								//## Internally, within StoryTest, processor is set to service
+								var storyTest = new StoryTest(service, writer)
+									.WithInput(document)			//## Sets string input = document
+									.OnAbandonSuite(() => { suiteIsAbandoned = true; });  //## Sets Action abandonSuite (sets suiteIsAbandoned to true)
+								reporter.WriteLine(storyTest.Leader);
+								//##>>>>>>>>>>>>>>>>>>
+								In fitSharp.Fit.Fixtures.StoryTest:
+								public string Leader
+								{
+									get { return ParsedInput.ValueAt(0).GetAttribute(CellAttribute.Leader); }
+									//##>>>>>>>>>>>>>>>>>>
+									In fitSharp.Machine.Model.TreeExtension:
+										public static T ValueAt<T>(this Tree<T> tree, int index)
+										{
+											return tree.Branches[index].Value;
+										}
+									//##<<<<<<<<<<<<<<<<<<
+								}
+
+								Tree<Cell> ParsedInput
+								{
+									get
+									{
+										if (!isParsed)
+										{
+//################################################################################################################################													
+//## THIS IS AN IMPORTANT BIT: Parses HTML document, as text, into tree of Parse objects.
+//## See document HowFitSharpWorks_ParsingHtmlDocuments.txt for details
+//################################################################################################################################	
+											parsedInput = processor.Compose(new StoryTestString(input));
+											isParsed = true;
+										}
+										return parsedInput;
+									}
+								}
+								//##<<<<<<<<<<<<<<<<<<
+								if (suiteSetupIdentifier.IsStartOf(storyTest.Leader) || IMaybeProcessingSuiteSetup)
+									storyTest.Execute();
+									//##>>>>>>>>>>>>>>>>>>
+									In StoryTest:
+										public void Execute()
+										{
+											Execute(processor);
+										}
+						
+										public void Execute(CellProcessor cellProcessor)
+										{
+											//## cellProcessor = Service
+											cellProcessor.Operate<RunTestOperator>(ParsedInput, writer);
+											//##>>>>>>>>>>>>>>>>>>
+											See ProcessorBase.Operate<O>(params object[] parameters), above
+											//## parameters: 2:
+											//##	0: fit.Parse object, same as ParsedInput above
+											//##	1: fitSharp.Fit.Fixtures.StoryTestStringWriter object:
+											//##		Counts: null
+											//##		handleCounts: Method passed in as delegate (see above)
+											//##		handleTables: Method passed in as delegate (see above)
+											//##		processor = Service object
+											//##		Tables: ""
+											//##		tables: {}
+											//##		writesTables: false
+											//## operationName = "RunTest"
+											//## candidate = fitSharp.Fit.Operators.RunTestDefault
+											//## member = RunTest
+											//##<<<<<<<<<<<<<<<<<<
+											In fitSharp.Fit.Operators.RunTestDefault:
+												public TypedValue RunTest(Tree<Cell> testTables, StoryTestWriter writer)
+												{
+													//## ExecuteStoryTest is private class within RunTestDefault.
+													new ExecuteStoryTest(Processor, writer).DoTables(testTables);
+													//##>>>>>>>>>>>>>>>>>>
+													In fitSharp.Fit.Operators.RunTestDefault.ExecuteStoryTest:
+														//## tables is fit.Parse object:  Same as fitSharp.Fit.Fixtures.StoryTest.ParsedInput
+														public void DoTables(Tree<Cell> tables)
+														{
+															processor.TestStatus.Reset();
+															processor.TestStatus.Summary["run date"] = DateTime.Now;
+															processor.TestStatus.Summary["run elapsed time"] = new ElapsedTime();
+															//## In this case heading = <td colspan="3">ActionFixture</td>
+															//## tables.Branches[0] = tables.Parts
+															//## tables.Parts.ValueAt(0, 0) is same as: tables.Parts.Parts.ValueAt(0)
+															//## tables.Parts.Parts.ValueAt(0) = tables.Parts.Parts.Parts.Value = tables.Parts.Parts.Parts
+															//## tables starts at outermost <div>
+															//## tables.Parts is the original document, starting at <br/>
+															//## tables.Parts.Parts is the first row
+															//## tables.Parts.Parts.Parts is the first cell of the first row
+															var heading = tables.Branches[0].ValueAt(0, 0);
+															//##>>>>>>>>>>>>>>>>>>
+															In fitSharp.Machine.Model.TreeExtension:
+																public static T ValueAt<T>(this Tree<T> tree, int index1, int index2)
+																{
+																	return tree.Branches[index1].ValueAt(index2);
+																}
+
+																public static T ValueAt<T>(this Tree<T> tree, int index)
+																{
+																	return tree.Branches[index].Value;
+																}
+															//##<<<<<<<<<<<<<<<<<<
+															try
+															{
+																processor.RunTest(() => InterpretTables(tables));
+																//##>>>>>>>>>>>>>>>>>>
+																In fitSharp.Machine.Engine.ProcessorExtensions:
+																	public static V RunTest<T, V>(this Processor<T> processor, Func<V> action)
+																	{
+																		//##	Memory has 6 items: 
+																		//##	0: Settings 
+																		//##	1: ApplicationUnderTest 
+																		//##	2: Operators:
+																		//##		3x Operators lists with 33, 0 and 12 Operators, respectively
+																		//##	3: Symbols: None
+																		//##	4: Procedures: fitSharp.Fit.Model.Procedures: None
+																		//##	5: Logging: Set to DoNotWrite
+																		
+																		//## Apply executes action for each Memory item, passing in each item in turn as a parameter.
+																		processor.Memory.Apply(i => i.As<SetUpTearDown>(s => s.SetUp()));
+																		//##>>>>>>>>>>>>>>>>>>
+																		In fitSharp.Machine.Model.ObjectExtension:
+																			public static void As<T>(this object item, Action<T> action) where T : class
+																			{
+																				var itemAsT = item as T;
+																				if (itemAsT != null) action(itemAsT);
+																			}
+																		//##<<<<<<<<<<<<<<<<<<
+																		Interface fitSharp.Machine.Model.SetUpTearDown.SetUp() doesn't seem to have any implementation.
+																		//##>>>>>>>>>>>>>>>>>>
+																		In fitSharp.Machine.Engine.TypeDictionary:
+																			public void Apply(Action<object> action)
+																			{
+																				foreach (var item in items.Values) action(item);
+																			}
+																		//##<<<<<<<<<<<<<<<<<<
+																		var result = action();
+																		//##>>>>>>>>>>>>>>>>>>
+																		action = fitSharp.Fit.Operators.RunTestDefault.ExecuteStoryTest.InterpretTables:
+																			TypedValue InterpretTables(Tree<Cell> theTables)
+																			{
+																				processor.TestStatus.TableCount = 1;
+																				flowFixture = new DefaultFlowInterpreter(null);
+																				//## Branches of Tables represent a table
+																				foreach (var table in theTables.Branches)
+																				{
+																					try
+																					{
+																						try
+																						{
+																							InterpretTable(table);
+																						}
+																						catch (System.Exception e)
+																						{
+																							processor.TestStatus.MarkException(table.ValueAt(0, 0), e);
+																						}
+																					}
+																					catch (System.Exception e)
+																					{
+																						if (!(e is AbandonException)) throw;
+																					}
+
+																					writer.WriteTable(table);
+
+																					processor.TestStatus.TableCount++;
+																				}
+																				flowFixture.DoTearDown(theTables.Branches[0]);
+																				return TypedValue.Void;
+																			}
+																			
+																			void InterpretTable(Tree<Cell> table)
+																			{
+//################################################################################################################################													
+//## ANOTHER IMPORTANT BIT: Performs a test based on the details in a parsed table.
+//## See document HowFitSharpWorks_PerformingTests.txt for details
+//################################################################################################################################																					
+																				var heading = table.ValueAt(0, 0);
+																				if (heading == null || processor.TestStatus.IsAbandoned) return;
+																				new InterpretFlow(processor, flowFixture)
+																					.OnNewFixture(IsNewFlowFixture)
+																					.DoTableFlow(table, 0);
+																			}
+
+																			bool IsNewFlowFixture(Interpreter fixture, int row)
+																			{
+																				var newFlowFixture = fixture as FlowInterpreter;
+																				if (row == 0 && newFlowFixture != null && newFlowFixture.IsInFlow(processor.TestStatus.TableCount))
+																				{
+																					flowFixture = newFlowFixture;
+																					return true;
+																				}
+																				return false;
+																			}
+																		//##<<<<<<<<<<<<<<<<<<
+																		processor.Memory.Apply(i => i.As<SetUpTearDown>(s => s.TearDown()));
+																		return result;
+																	}
+																//##<<<<<<<<<<<<<<<<<<
+															}
+															catch (System.Exception e)
+															{
+																processor.TestStatus.MarkException(heading, e);
+															}
+															writer.WriteTest(tables, processor.TestStatus.Counts);
+														}
+													//##<<<<<<<<<<<<<<<<<<
+													return TypedValue.Void;
+												}
+											//##<<<<<<<<<<<<<<<<<<
+											if (cellProcessor.TestStatus.SuiteIsAbandoned) abandonSuite();
+										}
+									//##<<<<<<<<<<<<<<<<<<
+								else
+									storyTest.Execute(new Service.Service(service));
+							}
+							catch (Exception e)
+							{
+								var testStatus = new TestStatus();
+								var parse = new CellBase(parseError, "div");
+								parse.SetAttribute(CellAttribute.Body, parseError);
+								testStatus.MarkException(parse, e);
+								writer.WriteTable(new CellTree(parse));
+								writer.WriteTest(new CellTree().AddBranchValue(parse), testStatus.Counts);
+							}
+						}
+					//##<<<<<<<<<<<<<<<<<<
+					IMaybeProcessingSuiteSetup = false;
+				}
+				//## Bottom of while loop
+				reporter.WriteLine("\ncompletion signal received");
+				socket.Close();
+
+				if (suiteIsAbandoned) throw new AbandonSuiteException();
+			}
+		//##<<<<<<<<<<<<<<<<<<
+
+		Exit();
+	}
+//####################

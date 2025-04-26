@@ -1,0 +1,289 @@
+<map version="freeplane 1.3.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="Python Naming Conventions" FOLDED="false" ID="Freemind_Link_839220195" CREATED="1204411331875" MODIFIED="1220434961656" COLOR="#000000" BACKGROUND_COLOR="#ffff66">
+<font NAME="SansSerif" SIZE="16" BOLD="true"/>
+<hook NAME="MapStyle">
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
+<stylenode LOCALIZED_TEXT="default" MAX_WIDTH="600" COLOR="#000000" STYLE="as_parent">
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important">
+<icon BUILTIN="yes"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<node TEXT="See" POSITION="left" ID="Freemind_Link_1618730616" CREATED="1205138327906" MODIFIED="1205404000140" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="PEP8: Style Guide for Python Code" ID="Freemind_Link_795464437" CREATED="1205138330171" MODIFIED="1471238122091" COLOR="#000000" BACKGROUND_COLOR="#99ff99" LINK="https://www.python.org/dev/peps/pep-0008/">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+</node>
+</node>
+<node TEXT="Naming Rules" POSITION="left" ID="Freemind_Link_1667825223" CREATED="1220434988343" MODIFIED="1220435497937" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="Enforced" ID="Freemind_Link_867654162" CREATED="1220435522609" MODIFIED="1220435530984" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+</node>
+<node TEXT="Must Start" ID="Freemind_Link_106459574" CREATED="1220434996265" MODIFIED="1220435497937" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Either" ID="Freemind_Link_99548237" CREATED="1220434999953" MODIFIED="1220435497953" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<node TEXT="_" FOLDED="true" ID="Freemind_Link_573347276" CREATED="1220435004578" MODIFIED="1220435497953" COLOR="#000000" BACKGROUND_COLOR="#ddddff">
+<node TEXT="Underscore" ID="Freemind_Link_1370139674" CREATED="1220435007062" MODIFIED="1220435497953" COLOR="#000000" STYLE="fork"/>
+</node>
+<node TEXT="Letter" ID="Freemind_Link_297103466" CREATED="1220435011796" MODIFIED="1220435497953" COLOR="#000000" BACKGROUND_COLOR="#ddddff"/>
+</node>
+</node>
+<node TEXT="Case-sensitive" ID="Freemind_Link_1080523584" CREATED="1220435026203" MODIFIED="1220435497968" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Variables" ID="Freemind_Link_956944309" CREATED="1220435050078" MODIFIED="1220435497968" COLOR="#000000" BACKGROUND_COLOR="#bbffff"/>
+<node TEXT="Reserved Words" ID="Freemind_Link_1938103795" CREATED="1220435059953" MODIFIED="1220435497968" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<node TEXT="Lowercase" FOLDED="true" ID="Freemind_Link_1307053422" CREATED="1220435148046" MODIFIED="1220435497968" COLOR="#000000" BACKGROUND_COLOR="#ddddff">
+<node TEXT="All" ID="Freemind_Link_985050196" CREATED="1220435144218" MODIFIED="1220435497968" COLOR="#000000" STYLE="fork"/>
+</node>
+</node>
+<node TEXT="Imported Modules" ID="Freemind_Link_199643360" CREATED="1220435066812" MODIFIED="1220435497984" COLOR="#000000" BACKGROUND_COLOR="#bbffff"/>
+<node TEXT="Regardless" ID="Freemind_Link_1994597571" CREATED="1220435076796" MODIFIED="1220435497984" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<node TEXT="If" FOLDED="true" ID="Freemind_Link_594399600" CREATED="1220435093609" MODIFIED="1220435497984" COLOR="#000000" BACKGROUND_COLOR="#ddddff">
+<node TEXT="Operating System" FOLDED="true" ID="Freemind_Link_1057558551" CREATED="1220435098937" MODIFIED="1220435497984" COLOR="#000000" STYLE="fork">
+<node TEXT="Case-insensitive" ID="Freemind_Link_1469734374" CREATED="1220435107406" MODIFIED="1220435119406"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Underscores" POSITION="left" ID="Freemind_Link_742272794" CREATED="1205404156187" MODIFIED="1220435278953" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="_single_leading_underscore" ID="Freemind_Link_1094711201" CREATED="1205138455453" MODIFIED="1205521850203" COLOR="#000000" BACKGROUND_COLOR="#99ff99" STYLE="bubble">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="For" ID="Freemind_Link_1967943044" CREATED="1205138465046" MODIFIED="1205521850203" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<font NAME="SansSerif" SIZE="12"/>
+<node TEXT="Internal Use" ID="Freemind_Link_828776779" CREATED="1205138482578" MODIFIED="1205521850203" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble"/>
+</node>
+<node TEXT="Weak" ID="Freemind_Link_1465285105" CREATED="1205138496281" MODIFIED="1205521850203" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node TEXT="NOT" ID="_" CREATED="1205404203328" MODIFIED="1205521850203" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<node TEXT="Imported" FOLDED="true" ID="Freemind_Link_1996813454" CREATED="1205404206953" MODIFIED="1205521850203" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Via" FOLDED="true" ID="Freemind_Link_1248772727" CREATED="1205404209984" MODIFIED="1205521850218" COLOR="#000000" STYLE="fork">
+<node TEXT="from &lt;module&gt; import *" ID="Freemind_Link_540769776" CREATED="1205138498546" MODIFIED="1205404236250" COLOR="#000000" STYLE="fork">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="single_trailing_underscore_" ID="Freemind_Link_1308756064" CREATED="1205138583906" MODIFIED="1205521850218" COLOR="#000000" BACKGROUND_COLOR="#99ff99" STYLE="bubble">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="For" ID="Freemind_Link_588079584" CREATED="1205138618984" MODIFIED="1205521850218" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<font NAME="SansSerif" SIZE="12"/>
+<node TEXT="Avoiding" FOLDED="true" ID="Freemind_Link_823067013" CREATED="1205138621093" MODIFIED="1205521850218" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Clash" FOLDED="true" ID="Freemind_Link_99649045" CREATED="1205138626062" MODIFIED="1205404000171" COLOR="#000000" STYLE="fork">
+<node TEXT="Python" FOLDED="true" ID="Freemind_Link_1861249198" CREATED="1205138628718" MODIFIED="1205138631484">
+<node TEXT="Keywords" ID="Freemind_Link_1582322939" CREATED="1205138632312" MODIFIED="1205138635062"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="__double_leading_underscore" ID="Freemind_Link_1370078186" CREATED="1205138664140" MODIFIED="1220435282812" COLOR="#000000" BACKGROUND_COLOR="#99ff99" STYLE="bubble">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Mangled Names" ID="Freemind_Link_242462625" CREATED="1220435282750" MODIFIED="1220435498000" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<node TEXT="Class-private Names" FOLDED="true" ID="Freemind_Link_1797494429" CREATED="1205138667015" MODIFIED="1220435498000" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<font NAME="SansSerif" SIZE="12"/>
+<node TEXT="Not Watertight" FOLDED="true" ID="Freemind_Link_633563083" CREATED="1205138688234" MODIFIED="1220435498000" COLOR="#000000" STYLE="fork">
+<font NAME="SansSerif" SIZE="12"/>
+<node TEXT="EG" FOLDED="true" ID="Freemind_Link_271970042" CREATED="1205138810281" MODIFIED="1205404000187" COLOR="#000000" STYLE="fork">
+<node TEXT="class Foo(object):&#xa;    __x = 3&#xa;    def p(self):&#xa;        print self.__x&#xa;f = Foo( )&#xa;f.__x    =&gt;    AttributeError: &apos;Foo&apos; object has no attribute &apos;__x&apos;&#xa;f.p( )    =&gt;    3&#xa;# Can access attribute via name mangling.&#xa;f._Foo__x    =&gt;    3  " ID="Freemind_Link_1994294906" CREATED="1205138812578" MODIFIED="1205403997015" COLOR="#000000" STYLE="fork"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="__double_leading_and_trailing_underscore__" ID="Freemind_Link_1823974996" CREATED="1205139151125" MODIFIED="1205521850250" COLOR="#000000" BACKGROUND_COLOR="#99ff99" STYLE="bubble">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Magic Objects / Attributes" ID="Freemind_Link_1643837424" CREATED="1205139164859" MODIFIED="1205521850250" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<font NAME="SansSerif" SIZE="12"/>
+<node TEXT="In" FOLDED="true" ID="Freemind_Link_391099813" CREATED="1205139209312" MODIFIED="1205521850250" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Namespaces" FOLDED="true" ID="Freemind_Link_283105165" CREATED="1205139223796" MODIFIED="1205404000218" COLOR="#000000" STYLE="fork">
+<node TEXT="User-Controlled" ID="Freemind_Link_1677964161" CREATED="1205139211562" MODIFIED="1205139222593"/>
+</node>
+</node>
+</node>
+<node TEXT="EG" ID="Freemind_Link_1863263169" CREATED="1205139267906" MODIFIED="1205521850250" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<font NAME="SansSerif" SIZE="12"/>
+<node TEXT="__init__" ID="Freemind_Link_1246858475" CREATED="1205139272187" MODIFIED="1205521850250" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble"/>
+<node TEXT="__file__" ID="Freemind_Link_1627256385" CREATED="1205139276578" MODIFIED="1205521850265" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble"/>
+</node>
+<node TEXT="May Be" ID="Freemind_Link_1388869925" CREATED="1205139295500" MODIFIED="1205521850265" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<font NAME="SansSerif" SIZE="12"/>
+<node TEXT="User-defined" FOLDED="true" ID="Freemind_Link_1043556864" CREATED="1205139298359" MODIFIED="1205521850265" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="For" FOLDED="true" ID="Freemind_Link_1177439941" CREATED="1205139749593" MODIFIED="1205404000234" COLOR="#000000" STYLE="fork">
+<node TEXT="Magic Behaviour" ID="Freemind_Link_575733973" CREATED="1205139751578" MODIFIED="1205139760500"/>
+</node>
+</node>
+<node TEXT="Inserted By" FOLDED="true" ID="Freemind_Link_201055048" CREATED="1205139688937" MODIFIED="1205521850265" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Infrastructure" ID="Freemind_Link_368752036" CREATED="1205139694843" MODIFIED="1205404000234" COLOR="#000000" STYLE="fork"/>
+</node>
+</node>
+</node>
+<node TEXT="_" ID="Freemind_Link_817868836" CREATED="1220435407218" MODIFIED="1220435498031" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Single Underscore" ID="Freemind_Link_784245288" CREATED="1220435413390" MODIFIED="1220435498046" COLOR="#000000" BACKGROUND_COLOR="#bbffff">
+<node TEXT="Result" FOLDED="true" ID="Freemind_Link_1596965773" CREATED="1220435419140" MODIFIED="1220435498046" COLOR="#000000" BACKGROUND_COLOR="#ddddff">
+<node TEXT="Last Expression" ID="Freemind_Link_474004884" CREATED="1220435425359" MODIFIED="1220435498046" COLOR="#000000" STYLE="fork"/>
+<node TEXT="Interactive" FOLDED="true" ID="Freemind_Link_1246345617" CREATED="1220435429500" MODIFIED="1220435498046" COLOR="#000000" STYLE="fork">
+<node TEXT="Only" ID="Freemind_Link_6674805" CREATED="1220435442453" MODIFIED="1220435443640"/>
+</node>
+</node>
+</node>
+<node TEXT="No Letters" ID="Freemind_Link_26321333" CREATED="1220435546937" MODIFIED="1220435552640" COLOR="#000000" BACKGROUND_COLOR="#bbffff"/>
+</node>
+</node>
+<node TEXT="Modules" POSITION="right" ID="Freemind_Link_1939387451" CREATED="1205139837953" MODIFIED="1205404000250" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="Either" ID="Freemind_Link_1078463733" CREATED="1205139960968" MODIFIED="1205521850265" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="lowercase" ID="Freemind_Link_437392162" CREATED="1205139964906" MODIFIED="1205521850265" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble"/>
+<node TEXT="camelCase" ID="Freemind_Link_630373142" CREATED="1205139973078" MODIFIED="1205521850281" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble"/>
+</node>
+<node TEXT="Often" ID="Freemind_Link_1533112178" CREATED="1205140063656" MODIFIED="1205521850281" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Module" ID="Freemind_Link_607996494" CREATED="1205140067093" MODIFIED="1205521850281" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble">
+<node TEXT="Containing" FOLDED="true" ID="Freemind_Link_1802801932" CREATED="1205140071000" MODIFIED="1205521850281" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Single Class" FOLDED="true" ID="Freemind_Link_505657620" CREATED="1205140073656" MODIFIED="1205521850281" COLOR="#000000" STYLE="fork">
+<node TEXT="camelCase" ID="Freemind_Link_176322059" CREATED="1205140078078" MODIFIED="1205140083125"/>
+</node>
+<node TEXT="Multiple Classes" FOLDED="true" ID="Freemind_Link_1079563287" CREATED="1205140084546" MODIFIED="1205521850281" COLOR="#000000" STYLE="fork">
+<node TEXT="lowercase" ID="Freemind_Link_1809110734" CREATED="1205140088796" MODIFIED="1205140096031"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Classes" POSITION="right" ID="Freemind_Link_586882218" CREATED="1205140101390" MODIFIED="1205404000265" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="PascalCase" ID="Freemind_Link_1783397518" CREATED="1205140141890" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+</node>
+</node>
+<node TEXT="Exceptions" POSITION="right" ID="Freemind_Link_627578027" CREATED="1205140394515" MODIFIED="1205558336781" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<cloud COLOR="#f0f0f0" SHAPE="ARC"/>
+<node TEXT="Either" ID="Freemind_Link_1420230623" CREATED="1205140397953" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="&quot;error&quot;" ID="Freemind_Link_1972732621" CREATED="1205140402046" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble"/>
+<node TEXT="&quot;Error&quot;" ID="Freemind_Link_1702166210" CREATED="1205140406281" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble"/>
+</node>
+</node>
+<node TEXT="Functions" POSITION="right" ID="Freemind_Link_1599359138" CREATED="1205140413000" MODIFIED="1205404110781" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="Either" ID="Freemind_Link_565145503" CREATED="1205140442062" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="lowercase" ID="Freemind_Link_69613022" CREATED="1205140445703" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble"/>
+<node TEXT="PascalCase" ID="Freemind_Link_1472727212" CREATED="1205140448687" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble"/>
+<node TEXT="lower_case_with_underscores" ID="Freemind_Link_463750142" CREATED="1205140470031" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble"/>
+</node>
+</node>
+<node TEXT="Methods" POSITION="right" ID="Freemind_Link_1256559056" CREATED="1205140491140" MODIFIED="1205558332203" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<cloud COLOR="#f0f0f0" SHAPE="ARC"/>
+<node TEXT="As Per" ID="Freemind_Link_806967271" CREATED="1205140570625" MODIFIED="1205521850296" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="Freemind_Link_1599359138" STARTINCLINATION="26;-10;" ENDINCLINATION="68;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="lowercase" ID="Freemind_Link_1087676195" CREATED="1205140602609" MODIFIED="1205521850312" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="If" ID="Freemind_Link_423776013" CREATED="1205140638578" MODIFIED="1205521850312" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble">
+<node TEXT="Accessed By" FOLDED="true" ID="Freemind_Link_504719083" CREATED="1205140639765" MODIFIED="1205521850312" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Other Classes" ID="Freemind_Link_1022787275" CREATED="1205140643421" MODIFIED="1205521850312" COLOR="#000000" STYLE="fork"/>
+</node>
+</node>
+</node>
+<node TEXT="_single_leading_underscore" ID="Freemind_Link_1095176365" CREATED="1205138455453" MODIFIED="1205521850312" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="For" ID="Freemind_Link_414440685" CREATED="1205138465046" MODIFIED="1205521850312" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble">
+<node TEXT="Either" FOLDED="true" ID="Freemind_Link_536262989" CREATED="1205140736140" MODIFIED="1205521850328" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Internal" ID="Freemind_Link_322824626" CREATED="1205138482578" MODIFIED="1205521850328" COLOR="#000000" STYLE="fork"/>
+<node TEXT="Accessed By" FOLDED="true" ID="Freemind_Link_1627069294" CREATED="1205140740750" MODIFIED="1205521850328" COLOR="#000000" STYLE="fork">
+<node TEXT="Subclasses" ID="Freemind_Link_166227040" CREATED="1205140747937" MODIFIED="1205140751609"/>
+</node>
+</node>
+</node>
+<node TEXT="from &lt;module&gt; import *" ID="Freemind_Link_494183949" CREATED="1205138498546" MODIFIED="1205521850328" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble">
+<node TEXT="Does Not" FOLDED="true" ID="Freemind_Link_1681254567" CREATED="1205138535187" MODIFIED="1205521850328" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Import" FOLDED="true" ID="Freemind_Link_1272007356" CREATED="1205138542421" MODIFIED="1205521850343" COLOR="#000000" STYLE="fork">
+<node TEXT="_single_leading_underscore" ID="Freemind_Link_1557676184" CREATED="1205138455453" MODIFIED="1205138455453"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="__double_leading_underscore" ID="Freemind_Link_1636250103" CREATED="1205138664140" MODIFIED="1205521850343" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Class-private Names" ID="Freemind_Link_1008110705" CREATED="1205138667015" MODIFIED="1205521850343" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble">
+<node TEXT="NOT" FOLDED="true" ID="Freemind_Link_401262195" CREATED="1205138688234" MODIFIED="1205521850343" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Accessible" FOLDED="true" ID="Freemind_Link_681945639" CREATED="1205140822906" MODIFIED="1205521850343" COLOR="#000000" STYLE="fork">
+<node TEXT="From" FOLDED="true" ID="Freemind_Link_561464623" CREATED="1205140826890" MODIFIED="1205140827828">
+<node TEXT="Subclasses" ID="Freemind_Link_66529118" CREATED="1205140828640" MODIFIED="1205140830875"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Global Variables" POSITION="right" ID="Freemind_Link_1921830860" CREATED="1205140860750" MODIFIED="1205404000328" COLOR="#000000" BACKGROUND_COLOR="#ffff66" STYLE="bubble">
+<font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<node TEXT="Should Be" ID="Freemind_Link_70032125" CREATED="1205140901187" MODIFIED="1205521850359" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="Internal" ID="Freemind_Link_1816817669" CREATED="1205140905078" MODIFIED="1205521850359" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble">
+<node TEXT="Only" ID="Freemind_Link_1883929513" CREATED="1205140908859" MODIFIED="1205521850359" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble"/>
+</node>
+</node>
+<node TEXT="_single_leading_underscore" ID="Freemind_Link_925103302" CREATED="1205138455453" MODIFIED="1205521850359" COLOR="#000000" BACKGROUND_COLOR="#99ff99">
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+<node TEXT="from &lt;module&gt; import *" ID="Freemind_Link_1127748230" CREATED="1205138498546" MODIFIED="1205521850359" COLOR="#000000" BACKGROUND_COLOR="#bbffff" STYLE="bubble">
+<node TEXT="Does Not" FOLDED="true" ID="Freemind_Link_874831733" CREATED="1205138535187" MODIFIED="1205521850359" COLOR="#000000" BACKGROUND_COLOR="#ddddff" STYLE="bubble">
+<node TEXT="Import" ID="Freemind_Link_75429153" CREATED="1205138542421" MODIFIED="1205521850375" COLOR="#000000" STYLE="fork"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

@@ -1,0 +1,213 @@
+<map version="0.8.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1253182734000" ID="Freemind_Link_833762289" MODIFIED="1255249924531" TEXT="DJANGO TEMPLATES:&#xa;TEMPLATE LOADERS">
+<font BOLD="true" NAME="SansSerif" SIZE="16"/>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254360550109" ID="Freemind_Link_1327179648" MODIFIED="1255250094328" POSITION="left" STYLE="bubble" TEXT="LOW LEVEL">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254360554234" ID="Freemind_Link_38264141" MODIFIED="1255250094343" POSITION="left" STYLE="bubble" TEXT="CALLED BY">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254360558078" ID="Freemind_Link_342698177" MODIFIED="1255250094343" TEXT="get_template( )">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254360565828" ID="Freemind_Link_821491761" MODIFIED="1255250094359" TEXT="select_template( )">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1254360575796" ID="Freemind_Link_412125895" MODIFIED="1255250094359" POSITION="left" STYLE="bubble" TEXT="SPECIFIED BY">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254360635546" FOLDED="true" ID="Freemind_Link_80079153" MODIFIED="1255250094359" TEXT="TEMPLATE_LOADERS">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254360655046" ID="Freemind_Link_537076070" MODIFIED="1255250094359" STYLE="bubble" TEXT="settings.py"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1255249988984" ID="Freemind_Link_460029606" MODIFIED="1255250094406" POSITION="right" STYLE="bubble" TEXT="CUSTOM LOADERS">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1255240808234" FOLDED="true" ID="Freemind_Link_426485025" MODIFIED="1255250094421" TEXT="Module">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1255240819953" FOLDED="true" ID="Freemind_Link_1314744616" MODIFIED="1255250094421" STYLE="bubble" TEXT="Containing">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255240826718" FOLDED="true" ID="Freemind_Link_379617681" MODIFIED="1255250094468" TEXT="Function">
+<node COLOR="#000000" CREATED="1255240829546" ID="Freemind_Link_1685144351" MODIFIED="1255250094468" STYLE="fork" TEXT="load_template_source(template_name, template_dirs=None)"/>
+<node COLOR="#000000" CREATED="1255240873109" FOLDED="true" ID="Freemind_Link_627088002" MODIFIED="1255250094468" STYLE="fork" TEXT="Arguments">
+<node CREATED="1255240882546" FOLDED="true" ID="Freemind_Link_592900929" MODIFIED="1255240885187" TEXT="template_name">
+<node CREATED="1255240886015" FOLDED="true" ID="Freemind_Link_428965328" MODIFIED="1255240892109" TEXT="Template Name">
+<node CREATED="1255240892750" FOLDED="true" ID="Freemind_Link_136426961" MODIFIED="1255240895406" TEXT="Passed To">
+<node CREATED="1254360558078" ID="Freemind_Link_427601150" MODIFIED="1254360565468" TEXT="get_template( )"/>
+<node CREATED="1254360565828" ID="Freemind_Link_1828198026" MODIFIED="1254360572265" TEXT="select_template( )"/>
+</node>
+</node>
+</node>
+<node CREATED="1255240921031" FOLDED="true" ID="Freemind_Link_1359172118" MODIFIED="1255240923890" TEXT="template_dirs">
+<node CREATED="1255240930640" ID="Freemind_Link_1223223310" MODIFIED="1255240933093" TEXT="Optional"/>
+<node CREATED="1255240933843" FOLDED="true" ID="Freemind_Link_916049223" MODIFIED="1255240934968" TEXT="List">
+<node CREATED="1255240935687" FOLDED="true" ID="Freemind_Link_1612839509" MODIFIED="1255240941328" TEXT="Directories">
+<node CREATED="1255240942109" FOLDED="true" ID="Freemind_Link_606891724" MODIFIED="1255240944265" TEXT="Search">
+<node CREATED="1255240945046" FOLDED="true" ID="Freemind_Link_1507527670" MODIFIED="1255240949015" TEXT="For">
+<node CREATED="1255240949718" ID="Freemind_Link_804935964" MODIFIED="1255240956921" TEXT="Template"/>
+</node>
+<node CREATED="1255240957953" FOLDED="true" ID="Freemind_Link_785528834" MODIFIED="1255240960703" TEXT="Instead Of">
+<node CREATED="1255240961390" FOLDED="true" ID="Freemind_Link_72409385" MODIFIED="1255240967109" TEXT="TEMPLATE_DIRS">
+<node CREATED="1255240967687" ID="Freemind_Link_306377455" MODIFIED="1255240969750" TEXT="Setting"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1255241046812" FOLDED="true" ID="Freemind_Link_1838065793" MODIFIED="1255250094484" STYLE="fork" TEXT="On Success">
+<node CREATED="1255241065593" FOLDED="true" ID="Freemind_Link_881005121" MODIFIED="1255241073125" TEXT="Returns">
+<node CREATED="1255241073703" FOLDED="true" ID="Freemind_Link_507815095" MODIFIED="1255241077062" TEXT="Tuple">
+<node CREATED="1255241086187" FOLDED="true" ID="Freemind_Link_1473616011" MODIFIED="1255241092515" TEXT="template_source">
+<node CREATED="1255241106250" FOLDED="true" ID="Freemind_Link_1864772452" MODIFIED="1255241112718" TEXT="Template String">
+<node CREATED="1255241113375" ID="Freemind_Link_787925230" MODIFIED="1255241114890" TEXT="Raw"/>
+<node CREATED="1255241117937" ID="Freemind_Link_1589532914" MODIFIED="1255241121890" TEXT="To Be Compiled"/>
+</node>
+</node>
+<node CREATED="1255241093046" FOLDED="true" ID="Freemind_Link_198316038" MODIFIED="1255241097484" TEXT="template_path">
+<node CREATED="1255241126906" FOLDED="true" ID="Freemind_Link_830237500" MODIFIED="1255241128484" TEXT="Path">
+<node CREATED="1255241129015" FOLDED="true" ID="Freemind_Link_1405050479" MODIFIED="1255241130281" TEXT="Template">
+<node CREATED="1255241130843" ID="Freemind_Link_256871753" MODIFIED="1255241133843" TEXT="Loaded From"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1255241136828" FOLDED="true" ID="Freemind_Link_717640204" MODIFIED="1255250094484" STYLE="fork" TEXT="On Failure">
+<node CREATED="1255241144359" FOLDED="true" ID="Freemind_Link_705896736" MODIFIED="1255241151156" TEXT="Raises">
+<node CREATED="1255241151750" ID="Freemind_Link_109886939" MODIFIED="1255241164500" TEXT="django.template.TemplateDoesNotExist"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1255241196031" FOLDED="true" ID="Freemind_Link_135828760" MODIFIED="1255250094500" STYLE="fork" TEXT="is_usable Function Attribute">
+<node CREATED="1255241203953" ID="Freemind_Link_837575429" MODIFIED="1255241206546" TEXT="Required"/>
+<node CREATED="1255241213515" ID="Freemind_Link_269091852" MODIFIED="1255241217703" TEXT="Boolean"/>
+<node CREATED="1255241218171" FOLDED="true" ID="Freemind_Link_765993550" MODIFIED="1255241221343" TEXT="Indicates">
+<node CREATED="1255241221906" FOLDED="true" ID="Freemind_Link_330184105" MODIFIED="1255241229437" TEXT="Loader Available">
+<node CREATED="1255241230453" FOLDED="true" ID="Freemind_Link_254717061" MODIFIED="1255241233000" TEXT="In">
+<node CREATED="1255241233593" FOLDED="true" ID="Freemind_Link_1780339429" MODIFIED="1255241235078" TEXT="Current">
+<node CREATED="1255241235765" FOLDED="true" ID="Freemind_Link_1611608444" MODIFIED="1255241237078" TEXT="Python">
+<node CREATED="1255241237687" ID="Freemind_Link_52456037" MODIFIED="1255241240343" TEXT="Installation"/>
+</node>
+</node>
+</node>
+<node CREATED="1255241254234" FOLDED="true" ID="Freemind_Link_273735376" MODIFIED="1255241255687" TEXT="EG">
+<node CREATED="1255241256187" FOLDED="true" ID="Freemind_Link_1898804954" MODIFIED="1255241272703" TEXT="Eggs Loader is_usable">
+<node CREATED="1255241273328" FOLDED="true" ID="Freemind_Link_593472358" MODIFIED="1255241275031" TEXT="False">
+<node CREATED="1255241275750" FOLDED="true" ID="Freemind_Link_125135961" MODIFIED="1255241277609" TEXT="If">
+<node CREATED="1255241278187" FOLDED="true" ID="Freemind_Link_682367928" MODIFIED="1255241288390" TEXT="pkg_resources Module">
+<node CREATED="1255241289171" ID="Freemind_Link_981995918" MODIFIED="1255241297578" TEXT="Not Installed"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1255241336828" FOLDED="true" ID="Freemind_Link_678658899" MODIFIED="1255250094500" STYLE="fork" TEXT="To Use">
+<node CREATED="1255241340718" FOLDED="true" ID="Freemind_Link_760038259" MODIFIED="1255241357875" TEXT="Add To">
+<node CREATED="1255241358750" FOLDED="true" ID="Freemind_Link_367265474" MODIFIED="1255241363375" TEXT="TEMPLATE_LOADERS">
+<node CREATED="1255241363890" ID="Freemind_Link_994283382" MODIFIED="1255241366734" TEXT="Setting"/>
+<node CREATED="1255241386671" FOLDED="true" ID="Freemind_Link_960222440" MODIFIED="1255241388515" TEXT="Include">
+<node CREATED="1255241389156" FOLDED="true" ID="Freemind_Link_132410650" MODIFIED="1255241400468" TEXT="Names">
+<node CREATED="1255241401031" FOLDED="true" ID="Freemind_Link_609989250" MODIFIED="1255241402875" TEXT="Package">
+<node CREATED="1255241406218" ID="Freemind_Link_970662277" MODIFIED="1255241408328" TEXT="If Any"/>
+</node>
+<node CREATED="1255241403359" ID="Freemind_Link_430234040" MODIFIED="1255241405281" TEXT="Module"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1255241417187" FOLDED="true" ID="Freemind_Link_1485248681" MODIFIED="1255250094515" STYLE="fork" TEXT="EG">
+<node CREATED="1255241419062" FOLDED="true" ID="Freemind_Link_910146769" MODIFIED="1255241460312" TEXT="Customer Loader">
+<node CREATED="1255241462828" FOLDED="true" ID="Freemind_Link_714332150" MODIFIED="1255241464515" TEXT="Loads">
+<node CREATED="1255241465187" FOLDED="true" ID="Freemind_Link_71530356" MODIFIED="1255241468484" TEXT="From">
+<node CREATED="1255241469187" ID="Freemind_Link_732816098" MODIFIED="1255241472781" TEXT="Zip Files"/>
+</node>
+</node>
+</node>
+<node CREATED="1255241475015" ID="Freemind_Link_1165442562" MODIFIED="1255241482203" TEXT="from django.conf import settings&#xa;from django.template import TemplateDoesNotExist&#xa;import zipfile&#xa;&#xa;def load_template_source(template_name, template_dirs=None):&#xa;    &quot;Template loader that loads templates from a ZIP file.&quot;&#xa;&#xa;    template_zipfiles = getattr(settings, &quot;TEMPLATE_ZIP_FILES&quot;, [])&#xa;&#xa;    # Try each ZIP file in TEMPLATE_ZIP_FILES.&#xa;    for fname in template_zipfiles:&#xa;        try:&#xa;            z = zipfile.ZipFile(fname)&#xa;            source = z.read(template_name)&#xa;        except (IOError, KeyError):&#xa;            continue&#xa;        z.close()&#xa;        # We found a template, so return the source.&#xa;        template_path = &quot;%s:%s&quot; % (fname, template_name)&#xa;        return (source, template_path)&#xa;&#xa;    # If we reach here, the template couldn&apos;t be loaded&#xa;    raise TemplateDoesNotExist(template_name)&#xa;&#xa;# This loader is always usable (since zipfile is included with Python)&#xa;load_template_source.is_usable = True"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1255249985296" ID="_" MODIFIED="1255250094546" POSITION="left" STYLE="bubble" TEXT="DEFAULT LOADERS">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1254360677312" FOLDED="true" ID="Freemind_Link_424917634" MODIFIED="1255250094546" TEXT="django.template.loaders">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1254360660265" FOLDED="true" ID="Freemind_Link_630604587" MODIFIED="1255250094546" TEXT="By Default">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255250037531" FOLDED="true" ID="Freemind_Link_1740950067" MODIFIED="1255250094546" TEXT="Enabled">
+<node COLOR="#000000" CREATED="1254360703531" FOLDED="true" ID="Freemind_Link_1463096252" MODIFIED="1255249815031" STYLE="fork" TEXT="filesystem.load_template_source">
+<node CREATED="1254360727000" FOLDED="true" ID="Freemind_Link_390898706" MODIFIED="1254360729234" TEXT="Loads">
+<node CREATED="1254360729968" ID="Freemind_Link_492154146" MODIFIED="1254360731875" TEXT="Templates"/>
+<node CREATED="1254360733453" FOLDED="true" ID="Freemind_Link_1543476258" MODIFIED="1254360734765" TEXT="From">
+<node CREATED="1254360735312" ID="Freemind_Link_970895051" MODIFIED="1254360739468" TEXT="File System"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1254360742171" FOLDED="true" ID="Freemind_Link_1623074155" MODIFIED="1255249815046" STYLE="fork" TEXT="app_directories.load_template_source">
+<node CREATED="1254360756781" FOLDED="true" ID="Freemind_Link_1111460505" MODIFIED="1254360758437" TEXT="Loads">
+<node CREATED="1254360759078" FOLDED="true" ID="Freemind_Link_1187454699" MODIFIED="1254360760015" TEXT="From">
+<node CREATED="1254360771843" FOLDED="true" ID="Freemind_Link_928362510" MODIFIED="1254360777640" TEXT="Django Apps">
+<node CREATED="1254360783421" FOLDED="true" ID="Freemind_Link_664922009" MODIFIED="1254360785375" TEXT="In">
+<node CREATED="1254360786265" ID="Freemind_Link_69068411" MODIFIED="1254360791375" TEXT="INSTALLED_APPS"/>
+</node>
+<node CREATED="1254360808718" FOLDED="true" ID="Freemind_Link_890785721" MODIFIED="1254360812843" TEXT="templates">
+<node CREATED="1254360813531" FOLDED="true" ID="Freemind_Link_1443857307" MODIFIED="1254360816765" TEXT="Sub-Folder">
+<node CREATED="1254360837906" ID="Freemind_Link_1506341326" MODIFIED="1254360840437" TEXT="If Exists"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1254360847453" FOLDED="true" ID="Freemind_Link_1335403096" MODIFIED="1254360848781" TEXT="Allows">
+<node CREATED="1254360849375" FOLDED="true" ID="Freemind_Link_1334318209" MODIFIED="1254360852578" TEXT="Store">
+<node CREATED="1254360853515" FOLDED="true" ID="Freemind_Link_200729091" MODIFIED="1254360855609" TEXT="Templates">
+<node CREATED="1254360856468" FOLDED="true" ID="Freemind_Link_1009762228" MODIFIED="1254360857531" TEXT="In">
+<node CREATED="1254360858406" ID="Freemind_Link_1978246516" MODIFIED="1254360870656" TEXT="Django Apps"/>
+</node>
+</node>
+</node>
+<node CREATED="1254360923578" FOLDED="true" ID="Freemind_Link_1966282056" MODIFIED="1254360926031" TEXT="Distibute">
+<node CREATED="1254360927078" FOLDED="true" ID="Freemind_Link_1298594689" MODIFIED="1254360931953" TEXT="Default Templates">
+<node CREATED="1254360932859" FOLDED="true" ID="Freemind_Link_971697787" MODIFIED="1254360933890" TEXT="With">
+<node CREATED="1254360934937" ID="Freemind_Link_495808712" MODIFIED="1254360937390" TEXT="Django Apps"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1254360962140" FOLDED="true" ID="Freemind_Link_1107064965" MODIFIED="1254360966515" TEXT="Caches">
+<node CREATED="1254360967390" FOLDED="true" ID="Freemind_Link_1060604010" MODIFIED="1254360969671" TEXT="List">
+<node CREATED="1254360970546" FOLDED="true" ID="Freemind_Link_1473076996" MODIFIED="1254360984218" TEXT="Dango Apps">
+<node CREATED="1254360984812" FOLDED="true" ID="Freemind_Link_1219038185" MODIFIED="1254360986453" TEXT="Containing">
+<node CREATED="1254360987328" FOLDED="true" ID="Freemind_Link_1804619018" MODIFIED="1254360990062" TEXT="templates">
+<node CREATED="1254360990687" ID="Freemind_Link_1721231909" MODIFIED="1254360994703" TEXT="Sub-Folders"/>
+</node>
+</node>
+<node CREATED="1254360999281" FOLDED="true" ID="Freemind_Link_1777922785" MODIFIED="1254361000921" TEXT="When">
+<node CREATED="1254361001609" ID="Freemind_Link_1475334727" MODIFIED="1254361009750" TEXT="Imported"/>
+</node>
+</node>
+<node CREATED="1254361015312" ID="Freemind_Link_469902881" MODIFIED="1254361019828" TEXT="Optimizes"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1255250048578" FOLDED="true" ID="Freemind_Link_629006359" MODIFIED="1255250094546" TEXT="Disabled">
+<node COLOR="#000000" CREATED="1254361077953" FOLDED="true" ID="Freemind_Link_840414023" MODIFIED="1255249815078" STYLE="fork" TEXT="eggs.load_template_source">
+<node CREATED="1254361096687" FOLDED="true" ID="Freemind_Link_261047507" MODIFIED="1254361098562" TEXT="Loads">
+<node CREATED="1254361099062" ID="Freemind_Link_1199805394" MODIFIED="1254361100593" TEXT="Templates"/>
+<node CREATED="1254361101796" FOLDED="true" ID="Freemind_Link_461876787" MODIFIED="1254361103046" TEXT="From">
+<node CREATED="1254361103656" ID="Freemind_Link_140234819" MODIFIED="1254361107453" TEXT="Python Eggs"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

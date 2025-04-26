@@ -1,0 +1,900 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1336395752874" ID="ID_1136101359" MODIFIED="1349063705650" STYLE="bubble">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: center">
+      DESIGNING .NET 4&#xa0;<br/>WINDOWS APPLICATIONS:<br/>PRESENTATION LAYER
+    </p>
+    <p style="text-align: center">
+      - INHERITANCE AND REUSE
+    </p>
+    <p style="text-align: center">
+      OF VISUAL ELEMENTS
+    </p>
+    <p style="text-align: center">
+      IN WPF
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="16"/>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1348786638729" ID="ID_1878801968" MODIFIED="1349063706220" POSITION="left" STYLE="bubble" TEXT="STYLES">
+<arrowlink DESTINATION="ID_1878801968" ENDARROW="Default" ENDINCLINATION="0;0;" ID="Arrow_ID_694462" STARTARROW="None" STARTINCLINATION="0;0;"/>
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1878801968" ENDARROW="Default" ENDINCLINATION="0;0;" ID="Arrow_ID_694462" SOURCE="ID_1878801968" STARTARROW="None" STARTINCLINATION="0;0;"/>
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348799947491" FOLDED="true" ID="ID_1075331090" MODIFIED="1385183450947" STYLE="bubble" TEXT="Affect">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348786641314" ID="ID_827813857" MODIFIED="1348800078384" STYLE="bubble" TEXT="Appearance">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348786644133" FOLDED="true" ID="ID_146361952" MODIFIED="1348800078384" STYLE="bubble" TEXT="Behaviour">
+<font NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348787449772" FOLDED="true" ID="ID_1231589827" MODIFIED="1348800078384" STYLE="bubble" TEXT="Properties">
+<node COLOR="#000000" CREATED="1348787460638" ID="ID_780460959" MODIFIED="1348800078385" STYLE="fork" TEXT="Set"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348787462223" FOLDED="true" ID="ID_53926199" MODIFIED="1348800078385" STYLE="bubble" TEXT="Event Handlers">
+<node COLOR="#000000" CREATED="1348787470855" FOLDED="true" ID="ID_1819464061" MODIFIED="1348800078385" STYLE="fork" TEXT="Hook To">
+<node COLOR="#000000" CREATED="1348787475752" ID="ID_801012820" MODIFIED="1348795860635" STYLE="fork" TEXT="UI Elements"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348787501369" FOLDED="true" ID="ID_779094856" MODIFIED="1385183450947" STYLE="bubble" TEXT="Triggers">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348787516625" FOLDED="true" ID="ID_1807860393" MODIFIED="1348800066388" STYLE="bubble" TEXT="Listen For">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348787520195" ID="ID_717257895" MODIFIED="1348795860637" STYLE="bubble" TEXT="Property Changes"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348787526295" FOLDED="true" ID="ID_283860602" MODIFIED="1348800066388" STYLE="bubble" TEXT="When Fire">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348787530333" FOLDED="true" ID="ID_635657275" MODIFIED="1348800066388" STYLE="bubble" TEXT="Apply">
+<node COLOR="#000000" CREATED="1348787535715" ID="ID_1380237578" MODIFIED="1348795860638" STYLE="fork" TEXT="Style Changes"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348787403705" FOLDED="true" ID="ID_947014397" MODIFIED="1385183450947" STYLE="bubble" TEXT="Similar To">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348787410102" ID="ID_567261270" MODIFIED="1348795860639" STYLE="bubble" TEXT="Cascading Style Sheets"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348787553566" FOLDED="true" ID="ID_106695818" MODIFIED="1385183450947" STYLE="bubble" TEXT="Via">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348787555010" FOLDED="true" ID="ID_1215252664" MODIFIED="1348800066396" STYLE="bubble" TEXT="Style Class">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348787567501" FOLDED="true" ID="ID_1515038633" MODIFIED="1348800066389" STYLE="bubble" TEXT="Applies To">
+<node COLOR="#000000" CREATED="1348787571133" FOLDED="true" ID="ID_381385828" MODIFIED="1348800066388" STYLE="fork" TEXT="Group">
+<node CREATED="1348787575890" FOLDED="true" ID="ID_1473900345" MODIFIED="1348800066388" TEXT="Of">
+<node CREATED="1348787577397" ID="ID_717770781" MODIFIED="1348787581898" TEXT="Properties"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348787609263" FOLDED="true" ID="ID_297764450" MODIFIED="1348800066389" STYLE="fork" TEXT="Either">
+<node CREATED="1348787612161" FOLDED="true" ID="ID_985331889" MODIFIED="1348800066389" TEXT="Element">
+<node CREATED="1348787619167" FOLDED="true" ID="ID_1603176049" MODIFIED="1348800066389" TEXT="Single">
+<node CREATED="1348787652266" ID="ID_867740820" MODIFIED="1348787654392" TEXT="Instance"/>
+<node CREATED="1348787654976" FOLDED="true" ID="ID_1805585148" MODIFIED="1348800066388" TEXT="Type">
+<node CREATED="1348787658202" ID="ID_1220077187" MODIFIED="1348787670953" TEXT="Multiple Instances"/>
+</node>
+</node>
+<node CREATED="1348787637987" FOLDED="true" ID="ID_1149353657" MODIFIED="1348800066389" TEXT="Multiple">
+<node CREATED="1348787640041" ID="ID_106693390" MODIFIED="1348787680734" TEXT="Types"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348787687240" FOLDED="true" ID="ID_911014046" MODIFIED="1348800066393" STYLE="bubble" TEXT="Important Properties">
+<node COLOR="#000000" CREATED="1348787697700" FOLDED="true" ID="ID_569056750" MODIFIED="1348800066390" STYLE="fork" TEXT="BasedOn">
+<node CREATED="1348787718055" ID="ID_363118702" MODIFIED="1348787732869" TEXT="Another Style"/>
+<node CREATED="1348787735109" FOLDED="true" ID="ID_1477118541" MODIFIED="1348800066389" TEXT="Used for">
+<node CREATED="1348787743256" ID="ID_1950840416" MODIFIED="1348787747710" TEXT="Style Inheritance"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348787700269" FOLDED="true" ID="ID_934929214" MODIFIED="1348800066390" STYLE="fork" TEXT="Resources">
+<node CREATED="1348787751888" FOLDED="true" ID="ID_232601672" MODIFIED="1348800066390" TEXT="Local Resources">
+<node CREATED="1348787760319" FOLDED="true" ID="ID_1716587330" MODIFIED="1348800066390" TEXT="Used By">
+<node CREATED="1348787762357" ID="ID_1271382881" MODIFIED="1348787763608" TEXT="Style"/>
+</node>
+</node>
+<node CREATED="1348787764723" ID="ID_1767986502" MODIFIED="1348787767083" TEXT="Collection"/>
+</node>
+<node COLOR="#000000" CREATED="1348787773808" FOLDED="true" ID="ID_1165169854" MODIFIED="1348800066391" STYLE="fork" TEXT="Setters">
+<node CREATED="1348787778299" FOLDED="true" ID="ID_107021847" MODIFIED="1348800066390" TEXT="Objects">
+<node CREATED="1348787787291" ID="ID_358133492" MODIFIED="1348787789229" TEXT="Collection"/>
+<node CREATED="1348787789516" FOLDED="true" ID="ID_879570397" MODIFIED="1348800066390" TEXT="Either">
+<node CREATED="1348787792429" ID="ID_685287966" MODIFIED="1348787794352" TEXT="Setter"/>
+<node CREATED="1348787794608" ID="ID_167012718" MODIFIED="1348787798843" TEXT="EventSetter"/>
+</node>
+</node>
+<node CREATED="1348787818818" FOLDED="true" ID="ID_1246786287" MODIFIED="1348800066391" TEXT="Set">
+<node CREATED="1348787822481" ID="ID_240283892" MODIFIED="1348787828935" TEXT="Properties"/>
+<node CREATED="1348787829207" FOLDED="true" ID="ID_788783193" MODIFIED="1348800066390" TEXT="Event Handlers">
+<node CREATED="1348788289840" FOLDED="true" ID="ID_1178220167" MODIFIED="1348800066390" TEXT="For">
+<node CREATED="1348788291191" ID="ID_1230412381" MODIFIED="1348788298317" TEXT="Events"/>
+</node>
+</node>
+<node CREATED="1348787833229" FOLDED="true" ID="ID_1106662691" MODIFIED="1348800066391" TEXT="On">
+<node CREATED="1348787835423" ID="ID_1574793068" MODIFIED="1348787838424" TEXT="Element"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348787704323" FOLDED="true" ID="ID_658694398" MODIFIED="1348800066391" STYLE="fork" TEXT="TargetType">
+<node CREATED="1348787843790" FOLDED="true" ID="ID_1957401239" MODIFIED="1348800066391" TEXT="Of">
+<node CREATED="1348787849515" FOLDED="true" ID="ID_1906040415" MODIFIED="1348800066391" TEXT="Element">
+<node CREATED="1348787852319" FOLDED="true" ID="ID_914007451" MODIFIED="1348800066391" TEXT="Style">
+<node CREATED="1348787854577" ID="ID_63094165" MODIFIED="1348787858295" TEXT="Applies To"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348787712048" FOLDED="true" ID="ID_56603698" MODIFIED="1348800066392" STYLE="fork" TEXT="Triggers">
+<node CREATED="1348787870136" FOLDED="true" ID="ID_314782090" MODIFIED="1348800066391" TEXT="Collection">
+<node CREATED="1348787861942" ID="ID_1998691404" MODIFIED="1348787868974" TEXT="Trigger Objects"/>
+<node CREATED="1348787888759" ID="ID_1841064169" MODIFIED="1348787891495" TEXT="Related Objects"/>
+</node>
+<node CREATED="1348787899782" FOLDED="true" ID="ID_959920588" MODIFIED="1348800066392" TEXT="Allow">
+<node CREATED="1348787903257" FOLDED="true" ID="ID_1212078687" MODIFIED="1348800066392" TEXT="Change">
+<node CREATED="1348787905577" ID="ID_1668120867" MODIFIED="1348787906546" TEXT="UI"/>
+<node CREATED="1348787907333" FOLDED="true" ID="ID_1659618278" MODIFIED="1348800066392" TEXT="In Response To">
+<node CREATED="1348787913090" FOLDED="true" ID="ID_550041932" MODIFIED="1348800066392" TEXT="Change In">
+<node CREATED="1348787915441" ID="ID_1054265835" MODIFIED="1348787920458" TEXT="Properties"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348787943064" FOLDED="true" ID="ID_1751729993" MODIFIED="1348800066393" STYLE="bubble" TEXT="Looks Like">
+<node COLOR="#000000" CREATED="1348786847546" ID="ID_1645105909" MODIFIED="1348795860644" STYLE="fork">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Styles&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;!-- A collection of setters is enumerated here --&gt; </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;Style.Triggers&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;!-- A collection of Trigger and related objects is enumerated here --&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Style.Triggers&gt;</font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;Style.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;!-- A collection of local resources for use in the style --&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Style.Resources&gt;</font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Styles&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348788196598" FOLDED="true" ID="ID_867110858" MODIFIED="1348800066396" STYLE="bubble" TEXT="Setters">
+<node COLOR="#000000" CREATED="1348788201183" FOLDED="true" ID="ID_254635706" MODIFIED="1348800066396" STYLE="fork" TEXT="For">
+<node CREATED="1348788208627" FOLDED="true" ID="ID_1075287952" MODIFIED="1348800066394" TEXT="Properties">
+<node CREATED="1348788212166" FOLDED="true" ID="ID_82140084" MODIFIED="1348800066394" TEXT="Setter Objects">
+<node CREATED="1348788326251" FOLDED="true" ID="ID_80424500" MODIFIED="1348800066393" TEXT="&lt;Setter&gt; Tag">
+<node CREATED="1348788319823" ID="ID_1123744190" MODIFIED="1348788325792" TEXT="XAML"/>
+</node>
+<node CREATED="1348788363592" FOLDED="true" ID="ID_1888188567" MODIFIED="1348800066393" TEXT="Important Properties">
+<node CREATED="1348788369287" FOLDED="true" ID="ID_855683606" MODIFIED="1348800066393" TEXT="Property">
+<node CREATED="1348788377418" ID="ID_1381429256" MODIFIED="1348788384435" TEXT="Property To Set"/>
+<node CREATED="1348788494169" FOLDED="true" ID="ID_1147813579" MODIFIED="1348800066393" TEXT="Format">
+<node CREATED="1348788496786" ID="ID_1267651304" MODIFIED="1348788505271" TEXT="&quot;Element.PropertyName&quot;"/>
+</node>
+</node>
+<node CREATED="1348788385894" ID="ID_1228607540" MODIFIED="1348788391567" TEXT="Value"/>
+</node>
+<node CREATED="1348788412916" FOLDED="true" ID="ID_1266375525" MODIFIED="1348800066393" TEXT="EG">
+<node CREATED="1348786847546" ID="ID_930128531" MODIFIED="1348788481195">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Setter Property="Button.Background" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;Value="Red" /&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1348788518690" FOLDED="true" ID="ID_189376403" MODIFIED="1348800066394" TEXT="Applying To">
+<node CREATED="1348788523353" FOLDED="true" ID="ID_686553341" MODIFIED="1348800066394" TEXT="Multiple Elements">
+<node CREATED="1348788534766" FOLDED="true" ID="ID_1773681939" MODIFIED="1348800066394" TEXT="Set Property">
+<node CREATED="1348788551030" FOLDED="true" ID="ID_918897229" MODIFIED="1348800066393" TEXT="On">
+<node CREATED="1348788552271" ID="ID_987198787" MODIFIED="1348788556241" TEXT="Common Base Class"/>
+</node>
+</node>
+<node CREATED="1348788562684" FOLDED="true" ID="ID_856711432" MODIFIED="1348800066394" TEXT="EG">
+<node CREATED="1348786847546" ID="ID_1929541049" MODIFIED="1348788580629">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Setter Property="Control.Background" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;Value="Red" /&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348788217329" FOLDED="true" ID="ID_1387106021" MODIFIED="1348800066396" TEXT="Events">
+<node CREATED="1348788221289" FOLDED="true" ID="ID_382074757" MODIFIED="1348800066395" TEXT="EventSetter Objects">
+<node CREATED="1348788326251" FOLDED="true" ID="ID_604563282" MODIFIED="1348800066395" TEXT="&lt;EventSetter&gt; Tag">
+<node CREATED="1348788319823" ID="ID_1517239386" MODIFIED="1348788325792" TEXT="XAML"/>
+</node>
+<node CREATED="1348788363592" FOLDED="true" ID="ID_1667673554" MODIFIED="1348800066395" TEXT="Important Properties">
+<node CREATED="1348788369287" FOLDED="true" ID="ID_1057008805" MODIFIED="1348800066395" TEXT="Event">
+<node CREATED="1348788377418" FOLDED="true" ID="ID_1774533027" MODIFIED="1348800066395" TEXT="Handler">
+<node CREATED="1348788656984" ID="ID_1150481606" MODIFIED="1348788659125" TEXT="Applies To"/>
+</node>
+<node CREATED="1348788494169" FOLDED="true" ID="ID_812296375" MODIFIED="1348800066395" TEXT="Format">
+<node CREATED="1348788496786" ID="ID_1938466189" MODIFIED="1348788764802" TEXT="&quot;Element.EventName&quot;"/>
+</node>
+</node>
+<node CREATED="1348788385894" FOLDED="true" ID="ID_1619034713" MODIFIED="1348800066395" TEXT="Handler">
+<node CREATED="1348800058480" ID="ID_1313382241" MODIFIED="1348800060354" TEXT="Name"/>
+</node>
+</node>
+<node CREATED="1348788412916" FOLDED="true" ID="ID_562891414" MODIFIED="1348800066395" TEXT="EG">
+<node CREATED="1348786847546" ID="ID_40490609" MODIFIED="1348788727311">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;EventSetter Event="Button.MouseEnter" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;Handler="Button_MouseEnter" /&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1348786652078" ID="ID_775216083" MODIFIED="1349063706220" POSITION="right" STYLE="bubble" TEXT="RESOURCES">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348789893000" ID="ID_673390744" MODIFIED="1348795860650" STYLE="bubble" TEXT="XAML">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348789901414" FOLDED="true" ID="ID_1129218062" MODIFIED="1385183450947" STYLE="bubble" TEXT="Objects">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348789905827" FOLDED="true" ID="ID_445385324" MODIFIED="1349063703330" STYLE="bubble" TEXT="Not Part Of">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348789912005" ID="ID_1405391173" MODIFIED="1348795860651" STYLE="bubble" TEXT="Visual Tree"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348789917012" FOLDED="true" ID="ID_270623766" MODIFIED="1349063703340" STYLE="bubble" TEXT="Available">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348789929535" FOLDED="true" ID="ID_1294639540" MODIFIED="1349063703340" STYLE="bubble" TEXT="For Use By">
+<node COLOR="#000000" CREATED="1348789932807" FOLDED="true" ID="ID_108364548" MODIFIED="1349063703340" STYLE="fork" TEXT="UI Elements">
+<node CREATED="1348789988699" ID="ID_816617136" MODIFIED="1348789991809" TEXT="Multiple"/>
+<node CREATED="1348790038463" FOLDED="true" ID="ID_1890050924" MODIFIED="1349063703330" TEXT="Each Element">
+<node CREATED="1348789999534" ID="ID_108009111" MODIFIED="1348790009753" TEXT="Resources Section"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348789947923" FOLDED="true" ID="ID_1692236502" MODIFIED="1349063703340" STYLE="bubble" TEXT="EG">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348789949868" FOLDED="true" ID="ID_1059314398" MODIFIED="1349063703340" STYLE="bubble" TEXT="Brush">
+<node COLOR="#000000" CREATED="1348789955468" FOLDED="true" ID="ID_1134868129" MODIFIED="1349063703340" STYLE="fork" TEXT="Provides">
+<node CREATED="1348789958428" ID="ID_28133259" MODIFIED="1348789972662" STYLE="fork" TEXT="Common Colour Scheme"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348790221421" ID="ID_1045116390" MODIFIED="1348795860652" STYLE="bubble" TEXT="Any Type Allowed"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348790060969" FOLDED="true" ID="ID_636013888" MODIFIED="1385183450947" STYLE="bubble" TEXT="Advantages">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348790065242" FOLDED="true" ID="ID_1910152889" MODIFIED="1349063703340" STYLE="bubble" TEXT="Reuse">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348790070624" ID="ID_764070380" MODIFIED="1348795860653" STYLE="bubble" TEXT="Define Once"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348790090356" FOLDED="true" ID="ID_437652865" MODIFIED="1349063703340" STYLE="bubble" TEXT="Reference">
+<node COLOR="#000000" CREATED="1348790095269" ID="ID_271300267" MODIFIED="1348795860653" STYLE="fork" TEXT="Multiple Places"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348790136750" FOLDED="true" ID="ID_1521310323" MODIFIED="1349063703340" STYLE="bubble" TEXT="Separates">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348790140288" ID="ID_48246977" MODIFIED="1348795860654" STYLE="bubble" TEXT="Objects"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348790142998" ID="ID_1084645884" MODIFIED="1348795860654" STYLE="bubble" TEXT="UI"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348790112854" FOLDED="true" ID="ID_1654172570" MODIFIED="1349063703340" STYLE="bubble" TEXT="Flexibility">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348790121080" FOLDED="true" ID="ID_1610364952" MODIFIED="1349063703340" STYLE="bubble" TEXT="Allows">
+<node COLOR="#000000" CREATED="1348790146958" FOLDED="true" ID="ID_92929444" MODIFIED="1349063703340" STYLE="fork" TEXT="Refactor">
+<node CREATED="1348790149652" FOLDED="true" ID="ID_265210737" MODIFIED="1349063703340" TEXT="Parts of UI">
+<node CREATED="1348790160244" FOLDED="true" ID="ID_1648781654" MODIFIED="1349063703340" TEXT="Without">
+<node CREATED="1348790165094" ID="ID_1258647339" MODIFIED="1348790171845" TEXT="Complete Redesign"/>
+</node>
+<node CREATED="1348790180210" FOLDED="true" ID="ID_155673751" MODIFIED="1349063703340" TEXT="EG">
+<node CREATED="1348790181889" FOLDED="true" ID="ID_1186173404" MODIFIED="1349063703340" TEXT="Different">
+<node CREATED="1348790184755" FOLDED="true" ID="ID_614095830" MODIFIED="1349063703340" TEXT="Resources">
+<node CREATED="1348790187981" FOLDED="true" ID="ID_988544100" MODIFIED="1349063703340" TEXT="For">
+<node CREATED="1348790189175" FOLDED="true" ID="ID_436183466" MODIFIED="1349063703340" TEXT="Different">
+<node CREATED="1348790194807" ID="ID_901559681" MODIFIED="1348790196292" TEXT="Cultures"/>
+<node CREATED="1348790208892" ID="ID_197073625" MODIFIED="1348790211627" TEXT="Conditions"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348790247216" FOLDED="true" ID="ID_823993261" MODIFIED="1385183450947" STYLE="bubble" TEXT="Declaring">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348790266598" ID="ID_1337586004" MODIFIED="1348795860655" STYLE="bubble" TEXT="XAML"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348790272261" FOLDED="true" ID="ID_1368785036" MODIFIED="1349063703340" STYLE="bubble" TEXT="Element">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348790275768" FOLDED="true" ID="ID_76363121" MODIFIED="1349063703340" STYLE="bubble" TEXT="Resources Collection">
+<node COLOR="#000000" CREATED="1348790282853" FOLDED="true" ID="ID_1660827840" MODIFIED="1349063703340" STYLE="fork" TEXT="Available To">
+<node CREATED="1348790286625" FOLDED="true" ID="ID_750214648" MODIFIED="1349063703340" TEXT="Descendant Elements">
+<node CREATED="1348790309460" FOLDED="true" ID="ID_1927623365" MODIFIED="1349063703340" TEXT="In">
+<node CREATED="1348790311405" ID="ID_169754789" MODIFIED="1348790313718" TEXT="Visual Tree"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348790328271" FOLDED="true" ID="ID_1934674754" MODIFIED="1349063703340" STYLE="bubble" TEXT="Commonly">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348790333700" FOLDED="true" ID="ID_760246091" MODIFIED="1349063703340" STYLE="bubble" TEXT="Window Element">
+<node COLOR="#000000" CREATED="1348790338082" ID="ID_138919443" MODIFIED="1348795860656" STYLE="fork" TEXT="Resources Collection"/>
+<node COLOR="#000000" CREATED="1348790344776" FOLDED="true" ID="ID_1885286982" MODIFIED="1349063703340" STYLE="fork" TEXT="Available To">
+<node CREATED="1348790348486" ID="ID_1087080292" MODIFIED="1348790355706" TEXT="All Descendants"/>
+</node>
+<node COLOR="#000000" CREATED="1348790388008" FOLDED="true" ID="ID_60741131" MODIFIED="1349063703340" STYLE="fork" TEXT="EG">
+<node CREATED="1348786847546" ID="ID_1582053656" MODIFIED="1348791384037">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Window.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;RadialGradientBrush x:Key="myBrush"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;GradientStop Color="CornflowerBlue" Offset="0" /&gt;</font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;GradientStop Color="Crimson" Offset="1" /&gt;</font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/RadialGradientBrush&gt;</font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Window.Resources&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348791449271" FOLDED="true" ID="ID_471959248" MODIFIED="1349063703340" STYLE="bubble" TEXT="x:Key">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791457778" FOLDED="true" ID="ID_799337228" MODIFIED="1349063703340" STYLE="bubble" TEXT="Required">
+<node COLOR="#000000" CREATED="1348791520270" FOLDED="true" ID="ID_1377914068" MODIFIED="1349063703340" STYLE="fork" TEXT="Except">
+<node CREATED="1348791528167" FOLDED="true" ID="ID_501883539" MODIFIED="1349063703340" TEXT="Style Objects">
+<node CREATED="1348791534987" FOLDED="true" ID="ID_794711782" MODIFIED="1349063703340" TEXT="Setting">
+<node CREATED="1348791538259" ID="ID_794139150" MODIFIED="1348791545745" TEXT="TargetType Property"/>
+</node>
+<node CREATED="1348791548844" FOLDED="true" ID="ID_525928805" MODIFIED="1349063703340" TEXT="x:Key">
+<node CREATED="1348791564335" FOLDED="true" ID="ID_1392490904" MODIFIED="1349063703340" TEXT="Set">
+<node CREATED="1348791565686" ID="ID_1301058695" MODIFIED="1348791571515" TEXT="Implicitly"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791461269" FOLDED="true" ID="ID_420510399" MODIFIED="1349063703340" STYLE="bubble" TEXT="Name">
+<node COLOR="#000000" CREATED="1348791467088" FOLDED="true" ID="ID_1175543388" MODIFIED="1349063703340" STYLE="fork" TEXT="Used">
+<node CREATED="1348791474923" FOLDED="true" ID="ID_69704648" MODIFIED="1349063703340" TEXT="By">
+<node CREATED="1348791476243" ID="ID_528410253" MODIFIED="1348791482009" TEXT="WPF Elements"/>
+</node>
+<node CREATED="1348791482890" FOLDED="true" ID="ID_1276404497" MODIFIED="1349063703340" TEXT="To">
+<node CREATED="1348791484788" FOLDED="true" ID="ID_618075139" MODIFIED="1349063703340" TEXT="Refer To">
+<node CREATED="1348791487873" ID="ID_1179640087" MODIFIED="1348791491124" TEXT="Resource"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791581833" FOLDED="true" ID="ID_829797338" MODIFIED="1349063703340" STYLE="bubble" TEXT="Unique">
+<node COLOR="#000000" CREATED="1348791587012" FOLDED="true" ID="ID_1760673153" MODIFIED="1349063703340" STYLE="fork" TEXT="To">
+<node CREATED="1348791591425" FOLDED="true" ID="ID_36051857" MODIFIED="1349063703340" TEXT="Resources Collection">
+<node CREATED="1348791596932" ID="ID_1586332026" MODIFIED="1348791600355" TEXT="Where Defined"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348791605461" FOLDED="true" ID="ID_210501952" MODIFIED="1349063703340" STYLE="fork" TEXT="Not Necessarily">
+<node CREATED="1348791640264" FOLDED="true" ID="ID_1264962267" MODIFIED="1349063703340" TEXT="Unique">
+<node CREATED="1348791607796" FOLDED="true" ID="ID_221485063" MODIFIED="1349063703340" TEXT="In">
+<node CREATED="1348791609272" ID="ID_1591739045" MODIFIED="1348791613882" TEXT="Application"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348791716683" FOLDED="true" ID="ID_147706315" MODIFIED="1349063703340" STYLE="bubble" TEXT="Application Resources">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791722659" FOLDED="true" ID="ID_1148142656" MODIFIED="1349063703340" STYLE="bubble" TEXT="Available">
+<node COLOR="#000000" CREATED="1348791725150" ID="ID_418450366" MODIFIED="1348795860659" STYLE="fork" TEXT="Whole Application"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791752954" FOLDED="true" ID="ID_975131859" MODIFIED="1349063703340" STYLE="bubble" TEXT="Declare In">
+<node COLOR="#000000" CREATED="1348791757117" FOLDED="true" ID="ID_1588268220" MODIFIED="1349063703340" STYLE="fork">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Application.Resources
+    </p>
+    <p>
+      Collection
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1348791764342" FOLDED="true" ID="ID_429788516" MODIFIED="1349063703340" TEXT="C#">
+<node CREATED="1348791774059" ID="ID_1696397476" MODIFIED="1348791780591" TEXT="App.xaml File"/>
+</node>
+<node CREATED="1348791770427" FOLDED="true" ID="ID_96742111" MODIFIED="1349063703340" TEXT="VB.NET">
+<node CREATED="1348791782597" ID="ID_533254617" MODIFIED="1348791789036" TEXT="Application.xaml File"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791814423" FOLDED="true" ID="ID_1453793077" MODIFIED="1349063703340" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1348786847546" ID="ID_1566464435" MODIFIED="1349063696297" STYLE="fork">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Application x:Class="WpfApplication2.App" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"&#xa0;&#xa0;&#xa0; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&#xa0;&#xa0; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;StartupUri="Windows1.xaml"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;Application.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;SolidColorBrush x:Key="appBrush" Color="PapayaWhip" /&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Application.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Application&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348792223942" FOLDED="true" ID="ID_815027112" MODIFIED="1385183450962" STYLE="bubble" TEXT="Accessing">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792246549" FOLDED="true" ID="ID_559439097" MODIFIED="1349063703340" STYLE="bubble" TEXT="Syntax">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792254947" ID="ID_1075327701" MODIFIED="1348795860661" STYLE="bubble" TEXT="{StaticResource resouceKey}"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792290891" FOLDED="true" ID="ID_351716974" MODIFIED="1349063703340" STYLE="bubble" TEXT="Substitute">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792299075" ID="ID_1252060707" MODIFIED="1348795860661" STYLE="bubble" TEXT="In XAML"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792328910" FOLDED="true" ID="ID_889398993" MODIFIED="1349063703340" STYLE="bubble" TEXT="Where">
+<node COLOR="#000000" CREATED="1348792336471" FOLDED="true" ID="ID_1989625132" MODIFIED="1349063703340" STYLE="fork" TEXT="Would Use">
+<node CREATED="1348792339212" FOLDED="true" ID="ID_1196082223" MODIFIED="1349063703340" TEXT="Object">
+<node CREATED="1348792341625" ID="ID_1675418978" MODIFIED="1348792344033" TEXT="Same Type"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792350085" FOLDED="true" ID="ID_372541194" MODIFIED="1349063703340" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1348786847546" ID="ID_1028148575" MODIFIED="1348795860662" STYLE="fork">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Grid Background="{StaticResource myBrush}"&gt;</font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Grid&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792463684" FOLDED="true" ID="ID_725042861" MODIFIED="1349063703340" STYLE="bubble" TEXT="Finding Resource">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792468753" FOLDED="true" ID="ID_607278724" MODIFIED="1349063703340" STYLE="bubble" TEXT="Searches">
+<node COLOR="#000000" CREATED="1348792499906" FOLDED="true" ID="ID_1202443848" MODIFIED="1349063703340" STYLE="fork" TEXT="Walks">
+<node CREATED="1348792503241" FOLDED="true" ID="ID_1280924459" MODIFIED="1349063703340" TEXT="Up">
+<node CREATED="1348792504576" FOLDED="true" ID="ID_1370953408" MODIFIED="1349063703340" TEXT="Tree">
+<node CREATED="1348792517754" FOLDED="true" ID="ID_1110064802" MODIFIED="1349063703340" TEXT="From">
+<node CREATED="1348792471260" FOLDED="true" ID="ID_1363009155" MODIFIED="1349063703340" TEXT="Object">
+<node CREATED="1348792478126" ID="ID_1600636926" MODIFIED="1348792490534" TEXT="Where Referenced"/>
+</node>
+</node>
+<node CREATED="1348792525956" FOLDED="true" ID="ID_787376892" MODIFIED="1349063703340" TEXT="Stops">
+<node CREATED="1348792529400" FOLDED="true" ID="ID_787882506" MODIFIED="1349063703340" TEXT="When">
+<node CREATED="1348792531079" FOLDED="true" ID="ID_43577532" MODIFIED="1349063703340" TEXT="Matches">
+<node CREATED="1348792539233" ID="ID_1754057059" MODIFIED="1348792542453" TEXT="x:Key"/>
+</node>
+</node>
+</node>
+<node CREATED="1348792576847" FOLDED="true" ID="ID_683001623" MODIFIED="1349063703340" TEXT="If Not Found">
+<node CREATED="1348792583791" FOLDED="true" ID="ID_1549375949" MODIFIED="1349063703340" TEXT="Tries">
+<node CREATED="1348792586814" ID="ID_1227066801" MODIFIED="1348792590002" TEXT="Application Resources"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348791413683" FOLDED="true" ID="ID_397807595" MODIFIED="1385183450964" STYLE="bubble" TEXT="Static Resources">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348791421174" FOLDED="true" ID="ID_1476616515" MODIFIED="1349063703340" STYLE="bubble" TEXT="Declare">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791423384" ID="ID_1408790829" MODIFIED="1348795860664" STYLE="bubble" TEXT="XAML"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791425672" FOLDED="true" ID="ID_1293419007" MODIFIED="1349063703340" STYLE="bubble" TEXT="Before">
+<node COLOR="#000000" CREATED="1348791432601" ID="ID_1295176139" MODIFIED="1348795860665" STYLE="fork" TEXT="Reference"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792649687" FOLDED="true" ID="ID_505880881" MODIFIED="1349063703340" STYLE="bubble" TEXT="Retrieved Once">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792659553" FOLDED="true" ID="ID_165446359" MODIFIED="1349063703340" STYLE="bubble" TEXT="By">
+<node COLOR="#000000" CREATED="1348792660826" ID="ID_639677413" MODIFIED="1348795860665" STYLE="fork" TEXT="Referring Element"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792667473" FOLDED="true" ID="ID_464603826" MODIFIED="1349063703340" STYLE="bubble" TEXT="Exist">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792677964" FOLDED="true" ID="ID_307139404" MODIFIED="1349063703340" STYLE="bubble" TEXT="Lifetime">
+<node COLOR="#000000" CREATED="1348792899421" FOLDED="true" ID="ID_181862603" MODIFIED="1349063703340" STYLE="fork" TEXT="Of">
+<node CREATED="1348792702034" ID="ID_1417154006" MODIFIED="1348792706550" TEXT="Referring Element"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348793028081" FOLDED="true" ID="ID_1593865050" MODIFIED="1349063703350" STYLE="bubble" TEXT="Reflect">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348793031291" FOLDED="true" ID="ID_14415699" MODIFIED="1349063703350" STYLE="bubble" TEXT="Changes">
+<node COLOR="#000000" CREATED="1348793033329" FOLDED="true" ID="ID_875325605" MODIFIED="1349063703350" STYLE="fork" TEXT="To">
+<node CREATED="1348793034460" FOLDED="true" ID="ID_142511386" MODIFIED="1349063703340" TEXT="Underlying Object">
+<node CREATED="1348793043846" ID="ID_1421950571" MODIFIED="1348793045503" TEXT="Properties"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348794133756" FOLDED="true" ID="ID_430767134" MODIFIED="1349063703350" STYLE="fork" TEXT="Via">
+<node CREATED="1348794138060" ID="ID_281538869" MODIFIED="1348794141030" TEXT="Change Notification"/>
+</node>
+<node COLOR="#000000" CREATED="1348793058744" FOLDED="true" ID="ID_1989267821" MODIFIED="1349063703350" STYLE="fork" TEXT="EG">
+<node CREATED="1348786847546" ID="ID_1635899" MODIFIED="1348794066993">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Window x:Class="WpfApplication2.Window1" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"&#xa0; &#xa0; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;Title="Window1" Height="300" Width="300"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;Window.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;SolidColorBrush x:Key="windowBrush" Color="Blue" /&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Window.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;Grid Background="{StaticResource windowBrush}"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Grid&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Window&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1348794071499" FOLDED="true" ID="ID_809086512" MODIFIED="1349063703350" TEXT="Change">
+<node CREATED="1348794077537" FOLDED="true" ID="ID_934501305" MODIFIED="1349063703350" TEXT="windowBrush">
+<node CREATED="1348794084778" FOLDED="true" ID="ID_1690681975" MODIFIED="1349063703350" TEXT="Color Property">
+<node CREATED="1348794091363" FOLDED="true" ID="ID_1856683654" MODIFIED="1349063703350" TEXT="To">
+<node CREATED="1348794092448" ID="ID_1676249250" MODIFIED="1348794095527" TEXT="Red"/>
+</node>
+<node CREATED="1348794106861" FOLDED="true" ID="ID_791488777" MODIFIED="1349063703350" TEXT="Grid">
+<node CREATED="1348794110040" FOLDED="true" ID="ID_1205807084" MODIFIED="1349063703350" TEXT="Background">
+<node CREATED="1348794113656" ID="ID_1805494551" MODIFIED="1348794114782" TEXT="Changes"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348792708572" FOLDED="true" ID="ID_544097823" MODIFIED="1385183450964" STYLE="bubble" TEXT="Dynamic Resources">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792722204" FOLDED="true" ID="ID_1826957579" MODIFIED="1349063703350" STYLE="bubble" TEXT="Retrieved Each Time">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792733639" ID="ID_902248659" MODIFIED="1348795860667" STYLE="bubble" TEXT="Resource Used"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792911396" FOLDED="true" ID="ID_1170798745" MODIFIED="1349063703350" STYLE="bubble" TEXT="Referencing">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792919325" ID="ID_1703816552" MODIFIED="1348795860667" STYLE="bubble" TEXT="{DynamicResource resourceKey}"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348792942472" FOLDED="true" ID="ID_1794478290" MODIFIED="1349063703350" STYLE="bubble" TEXT="Reflect">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348792948557" FOLDED="true" ID="ID_945272310" MODIFIED="1349063703350" STYLE="bubble" TEXT="Changes">
+<node COLOR="#000000" CREATED="1348792950986" FOLDED="true" ID="ID_356373637" MODIFIED="1349063703350" STYLE="fork" TEXT="In">
+<node CREATED="1348792952868" ID="ID_1646431392" MODIFIED="1348792961916" TEXT="Underlying Object"/>
+</node>
+<node COLOR="#000000" CREATED="1348792970156" FOLDED="true" ID="ID_1902093850" MODIFIED="1349063703350" STYLE="fork" TEXT="EG">
+<node CREATED="1348792972319" FOLDED="true" ID="ID_1077467582" MODIFIED="1349063703350" TEXT="Change">
+<node CREATED="1348792974685" FOLDED="true" ID="ID_144596882" MODIFIED="1349063703350" TEXT="To">
+<node CREATED="1348792975754" FOLDED="true" ID="ID_500041132" MODIFIED="1349063703350" TEXT="Different">
+<node CREATED="1348792978121" ID="ID_1587497501" MODIFIED="1348794169418" TEXT="Instance">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794194737" FOLDED="true" ID="ID_1618296636" MODIFIED="1349063703350" STYLE="bubble" TEXT="Disadvantage">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794220197" FOLDED="true" ID="ID_369079194" MODIFIED="1349063703350" STYLE="bubble" TEXT="Performance">
+<node COLOR="#000000" CREATED="1348794235594" ID="ID_1953584923" MODIFIED="1348795860669" STYLE="fork" TEXT="Reduced"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794240585" FOLDED="true" ID="ID_1201751017" MODIFIED="1349063703350" STYLE="bubble" TEXT="Best Practice">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794246530" FOLDED="true" ID="ID_174758909" MODIFIED="1349063703350" STYLE="bubble" TEXT="Use">
+<node COLOR="#000000" CREATED="1348794248505" FOLDED="true" ID="ID_1428893988" MODIFIED="1349063703350" STYLE="fork" TEXT="Only">
+<node CREATED="1348794262747" FOLDED="true" ID="ID_194233691" MODIFIED="1349063703350" TEXT="If">
+<node CREATED="1348794340585" FOLDED="true" ID="ID_925876507" MODIFIED="1349063703350" TEXT="Underlying Object">
+<node CREATED="1348794348702" FOLDED="true" ID="ID_1038872512" MODIFIED="1349063703350" TEXT="May Change">
+<node CREATED="1348794274472" FOLDED="true" ID="ID_1161072447" MODIFIED="1349063703350" TEXT="EG">
+<node CREATED="1348794285745" FOLDED="true" ID="ID_1637446687" MODIFIED="1349063703350" TEXT="Resource In">
+<node CREATED="1348794310883" ID="ID_506868568" MODIFIED="1348794315681" TEXT="SystemBrushes"/>
+<node CREATED="1348794316125" ID="ID_537424380" MODIFIED="1348794319625" TEXT="SystemFonts"/>
+<node CREATED="1348794319897" ID="ID_36039887" MODIFIED="1348794323273" TEXT="SystemParameters"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348794387829" FOLDED="true" ID="ID_18212014" MODIFIED="1385183450966" STYLE="bubble" TEXT="Resource Dictionary">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794396132" FOLDED="true" ID="ID_1804625536" MODIFIED="1349063703350" STYLE="bubble" TEXT="Resource Collection">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794404186" FOLDED="true" ID="ID_1304665327" MODIFIED="1349063703350" STYLE="bubble" TEXT="In">
+<node COLOR="#000000" CREATED="1348794405458" FOLDED="true" ID="ID_685513436" MODIFIED="1349063703350" STYLE="fork" TEXT="XAML File">
+<node CREATED="1348794414103" ID="ID_1226061307" MODIFIED="1348794415870" TEXT="Separate"/>
+<node CREATED="1348794420032" FOLDED="true" ID="ID_1980607822" MODIFIED="1349063703350" TEXT="Imported">
+<node CREATED="1348794422867" FOLDED="true" ID="ID_1724646036" MODIFIED="1349063703350" TEXT="Into">
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794427764" ID="ID_1263224619" MODIFIED="1348794436216" STYLE="bubble" TEXT="Applicaiton"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794445410" FOLDED="true" ID="ID_224019084" MODIFIED="1349063703350" STYLE="bubble" TEXT="Allows">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794485566" FOLDED="true" ID="ID_940262126" MODIFIED="1349063703350" STYLE="bubble" TEXT="Organising">
+<node COLOR="#000000" CREATED="1348794491510" FOLDED="true" ID="ID_72877290" MODIFIED="1349063703350" STYLE="fork" TEXT="Resources">
+<node CREATED="1348794512705" ID="ID_1614473423" MODIFIED="1348794514831" TEXT="Single Location"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794462158" FOLDED="true" ID="ID_5162568" MODIFIED="1349063703350" STYLE="bubble" TEXT="Sharing">
+<node COLOR="#000000" CREATED="1348794447979" ID="ID_1042318993" MODIFIED="1348795860673" STYLE="fork" TEXT="Resource"/>
+<node COLOR="#000000" CREATED="1348794467577" FOLDED="true" ID="ID_1337035382" MODIFIED="1349063703350" STYLE="fork" TEXT="Between">
+<node CREATED="1348794471818" FOLDED="true" ID="ID_1704673275" MODIFIED="1349063703350" TEXT="Projects">
+<node CREATED="1348794474247" ID="ID_1332315619" MODIFIED="1348794476482" TEXT="Same Solution"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794526571" FOLDED="true" ID="ID_872407820" MODIFIED="1349063703350" STYLE="bubble" TEXT="Creating">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794532796" FOLDED="true" ID="ID_557547569" MODIFIED="1349063703350" STYLE="bubble" TEXT="Visual Studio">
+<node COLOR="#000000" CREATED="1348794541194" ID="ID_1814446871" MODIFIED="1348795860674" STYLE="fork" TEXT="Project Menu &gt; Add Resource Dictionary"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794564248" FOLDED="true" ID="ID_750939416" MODIFIED="1349063703350" STYLE="bubble" TEXT="Adding Resources To">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794590167" ID="ID_412562455" MODIFIED="1348795860674" STYLE="bubble" TEXT="XAML View"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794607244" FOLDED="true" ID="ID_218916258" MODIFIED="1349063703350" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1348786847546" ID="ID_1481033678" MODIFIED="1348795860675" STYLE="fork">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;ResourceDictionary </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"&#xa0;&#xa0;&#xa0; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;<b>&lt;SolidColorBrush x:Key="appBrush" Color="DarkSalmon" /&gt;</b> </font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/ResourceDictionary&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348794745632" FOLDED="true" ID="ID_1089966914" MODIFIED="1349063703350" STYLE="bubble" TEXT="Using">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348794763895" FOLDED="true" ID="ID_1791156441" MODIFIED="1349063703350" STYLE="bubble" TEXT="Merge">
+<node COLOR="#000000" CREATED="1348794767839" ID="ID_1879285840" MODIFIED="1348795860676" STYLE="fork" TEXT="ResourceDictionary"/>
+<node COLOR="#000000" CREATED="1348794772456" FOLDED="true" ID="ID_399609425" MODIFIED="1349063703350" STYLE="fork" TEXT="Into">
+<node CREATED="1348794779337" FOLDED="true" ID="ID_16149660" MODIFIED="1349063703350" TEXT="Resources Collection">
+<node CREATED="1348794788125" FOLDED="true" ID="ID_1931785221" MODIFIED="1349063703350" TEXT="In">
+<node CREATED="1348794789210" ID="ID_1414388526" MODIFIED="1348794790899" TEXT="Applicaiton"/>
+</node>
+<node CREATED="1348794828505" FOLDED="true" ID="ID_1624481661" MODIFIED="1349063703350" TEXT="EG">
+<node CREATED="1348794831825" ID="ID_936465474" MODIFIED="1348794837982" TEXT="Application.Resources"/>
+<node CREATED="1348794838332" ID="ID_1562540828" MODIFIED="1348794844426" TEXT="Window.Resources"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348794850932" FOLDED="true" ID="ID_1009812761" MODIFIED="1349063703350" STYLE="fork" TEXT="Via">
+<node CREATED="1348794854064" FOLDED="true" ID="ID_957808568" MODIFIED="1349063703350" TEXT="Referencing">
+<node CREATED="1348794767839" ID="ID_972600425" MODIFIED="1348794770856" TEXT="ResourceDictionary"/>
+<node CREATED="1348794876468" FOLDED="true" ID="ID_253089654" MODIFIED="1349063703350" TEXT="In">
+<node CREATED="1348794767839" ID="ID_876506196" MODIFIED="1348794896422" TEXT="ResourceDictionary.MergedDictionaries Collection"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348795235309" FOLDED="true" ID="ID_1328703632" MODIFIED="1349063703350" STYLE="fork" TEXT="WARNING">
+<node CREATED="1348795239132" FOLDED="true" ID="ID_1133191330" MODIFIED="1349063703350" TEXT="Additional Resources">
+<node CREATED="1348795249676" ID="ID_785416195" MODIFIED="1348795255461" TEXT="Defined Locally"/>
+<node CREATED="1348795256460" FOLDED="true" ID="ID_1707846686" MODIFIED="1349063703350" TEXT="Must Be Within">
+<node CREATED="1348795266508" ID="ID_1399822224" MODIFIED="1348795286310" TEXT="ResourceDictionary Tags"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348794936709" FOLDED="true" ID="ID_774555747" MODIFIED="1349063703350" STYLE="fork" TEXT="EG">
+<node CREATED="1348786847546" ID="ID_689755806" MODIFIED="1348795226915">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Window.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0; </font><b><font color="#990000" face="Consolas">&lt;ResourceDictionary&gt; </font></b>
+    </p>
+    <p>
+      <b><font color="#990000" face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </font><font color="#006633" face="Consolas">&lt;ResourceDictionary.MergedDictionaries&gt; </font></b>
+    </p>
+    <p>
+      <b><font color="#006633" face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;ResourceDictionary Source="ResDictionary1.xaml" /&gt; </font></b>
+    </p>
+    <p>
+      <b><font color="#006633" face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;ResourceDictionary Source="ResDictionary2.xaml" /&gt; </font></b>
+    </p>
+    <p>
+      <b><font color="#006633" face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;/ResourceDictionary.MergedDictionaries&gt;</font></b>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </font><b><font color="#0000cc" face="Consolas">&lt;SolidColorBrush x:Key="windowBrush" Color="Blue" /&gt;</font></b>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0; </font><b><font color="#990000" face="Consolas">&lt;/ResourceDictionary&gt;</font></b>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Window.Resources&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348795390041" FOLDED="true" ID="ID_97546483" MODIFIED="1385183450966" STYLE="bubble" TEXT="Where To Define">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348795407498" FOLDED="true" ID="ID_183368358" MODIFIED="1349063703350" STYLE="bubble" TEXT="Factors">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348795410137" FOLDED="true" ID="ID_811760947" MODIFIED="1349063703350" STYLE="bubble" TEXT="Accessibility">
+<node COLOR="#000000" CREATED="1348795418761" FOLDED="true" ID="ID_90831932" MODIFIED="1349063703350" STYLE="fork" TEXT="From">
+<node CREATED="1348795420410" ID="ID_1263577118" MODIFIED="1348795423843" TEXT="Referring Elements"/>
+<node CREATED="1348795513656" FOLDED="true" ID="ID_789834017" MODIFIED="1349063703350" TEXT="All Elements">
+<node CREATED="1348795522343" FOLDED="true" ID="ID_1023172131" MODIFIED="1349063703350" TEXT="In">
+<node CREATED="1348795523511" FOLDED="true" ID="ID_390793137" MODIFIED="1349063703350" TEXT="Application">
+<node CREATED="1348795526567" ID="ID_320393541" MODIFIED="1348795531827" TEXT="Application.Resources"/>
+</node>
+<node CREATED="1348795534519" FOLDED="true" ID="ID_1587715510" MODIFIED="1349063703350" TEXT="Window">
+<node CREATED="1348795537191" ID="ID_573265173" MODIFIED="1348795541506" TEXT="Window.Resources"/>
+<node CREATED="1348795542407" FOLDED="true" ID="ID_996352709" MODIFIED="1349063703350" TEXT="Sufficient">
+<node CREATED="1348795546119" ID="ID_213708606" MODIFIED="1348795548228" TEXT="Most Cases"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348795553911" FOLDED="true" ID="ID_1902008873" MODIFIED="1349063703350" TEXT="Multiple Projects">
+<node CREATED="1348795564422" FOLDED="true" ID="ID_1152703803" MODIFIED="1349063703350" TEXT="In">
+<node CREATED="1348795566278" ID="ID_687052234" MODIFIED="1348795568562" TEXT="Solution"/>
+</node>
+<node CREATED="1348795569447" ID="ID_1448781698" MODIFIED="1348795580706" TEXT="Resource Dictionary"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348795427625" FOLDED="true" ID="ID_1256643520" MODIFIED="1349063703350" STYLE="bubble" TEXT="Readability">
+<node COLOR="#000000" CREATED="1348795606326" FOLDED="true" ID="ID_230191160" MODIFIED="1349063703350" STYLE="fork" TEXT="Best Choice">
+<node CREATED="1348795610357" FOLDED="true" ID="ID_1086593966" MODIFIED="1349063703350" TEXT="Windows.Resources">
+<node CREATED="1348795623253" FOLDED="true" ID="ID_1375744296" MODIFIED="1349063703350" TEXT="All Code">
+<node CREATED="1348795626069" ID="ID_608898820" MODIFIED="1348795632912" TEXT="Same File"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348795430635" FOLDED="true" ID="ID_1358734891" MODIFIED="1349063703350" STYLE="bubble" TEXT="Maintainability">
+<node COLOR="#000000" CREATED="1348795438617" FOLDED="true" ID="ID_1857744768" MODIFIED="1349063703350" STYLE="fork" TEXT="Of">
+<node CREATED="1348795439769" ID="ID_1160134581" MODIFIED="1348795440483" TEXT="Code"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348795443577" FOLDED="true" ID="ID_837023546" MODIFIED="1349063703350" STYLE="bubble" TEXT="Reusability">
+<node COLOR="#000000" CREATED="1348795639509" FOLDED="true" ID="ID_532949189" MODIFIED="1349063703350" STYLE="fork" TEXT="Resource Dictionary">
+<node CREATED="1348795654388" FOLDED="true" ID="ID_570553216" MODIFIED="1349063703350" TEXT="Allows">
+<node CREATED="1348795656916" FOLDED="true" ID="ID_1595821107" MODIFIED="1349063703350" TEXT="Reuse">
+<node CREATED="1348795659876" ID="ID_1466860188" MODIFIED="1348795661632" TEXT="Simple"/>
+<node CREATED="1348795662325" FOLDED="true" ID="ID_1557057902" MODIFIED="1349063703350" TEXT="Other">
+<node CREATED="1348795664469" ID="ID_1300983899" MODIFIED="1348795666192" TEXT="Solutions"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

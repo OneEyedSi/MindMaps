@@ -1,0 +1,144 @@
+How Processor Works in FitSharp
+===============================
+Simon Elms, 27 May 2017
+
+A) Derivatives
+==============
+fitSharp.Machine.Engine.Processor<T> [INTERFACE]
+|-----------------------------------------------
+|
+|        Memory Memory { get; }
+|        Configuration Configuration { get; }
+|
+|        ApplicationUnderTest ApplicationUnderTest { get; }
+|        void AddNamespace(string namespaceName);
+|
+|        void AddOperator(string operatorName);
+|        void AddOperatorFirst(string operatorName);
+|        void RemoveOperator(string operatorName);
+|
+|        bool Compare(TypedValue instance, Tree<T> parameters);
+|        Tree<T> Compose(TypedValue instance);
+|        TypedValue Parse(Type type, TypedValue instance, Tree<T> parameters);
+|        TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<T> parameters);
+|
+|        TypedValue Operate<O>(params object[] parameters) where O : class;
+|
+|--fitSharp.Fit.Engine.CellProcessor : Processor<Cell> [INTERFACE]
+|-----------------------------------------------------------------
+|  |     
+|  |     TestStatus TestStatus { get; }
+|  |     CallStack CallStack { get; }
+|  |     Tree<Cell> MakeCell(string text, string tag, IEnumerable<Tree<Cell>> branches);
+|  |     
+|  ... fitSharp.Fit.Service.CellProcessorBase also implements CellProcessor
+|
+|--fitSharp.Fit.Engine.ProcessorBase<T, P> : Processor<T> where P : class, Processor<T> [ABSTRACT BASE CLASS]
+|  |---------------------------------------------------------------------------------------------------------
+|  |
+|  |     protected ProcessorBase(Memory memory) ... [**** CTOR ****]
+|  |      
+|  |     public Memory Memory { get; protected set; }
+|  |     public Configuration Configuration get ...
+|  |     
+|  |     public ApplicationUnderTest ApplicationUnderTest get ...
+|  |     public void AddNamespace(string namespaceName) ...
+|  |     
+|  |     protected abstract Operators<T, P> Operators { get; } [**** INTRODUCED IN THIS CLASS ****]
+|  |     
+|  |     public void AddOperator(string operatorName) ...
+|  |     public void AddOperatorFirst(string operatorName) ...
+|  |     public void RemoveOperator(string operatorName) ...
+|  |     
+|  |     public void AddOperator(Operator<T, P> anOperator) ... [**** INTRODUCED IN THIS CLASS ****]
+|  |     public void AddOperator(Operator<T, P> anOperator, int priority) ... [**** INTRODUCED IN THIS CLASS ****]
+|  |     
+|  |     public bool Compare(TypedValue instance, Tree<T> parameters) ...
+|  |     public Tree<T> Compose(TypedValue instance) ...
+|  |     public virtual TypedValue Parse(Type type, TypedValue instance, Tree<T> parameters) ...
+|  |     public TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<T> parameters) ...
+|  |     
+|  |     public TypedValue Operate<O>(params object[] parameters) where O : class ...
+|  |     
+|  |     R DoLoggedOperation<R>(string startMessage, Func<OperationLogging, R> operation) ... [**** INTRODUCED IN THIS CLASS ****]
+|  |     
+|  |--fitSharp.Machine.Engine.BasicProcessor : ProcessorBase<string, BasicProcessor> [CLASS]
+|  |---------------------------------------------------------------------------------------------------------  
+|  |     
+|  |     public BasicProcessor() : this(new TypeDictionary()) {} [**** CTOR ****]
+|  |     public BasicProcessor(Memory memory) : base(memory) ... [**** CTOR ****]
+|  |     
+|  |     protected override Operators<string, BasicProcessor> Operators get ... [**** FROM ProcessorBase ****]
+|  |     
+|  |     private class DefaultCompose : Operator<string, BasicProcessor>, ComposeOperator<string> ... [**** INTRODUCED IN THIS CLASS ****]
+|  |     
+|  |     		public bool CanCompose(TypedValue instance) ...
+|  |     		public Tree<string> Compose(TypedValue instance) ...
+|  |     
+|  |--fitSharp.Fit.Service.CellProcessorBase : ProcessorBase<Cell, CellProcessor>, CellProcessor [CLASS] 
+|  |  |------------------------------------------------------------------------------------------------------    
+|  |  |     
+|  |  |     public CellProcessorBase(Memory memory, CellOperators operators)
+|  |  |        : base(memory) ... [**** CTOR ****]
+|  |  |     
+|  |  |     protected readonly CellOperators operators; [**** INTRODUCED IN THIS CLASS ****]
+|  |  |     
+|  |  |     public TestStatus TestStatus { get; set; } [**** FROM CellProcessor ****]
+|  |  |     public CallStack CallStack { get; private set; } [**** FROM CellProcessor ****]
+|  |  |     public virtual Tree<Cell> MakeCell(string text, string tag, IEnumerable<Tree<Cell>> branches) ... [**** FROM CellProcessor ****]
+|  |  |     
+|  |  |     public override TypedValue Parse(System.Type type, TypedValue instance, Tree<Cell> parameters) ... [**** FROM Processor ****]
+|  |  |     
+|  |  |     protected override Operators<Cell, CellProcessor> Operators get [**** FROM ProcessorBase ****]
+|  |  |     
+|  |  |--fit.Service.Service : CellProcessorBase [CLASS]     
+|  |  |-------------------------------------------------     
+|  |  |  |   
+|  |  |  |     public Service() : this(new TypeDictionary()) {} [**** CTOR ****]
+|  |  |  |     public Service(Memory memory) : base(memory, memory.GetItem<Operators>()) ... [**** CTOR ****]
+|  |  |  |     public Service(Processor<Cell> other) : this(other.Memory.Copy()) {} [**** CTOR ****]
+|  |  |  |     
+|  |  |  |     public void AddCellHandler(string handlerName) ... [**** INTRODUCED IN THIS CLASS ****]
+|  |  |  |     public void RemoveCellHandler(string handlerName) ... [**** INTRODUCED IN THIS CLASS ****]
+|  |  |  |     
+|  |  |  |     public override Tree<Cell> MakeCell(string text, string tag, IEnumerable<Tree<Cell>> branches) ... [**** FROM CellProcessor ****]
+|  |  |  |     
+|  |  |   \------------------------------------------------
+|  |   \----------------------------------------------------------------------------------------------------- 
+|  |      
+|  ... fitSharp.Slim.Service.Service also implements ProcessorBase ...           
+|             
+|--SlimProcessor : Processor<string> [INTERFACE]
+|  |---------------------------------------------------------------------------------------------------------
+|  |
+|  |     void PushLibraryInstance(TypedValue instance);
+|  |     IEnumerable<TypedValue> LibraryInstances { get; }
+|  |     TypedValue LoadSymbol(string input);
+|  |         
+|  |--fitSharp.Slim.Service.Service : ProcessorBase<string, SlimProcessor>, SlimProcessor [CLASS]       
+|  |  |------------------------------------------------------------------------------------------------------      
+|  |  |         
+|  |  |     public Service(Memory memory) : base(memory) ... [**** CTOR ****]    
+|  |  |         
+|  |  |     public void PushLibraryInstance(TypedValue instance) ... [**** FROM SlimProcessor ****]    
+|  |  |     public IEnumerable<TypedValue> LibraryInstances ... [**** FROM SlimProcessor ****]   
+|  |  |     public TypedValue LoadSymbol(string input) ... [**** FROM SlimProcessor ****]
+|  |  |         
+|  |  |     protected override Operators<string, SlimProcessor> Operators get ... [**** FROM ProcessorBase ****]
+|  |  |         
+|  |  |     private class Actors ... [**** INTRODUCED IN THIS CLASS ****]
+|  |  |     
+|  |  |  		public Actors(SlimProcessor processor) ... [**** CTOR ****]
+|  |  |  		public object GetFixture() ...
+|  |  |  		public void PushFixture() ...
+|  |  |  		public void PopFixture() ...
+|  |  |  		
+|  |  |     class SlimFunctions
+|  |  |     
+|  |  |  		public SlimFunctions(SlimProcessor processor) ... [**** CTOR ****] 
+|  |  |  		 
+|  |  |  		public void _Configure(string feature, string item, string value) ... 
+|  |  | 
+|  |   \----------------------------------------------------------------------------------------------------- 
+|   \----------------------------------------------------------------------------------------------------- 
+\-----------------------------------------------

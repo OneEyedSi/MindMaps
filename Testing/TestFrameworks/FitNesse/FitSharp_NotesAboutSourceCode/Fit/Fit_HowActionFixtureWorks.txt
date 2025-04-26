@@ -1,0 +1,67 @@
+How ActionFixture Works
+=======================
+Simon Elms, 29 May 2017
+
+Likely entry methods: Start, DoCells
+DoCells is likely the first as it sets variable cells, which is used in Start
+
+ActionFixture inherits Fixture, look at how Fixture works
+
+Fixture
+-------
+UseFixture (implements Interpreter).Interpret(CellProcessor processor, Tree<Cell> table):
+|	(NB: Interpreter only has one method: Interpret)
+|
+|	var firstRow = table.Branches[0];	if (firstRow.Branches.Count < 2) throw new TableStructureException("Missing cells for use.");
+|
+|	var fixtureName = firstRow.ValueAt(1).Text;
+|	var targetFixture = GetNamedFixture(processor, fixtureName)
+|						?? MakeNewFixture(processor, firstRow);
+|
+|	targetFixture.Interpret(processor, table);
+|
+--Interpret(CellProcessor processor, Tree<Cell> table):
+	|	Prepare(processor, table.Branches[0]);
+	|	if (!IsVisible) this.processor.TestStatus.TableCount--;
+	|	table.Value.As<Parse>(DoTable);
+	|
+	--Prepare(CellProcessor processor, Tree<Cell> row):
+	|	|	Processor = processor;
+	|	|	GetArgsForRow(row);
+	|	|
+	|	--GetArgsForRow(Tree<Cell> row):
+	|			argumentRow = row;
+	|			Args = row.Branches.Skip(1).Aggregate(new List<string>(),
+	|		        (list, cell) =>
+	|		        {
+	|		            list.Add(cell.Value.Text);
+	|		            return list;
+	|		        }).ToArray();
+	|		       
+	--DoTable(table):
+		|	calls DoRows(table.Parts.More);
+		|
+		--DoRows(rows): 
+			|	rows is actually a single row
+			|	loops, calling DoRow(rows) then rows.More until rows is null
+			|
+			--DoRow(row): 
+				|	calls DoCells(row.Parts)
+				|
+				--DoCells(Parse cells):
+					|
+					|	for (int i = 0; cells != null; i++)
+					|	{
+					|		try
+					|		{
+					|			DoCell(cells, i);
+					|		}
+					|		catch (Exception e)
+					|		{
+					|			TestStatus.MarkException(cells, e);
+					|		}
+					|		cells = cells.More;
+					|	}
+					|
+					--DoCell(Parse cell, int columnNumber):
+						TestStatus.MarkIgnore(cell);

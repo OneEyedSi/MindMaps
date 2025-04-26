@@ -1,0 +1,249 @@
+<map version="0.8.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1204411331875" ID="Freemind_Link_839220195" MODIFIED="1205522228656" TEXT="Python Regular Expressions">
+<font BOLD="true" NAME="SansSerif" SIZE="16"/>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205141514062" ID="Freemind_Link_1348625528" MODIFIED="1205522272781" POSITION="left" STYLE="bubble" TEXT="Compiling">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141518171" ID="Freemind_Link_1229960142" MODIFIED="1205522272796" TEXT="Pattern">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141524109" ID="Freemind_Link_1757162375" MODIFIED="1205522272796" TEXT="Optional">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205141530546" FOLDED="true" ID="Freemind_Link_1155973669" MODIFIED="1205522272796" STYLE="bubble" TEXT="But">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141532437" FOLDED="true" ID="Freemind_Link_829405828" MODIFIED="1205522272796" TEXT="Quicker">
+<node COLOR="#000000" CREATED="1205141538515" FOLDED="true" ID="Freemind_Link_1300817605" MODIFIED="1205522272812" STYLE="fork" TEXT="If">
+<node CREATED="1205141540343" FOLDED="true" ID="Freemind_Link_384647611" MODIFIED="1205141551250" TEXT="Text">
+<node CREATED="1205141552078" ID="Freemind_Link_293743583" MODIFIED="1205141554796" TEXT="To Search"/>
+<node CREATED="1205141555500" ID="Freemind_Link_566059454" MODIFIED="1205141556968" TEXT="Long"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205141567203" ID="Freemind_Link_258054145" MODIFIED="1205558433890" POSITION="left" STYLE="bubble" TEXT="Special Characters">
+<cloud/>
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141609609" ID="Freemind_Link_1224815440" MODIFIED="1205522272828" TEXT="( )">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205141612875" FOLDED="true" ID="Freemind_Link_769660733" MODIFIED="1205522272828" STYLE="bubble" TEXT="Grouping">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141619140" FOLDED="true" ID="Freemind_Link_1512759062" MODIFIED="1205522272843" TEXT="EG">
+<node COLOR="#000000" CREATED="1205141621000" FOLDED="true" ID="Freemind_Link_1688190838" MODIFIED="1205522272843" STYLE="fork" TEXT="(h|H)">
+<node CREATED="1205141632328" FOLDED="true" ID="Freemind_Link_603364198" MODIFIED="1205141634109" TEXT="Either">
+<node CREATED="1205141635000" ID="Freemind_Link_1978110033" MODIFIED="1205141636328" TEXT="h"/>
+<node CREATED="1205141637109" ID="Freemind_Link_1236985663" MODIFIED="1205141638250" TEXT="H"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141643375" ID="Freemind_Link_190077702" MODIFIED="1205522272843" TEXT="[ ]">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205141647531" FOLDED="true" ID="Freemind_Link_79770548" MODIFIED="1205522272859" STYLE="bubble" TEXT="Sequence">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141650609" FOLDED="true" ID="Freemind_Link_44814939" MODIFIED="1205522272859" TEXT="Of Characters">
+<node COLOR="#000000" CREATED="1205141735750" FOLDED="true" ID="Freemind_Link_1174389920" MODIFIED="1205522272859" STYLE="fork" TEXT="One">
+<node CREATED="1205141737671" FOLDED="true" ID="Freemind_Link_1014345175" MODIFIED="1205141740593" TEXT="Should Match">
+<node CREATED="1205141743484" FOLDED="true" ID="Freemind_Link_374545846" MODIFIED="1205141746218" TEXT="Single Character">
+<node CREATED="1205141747031" FOLDED="true" ID="Freemind_Link_1933271110" MODIFIED="1205141749687" TEXT="In">
+<node CREATED="1205141750500" ID="Freemind_Link_1095633984" MODIFIED="1205141751593" TEXT="Text"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205142052328" ID="Freemind_Link_731146553" MODIFIED="1205522272859" TEXT="Repeating">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142108937" FOLDED="true" ID="Freemind_Link_1583957309" MODIFIED="1205522272875" STYLE="bubble" TEXT="Preceding">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142122625" ID="Freemind_Link_1484887378" MODIFIED="1205522272875" TEXT="Character"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142126765" ID="Freemind_Link_535389924" MODIFIED="1205522272875" TEXT="Group"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142107187" FOLDED="true" ID="Freemind_Link_499809215" MODIFIED="1205522272875" STYLE="bubble" TEXT="*">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142172312" ID="Freemind_Link_1966379934" MODIFIED="1205522272890" TEXT="0 Or More Times"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142184250" FOLDED="true" ID="Freemind_Link_1376261125" MODIFIED="1205522272890" STYLE="bubble" TEXT="+">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142188359" ID="Freemind_Link_757509897" MODIFIED="1205522272906" TEXT="1 Or More Times"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142196296" FOLDED="true" ID="Freemind_Link_8470071" MODIFIED="1205522272906" STYLE="bubble" TEXT="?">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142202312" ID="Freemind_Link_1406077770" MODIFIED="1205522272906" TEXT="0 Or 1 Times"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142219156" FOLDED="true" ID="Freemind_Link_990148687" MODIFIED="1205522272906" STYLE="bubble" TEXT="{m}">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142400750" ID="Freemind_Link_615917280" MODIFIED="1205522272906" TEXT="m Times"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142406765" FOLDED="true" ID="Freemind_Link_626040347" MODIFIED="1205522272921" STYLE="bubble" TEXT="{m,n}">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142412765" FOLDED="true" ID="Freemind_Link_1301370411" MODIFIED="1205522272921" TEXT="Between">
+<node COLOR="#000000" CREATED="1205142416906" ID="Freemind_Link_1466894535" MODIFIED="1205522272921" STYLE="fork" TEXT="m and n Times"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205141764031" ID="Freemind_Link_1614844026" MODIFIED="1205522272937" POSITION="left" STYLE="bubble" TEXT="Backslash Problem">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141775875" ID="Freemind_Link_1490508463" MODIFIED="1205522272937" TEXT="Searching For">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205141786781" ID="Freemind_Link_1932932988" MODIFIED="1205522272937" STYLE="bubble" TEXT="Backslash"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141797203" ID="Freemind_Link_1437987458" MODIFIED="1205522272953" TEXT="\">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205141803609" FOLDED="true" ID="Freemind_Link_396348020" MODIFIED="1205522272953" STYLE="bubble" TEXT="Must Be Escaped">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141811578" FOLDED="true" ID="Freemind_Link_13641896" MODIFIED="1205522272968" TEXT="In">
+<node COLOR="#000000" CREATED="1205141817500" FOLDED="true" ID="Freemind_Link_1030246020" MODIFIED="1205522272968" STYLE="fork" TEXT="Regex">
+<node CREATED="1205141825562" FOLDED="true" ID="Freemind_Link_1963511315" MODIFIED="1205141826906" TEXT="EG">
+<node CREATED="1205141827406" FOLDED="true" ID="Freemind_Link_1494714598" MODIFIED="1205141833703" TEXT="\\">
+<node CREATED="1205141834921" FOLDED="true" ID="Freemind_Link_1305010378" MODIFIED="1205141836859" TEXT="Means">
+<node CREATED="1205141837890" FOLDED="true" ID="Freemind_Link_1363024015" MODIFIED="1205141838921" TEXT="Find">
+<node CREATED="1205141839781" ID="Freemind_Link_979427094" MODIFIED="1205141840687" TEXT="\"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1205141846093" ID="Freemind_Link_968953252" MODIFIED="1205522272968" STYLE="fork" TEXT="Python"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141875718" ID="Freemind_Link_1647399939" MODIFIED="1205522272968" TEXT="EG">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205141879109" FOLDED="true" ID="Freemind_Link_1057645534" MODIFIED="1205522272968" STYLE="bubble" TEXT="Search For">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141894906" ID="Freemind_Link_1388270614" MODIFIED="1205522272984" TEXT="&quot;\ten&quot;"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141909718" FOLDED="true" ID="Freemind_Link_1970361568" MODIFIED="1205522272984" TEXT="Requires">
+<node COLOR="#000000" CREATED="1205141912953" ID="Freemind_Link_1860225792" MODIFIED="1205522272984" STYLE="fork" TEXT="regexp = re.compile(&quot;\\\\ten&quot;)"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205141938609" ID="Freemind_Link_1663651297" MODIFIED="1205522272984" TEXT="Solution">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205141943750" FOLDED="true" ID="Freemind_Link_273117882" MODIFIED="1205522273000" STYLE="bubble" TEXT="Raw String">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141951203" FOLDED="true" ID="Freemind_Link_444302159" MODIFIED="1205522273000" TEXT="EG">
+<node COLOR="#000000" CREATED="1205141954328" ID="Freemind_Link_1265442049" MODIFIED="1205522273000" STYLE="fork" TEXT="regexp = re.compile(r&quot;\\ten&quot;)"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205141978515" FOLDED="true" ID="Freemind_Link_1089909007" MODIFIED="1205522273015" TEXT="Avoids">
+<node COLOR="#000000" CREATED="1205141985937" FOLDED="true" ID="Freemind_Link_319998431" MODIFIED="1205522273015" STYLE="fork" TEXT="Escaping">
+<node CREATED="1205141997234" FOLDED="true" ID="Freemind_Link_1292212026" MODIFIED="1205141998812" TEXT="In">
+<node CREATED="1205141999250" FOLDED="true" ID="Freemind_Link_283656325" MODIFIED="1205142001921" TEXT="Python">
+<node CREATED="1205142013515" ID="Freemind_Link_614876967" MODIFIED="1205142014750" TEXT="Only"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142021625" FOLDED="true" ID="Freemind_Link_1727126240" MODIFIED="1205522273015" TEXT="Still Requires">
+<node COLOR="#000000" CREATED="1205142028859" FOLDED="true" ID="Freemind_Link_1018111144" MODIFIED="1205522273015" STYLE="fork" TEXT="Escaping">
+<node CREATED="1205142031546" FOLDED="true" ID="Freemind_Link_1927701176" MODIFIED="1205142032281" TEXT="In">
+<node CREATED="1205142033062" ID="Freemind_Link_207814778" MODIFIED="1205142037203" TEXT="Regex"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205142482265" ID="Freemind_Link_1431161567" MODIFIED="1205522273031" POSITION="right" STYLE="bubble" TEXT="Multiline Patterns">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205142492859" ID="Freemind_Link_1104898881" MODIFIED="1205522273031" TEXT="Python">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142497718" FOLDED="true" ID="Freemind_Link_1125159072" MODIFIED="1205522273031" STYLE="bubble" TEXT="Concatenates">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142505328" ID="Freemind_Link_1312203502" MODIFIED="1205522273031" TEXT="Strings"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142512000" FOLDED="true" ID="Freemind_Link_547736541" MODIFIED="1205522273031" TEXT="Separated By">
+<node COLOR="#000000" CREATED="1205142519375" ID="Freemind_Link_265876102" MODIFIED="1205522273031" STYLE="fork" TEXT="Whitespace"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142530984" FOLDED="true" ID="Freemind_Link_851603018" MODIFIED="1205522273046" TEXT="Allows">
+<node COLOR="#000000" CREATED="1205142535734" FOLDED="true" ID="Freemind_Link_1083120624" MODIFIED="1205522273046" STYLE="fork" TEXT="Break">
+<node CREATED="1205142539015" FOLDED="true" ID="Freemind_Link_969320048" MODIFIED="1205142540671" TEXT="Pattern">
+<node CREATED="1205142545234" FOLDED="true" ID="Freemind_Link_1852564433" MODIFIED="1205142547515" TEXT="Across">
+<node CREATED="1205142549921" ID="Freemind_Link_1171808304" MODIFIED="1205142551140" TEXT="Lines"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205142567515" ID="Freemind_Link_191907744" MODIFIED="1205522273046" TEXT="EG">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142570625" FOLDED="true" ID="Freemind_Link_739576722" MODIFIED="1205522273046" STYLE="bubble" TEXT="Pattern">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142576031" FOLDED="true" ID="Freemind_Link_287167186" MODIFIED="1205522273046" TEXT="To Find">
+<node COLOR="#000000" CREATED="1205142578281" ID="Freemind_Link_1557879236" MODIFIED="1205522273046" STYLE="fork" TEXT="lastname, firstname middlename (optional)"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142605593" ID="Freemind_Link_1654489120" MODIFIED="1205522273062" TEXT="regexp = re.compile( r&quot;[a-zA-Z]+,&quot;      # lastname + comma&#xa;                                      r&quot;[a-zA-Z]+&quot;       # firstname&#xa;                                      r&quot;([a-zA-Z]+)?&quot;  # optional middlename&#xa;                                     )"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205142913375" ID="Freemind_Link_917749858" MODIFIED="1205558437640" POSITION="right" STYLE="bubble" TEXT="Extracting Text">
+<cloud/>
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205142928156" ID="Freemind_Link_446955034" MODIFIED="1205522273078" TEXT="Matching">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142946171" ID="Freemind_Link_353456366" MODIFIED="1205522273078" STYLE="bubble" TEXT="Subpattern"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205142973984" ID="Freemind_Link_771150342" MODIFIED="1205522273078" TEXT="Group Subpattern">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205142980828" FOLDED="true" ID="Freemind_Link_1896007445" MODIFIED="1205522273078" STYLE="bubble" TEXT="In">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205142988625" ID="Freemind_Link_1576700636" MODIFIED="1205522273078" TEXT="( )"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205143011828" FOLDED="true" ID="Freemind_Link_373165522" MODIFIED="1205522273078" STYLE="bubble" TEXT="Can Name">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205143034578" FOLDED="true" ID="Freemind_Link_1653163214" MODIFIED="1205522273078" TEXT="Using">
+<node COLOR="#000000" CREATED="1205143037281" FOLDED="true" ID="Freemind_Link_672877478" MODIFIED="1205522273078" STYLE="fork" TEXT="?P&lt;group_name&gt;">
+<node CREATED="1205143112671" FOLDED="true" ID="Freemind_Link_579850268" MODIFIED="1205143114625" TEXT="?">
+<node CREATED="1205143115656" FOLDED="true" ID="Freemind_Link_695699446" MODIFIED="1205143118906" TEXT="Different From">
+<node CREATED="1205143141578" FOLDED="true" ID="Freemind_Link_161056782" MODIFIED="1205143143328" TEXT="Meaning">
+<node CREATED="1205143130953" ID="Freemind_Link_338014156" MODIFIED="1205143137015" TEXT="0 or 1"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205143053109" FOLDED="true" ID="Freemind_Link_503847823" MODIFIED="1205522273093" TEXT="EG">
+<node COLOR="#000000" CREATED="1205143054578" ID="Freemind_Link_1556423489" MODIFIED="1205522273093" STYLE="fork" TEXT="(?P&lt;lastname&gt;[a-zA-Z]+)"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205143248468" FOLDED="true" ID="Freemind_Link_1745202839" MODIFIED="1205522273093" STYLE="bubble" TEXT="Returns">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205143258859" FOLDED="true" ID="Freemind_Link_558542976" MODIFIED="1205522273093" TEXT="Match Object">
+<node COLOR="#000000" CREATED="1205143268593" FOLDED="true" ID="Freemind_Link_1729846805" MODIFIED="1205522273093" STYLE="fork" TEXT="Containing">
+<node CREATED="1205143273828" FOLDED="true" ID="Freemind_Link_1219812917" MODIFIED="1205143274937" TEXT="Text">
+<node CREATED="1205143278859" FOLDED="true" ID="Freemind_Link_606810462" MODIFIED="1205143281906" TEXT="Matching">
+<node CREATED="1205143282312" ID="Freemind_Link_411699435" MODIFIED="1205143284484" TEXT="Subpattern"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205143298796" ID="Freemind_Link_1437527819" MODIFIED="1205522273093" TEXT="match.group">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205143306953" FOLDED="true" ID="Freemind_Link_54725027" MODIFIED="1205522273093" STYLE="bubble" TEXT="Extracts">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205143315375" FOLDED="true" ID="Freemind_Link_845966614" MODIFIED="1205522273109" TEXT="Named Groups">
+<node COLOR="#000000" CREATED="1205143320359" FOLDED="true" ID="Freemind_Link_1247636636" MODIFIED="1205522273109" STYLE="fork" TEXT="From">
+<node CREATED="1205143324546" ID="Freemind_Link_91308195" MODIFIED="1205143331578" TEXT="Matching Text"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205143335968" FOLDED="true" ID="Freemind_Link_1987404181" MODIFIED="1205522273109" STYLE="bubble" TEXT="EG">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205143337921" ID="Freemind_Link_485609809" MODIFIED="1205522273125" TEXT="import re&#xa;regexp = re.compile( r&quot;(?P&lt;lastname&gt;[a-zA-Z]+),&quot;              # lastname + comma&#xa;                                      r&quot;(?P&lt;firstname&gt;[a-zA-Z]+)&quot;                # firstname&#xa;                                      r&quot;((?P&lt;middlename&gt;([a-zA-Z]+)))?&quot;  # optional middlename&#xa;                                     )&#xa;file.open(&quot;textfile&quot;, &apos;r&apos;)&#xa;for line in file.readlines( ):&#xa;    result = regexp.search(line)&#xa;    if result == None:&#xa;        print &quot;Not a person.&quot;&#xa;    else:&#xa;        lastname = result.group( &apos;lastname&apos; )    # &apos;lastname&apos; is name of subpattern in (?P&lt;...&gt;)&#xa;        firstname = result.group( &apos;firstname&apos; )&#xa;        middlename = result.group( &apos;middlename&apos; )&#xa;        if middlename == None:&#xa;             middlename = &quot;&quot;&#xa;        print &quot;Name: %s %s %s&quot; % firstname, middlename, lastname"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205143716015" ID="Freemind_Link_815391570" MODIFIED="1205522273125" POSITION="right" STYLE="bubble" TEXT="Replacing Text">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205143735500" ID="Freemind_Link_1186955196" MODIFIED="1205522273140" TEXT="regexp.sub(&lt;replacement text&gt;, &lt;text to search&gt;)">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205143779656" FOLDED="true" ID="Freemind_Link_1417249818" MODIFIED="1205522273140" STYLE="bubble" TEXT="First Argument">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205143790593" FOLDED="true" ID="Freemind_Link_1465407939" MODIFIED="1205522273140" TEXT="May Be">
+<node COLOR="#000000" CREATED="1205143794093" FOLDED="true" ID="Freemind_Link_1450497595" MODIFIED="1205522273140" STYLE="fork" TEXT="Function">
+<node CREATED="1205143807640" FOLDED="true" ID="Freemind_Link_1956209753" MODIFIED="1205143809515" TEXT="Taking">
+<node CREATED="1205143812296" FOLDED="true" ID="Freemind_Link_963318633" MODIFIED="1205143817000" TEXT="Argument">
+<node CREATED="1205143817937" ID="Freemind_Link_392966663" MODIFIED="1205143821375" TEXT="Match Object"/>
+</node>
+<node CREATED="1205143822968" FOLDED="true" ID="Freemind_Link_493732534" MODIFIED="1205143828734" TEXT="Calculates">
+<node CREATED="1205143829609" ID="Freemind_Link_1222653160" MODIFIED="1205143833515" TEXT="Replacement Text"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205143841718" ID="Freemind_Link_1049882206" MODIFIED="1205522273140" TEXT="EG">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205143844000" ID="Freemind_Link_1856080289" MODIFIED="1205522273140" STYLE="bubble" TEXT="string = &quot;1 2 3 4 5&quot;&#xa;def intMatchToFloat(matchobj):&#xa;    return (matchobj.group(&quot;num&quot;) + &quot;.0&quot; )&#xa;    pattern = r&quot;(?P&lt;num&gt;[0-9]+)&quot;&#xa;    regexp = re.compile(pattern)&#xa;    regexp.sub(intMatchToFloat, string)    =&gt;    &quot;1.0 2.0 3.0 4.0 5.0&quot;"/>
+</node>
+</node>
+</node>
+</map>

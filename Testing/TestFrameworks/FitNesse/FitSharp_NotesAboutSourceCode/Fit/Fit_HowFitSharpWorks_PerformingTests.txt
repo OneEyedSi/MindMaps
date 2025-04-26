@@ -1,0 +1,1172 @@
+Executes appropriate commands for each parsed table.
+
+In fitSharp.Fit.Operators.RunTestDefault.ExecuteStoryTest:
+	public void DoTables(Tree<Cell> tables)
+	{
+		processor.TestStatus.Reset();
+		processor.TestStatus.Summary["run date"] = DateTime.Now;
+		processor.TestStatus.Summary["run elapsed time"] = new ElapsedTime();
+		//## tables.Branches[0].ValueAt(0, 0) is equivalent of tables.Parts.Parts.Parts.
+		//## That is the first cell of the first row.
+		//## In this case heading = <td colspan="3">ActionFixture</td>
+		var heading = tables.Branches[0].ValueAt(0, 0);
+		try
+		{
+			processor.RunTest(() => InterpretTables(tables));
+			//##>>>>>>>>>>>>>>>>>>
+			In fitSharp.Machine.Engine.ProcessorExtension:
+				public static V RunTest<T, V>(this Processor<T> processor, Func<V> action)
+				{
+					//##	Memory has 6 items: 
+					//##	0: Settings 
+					//##	1: ApplicationUnderTest 
+					//##	2: Operators:
+					//##		3x Operators lists with 33, 0 and 12 Operators, respectively
+					//##	3: Symbols: None
+					//##	4: Procedures: fitSharp.Fit.Model.Procedures: None
+					//##	5: Logging: Set to DoNotWrite
+					
+					//## Apply executes action repeatedly, passing in each item in turn as a parameter.
+					//## fitSharp.Machine.Model.ObjectExtension.As<T>(this, Action<T> action) attempts 
+					//## to cast this to type T.  If successful, executes action, passing in cast object  
+					//## as parameter.
+					//## However, Interface fitSharp.Machine.Model.SetUpTearDown.SetUp() doesn't seem 
+					//##	to have any implementation.
+					processor.Memory.Apply(i => i.As<SetUpTearDown>(s => s.SetUp()));
+					//## action = fitSharp.Fit.Operators.RunTestDefault.ExecuteStoryTest.InterpretTables(tables)
+					var result = action();
+					processor.Memory.Apply(i => i.As<SetUpTearDown>(s => s.TearDown()));
+					return result;
+				}
+			//##<<<<<<<<<<<<<<<<<<
+		}
+		catch (System.Exception e)
+		{
+			processor.TestStatus.MarkException(heading, e);
+		}
+		writer.WriteTest(tables, processor.TestStatus.Counts);
+		//##>>>>>>>>>>>>>>>>>>
+		In fitSharp.Fit.Fixtures.StoryTestStringWriter:
+			public void WriteTest(Tree<Cell> test, TestCounts counts)
+			{
+				//## writesTables = true
+				if (!writesTables)
+				{
+					var testResult = processor.ParseTree<Cell, StoryTestString>(test).ToString();
+					if (!string.IsNullOrEmpty(testResult)) HandleTableResult(testResult);
+				}
+				handleCounts(counts);
+				Counts = counts;
+			}
+		//##<<<<<<<<<<<<<<<<<<
+	}
+
+	TypedValue InterpretTables(Tree<Cell> theTables)
+	{
+		processor.TestStatus.TableCount = 1;
+		flowFixture = new DefaultFlowInterpreter(null);
+		//## Branches of Tables represent a table
+		foreach (var table in theTables.Branches)
+		{
+			try
+			{
+				try
+				{
+					InterpretTable(table);
+				}
+				catch (System.Exception e)
+				{
+					processor.TestStatus.MarkException(table.ValueAt(0, 0), e);
+				}
+			}
+			catch (System.Exception e)
+			{
+				if (!(e is AbandonException)) throw;
+			}
+
+			writer.WriteTable(table);
+			//##>>>>>>>>>>>>>>>>>>
+			In fitSharp.Fit.Fixtures.StoryTestStringWriter:
+				public void WriteTable(Tree<Cell> table)
+				{
+					//## For successful test tableResult appears identical to the original HTML 
+					//	table (in string form).
+					var tableResult = processor.ParseTree<Cell, StoryTableString>(table).ToString();
+					if (string.IsNullOrEmpty(tableResult)) return;
+
+					HandleTableResult(tableResult);
+					writesTables = true;
+				}
+
+				void HandleTableResult(string tableResult)
+				{
+					handleTables(tableResult);
+					//##>>>>>>>>>>>>>>>>>>
+					In fitnesse.fitserver.FitServer:
+						private void WriteTables(string tables)
+						{
+							reporter.WriteLine("\tTransmitting tables of length " + tables.Length);
+							clientSocket.SendDocument(tables);
+							//##>>>>>>>>>>>>>>>>>>
+							In fit.Runner.FitSocket:
+								public void SendDocument(string document)
+								{
+									socketSession.Write(Protocol.FormatDocument(document));
+									//##>>>>>>>>>>>>>>>>>>
+									In fitSharp.IO.SocketSession:
+										public void Write(string message)
+										{
+											var messageBytes = Encoding.UTF8.GetBytes(message);
+											socket.Send(messageBytes);
+										}
+									//##<<<<<<<<<<<<<<<<<<
+								}
+							//##<<<<<<<<<<<<<<<<<<
+						}
+					//##<<<<<<<<<<<<<<<<<<
+					tables.Append(tableResult);
+				}
+			//##<<<<<<<<<<<<<<<<<<
+
+			processor.TestStatus.TableCount++;
+		}
+		flowFixture.DoTearDown(theTables.Branches[0]);
+		return TypedValue.Void;
+	}
+
+	void InterpretTable(Tree<Cell> table)
+	{
+//################################################################################################################################													
+//## THIS IS WHERE THE "ANOTHER IMPORTANT BIT" tag appears in HowFitSharpWorks.txt.
+//## (repeated the bit above for context)
+//################################################################################################################################			
+		//## table.ValueAt(0, 0) = table.Branches[0].Branches[0].Value 
+		//##	= table.Parts.Parts 
+		//##	= first cell of first row of table
+		//## In this case heading of first table = <td colspan="3">ActionFixture</td>
+		var heading = table.ValueAt(0, 0);
+		if (heading == null || processor.TestStatus.IsAbandoned) return;
+		//## processor is fit.Service.Service
+		//## flowFixture is fitSharp.Fit.Engine.DefaultFlowInterpreter
+		new InterpretFlow(processor, flowFixture)
+			.OnNewFixture(IsNewFlowFixture)
+			.DoTableFlow(table, 0);
+		//##>>>>>>>>>>>>>>>>>>
+		In fitSharp.Fit.Engine.InterpretFlow:
+			//## processor is fit.Service.Service
+			//## rowsToSkip = 0
+			public void DoTableFlow(Tree<Cell> table, int rowsToSkip)
+			{
+				if (processor.TestStatus.IsAbandoned) return;
+				hasFinishedTable = false;
+				//## Iterates through rows of table.
+				for (var i = 0; i < table.Branches.Count; i++)
+				{
+					if (i < rowsToSkip) continue;
+					//## Set once ProcessRestOfTable has iterated through all rows in the table.
+					//## Prevents iterating through the same table multiple times.
+					if (hasFinishedTable) break;
+					ProcessFlowRow(table, i);
+				}
+			}
+
+			//## processor is fit.Service.Service
+			//## interpreter is new fitSharp.Fit.Engine.DefaultFlowInterpreter(null)
+			void ProcessFlowRow(Tree<Cell> table, int rowNumber)
+			{
+				//## table:
+				/*
+				<table>
+					<tr>
+						<td colspan="3">ActionFixture</td>
+					</tr>
+					<tr>
+						<td>start</td>
+						<td colspan="2">FitNesseDEMO.ActionFixtureTest</td>
+					</tr>
+					<tr>
+						<td>enter</td>
+						<td>string1</td>
+						<td>Hello</td>
+					</tr>
+					<tr>
+						<td>enter</td>
+						<td>string2</td>
+						<td>World</td>
+					</tr>
+					<tr>
+						<td>press</td>
+						<td colspan="2">Concatenate</td>
+					</tr>
+					<tr>
+						<td>check</td>
+						<td>combined</td>
+						<td>Hello World</td>
+					</tr>
+				</table>				
+				*/
+				//## Each branch represents a different row.
+				var currentRow = table.Branches[rowNumber];	
+				try
+				
+					//## Row[0]: 
+					/*
+					<tr>
+						<td colspan="3">ActionFixture</td>
+					</tr>
+					*/
+					//## Row[1]: 
+					/*
+					<tr>
+						<td>start</td>
+						<td colspan="2">FitNesseDEMO.ActionFixtureTest</td>
+					</tr>
+					*/
+					//## etc
+					var result = currentRow.InvokeSpecialAction(processor, interpreter);
+					//##>>>>>>>>>>>>>>>>>>
+					In fitSharp.Fit.Engine.FlowRow:					
+						//## processor = Service	
+						//## interpreter = new DefaultFlowInterpreter(null);
+						public static TypedValue InvokeSpecialAction(this Tree<Cell> row, CellProcessor processor,
+							FlowInterpreter interpreter)
+						{
+							//## First cell in row, so specialActionName = "actionfixture" in this case
+							//## (but it's a MemberName object, not a string)
+							//## Row was:
+							/*
+							<tr>
+								<td colspan="3">ActionFixture</td>
+							</tr>
+							*/
+							//## Now changed to:
+							/*
+							<tr>
+								<td colspan="3"><span class="fit_member">ActionFixture</span></td>
+							</tr>
+							*/
+							//## SIDE EFFECT OF ParseTree: 
+							//## Sets cell.ParsedValue = TypedValue(new fitSharp.Machine.Model.MemberName("ActionFixture"))
+							//## Also sets Syntax attribute on cell to "member".  This adds the span element as class 
+							//## SyntaxValue Format method returns (paraphrased):
+							//##	StringBuilder.Insert(0, String.Format("<span class=\"fit_{0}\">", Value)) + "</span"
+							var specialActionName = processor.ParseTree<Cell, MemberName>(row.Branches[0]);
+							//##>>>>>>>>>>>>>>>>>>
+							Calls down into fitSharp.Fit.Service.CellProcessorBase:
+								//## type: fitSharp.Machine.Model.MemberName
+								//## instance: TypedValue.Void
+								//## parameters: cell: <td colspan="3">ActionFixture</td>
+								public override TypedValue Parse(System.Type type, TypedValue instance, Tree<Cell> parameters)
+								{
+									Cell cell = parameters.Value;
+									//## cell.ParsedValue.Type = null and cell.ParsedValue.HasValue = false
+									//## cell.ParsedValue is like More: Just a property with a getter and setter, no logic.
+									//## 	so has to be set explicitly, and isn't set when parsing HTML document.
+									if (cell != null && cell.ParsedValue.Type == type) return cell.ParsedValue;
+									TypedValue parsedValue = base.Parse(type, instance, parameters);
+									//##>>>>>>>>>>>>>>>>>>
+									In fitSharp.Machine.Engine.ProcessorBase:
+										public virtual TypedValue Parse(Type type, TypedValue instance, Tree<T> parameters)
+										{
+											return DoLoggedOperation(
+												string.Format("parse {0}", type),
+												logging =>
+												{
+													var result = TypedValue.Void;
+													Operators.Do<ParseOperator<T>>(
+														o => o.CanParse(type, instance, parameters),
+														o =>
+														{
+															result = o.Parse(type, instance, parameters);
+															logging.LogResult(o, result);
+														});
+													return result;
+												});
+										}
+										//##>>>>>>>>>>>>>>>>>>
+										Calls into fitSharp.Fit.Operators.ParseMemberName:
+											public TypedValue Parse(Type type, TypedValue instance, Tree<Cell> parameters)
+											{
+												//## nameParts = "ActionFixture"
+												var nameParts = Processor.Get<Settings>().BehaviorHas("fitlibrary1")
+													? parameters.Leaves().Aggregate(new StringBuilder(), (t, cell) => AppendWithConversion(t, cell.Text))
+													: parameters.Leaves().Aggregate(new StringBuilder(), (t, cell) => Append(t, cell.Text));
+
+												
+												if (nameParts.Length == 0) nameParts.Append("blank");
+												var name = nameParts.ToString();
+												if (name.Length > 0 && char.IsDigit(name, 0))
+												{
+													name = digitConversion[name[0]] + name.Substring(1);
+												}
+												
+												//## Adds atttribute to cell with key Syntax and value "member"
+												foreach (var cell in parameters.Leaves())
+													cell.SetAttribute(CellAttribute.Syntax, CellAttributeValue.SyntaxMember);
+												
+												//## Returns TypedValue object wrapping a MemberName object containing "ActionFixture"
+												return new TypedValue(MakeMemberName(name));
+											}
+
+											private static StringBuilder Append(StringBuilder nameParts, string name)
+											{
+												return nameParts.Append(name);
+											}
+
+											MemberName MakeMemberName(string name)
+											{
+												if (name.EndsWith("?")) name = name.Substring(0, name.Length - 1);
+												var ofPosition = name.IndexOf(" of ", StringComparison.OrdinalIgnoreCase);
+												if (ofPosition > 0 && ofPosition < name.Length - 4)
+												{
+													var genericType = name.Substring(ofPosition + 4);
+													var baseName = name.Substring(0, ofPosition);
+													return new MemberName(name, baseName, MakeGenericTypes(new[] {genericType}));
+												}
+												return new MemberName(name);
+											}
+										//##<<<<<<<<<<<<<<<<<<
+									//##<<<<<<<<<<<<<<<<<<
+									if (cell != null) cell.ParsedValue = parsedValue;
+									return parsedValue;
+								}
+							//##<<<<<<<<<<<<<<<<<<
+							try
+							{
+								var result = processor.Operate<InvokeSpecialOperator>(new TypedValue(interpreter), specialActionName,
+									row);
+								//##>>>>>>>>>>>>>>>>>>
+								In ProcessorBase<string, BasicProcessor>:
+									public TypedValue Operate<O>(params object[] parameters) where O : class (see above)
+										//## operationName = "InvokeSpecial"
+										//## candidate = fitSharp.Fit.Operators.InvokeSpecialDefault
+										//## member = InvokeSpecial
+										//## invokes fitSharp.Fit.Operators.InvokeSpecialDefault.InvokeSpecial:
+										//##>>>>>>>>>>>>>>>>>>
+										In fitSharp.Fit.Operators.InvokeSpecialDefault:
+											public TypedValue InvokeSpecial(TypedValue instance, MemberName memberName, Tree<Cell> parameters)
+											{
+												//## Creates a new TypedValue object with a MemberMissingException as the value 
+												//##	and void as the type. memberName = "actionfixture" (lower case)
+												return TypedValue.MakeInvalid(new MemberMissingException(instance.Type, memberName.Name, 1));
+											}
+										//##<<<<<<<<<<<<<<<<<<
+										//## wraps TypedValue in another TypedValue, of type TypedValue and returns it as the result
+								//##<<<<<<<<<<<<<<<<<<
+								if (result.IsValid)
+								{
+									//## Skips this so must not be valid
+									SetSyntaxKeyword(row);
+								}
+								return result;
+							}
+							catch (System.Exception)
+							{
+								SetSyntaxKeyword(row);
+								throw;
+							}
+						}
+					//##<<<<<<<<<<<<<<<<<<
+					//## result.Value: fitSharp.Machine.Exception.MemberMissingException object with message:
+					//##	Member 'actionfixture' with 1 parameter(s) not found for type 'fitSharp.Fit.Engine.DefaultFlowInterpreter'.
+					//## IsValid = false
+					if (!result.IsValid)
+					{
+						result = currentRow.ExecuteMethod(processor, interpreter);
+						//##>>>>>>>>>>>>>>>>>>
+						In FitSharp.Fit.Engine.FlowRow:
+							public static TypedValue ExecuteMethod(this Tree<Cell> row, CellProcessor processor, FlowInterpreter interpreter)
+							{
+								//## Calls ExecuteMethod overload.
+								return row.ExecuteMethod(processor, interpreter.MethodRowSelector, interpreter);
+							}
+							
+							//## row = first row of table: 
+							/*
+							<tr>
+								<td colspan="3"><span class="fit_member">ActionFixture</span></td>
+							</tr>
+							*/
+							//## processor = fit.Service.Service		
+							//## selector = fitSharp.Fit.Engine.DefaultFlowInterpreter.MethodRowSelector = new fitSharp.Fit.Model.DoRowSelector();
+							//## target = new fitSharp.Fit.Engine.DefaultFlowInterpreter(null);
+							public static TypedValue ExecuteMethod(this Tree<Cell> row, CellProcessor processor, MethodRowSelector selector,
+								object target)
+							{
+								return processor.Execute(target,
+									selector.SelectMethodCells(row),
+									selector.SelectParameterCells(row),		
+									row.ValueAt(0));  //## Returns the value of Branch[0] of the row.  Branch[0]: <td colspan="3"><span class="fit_member">ActionFixture</span></td>
+									//##>>>>>>>>>>>>>>>>>>
+									In fitSharp.Fit.Model.DoRowSelector:
+										public Tree<Cell> SelectMethodCells(Tree<Cell> row)
+										{
+											return new CellTree(row.Branches.Alternate());
+											//##>>>>>>>>>>>>>>>>>>
+											In fitSharp.Machine.Model.EnumerableExtension:
+												//## Returns odd-numbered branches.  In this case there is only one.
+												public static IEnumerable<T> Alternate<T>(this IEnumerable<T> collection)
+												{
+													var alternate = true;
+													foreach (var unit in collection)
+													{
+														if (alternate) yield return unit;
+														alternate = !alternate;
+													}
+												}
+											//##<<<<<<<<<<<<<<<<<<
+										}
+										
+										public Tree<Cell> SelectParameterCells(Tree<Cell> row)
+										{
+											//## Returns even-numbered branches.  In this case there aren't any.
+											return new CellTree(row.Branches.Skip(1).Alternate());
+										}
+									//##<<<<<<<<<<<<<<<<<<
+									//## systemUnderTest: new fitSharp.Fit.Engine.DefaultFlowInterpreter(null);
+									//## memberName: row (?) with Value null, Branch <td colspan="3"><span class="fit_member">ActionFixture</span></td>
+									//## parameters: Empty Tree<Cell>: Value = null, no Branches
+									//## targetCell: <td colspan="3"><span class="fit_member">ActionFixture</span></td>
+									Calls FitSharp.Fit.Engine.CellProcessorExtension.Execute(this CellProcessor processor, object systemUnderTest, 
+										Tree<Cell> memberName, Tree<Cell> parameters, Cell targetCell):
+									//## parameters: 4 objects:
+									//##	0: fitSharp.Fit.Engine.DefaultFlowInterpreter
+									//##	1: row (?) with Value null, Branch <td colspan="3"><span class="fit_member">ActionFixture</span></td>
+									//##	2: cell with Value null, no Branches
+									//##	3: cell <td colspan="3"><span class="fit_member">ActionFixture</span></td>, no Branches
+									Calls ProcessorBase.Operate<O>(params object[] parameters):
+										//## operationName = "Execute"
+										//## candidate = fitSharp.Fit.Operators.ExecuteDefault
+										//## member = Execute
+										//## invokes fitSharp.Fit.Operators.ExecuteDefault.Execute:
+										//##>>>>>>>>>>>>>>>>>>
+										In fitSharp.Fit.Operators.ExecuteDefault:
+											//## systemUnderTest: fitSharp.Fit.Engine.DefaultFlowInterpreter
+											//## memberName: CellTree object with 1 Branch = <td colspan="3"><span class="fit_member">ActionFixture</span></td>
+											//## parameters: CellTree object with Value = null and no Branches
+											//## targetCell: fit.Parse object representing cell <td colspan="3"><span class="fit_member">ActionFixture</span></td>
+											public TypedValue Execute(object systemUnderTest, Tree<Cell> memberName, Tree<Cell> parameters, Cell targetCell)
+											{
+												var beforeCounts = new TestCounts(Processor.TestStatus.Counts);
+												var targetObjectProvider = systemUnderTest as TargetObjectProvider;
+												//## In this case name = TypedValue with value of "actionfixture"
+												var name = Processor.ParseTree<Cell, MemberName>(memberName);
+												//##>>>>>>>>>>>>>>>>>>
+												Calls down to CellProcessorBase.Parse(System.Type type, TypedValue instance, Tree<Cell> parameters):
+													//## type = MemberName
+													//## instance = void
+													//## parmeters = memberName from above: CellTree object 
+													//##									with 1 Branch = <td colspan="3"><span class="fit_member">ActionFixture</span></td>
+													Calls down to ProcessorBase.Parse(Type type, TypedValue instance, Tree<T> parameters):
+														Calls ParseMemberName.Parse: 
+															//## name = "ActionFixture"
+															//## Adds Syntax attribute with value "member" to cell
+															//## returns TypedValue(MakeMemberName(name))
+													//## Sets cell.ParsedValue = result from ParseMemberName.Parse
+												//##<<<<<<<<<<<<<<<<<<
+												TypedValue result;
+												Processor.Get<Logging>().BeginCell(targetCell);
+												//##>>>>>>>>>>>>>>>>>>
+												In FitSharp.Machine.Engine.Logging:
+													public void BeginCell(Cell cell)
+													{
+														//## Both BeginCellEvent is null and isStarted = false
+														if (BeginCellEvent != null && isStarted) BeginCellEvent(cell);
+													}
+												//##<<<<<<<<<<<<<<<<<<
+												try
+												{
+													//## result = TypedValue where 
+													//##			IsValid = false
+													//##			ValueString = fitSharp.Machine.Exception.MemberMissingException: Member 'actionfixture' with 0 parameter(s) not found for type 'fitSharp.Fit.Engine.DefaultFlowInterpreter'.
+													//## for how calculated see asides below
+													result = Processor.Invoke(
+														new TypedValue(targetObjectProvider != null
+															? targetObjectProvider.GetTargetObject()
+															: systemUnderTest),
+														name, parameters);
+													//##>>>>>>>>>>>>>>>>>>
+													Calls into ProcessorBase.Invoke(TypedValue instance, MemberName memberName, Tree<T> parameters)
+													{
+														//## instance: fitSharp.Fit.Engine.DefaultFlowInterpreter
+														//## memberName: actionfixture
+														//## parameters: CellTree with Value = null, no Branches
+														return DoLoggedOperation(
+															instance.Type != typeof (Logging)
+																? string.Format("invoke {0} {1}", instance.ValueString, memberName)
+																: string.Empty,
+															logging =>
+															{
+																var result = TypedValue.Void;
+																Operators.Do<InvokeOperator<T>>(
+																	o => o.CanInvoke(instance, memberName, parameters),
+																	o =>
+																	{
+																		result = o.Invoke(instance, memberName, parameters);
+																		logging.LogResult(o, result);
+																	});
+																return result;
+																//##>>>>>>>>>>>>>>>>>>
+																In fitSharp.Machine.Engine.Operators:
+																	public void Do<O>(CanDoOperation<O> canDoOperation, DoOperation<O> doOperation) where O : class
+																	{
+																		//##: O = fitSharp.Machine.Engine.InvokeOperator<Cell>
+																		foreach (var candidate in Values<O>().Where(candidate => canDoOperation(candidate)))
+																		{
+																			//## candidate: fitSharp.Machine.Engine.InvokeDefault<Cell, CellProcessor>
+																			doOperation(candidate);
+																			//##>>>>>>>>>>>>>>>>>>
+																			In fitSharp.Machine.Engine.InvokeDefault<Cell, CellProcessor>:
+																				public TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<T> parameters)
+																				{
+																					RuntimeMember member;
+																					var parameterNames = new List<string>();
+																					int parameterCount;
+
+																					if (memberName.HasNamedParameters)	//## false for "ActionFixture"
+																					{
+																						parameterNames = parameters.Branches.Alternate().Aggregate(new List<string>(),
+																							(names, parameter) =>
+																							{
+																								names.Add(Processor.ParseTree<T, string>(parameter));
+																								return names;
+																							});
+																						parameterCount = parameterNames.Count;
+																						member = MemberQuery.FindInstance(Processor.FindMember, instance.Value,
+																							new MemberSpecification(memberName).WithParameterNames(parameterNames));
+																					}
+																					else
+																					{
+																						parameterCount = parameters.Branches.Count;	//##: 0
+																						member = MemberQuery.FindInstance(Processor.FindMember, instance.Value,
+																							new MemberSpecification(memberName, parameterCount)); 
+																						//##>>>>>>>>>>>>>>>>>>
+																						Calls down into ProcessorBase.Operate<O>(params object[] parameters):
+																						//## operationName = "FindMember"
+																						//## candidate = fitSharp.Machine.Engine.FindMemberDefault<Cell, CellProcessor>
+																						//## member = FindMember
+																						//## returns TypedValue(null): IsNull = true, HasValue = false
+																						//##<<<<<<<<<<<<<<<<<<
+																					}
+																					//## member = null
+																					if (member == null)
+																						//## returns here
+																						return TypedValue.MakeInvalid(new MemberMissingException(instance.Type, memberName.Name, parameterCount));
+
+																					var parameterList = memberName.HasNamedParameters
+																						? new ParameterList<T>(Processor).GetNamedParameterList(instance, parameters, member, parameterNames)
+																						: new ParameterList<T>(Processor).GetParameterList(instance, parameters, member);
+																					try
+																					{
+																						return member.Invoke(parameterList);
+																					}
+																					catch (TargetInvocationException e)
+																					{
+																						return TypedValue.MakeInvalid(e.InnerException);
+																					}
+																					catch (ValidationException e)
+																					{
+																						return TypedValue.MakeInvalid(e);
+																					}
+																				}
+																			//##<<<<<<<<<<<<<<<<<<
+																			return;
+																		}
+																		throw new ApplicationException(string.Format("No default for {0}", typeof (T).Name));
+																	}
+																//##<<<<<<<<<<<<<<<<<<
+															});
+													}
+														Calls into ProcessorBase.Operate<O>(params object[] parameters):
+															//## operationName = "Execute"
+															//## candidate = fitSharp.Fit.Operators.ExecuteDefault
+															//## member = Execute
+															//## returns TypedValue(null): IsNull = true, HasValue = false
+													//##<<<<<<<<<<<<<<<<<<
+												}
+												finally
+												{
+													Processor.Get<Logging>().EndCell(targetCell);
+													//##>>>>>>>>>>>>>>>>>>
+													In FitSharp.Machine.Engine.Logging:
+														public void EndCell(Cell cell)
+														{
+															//## Both EndCellEvent is null and isStarted = false
+															if (EndCellEvent != null && isStarted) EndCellEvent(cell);
+														}
+													//##<<<<<<<<<<<<<<<<<<
+												}
+												Processor.TestStatus.MarkCellWithLastResults(targetCell, beforeCounts);
+												//##>>>>>>>>>>>>>>>>>>
+												Calls down into TestStatus.MarkCellWithLastResults(Cell cell, Action<Cell> markWithCounts):
+												{										
+													//## LastAction is empty string
+													if (cell != null && !string.IsNullOrEmpty(LastAction))
+													{
+														cell.SetAttribute(CellAttribute.Folded, LastAction);
+														markWithCounts(cell);
+													}
+													LastAction = null;
+												}
+													
+												//##<<<<<<<<<<<<<<<<<<
+												return result;
+											}
+										//##<<<<<<<<<<<<<<<<<<
+										result wrapped in TypedValue of type TypedValue
+									//##<<<<<<<<<<<<<<<<<<
+							}
+						//##<<<<<<<<<<<<<<<<<<
+					}
+					//## result still not valid
+					if (!result.IsValid)
+					{
+						//## true
+						if (result.IsException<MemberMissingException>())
+						{
+							//## Removes Syntax attribute from odd-numbered cells in first row.
+							foreach (var cell in interpreter.MethodRowSelector.SelectMethodCells(currentRow).Branches)
+							{
+								cell.Value.ClearAttribute(CellAttribute.Syntax);
+							}
+	//#########################################################
+	//## ANOTHER IMPORTANT BIT: ActionFixture object created
+	//## From here on down the table is parsed and methods on 
+	//## the ActionFixture object are called as a result
+	//#########################################################
+							//## newFixture set to TypedValue of fit.ActionFixture object			
+							var newFixture = processor.ParseTree<Cell, Interpreter>(currentRow);
+							//##>>>>>>>>>>>>>>>>>>
+							Calls down into CellProcessorBase.Parse(System.Type type, TypedValue instance, Tree<Cell> parameters):
+							{ //## Added so can collapse
+							
+								//## type = fitSharp.Fit.Engine.Interpreter
+								//## instance = TypedValue(void)
+								//## parameters = TypedValue wrapped inside another TypedValue.  Outer one has 1 branch 
+								//##				representing the first row.  Inner TypedValue represents 
+								///##				table HTML with four attributes:
+									//## Leader = \r\n\t
+									//## StartTag = <tr>
+									//## Body = ""
+									//## EndTag = </tr>
+								Calls ProcessorBase.Parse(Type type, TypedValue instance, Tree<T> parameters):
+									Calls into ParseInterpreter:
+										public TypedValue Parse(Type type, TypedValue instance, Tree<Cell> parameters)
+										{
+											//## Reads parameters.Branches[0] = first row of table
+											var classCell = parameters.ValueAt(0);  
+											var interpreter = WithSystemUnderTest(MakeInterpreter(classCell), instance);
+											//##>>>>>>>>>>>>>>>>>>
+											Interpreter MakeInterpreter(Cell classCell)
+											{
+												var className = classCell.Text.Trim();	//## "ActionFixture"
+												if (className.Length == 0 || !char.IsLetter(className[0])) return new CommentFixture();
+												
+												//## result = TypedValue of fit.ActionFixture
+												var result = Processor.Create(new GracefulNameMatcher(className, className + "fixture"), new CellTree());
+												//##>>>>>>>>>>>>>>>>>>
+												Calls down into ProcessorBase.Operate<O>(params object[] parameters):
+													//## operationName = "Create"
+													//## candidate = Service
+													//## member = Create
+													//## result = TypedValue of fit.ActionFixture
+													Eventually called down into fitSharp.Machine.Engine.CreateDefault<fitSharp.Machine.Model.Cell, fitSharp.Fit.Engine.CellProcessor>:
+														public TypedValue Create(NameMatcher memberName, Tree<T> parameters)
+														{
+															//## memberName: ActionFixture
+															//## Processor.ApplicationUnderTest: 
+															//##	assemblies: 
+															//##		0: file:///C:/Users/simone/Documents/SimonsDocuments/IT/C#/DemoCode/FitNesseDEMO/Tristan.Test/bin/Debug/Tristan.Test.dll
+															//##		1: file:///C:/Users/simone/Documents/SimonsDocuments/IT/TestTools/FitNesse/FitSharp/fit.DLL
+															//##	namespaces: 
+															//##		0: fitSharp.Machine.Engine
+															//##		1: fitSharp.Fit.Fixtures
+															//##		2: fit
+															//##		3: fitSharp.Fit.Operators
+															//##		4: fit.Operators															
+															var runtimeType = Processor.ApplicationUnderTest.FindType(memberName);
+															//##>>>>>>>>>>>>>>>>>>
+															In fitSharp.Machine.Engine.ApplicationUnderTest:
+																public RuntimeType FindType(NameMatcher typeName)
+																{
+																	var type = Type.GetType(typeName.MatchName);
+																	if (type == null)
+																	{
+																		//## cache: 1 Type: fitnesse.fitserver.FitServer
+																		type = SearchForType(typeName, cache);
+																		//##>>>>>>>>>>>>>>>>>>
+																		Type SearchForType(NameMatcher typeName, IEnumerable<Type> types)
+																		{
+																			foreach (var type in types)
+																			{
+																				if (typeName.Matches(type.FullName)) return type;
+																				if (type.Namespace == null || !namespaces.IsRegistered(type.Namespace)) continue;
+																				if (typeName.Matches(type.Name)) return type;
+																			}
+																			return null;
+																		}
+																		//##<<<<<<<<<<<<<<<<<<
+																		//## type = null
+																		if (type == null)
+																		{
+																			assemblies.LoadWellKnownAssemblies(typeName.MatchName);  //## Does nothing, returns straight away
+																			//## assemblies.Types includes fit.ActionFixture
+																			//## returns fit.ActionFixture
+																			type = SearchForType(typeName, assemblies.Types);	
+																		}
+																		if (type == null)
+																		{
+																			throw new TypeMissingException(typeName.MatchName, assemblies.Report);
+																		}
+																		// Adds fit.ActionFixture type to cache
+																		UpdateCache(type);
+																	}
+																	return new RuntimeType(type);
+																}
+															//##<<<<<<<<<<<<<<<<<<
+															//## parameters.Branches.Count = 0 so calls first overload
+															return parameters.Branches.Count == 0
+																? CreateWithoutParameters(runtimeType)
+																: CreateWithParameters(parameters, runtimeType);
+															//##>>>>>>>>>>>>>>>>>>
+															static TypedValue CreateWithoutParameters(RuntimeType runtimeType)
+															{
+																try
+																{
+																	return runtimeType.CreateInstance();
+																	//##>>>>>>>>>>>>>>>>>>
+																	In fitSharp.Machine.Engine.RuntimeType:
+																		public TypedValue CreateInstance()
+																		{
+																			return new TypedValue(Type.Assembly.CreateInstance(Type.FullName), Type);
+																		}
+																	//##<<<<<<<<<<<<<<<<<<
+																}
+																catch (System.Exception e)
+																{
+																	throw new CreateException(runtimeType.Type, 0, e.InnerException ?? e);
+																}
+															}
+															//##<<<<<<<<<<<<<<<<<<
+														}
+												//##<<<<<<<<<<<<<<<<<<
+												classCell.SetAttribute(CellAttribute.Syntax,
+													result.HasValueAs<Interpreter>() ? CellAttributeValue.SyntaxInterpreter : CellAttributeValue.SyntaxSUT);
+													//## Sets Syntax attribute to CellAttributeValue.SyntaxInterpreter
+
+												//## returns TypedValue.Value cast as Interpreter
+												return result.GetValueAs<Interpreter>() ?? WithSystemUnderTest(new DefaultFlowInterpreter(null), result);
+											}
+											//## In this case, wraps fit.ActionFixture object in TypedValue
+											return new TypedValue(interpreter);
+										}
+								Sets ParsedValue of parameters object, representing row 
+								<tr>
+									<td colspan="2"><span class="fit_interpreter">StringFixture</span></td>
+								</tr>
+								to TypedValue(fit.StringFixture object)
+								
+								returns TypedValue(of fit.StringFixture)
+							} //## Added so can collapse
+							//##<<<<<<<<<<<<<<<<<<
+							//## newFlow = false
+							var newFlow = onNewFixture(newFixture, rowNumber);
+							//##>>>>>>>>>>>>>>>>>>
+							Calls RunTestDefault.IsNewFlowFixture(Interpreter fixture, int row)
+							{
+								//## ActionFixture is not FlowInterpreter so returns false.
+								var newFlowFixture = fixture as FlowInterpreter;
+								if (row == 0 && newFlowFixture != null && newFlowFixture.IsInFlow(processor.TestStatus.TableCount))
+								{
+									flowFixture = newFlowFixture;
+									return true;
+								}
+								return false;
+							}
+							//##<<<<<<<<<<<<<<<<<<
+							var adapter = newFixture as MutableDomainAdapter;
+							//## adapter != null and adapter.SystemUnderTest == null but interpreter, which is DefaultFlowInterpreter, 
+							//##	has SystemUnderTest == null
+							if (adapter != null && adapter.SystemUnderTest == null && interpreter.SystemUnderTest != null)
+								adapter.SetSystemUnderTest(interpreter.SystemUnderTest);
+							ProcessRestOfTable(newFixture, MakeTableWithRows(table, rowNumber), newFlow);
+							//##>>>>>>>>>>>>>>>>>>
+							In InterpretFlow:
+							{ //## Added so can collapse this section
+							
+								//## first row rowNumber = 0
+								Tree<Cell> MakeTableWithRows(Tree<Cell> table, int rowNumber)
+								{
+									if (rowNumber == 0) return table;
+									//## For row 0 returns whole table.  For row 1 it skips row 0 and returns the 
+									//##	remaining rows.  For row 2 it skips rows 0 & 1, etc.
+									var rows = new List<Tree<Cell>>(table.Branches.Skip(rowNumber));
+									return processor.MakeCell(string.Empty, "table", rows);
+								}
+								
+								//## childInterpreter is fit.ActionFixture object, in this case.
+								//## theRestOfTheRows is the whole table, for the first iteration, where row = 0, in 
+								//##								fitSharp.Fit.Engine.InterpretFlow.DoTableFlow
+								//## isFlow = false
+								void ProcessRestOfTable(Interpreter childInterpreter, Tree<Cell> theRestOfTheRows, bool isFlow)
+								{
+									processor.CallStack.Push();
+									//## interpreter is DefaultFlowInterpreter
+									processor.CallStack.DomainAdapter = new TypedValue(interpreter);
+									try
+									{
+										DoTable(theRestOfTheRows, childInterpreter, isFlow);
+									}
+									catch (System.Exception e)
+									{
+										processor.TestStatus.MarkException(theRestOfTheRows.ValueAt(0, 0), e);
+									}
+									processor.CallStack.PopReturn();
+									//## No error so sets hasFinishedTable after iterating through all the rows once.
+									hasFinishedTable = true;
+								}
+								
+								//## For ActionFixture inFlow = false
+								//## activeFixture is fit.ActionFixture object, in this case.
+								void DoTable(Tree<Cell> table, Interpreter activeFixture, bool inFlow)
+								{
+									var activeFlowFixture = activeFixture as FlowInterpreter;
+									//## fit.ActionFixture is not a FlowInterpreter so activeFlowFixture is null
+									if (activeFlowFixture != null) activeFlowFixture.DoSetUp(processor, table);
+									//##>>>>>>>>>>>>>>>>>>
+									In fitLibrary.FlowFixtureBase:
+										public void DoSetUp(CellProcessor processor, Tree<Cell> table)
+										{
+											//## Branches[0] is first row
+											Prepare(processor, table.Branches[0]);
+											//##>>>>>>>>>>>>>>>>>>
+											In fit.Fixture:
+												public void Prepare(CellProcessor processor, Tree<Cell> row)
+												{
+													Processor = processor;
+													GetArgsForRow(row);
+												}
+												
+												public void GetArgsForRow(Tree<Cell> row)
+												{
+													argumentRow = row;
+													Args = row.Branches.Skip(1).Aggregate(new List<string>(),
+														(list, cell) =>
+														{
+															list.Add(cell.Value.Text);
+															return list;
+														}).ToArray();
+												}
+											//##<<<<<<<<<<<<<<<<<<
+											ExecuteOptionalMethod(MemberName.SetUp, (Parse) table.Branches[0].Branches[0]);
+											//####################
+											
+											//####################
+										}
+									//##<<<<<<<<<<<<<<<<<<
+									//## The methods called in the asides below will vary depending on the type 
+									//## of fixture.  While the general structure will be similar:
+									//##	Interpret
+									//##		DoTable
+									//##			DoRows
+									//##				DoRow
+									//##					DoCells
+									//##						DoCell
+									//## the details will differ.  Some fixtures will override one or more of 
+									//## methods.  Other fixtures will just call the base methods in fit.Fixture.
+									activeFixture.Interpret(processor, table);
+									//##>>>>>>>>>>>>>>>>>>
+									In fit.Fixture:
+										public void Interpret(CellProcessor processor, Tree<Cell> table)
+										{
+											//## table.Branches[0] is first row (but remember this is theRestOfTheRows, 
+											//## which may start with table row 0, 1 or 2 in different iterations)
+											Prepare(processor, table.Branches[0]);
+											if (!IsVisible) this.processor.TestStatus.TableCount--;
+											//## Tries to cast table (ie theRestOfTheRows) to Parse object.  If 
+											//## successful (it is) then calls DoTable and passes in Parse object.
+											table.Value.As<Parse>(DoTable);
+										}
+
+										public void Prepare(CellProcessor processor, Tree<Cell> row)
+										{
+											Processor = processor;
+											GetArgsForRow(row);
+										}
+										
+										public string[] Args { get; private set; }
+
+										public void GetArgsForRow(Tree<Cell> row)
+										{
+											argumentRow = row;
+											//## For row 0 of table 0, which is
+											/*
+											<tr>
+												<td colspan="3">ActionFixture</td>
+											</tr>
+											*/
+											//## returns an empty string array
+											Args = row.Branches.Skip(1).Aggregate(new List<string>(),
+												(list, cell) =>
+												{
+													list.Add(cell.Value.Text);
+													return list;
+												}).ToArray();
+										}
+										
+										public virtual void DoTable(Parse table)
+										{
+											//## table.Parts.More = second row of the table (ie of theRestOfTheRows).
+											DoRows(table.Parts.More);
+										}
+
+										public virtual void DoRows(Parse rows)
+										{
+											//## Loops through all rows in theRestOfTheRows, starting at the second row
+											//## (see DoTable, above)
+											while (rows != null)
+											{
+												Parse more = rows.More;
+												DoRow(rows);
+												rows = more;
+											}
+										}
+
+										public virtual void DoRow(Parse row)
+										{
+											//## Iteration 0: First cell of second row of table.
+											//##				- Called fit.ActionFixture.Start, set actor = new FitNesseDEMO.ActionFixtureTest object
+											//## Iteration 1: First cell of third row of table.
+											//##				- Sets FitNesseDEMO.ActionFixtureTest.string1 = "Hello"
+											//## Iteration 2: First cell of fourth row of table.
+											//##				- Sets FitNesseDEMO.ActionFixtureTest.string2 = "World"
+											//## Iteration 3: First cell of fifth row of table.
+											//##				- Executes method FitNesseDEMO.ActionFixtureTest.Concatenate
+											//## Iteration 4: First cell of sixth row of table.
+											//##				- calls FitNesseDEMO.ActionFixtureTest.Combined and compares the 
+											//##					results to the value in the Hello World cell.
+											DoCells(row.Parts);
+										}
+										//##>>>>>>>>>>>>>>>>>>
+										In fit.ActionFixture:
+											public override void DoCells(Parse cells)
+											{
+												//## First cell of row, starting at the second row of theRestOfTheRows
+												this.cells = cells;
+												try
+												{
+													targetObject = this;
+													//## this.Processor = fit.Service.Service
+													Processor.ExecuteWithThrow(this, cells);
+													//##>>>>>>>>>>>>>>>>>>
+													//## For first iteration: First cell of second row of table.
+													In fitSharp.Fit.Engine.CellProcessorExtension:
+													{	//## Added to simplify collapsing
+													
+														//## target: fit.ActionFixture object with cells = First cell of row, starting at the second row of theRestOfTheRows
+														//## memberName: First cell of row, starting at the second row of theRestOfTheRows
+														public static TypedValue ExecuteWithThrow(this CellProcessor processor, object target, Tree<Cell> memberName)
+														{
+															return processor.ExecuteWithThrow(target, memberName, new CellTree(), new CellBase(string.Empty));
+														}
+
+														public static TypedValue ExecuteWithThrow(this CellProcessor processor, object target, Tree<Cell> memberName,
+															Tree<Cell> parameters, Cell targetCell)
+														{
+															var result = processor.Execute(target, memberName, parameters, targetCell);
+															result.ThrowExceptionIfNotValid();
+															return result;
+														}
+														
+														//## systemUnderTest: fit.ActionFixture object with cells = First cell of row, starting at the 
+														//##		second row of theRestOfTheRows
+														//## memberName: First cell of row, starting at the second row of theRestOfTheRows
+														//## parameters: new CellTree()
+														//## targetCell: new CellBase(string.Empty)
+														public static TypedValue Execute(this CellProcessor processor, object systemUnderTest, Tree<Cell> memberName,
+															Tree<Cell> parameters, Cell targetCell)
+														{
+															return processor.Operate<ExecuteOperator>(systemUnderTest, memberName, parameters, targetCell);
+														}
+														//##>>>>>>>>>>>>>>>>>>
+														In fitSharp.Machine.Engine.ProcessorBase:
+															public TypedValue Operate<O>(params object[] parameters)
+																//## parameters: 4 objects: As parameter list above
+																//## operationName: Execute
+																//## candidate: fitSharp.Fit.Operators.ExecuteDefault
+																//## member: Execute
+																//## result: TypedValue set to Void type but IsValid = true
+															//##>>>>>>>>>>>>>>>>>>
+															Calls down into fitSharp.Fit.Operators.ExecuteDefault:
+																public TypedValue Execute(object systemUnderTest, Tree<Cell> memberName, Tree<Cell> parameters, Cell targetCell)
+																{
+																	var beforeCounts = new TestCounts(Processor.TestStatus.Counts);
+																	var targetObjectProvider = systemUnderTest as TargetObjectProvider;
+																	//## MemberName object: start
+																	var name = Processor.ParseTree<Cell, MemberName>(memberName);
+																	TypedValue result;
+																	Processor.Get<Logging>().BeginCell(targetCell);
+																	try
+																	{
+																		result = Processor.Invoke(
+																			new TypedValue(targetObjectProvider != null
+																				? targetObjectProvider.GetTargetObject()
+																				: systemUnderTest),
+																			name, parameters);
+																		//##>>>>>>>>>>>>>>>>>>
+																		In fitSharp.Machine.Engine.ProcessorBase:
+																			//## instance: fit.ActionFixture object
+																			//## memberName: MemberName object set to "start"
+																			//## parameters: new CellTree()
+																			public TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<T> parameters)
+																			{
+																				...
+																				//##>>>>>>>>>>>>>>>>>>
+																				For iteration 0 calls down into fit.ActionFixture:
+																					public virtual void Start()
+																					{
+																						//## Processor = fit.Service.Service
+																						//## cells.More = <td colspan="2">FitNesseDEMO.ActionFixtureTest</td>
+																						//## actor = FitNesseDEMO.ActionFixtureTest object
+																						actor = Processor.Create(cells.More).Value;
+																						//## Sets Syntax attribute on ActionFixtureTest cell to "SUT"
+																						cells.More.Value.SetAttribute(CellAttribute.Syntax, CellAttributeValue.SyntaxSUT);
+																						var fixture = actor as Fixture;
+																						if (fixture != null) fixture.Processor = Processor;
+																					}
+																				//##------------------
+																				For iterations 1 & 2 (2nd & 3rd) calls down into fit.ActionFixture:
+																					public virtual void Enter()
+																					{
+																						//## Processor = fit.Service.Service
+																						//## actor = FitNesseDEMO.ActionFixtureTest object
+																						//## cells.More = <td>string1</td>
+																						//## cells.More.More = <td>Hello</td>
+																						new InputBinding(Processor, new Actor(actor), cells.More).Do(cells.More.More);
+																						//##>>>>>>>>>>>>>>>>>>
+																						In fitSharp.Fit.Service.InputBinding:
+																							public InputBinding(CellProcessor processor, TargetObjectProvider targetProvider, Tree<Cell> memberCell)
+																							{
+																								//## processor: fit.Service.Service
+																								//## targetProvider: FitNesseDEMO.ActionFixtureTest object wrapped in an Actor
+																								//## memberCell: For iteration 1 (2nd): <td>string1</td>
+																								this.processor = processor;
+																								this.memberCell = memberCell;
+																								this.targetProvider = targetProvider;
+																							}
+																							
+																							//## cell: For iteration 1 (2nd): <td>Hello</td>
+																							public void Do(Tree<Cell> cell)
+																							{
+																								var instance = new TypedValue(targetProvider.GetTargetObject());
+																								//## cell.Value.Text.Length > 0
+																								if (cell.IsLeaf && cell.Value.Text.Length == 0)
+																								{
+																									var actual = processor.Invoke(instance, GetMemberName(memberCell), new CellTree());
+																									if (actual.IsValid) ShowActual(cell.Value, actual.Value);
+																								}
+																								else
+																								{
+																									var beforeCounts = new TestCounts(processor.TestStatus.Counts);
+																									//## Iteration 1 (2nd): Sets FitNesseDEMO.ActionFixtureTest.string1 = "Hello"
+																									processor.InvokeWithThrow(instance, GetMemberName(memberCell), new CellTree(cell));
+																									processor.TestStatus.MarkCellWithLastResults(cell.Value, beforeCounts);
+																								}
+																							}
+																						//##<<<<<<<<<<<<<<<<<<
+																					}
+																				//##------------------
+																				For iteration 3 (4th) calls down into fit.ActionFixture:
+																					public virtual void Press()
+																					{
+																						//## actor = FitNesseDEMO.ActionFixtureTest object
+																						//## cells.More = <td colspan="2">Concatenate</td>
+																						
+																						//## Parameters: target (object), memberName, parmeters, targetCell
+																						Processor.ExecuteWithThrow(actor, cells.More, new CellTree(), cells.More);																						
+																					}
+																				//##------------------
+																				For iteration 4 (5th) calls down into fit.ActionFixture:
+																					public virtual void Check()
+																					{
+																						//## GetTarget(actor) returns the FitNesseDEMO.ActionFixtureTest instance
+																						//## cells.More = <td>combined</td>
+																						//## cells.More.More = <td>Hello World</td>		
+																						
+																						//## Processor.Check calls member Combined on FitNesseDEMO.ActionFixtureTest object 
+																						//## and compares the results to the value in the Hello World cell.
+																						Processor.Check(GetTarget(actor), cells.More, cells.More.More);
+																					}
+																				//##<<<<<<<<<<<<<<<<<<
+																			}
+																		//##<<<<<<<<<<<<<<<<<<
+																	}
+																	finally
+																	{
+																		Processor.Get<Logging>().EndCell(targetCell);
+																	}
+																	Processor.TestStatus.MarkCellWithLastResults(targetCell, beforeCounts);
+																	return result;
+																}
+															//##<<<<<<<<<<<<<<<<<<
+														//##<<<<<<<<<<<<<<<<<<
+													}	//## Added to simplify collapsing
+													//##<<<<<<<<<<<<<<<<<<
+													//## actor = FitNesseDEMO.ActionFixtureTest object
+													targetObject = actor;
+												}
+												catch (Exception e)
+												{
+													TestStatus.MarkException(cells, e);
+												}
+											}
+										//##<<<<<<<<<<<<<<<<<<
+									//##<<<<<<<<<<<<<<<<<<
+									if (activeFlowFixture != null && !inFlow) activeFlowFixture.DoTearDown(table);
+									//####################
+									
+									//####################
+								}
+							} //## Added so can collapse section
+							//##<<<<<<<<<<<<<<<<<<
+						}
+						else
+						{
+							result.ThrowExceptionIfNotValid();
+						}
+					}
+					else
+					{
+						if (processor.TestStatus.IsAbandoned)
+						{
+							processor.TestStatus.MarkIgnore(currentRow.Value);
+							return;
+						}
+						if (result.Type == typeof (bool))
+						{
+							ColorMethodName(interpreter.MethodRowSelector.SelectMethodCells(currentRow),
+								result.GetValue<bool>());
+						}
+						else
+						{
+							//todo: change wrapping re sut & call stack?
+							processor.Operate<WrapOperator>(result)
+								.As<Interpreter>(i => ProcessRestOfTable(i, MakeTableWithRows(table, rowNumber), false));
+						}
+					}
+				}
+				catch (IgnoredException) {}
+				catch (ParseException<Cell> e)
+				{
+					processor.TestStatus.MarkException(e.Subject, e);
+					hasFinishedTable = true;
+				}
+				catch (System.Exception e)
+				{
+					processor.TestStatus.MarkException(currentRow.ValueAt(0), e);
+					hasFinishedTable = true;
+				}
+			}
+		
+		//####################
+	}

@@ -1,0 +1,957 @@
+//## The text that will be parsed (slightly reformatted for readability):
+/*
+<br/>
+<span class="meta">variable defined: TEST_SYSTEM=FIT</span><br/>
+<span class="meta">variable defined: COMMAND_PATTERN=%m -r fitnesse.fitserver.FitServer %p</span><br/>
+<span class="meta">variable defined: TEST_RUNNER=FitSharp\RunnerW.exe</span><br/>
+<span class="meta">classpath: C:\Users\simone\Documents\SimonsDocuments\IT\C#\DemoCode\FitNesseDEMO\FitNesseDEMO\bin\Debug\FitNesseDEMO.dll</span><br/>
+<br/>
+NOTE: Use <i>Runner.exe</i> as the test runner for normal operation.<br/>
+<i>RunnerW.exe</i> is for debugging.  It will open a Windows Forms application and wait.  This allows the developer time <br/>
+to attach to the running process from Visual Studio with the FitSharp solution loaded.  After attaching to the <br/>
+process click the Go button on the Windows Form to continue execution.<br/>
+<br/>
+Basic demonstration of an ActionFixture.  For more information about ActionFixtures, and writing tests and <br/>
+fixtures that use them, see <a href="http://fitnesse.org/FitNesse.UserGuide.FixtureGallery.BasicFitFixtures.ActionFixture">http://fitnesse.org/FitNesse.UserGuide.FixtureGallery.BasicFitFixtures.ActionFixture</a><br/>
+<br/>
+Note that the test fixture class name is not included in the table in the first row, like with most fixtures.  <br/>
+Instead the first row just includes "ActionFixture" and the full name of the test class, including namespace, <br/>
+is passed as a parameter to the Start method in the second row.<br/>
+<br/>
+<table>
+	<tr>
+		<td colspan="3">ActionFixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">FitNesseDEMO.ActionFixtureTest</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>string1</td>
+		<td>Hello</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>string2</td>
+		<td>World</td>
+	</tr>
+	<tr>
+		<td>press</td>
+		<td colspan="2">Concatenate</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>combined</td>
+		<td>Hello World</td>
+	</tr>
+</table>
+*/
+In fitSharp.Fit.Fixtures.StoryTest:
+public string Leader
+{
+	get { return ParsedInput.ValueAt(0).GetAttribute(CellAttribute.Leader); }
+}
+
+Tree<Cell> ParsedInput
+{
+	get
+	{
+		if (!isParsed)
+		{
+			parsedInput = processor.Compose(new StoryTestString(input));
+			//####################
+			StoryTestString just saves input string to a data member then returns it via ToString()
+			//####################
+			fit.Service.Service has no Compose method, signature matches an extension method
+			ProcessorExtension.Compose<T>(this Processor<T> processor, object instance):
+				return processor.Compose(new TypedValue(instance));
+				
+			fit.Service.Service has no Compose method, have to go to ProcessorBase.Compose:
+				public Tree<T> Compose(TypedValue instance)
+				{
+					return DoLoggedOperation(
+						string.Format("compose {0}", instance.ValueString),
+						logging =>
+						{
+							Tree<T> result = null;
+							
+							//## Finds all stored operators that CanCompose and then executes the Compose method on them.
+							//## ComposeOperators stored:
+							//##		fit.Operators.ComposeTable: Added to Operators in Operators default ctor, instantiated in Service ctor
+							//##		Added to Operators in CellOperators default ctor.  Operators inherits CellOperators so CellOperators default ctor called at same time as Operators default ctor, instantiated in Service ctor:
+							//##		fitSharp.Fit.Operators.ComposeDefault
+							//##		fitSharp.Fit.Operators.ComposeShowAsOperator
+							//##		fitSharp.Fit.Operators.ComposeStoryTestString
+							//## T is Cell
+							Operators.Do<ComposeOperator<T>>(
+								o => o.CanCompose(instance),
+								o =>
+								{
+									result = o.Compose(instance);		//## instance = document
+									logging.Write(string.Format(" by {0}", o.GetType()));
+								});
+							return result;
+							//####################
+							In Operators<T, P> (not the same as non-generic Operators class):
+								Do<O>(CanDoOperation<O> canDoOperation, DoOperation<O> doOperation) where O : class
+								{
+									foreach (var candidate in Values<O>().Where(candidate => canDoOperation(candidate)))
+									{
+										doOperation(candidate);
+										//####################
+										In fit.Operators.ComposeTable:
+											//## Returns false so no call to ComposeTable.Compose method.
+											public bool CanCompose(TypedValue instance)
+											{
+												return typeof (Table).IsAssignableFrom(instance.Type); 
+											}
+										//####################
+										In fitSharp.Fit.Operators.ComposeDefault(TypedValue instance):
+										//####################
+										In fitSharp.Fit.Operators.ComposeShowAsOperator(TypedValue instance):
+											//## Returns false so no call to ComposeShowAsOperator.Compose method.
+											public bool CanCompose(TypedValue instance)
+											{
+												return GetType().IsAssignableFrom(instance.Type);
+											}
+										//####################
+										In fitSharp.Fit.Operators.ComposeStoryTestString(TypedValue instance):
+											//## Returns true so will call ComposeStoryTestString.Compose method.
+											public bool CanCompose(TypedValue instance)
+											{
+												return instance.Type == typeof (StoryTestString);
+											}
+											
+											public Tree<Cell> Compose(TypedValue instance)
+											{
+												var storyTestInput = instance.ValueString;	//## Set to document string.
+												//## false
+												if (storyTestInput.Contains(Characters.TextStoryTestBegin))  //## TextStoryTestBegin = "test@" 
+												{
+													return new TextTables(
+														new TextTableScanner(instance.ValueString, c => c == CharacterType.Letter),
+														MakeTreeCell)
+														.Parse();
+												}
+												else
+												{
+													HtmlString.IsStandard = Processor.Get<Settings>().IsStandard;
+													//####################
+													In fitSharp.Fit.Engine.CellProcessorExtension:
+														//## V = fitSharp.Machine.Application.Settings
+														public static V Get<V>(this CellProcessor processor) where V : new()
+														{
+															return processor.Memory.GetItem<V>();
+														}
+														//## Settings.IsStandard = Behavior contains "std" = false
+													//####################
+//################################################################################################################################													
+//## THIS IS THE MOST IMPORTANT BIT: HtmlTables(), Parse and MakeTreeCell
+//################################################################################################################################
+													return new HtmlTables(MakeTreeCell).Parse(instance.ValueString);
+													//####################
+													In fitSharp.Fit.Operators.ComposeStoryTestString:
+														Tree<Cell> MakeTreeCell(string text)
+														{
+															return Processor.MakeCell(text, string.Empty, new TreeList<Cell>[] {});
+														}
+													//####################
+													In fitSharp.Parser.HtmlTables:
+														public Tree<Cell> Parse(string input)
+														{
+															var alternationParser = new AlternationParser();  
+															//####################
+															Private class within HtmlTables:
+																class AlternationParser : ElementParser
+																{
+																	public List<Tree<Cell>> Parse(LexicalAnalyzer theAnalyzer)
+																	{
+																		var result = new List<Tree<Cell>>();
+																		ListParser firstChildParser = null;
+																		int firstPosition = int.MaxValue;
+																		foreach (ListParser childParser in myChildParsers)
+																		{
+																			int contentPosition = theAnalyzer.FindPosition(childParser.Keyword);
+																			if (contentPosition >= 0 && contentPosition < firstPosition)
+																			{
+																				firstPosition = contentPosition;
+																				firstChildParser = childParser;
+																			}
+																		}
+																		if (firstChildParser != null)
+																		{
+																			result.Add(firstChildParser.ParseOne(theAnalyzer));
+																			result.AddRange(Parse(theAnalyzer));
+																		}
+																		return result;
+																	}
+
+																	public string Keyword
+																	{
+																		get { return string.Empty; }
+																	}
+
+																	public ListParser[] ChildParsers
+																	{
+																		set { myChildParsers = value; }
+																	}
+
+																	ListParser[] myChildParsers;
+																}
+															//####################
+															var cells = new ListParser("td", alternationParser, false, makeTreeCell);
+															//####################
+															Private class within HtmlTables:
+																public ListParser(string theKeyword, ElementParser theChildParser, bool thisRequiresChildren,
+																	Func<string, Tree<Cell>> makeTreeCell)
+																{
+																	myChildParser = theChildParser;
+																	myKeyword = theKeyword;
+																	IRequireChildren = thisRequiresChildren;
+																	this.makeTreeCell = makeTreeCell;
+																}
+															//####################
+															var rows = new ListParser("tr", cells, true, makeTreeCell);
+															var tables = new ListParser("table", rows, true, makeTreeCell);
+															var items = new ListParser("li", alternationParser, false, makeTreeCell);
+															var lists = new ListParser("ul", items, true, makeTreeCell);
+															alternationParser.ChildParsers = new[] {tables, lists};
+															//## result = Parse object:
+															//##	Text = ""
+															//##	Body = ""
+															//##	Parts = null
+															//##	More = null
+															//##	IsLeaf = true (since IsLeaf = (Parts == null))
+															//##	FootNote = "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\7.html>[7]</a>"
+															//##		- built up in Parse.FootNote getter.  
+															//##		NOTE: Number (in this case 7) increments each time the object is viewed.
+															var result = makeTreeCell(string.Empty);
+															//####################
+															makeTreeCell is ComposeStoryTestString.MakeTreeCell:
+																Tree<Cell> MakeTreeCell(string text)
+																{
+																	return Processor.MakeCell(text, string.Empty, new TreeList<Cell>[] {});
+																	//####################
+																	In Service:
+																		public override Tree<Cell> MakeCell(string text, string tag, IEnumerable<Tree<Cell>> branches)
+																		{
+																			//## Copies attributes and Text from new CellBase(text) to new Parse object.
+																			var result = new Parse(new CellBase(text));
+																			//## Parse.Value returns this, reference to the Parse object.
+																			if (!string.IsNullOrEmpty(tag)) result.Value.SetTag(tag);
+																			if (!string.IsNullOrEmpty(text)) result.Value.SetAttribute(CellAttribute.Body, text);
+																			foreach (var branch in branches)
+																			{
+																				result.Add(branch);
+																			}
+																			return result;	//## Returns empty Parse object for makeTreeCell(string.Empty).
+																		}
+																	//####################
+																}
+															//####################
+															//## Adds 2 Attributes:
+															//##	StartTag: "<div>"
+															//##	EndTag: "</div>"
+															result.Value.SetTag("div");  
+															//## Each branch appears to represent a table, not a row in a table.
+															foreach (var branch in tables.Parse(new LexicalAnalyzer(input))) result.Add(branch);
+															//####################
+															Private class within HtmlTables:
+																public LexicalAnalyzer(string theInput)
+																{
+																	myInput = theInput;
+																	myPosition = 0;
+																	myEndTokens = new Stack<string>();
+																}
+															//####################
+															In HtmlTables.ListParser:
+																public List<Tree<Cell>> Parse(LexicalAnalyzer theAnalyzer)
+																{
+																	var list = new List<Tree<Cell>>();
+																	Tree<Cell> first = ParseOne(theAnalyzer);
+																	if (first != null)
+																	{
+																		list.Add(first);
+																		var rest = Parse(theAnalyzer);
+																		list.AddRange(rest);
+																		if (rest.Count == 0)
+																		{
+																			var trailer = theAnalyzer.Trailer;
+																			if (trailer.Length > 0) first.Value.SetAttribute(CellAttribute.Trailer, trailer);
+																		}
+																	}
+																	return list;
+																}
+
+																public Tree<Cell> ParseOne(LexicalAnalyzer theAnalyzer)
+																{
+																	//## For tables, myKeyword = "table"
+																	theAnalyzer.GoToNextToken(myKeyword);
+																	//####################
+																	In HtmlTables.LexicalAnalyzer:		
+																	{ //## Additional brace added to simplify collapsing of this section
+																	
+																		//## For tables, theToken = "table"
+																		public void GoToNextToken(string theToken)
+																		{
+																			Token = string.Empty;
+																			int start = IndexOfSkipComments(myInput, "<" + theToken, myPosition);
+																			if (start < 0 || start > EndPosition) return;
+																			//## Leader will be text before start tag, or contents of element for end tag.
+																			Leader = myInput.Substring(myPosition, start - myPosition);
+																			int end = myInput.IndexOf('>', start);
+																			if (end < 0) return;
+																			Token = myInput.Substring(start, end - start + 1);
+																			myPosition = end + 1;
+																		}
+
+																		public int FindPosition(string theToken)
+																		{
+																			int start = IndexOfSkipComments(myInput, "<" + theToken, myPosition,
+																				Math.Min(EndPosition, myInput.Length) - myPosition);
+																			if (start < 0 || start > EndPosition) return -1;
+																			int end = myInput.IndexOf('>', start);
+																			if (end < 0) return -1;
+																			return start;
+																		}
+
+																		private int IndexOfSkipComments(string input, string value, int position)
+																		{
+																			return IndexOfSkipComments(input, value, position, input.Length - position);
+																		}
+
+																		private int IndexOfSkipComments(string input, string value, int position, int count)
+																		{
+																			int valueIndex = input.IndexOf(value, position, count, StringComparison.OrdinalIgnoreCase);
+																			if (valueIndex == -1)
+																				return -1;
+
+																			// Scan backwards to see find the last comment that begins before the value we're looking for
+																			int commentIndex = input.LastIndexOf("<!--", valueIndex, valueIndex - position + 1,
+																				StringComparison.Ordinal);
+																			if (commentIndex != -1 && commentIndex < valueIndex)
+																			{
+																				// From found comment, look for closing token
+																				int endCommentIndex = input.IndexOf("-->", commentIndex + 4, StringComparison.Ordinal);
+																				if (endCommentIndex == -1)
+																				{
+																					// Unclosed comment
+																					return -1;
+																				}
+
+																				// If value is between opening and closing comment tokens, value is enclosed in a comment.
+																				// Find next value after said comment.
+																				if (endCommentIndex > valueIndex)
+																				{
+																					int afterComment = endCommentIndex + 3;
+																					return IndexOfSkipComments(input, value, afterComment, count - (afterComment - position));
+																				}
+																			}
+
+																			return valueIndex;
+																		}
+
+																		public string Trailer
+																		{
+																			get
+																			{
+																				int endPosition = EndPosition;
+																				string result = myInput.Substring(myPosition, endPosition - myPosition);
+																				myPosition = endPosition;
+																				return result;
+																			}
+																		}
+
+																		string PeekEnd()
+																		{
+																			string endToken = null;
+																			try
+																			{
+																				endToken = myEndTokens.Peek();
+																			}
+																			catch (InvalidOperationException) {}
+																			return endToken;
+																		}
+
+																		public void PushEnd(string theToken)
+																		{
+																			myEndTokens.Push(theToken);
+																		}
+
+																		public void PopEnd()
+																		{
+																			myEndTokens.Pop();
+																		}
+
+																		public string Leader { get; private set; }
+																		public string Token { get; private set; }
+
+																		int EndPosition
+																		{
+																			get
+																			{
+																				int endInput = -1;
+																				string endToken = PeekEnd();
+																				if (endToken != null)
+																				{
+																					endInput = myInput.IndexOf("<" + endToken, myPosition, StringComparison.OrdinalIgnoreCase);
+																				}
+																				if (endInput < 0) endInput = myInput.Length;
+																				return endInput;
+																			}
+																		}
+																	} //## Additional brace added to simplify collapsing of this section
+																	//####################
+																	if (theAnalyzer.Token.Length == 0) return null;
+																	return ParseElement(theAnalyzer);
+																}
+																
+																Tree<Cell> ParseElement(LexicalAnalyzer theAnalyzer)
+																{
+																	//## tag = "<table>"
+																	string tag = theAnalyzer.Token;
+																	//## leader = text up to start of first <table> tag
+																	string leader = theAnalyzer.Leader;
+																	//## "/table" pushed onto stack.
+																	theAnalyzer.PushEnd("/" + myKeyword);
+//################################################################################################################################													
+//## ANOTHER IMPORTANT BIT: Recursively parse elements within elements: rows within tables, cells within rows
+//################################################################################################################################																	
+																	//## Remember:
+																	/*
+																	var cells = new ListParser("td", alternationParser, false, makeTreeCell);
+																	var rows = new ListParser("tr", cells, true, makeTreeCell);
+																	var tables = new ListParser("table", rows, true, makeTreeCell);
+																	var items = new ListParser("li", alternationParser, false, makeTreeCell);
+																	var lists = new ListParser("ul", items, true, makeTreeCell);
+																	alternationParser.ChildParsers = new[] {tables, lists};
+																	
+																	So child of tables is rows, child of rows is cells
+																	*/
+																	
+																	var children = myChildParser.Parse(theAnalyzer);
+																	//####################
+																	In HtmlTables.AlternationParser (childParser for cells):
+																		public List<Tree<Cell>> Parse(LexicalAnalyzer theAnalyzer)
+																		{
+																			var result = new List<Tree<Cell>>();
+																			ListParser firstChildParser = null;
+																			int firstPosition = int.MaxValue;
+																			//## The two childParsers are tables and lists.
+																			foreach (ListParser childParser in myChildParsers)
+																			{
+																				//## Checks if there is a <table> element then checks if there is a <list> element 
+																				//##	inside the cell.
+																				int contentPosition = theAnalyzer.FindPosition(childParser.Keyword);
+																				if (contentPosition >= 0 && contentPosition < firstPosition)
+																				{
+																					firstPosition = contentPosition;
+																					firstChildParser = childParser;
+																				}
+																			}
+																			if (firstChildParser != null)
+																			{
+																				//## If <table> or <list> found then parse with appropriate parser.
+																				result.Add(firstChildParser.ParseOne(theAnalyzer));
+																				//## Add result to the list of parsed elements.
+																				result.AddRange(Parse(theAnalyzer));
+																			}
+																			return result;
+																		}
+																	//####################
+																	//## For tables IRequireChildren = true
+																	if (IRequireChildren && children.Count == 0)
+																	{
+																		throw new ApplicationException(string.Format("Can't find tag: {0}", myChildParser.Keyword));
+																	}
+																	//## "/table" popped off stack.
+																	theAnalyzer.PopEnd();
+																	//## Goes to next "</table>" end tag.
+																	theAnalyzer.GoToNextToken("/" + myKeyword);
+																	if (theAnalyzer.Token.Length == 0) throw new ApplicationException("expected /" + myKeyword + " tag");
+																	//## For first cell:
+																	/*
+																		Body: "ActionFixture"
+																		Branches: None
+																		End: ""
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\2.html>[2]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: true (since IsLeaf = (Parts == null))
+																		Last: this, since in fit.Parse: Last = {More == null ? this : More.Last;}
+																		Leader: ""
+																		Leaf: this, since in fit.Parse: Leaf = (Parts == null ? this : Parts.Leaf;)
+																		More: null
+																		ParseCell: this, since in fit.Parse: ParseCell = this
+																		Parts: null
+																		Tag: ""
+																		Trailer: ""
+																		Value: this
+																	*/
+																	var result = makeTreeCell(HtmlToText(theAnalyzer.Leader)); //## HtmlToText unescapes HTML escape codes.
+																	//####################
+																	By the way, in fit.Parse:
+																		public override string ToString()
+																		{
+																			return BuildString(new StringBuilder(), More).ToString();
+																		}
+
+																		StringBuilder BuildString(StringBuilder builder, Parse moreNodes)
+																		{
+																			builder.Append(Leader);
+																			builder.Append(Tag);
+																			if (Parts != null) builder.Append(Parts.BuildString(new StringBuilder(), Parts.More));
+																			builder.Append(Body);
+																			builder.Append(End);
+																			if (moreNodes != null)
+																			{
+																				return builder.Append(moreNodes.BuildString(new StringBuilder(), moreNodes.More));
+																			}
+																			builder.Append(Trailer);
+																			return builder;
+																		}
+																	//####################
+																	//## Parse.Value = this (ie, Parse object)
+																	result.Value.SetAttribute(CellAttribute.Body, theAnalyzer.Leader);
+																	//####################
+																	No Parse.SetAttribute.  Instead uses fitSharp.Machine.Model.CellExtension.SetAttribute:
+																	public static void SetAttribute(this Cell cell, CellAttribute key, string value)
+																	{
+																		if (!cell.HasAttribute(key)) cell.Attributes.Add(key, CellAttributeValue.Make(key));
+																		//####################
+																		In fitSharp.Machine.Model.CellAttributeValue:
+																			public static CellAttributeValue Make(CellAttribute attribute)
+																			{
+																				return factories.ContainsKey(attribute)
+																					? factories[attribute](attribute)
+																					: new CellAttributeValue();
+																			}
+																			
+																			static readonly Dictionary<CellAttribute, Func<CellAttribute, CellAttributeValue>> factories
+																			= new Dictionary<CellAttribute, Func<CellAttribute, CellAttributeValue>>
+																			{
+																				{CellAttribute.Add, key => new AddValue()},
+																				{CellAttribute.Actual, key => new ActualValue()},
+																				{CellAttribute.Difference, key => new DifferenceValue()},
+																				{CellAttribute.Exception, key => new ExceptionValue()},
+																				{CellAttribute.Folded, key => new FoldedValue()},
+																				{CellAttribute.Formatted, key => new FormattedValue()},
+																				{CellAttribute.InformationPrefix, key => new InformationPrefixValue()},
+																				{CellAttribute.InformationSuffix, key => new InformationSuffixValue()},
+																				{CellAttribute.Label, key => new LabelValue()},
+																				{CellAttribute.Status, key => new StatusValue()},
+																				{CellAttribute.Syntax, key => new SyntaxValue()},
+																				{CellAttribute.Title, key => new TitleValue()}
+																			};
+																		//####################
+																		cell.Attributes[key].SetValue(value);
+																	}
+																	//####################
+																	result.Value.SetAttribute(CellAttribute.EndTag, theAnalyzer.Token);
+																	if (leader.Length > 0) result.Value.SetAttribute(CellAttribute.Leader, leader);
+																	result.Value.SetAttribute(CellAttribute.StartTag, tag);
+																	//## No children for first cell.
+																	foreach (var child in children) result.Add(child);
+																	//####################
+																	//## parseObject.Parts = the first child parseObject.
+																	//## each child is linked to the next via firstChild.More.
+																	//## the last child has More = null
+																	//## by definition Parts.Last = the last child, where More = null
+																	In fit.Parse:
+																		public void Add(Tree<Cell> branch)
+																		{
+																			var parseBranch = (Parse) branch;
+																			parseBranch.More = null;
+																			if (Parts == null)
+																			{
+																				Parts = parseBranch;
+																			}
+																			else
+																			{
+																				//## Parts.Last = the Parts object with More = null
+																				Parts.Last.More = parseBranch;
+																				//####################
+																				In fit.Parse:
+																					public virtual Parse Last
+																					{
+																						get { return More == null ? this : More.Last; }
+																					}
+																					
+																					public Parse More { get; set; }
+																					
+																					public virtual Parse Leaf
+																					{
+																						get { return Parts == null ? this : Parts.Leaf; }
+																					}
+																					
+																					public virtual int Size
+																					{
+																						get { return More == null ? 1 : More.Size + 1; }
+																					}
+
+																					public virtual Parse At(int i)
+																					{
+																						return i == 0 || More == null ? this : More.At(i - 1);
+																					}
+
+																					public virtual Parse At(int i, int j)
+																					{
+																						return At(i).Parts.At(j);
+																					}
+
+																					public virtual Parse At(int i, int j, int k)
+																					{
+																						return At(i, j).Parts.At(k);
+																					}
+																					
+																					public ReadList<Tree<Cell>> Branches
+																					{
+																						get { return new ParseList(this); }
+																						//## So Branches.Count = (this.Parts == null ? 0 : this.Parts.Size);
+																						//## Branches[index] = this.Parts.At(index); 
+																						//##				= if index == 0 or this.Parts.More == null then this.Parts 
+																						//##					else this.Parts.More.At(i - 1);
+																						//## foreach (var branch in this.Branches)
+																						//##	same as 
+																						//## for (Parse part = this.Parts; part != null; part = part.More)
+																					}
+
+																					public Cell Value
+																					{
+																						get { return this; }
+																					}																			
+																					//####################
+																					In fit.ParseList:
+																					{
+																						private readonly Parse parse;
+																						
+																						public ParseList(Parse parse)
+																						{
+																							this.parse = parse;
+																						}
+
+																						public IEnumerator<Tree<Cell>> GetEnumerator()
+																						{
+																							for (Parse part = parse.Parts; part != null; part = part.More) yield return part;
+																						}
+
+																						IEnumerator IEnumerable.GetEnumerator()
+																						{
+																							return GetEnumerator();
+																						}
+
+																						public Tree<Cell> this[int index]
+																						{
+																							get { return parse.Parts.At(index); }
+																						}
+
+																						public int Count
+																						{
+																							get { return parse.Parts == null ? 0 : parse.Parts.Size; }
+																						}
+																					}
+																					//####################
+																				//####################
+																			}
+																		}
+																	//####################
+																	//## For first cell:
+																	/*
+																	<td colspan="3">ActionFixture</td>
+																	*/
+																	/*
+																		Body: "ActionFixture"
+																		Branches: None
+																		End: "</td>"
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\3.html>[3]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: true, since IsLeaf = (Parts == null)
+																		Last: this, since Last = {More == null ? this : More.Last;}
+																		Leader: "\r\n\t\t"
+																		Leaf: this, since Leaf = {Parts == null ? this : Parts.Leaf;}
+																		More: null
+																		ParseCell: this, since in fit.Parse: ParseCell = this
+																		Parts: null
+																		Size: 1
+																		Tag: "<td colspan=\"3\">"
+																		Trailer: ""
+																		Value: this
+																	*/
+																	//## For first row:
+																	/*
+																	<tr>
+																		<td colspan="3">ActionFixture</td>
+																	</tr>
+																	*/
+																	/*
+																		Body: ""
+																		Branches: 1: ActionFixture cell
+																		End: "</tr>"
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\4.html>[4]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: false, since IsLeaf = (Parts == null)
+																		Last: this, since Last = {More == null ? this : More.Last;}
+																		Leader: "\r\n\t"
+																		Leaf: ActionFixture cell
+																		More: null
+																		ParseCell: this, since ParseCell = this
+																		Parts: ActionFixture cell
+																		Tag: "<tr>"
+																		Trailer: ""
+																		Value: this
+																	*/
+																	//## For first cell of second row:
+																	/*
+																	<td>start</td>
+																	*/
+																	/*
+																		Body: "start"
+																		Branches: None
+																		End: "</td>"
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\14.html>[14]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: true, since IsLeaf = (Parts == null)
+																		Last: this, since Last = {More == null ? this : More.Last;}
+																		Leader: "\r\n\t\t"
+																		Leaf: this, since Leaf = {Parts == null ? this : Parts.Leaf;}
+																		More: null
+																		ParseCell: this, since in fit.Parse: ParseCell = this
+																		Parts: null
+																		Size: 1
+																		Tag: "<td>"
+																		Trailer: ""														
+																	*/
+																	//## For second cell of second row:
+																	/*
+																	<td colspan="2">FitNesseDEMO.ActionFixtureTest</td>
+																	*/
+																	/*
+																		Body: "FitNesseDEMO.ActionFixtureTest"
+																		Branches: None
+																		End: "</td>"
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\5.html>[5]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: true, since IsLeaf = (Parts == null)
+																		Last: this, since Last = {More == null ? this : More.Last;}
+																		Leader: "\r\n\t\t"
+																		Leaf: this, since Leaf = {Parts == null ? this : Parts.Leaf;}
+																		More: null
+																		ParseCell: this, since in fit.Parse: ParseCell = this
+																		Parts: null
+																		Size: 1
+																		Tag: "<td>"
+																		Trailer: ""																
+																	*/
+																	//## For second row:
+																	/*
+																	<tr>
+																		<td>start</td>
+																		<td colspan="2">FitNesseDEMO.ActionFixtureTest</td>
+																	</tr>																	
+																	*/
+																	/*
+																		Body: ""
+																		Branches: 2: start and ActionFixtureTest cells
+																		End: "</tr>"
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\16.html>[16]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: false, since IsLeaf = (Parts == null)
+																		Last: this, since Last = {More == null ? this : More.Last;}
+																		Leader: "\r\n\t"
+																		Leaf: start cell, since Leaf = {Parts == null ? this : Parts.Leaf;}
+																		More: null
+																		ParseCell: this, since in fit.Parse: ParseCell = this
+																		Parts: null
+																		Size: 1
+																		Tag: "<tr>"
+																		Trailer: ""																	
+																	*/
+																	//## Modified first cell of second row:
+																	/*
+																		Body: "start"
+																		Branches: None
+																		End: "</td>"
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\17.html>[17]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: true, since IsLeaf = (Parts == null)
+																		Last: ActionFixtureTest cell, since Last = {More == null ? this : More.Last;}
+																		Leader: "\r\n\t\t"
+																		Leaf: this, since Leaf = {Parts == null ? this : Parts.Leaf;}
+																		More: ActionFixtureTest cell
+																		ParseCell: this, since in fit.Parse: ParseCell = this
+																		Parts: null
+																		Size: 2
+																		Tag: "<td>"
+																		Trailer: ""
+																		Attributes (apart from the ones that map to Parse properties, like Leader, StartTag (maps to Tag property), Body, EndTag):
+																			No extras															
+																	*/
+																	//## Modified second cell of second row:
+																	/*
+																		Body: "ActionFixtureTest"
+																		Branches: None
+																		End: "</td>"
+																		FootNote: "<a href=C:\Users\simone\Documents\SimonsDocuments\IT\TestTools\FitNesse\Reports\footnotes\18.html>[18]</a>"
+																			(built up in Parse.FootNote getter; Every time I view the FootNote of the same object the number increments)
+																		IsLeaf: true, since IsLeaf = (Parts == null)
+																		Last: this, since Last = {More == null ? this : More.Last;}
+																		Leader: "\r\n\t\t"
+																		Leaf: this, since Leaf = {Parts == null ? this : Parts.Leaf;}
+																		More: null
+																		ParseCell: this, since in fit.Parse: ParseCell = this
+																		Parts: null
+																		Size: 1
+																		Tag: "<td>"
+																		Trailer: "\r\n\t"
+																		Attributes (apart from the ones that map to Parse properties, like Leader, StartTag (maps to Tag property), Body, EndTag):
+																			No extras																	
+																	*/
+																	return result;
+																}
+															//####################
+															In fitSharp.Parser.HtmlTables:
+																public List<Tree<Cell>> Parse(LexicalAnalyzer theAnalyzer)
+																{
+																	var list = new List<Tree<Cell>>();
+																	Tree<Cell> first = ParseOne(theAnalyzer);
+																	//####################
+																	In private class fitSharp.Parser.HtmlTables.ListParser:
+																	public Tree<Cell> ParseOne(LexicalAnalyzer theAnalyzer)
+																	{
+																		//## myKeyword = "table"
+																		//## GoToNextToken moves the index to just after the "<table>" tag
+																		//## sets Token = "<table>" and 
+																		//## Leader = from start of document to last character before Token
+																		theAnalyzer.GoToNextToken(myKeyword);	
+																		if (theAnalyzer.Token.Length == 0) return null;
+																		return ParseElement(theAnalyzer);
+																		//####################
+																		In private class fitSharp.Parser.HtmlTables.ListParser:
+																		Tree<Cell> ParseElement(LexicalAnalyzer theAnalyzer)
+																		{
+																			string tag = theAnalyzer.Token;
+																			string leader = theAnalyzer.Leader;
+																			theAnalyzer.PushEnd("/" + myKeyword);
+																			//## myChildParser = ListParser
+																			var children = myChildParser.Parse(theAnalyzer);					//####################													In ListParser:						
+																				public List<Tree<Cell>> Parse(LexicalAnalyzer theAnalyzer)
+																				{
+																					var list = new List<Tree<Cell>>();
+																					Tree<Cell> first = ParseOne(theAnalyzer);
+																					if (first != null)
+																					{
+																						list.Add(first);
+																						var rest = Parse(theAnalyzer);
+																						list.AddRange(rest);
+																						if (rest.Count == 0)
+																						{
+																							var trailer = theAnalyzer.Trailer;
+																							if (trailer.Length > 0) first.Value.SetAttribute(CellAttribute.Trailer, trailer);
+																						}
+																					}
+																					//## Returns one element for each row in table.
+																					//## eg 
+																					/*
+																					"<tr>
+																						<td colspan="3">ActionFixture</td>
+																					</tr>"
+																					*/
+																					//## Elements seem to be Parse objects.
+																					return list;
+																				}
+																			//####################
+																			if (IRequireChildren && children.Count == 0)
+																			{
+																				throw new ApplicationException(string.Format("Can't find tag: {0}", myChildParser.Keyword));
+																			}
+																			theAnalyzer.PopEnd();
+																			//## Goes to end tag for same keyword
+																			theAnalyzer.GoToNextToken("/" + myKeyword); 
+																			if (theAnalyzer.Token.Length == 0) throw new ApplicationException("expected /" + myKeyword + " tag");
+																			//## Calls Service.MakeCell again. Again empty Parse object.
+																			var result = makeTreeCell(HtmlToText(theAnalyzer.Leader));
+																			//## theAnalyzer.Leader = Empty string
+																			result.Value.SetAttribute(CellAttribute.Body, theAnalyzer.Leader);
+																			//## theAnalyzer.Token = "</table>"
+																			result.Value.SetAttribute(CellAttribute.EndTag, theAnalyzer.Token);
+																			if (leader.Length > 0) result.Value.SetAttribute(CellAttribute.Leader, leader);
+																			//## tag = "<table>"
+																			result.Value.SetAttribute(CellAttribute.StartTag, tag);
+																			//## Adds each row to the Parse object as a branch
+																			foreach (var child in children) result.Add(child);
+																			//####################
+																			In fit.Parse:
+																				public void Add(Tree<Cell> branch)
+																				{
+																					var parseBranch = (Parse) branch;
+																					parseBranch.More = null;
+																					//## First row: this.Parts = firstRow.
+																					//## Second row: this.Parts.Last.More = secondRow
+																					//##	where this.Parts.Last resolves to firstRow.Last which
+																					//##	resolves to firstRow since firstRow.More is null
+																					//##	so firstRow.More = secondRow
+																					//## Third row: this.Parts.Last.More = thirdRow
+																					//##	where this.Parts resolves to firstRow and firstRow.Last 
+																					//##	resolves to firstRow.More.Last, since now firstRow.More 
+																					//##	is not null.  firstRow.More resolves to secondRow so 
+																					//##	firstRow.More.Last = secondRow.Last = secondRow (since 
+																					//##	secondRow.More is null)
+																					//##	so secondRow.More = thirdRow
+																					if (Parts == null)
+																					{
+																						Parts = parseBranch;
+																					}
+																					else
+																					{
+																						Parts.Last.More = parseBranch;
+																						//####################
+																						public virtual Parse Last
+																						{
+																							get { return More == null ? this : More.Last; }
+																						}
+																						//####################
+																					}
+																				}
+																			//####################
+																			return result;
+																		}
+																		//####################
+																	}
+																	//####################
+																	if (first != null)
+																	{
+																		list.Add(first);
+																		//## Calls itself recursively going to the next of the same sort of tag.
+																		var rest = Parse(theAnalyzer);
+																		list.AddRange(rest);
+																		if (rest.Count == 0)
+																		{
+																			//## In this case Trailer is blank.
+																			var trailer = theAnalyzer.Trailer;
+																			if (trailer.Length > 0) first.Value.SetAttribute(CellAttribute.Trailer, trailer);
+																		}
+																	}
+																	return list;
+																}
+															//####################
+															
+															return result;
+														}
+													//####################
+												}
+											}
+										//####################
+										return;
+									}
+									throw new ApplicationException(string.Format("No default for {0}", typeof (T).Name));
+								}
+							//####################
+						});
+				}
+			//####################
+			isParsed = true;
+		}
+
+		return parsedInput;
+	}
+}

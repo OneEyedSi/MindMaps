@@ -1,0 +1,383 @@
+<map version="0.8.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1204411331875" ID="Freemind_Link_839220195" MODIFIED="1221379584093" TEXT="Python Classes:&#xa;      Inheritance">
+<font BOLD="true" NAME="SansSerif" SIZE="16"/>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1221131027171" ID="Freemind_Link_912293011" MODIFIED="1221379641906" POSITION="right" STYLE="bubble" TEXT="Techniques">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221131031750" FOLDED="true" ID="Freemind_Link_1930161889" MODIFIED="1221379641906" TEXT="Replacement">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221131078437" FOLDED="true" ID="Freemind_Link_669937430" MODIFIED="1221379641906" TEXT="Override">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131083937" ID="Freemind_Link_1208006112" MODIFIED="1221379641906" STYLE="bubble" TEXT="Attribute"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131087437" ID="Freemind_Link_1233704714" MODIFIED="1221379641906" STYLE="bubble" TEXT="Method"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131090062" FOLDED="true" ID="Freemind_Link_614267600" MODIFIED="1221379641921" STYLE="bubble" TEXT="From">
+<node COLOR="#000000" CREATED="1221131092250" ID="Freemind_Link_129488442" MODIFIED="1221379641921" STYLE="fork" TEXT="Base Class"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221131096796" FOLDED="true" ID="Freemind_Link_945703989" MODIFIED="1221379641921" TEXT="Extension">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221131132921" ID="Freemind_Link_1546290142" MODIFIED="1221379641921" TEXT="Call"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221131119562" FOLDED="true" ID="Freemind_Link_1841134360" MODIFIED="1221379641921" TEXT="Base Class">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131114687" FOLDED="true" ID="Freemind_Link_1106850398" MODIFIED="1221379641921" STYLE="bubble" TEXT="Method">
+<node COLOR="#000000" CREATED="1221131107312" ID="Freemind_Link_398205993" MODIFIED="1221379641921" STYLE="fork" TEXT="Override"/>
+<node COLOR="#000000" CREATED="1221131149578" FOLDED="true" ID="Freemind_Link_643561792" MODIFIED="1221379641921" STYLE="fork" TEXT="Call">
+<node CREATED="1221131153343" FOLDED="true" ID="Freemind_Link_1677775887" MODIFIED="1221131154781" TEXT="Within">
+<node CREATED="1221131155515" FOLDED="true" ID="Freemind_Link_1625034080" MODIFIED="1221131161390" TEXT="Overriding">
+<node CREATED="1221131162453" FOLDED="true" ID="Freemind_Link_707284862" MODIFIED="1221131180109" TEXT="Derived Class">
+<node CREATED="1221131180906" ID="Freemind_Link_120890489" MODIFIED="1221131182390" TEXT="Method"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131191500" FOLDED="true" ID="Freemind_Link_1312703678" MODIFIED="1221379641937" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1221131192937" FOLDED="true" ID="Freemind_Link_339656541" MODIFIED="1221379641937" STYLE="fork" TEXT="See">
+<node CREATED="1221131194656" ID="Freemind_Link_1092289459" MODIFIED="1221131201015" TEXT="__init__ Example"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221131204765" FOLDED="true" ID="Freemind_Link_434523899" MODIFIED="1221379641937" TEXT="Delegation">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221131369625" FOLDED="true" ID="Freemind_Link_1523802243" MODIFIED="1221379641937" TEXT="Base Class">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131374750" FOLDED="true" ID="Freemind_Link_854444362" MODIFIED="1221379641937" STYLE="bubble" TEXT="Calls">
+<node COLOR="#000000" CREATED="1221131376750" FOLDED="true" ID="Freemind_Link_70950658" MODIFIED="1221379641937" STYLE="fork" TEXT="Method">
+<node CREATED="1221131379406" FOLDED="true" ID="Freemind_Link_524621415" MODIFIED="1221131426640" TEXT="Defined">
+<node CREATED="1221131409031" FOLDED="true" ID="Freemind_Link_680820307" MODIFIED="1221131413812" TEXT="In">
+<node CREATED="1221131432812" ID="Freemind_Link_1542610655" MODIFIED="1221131437953" TEXT="Derived Class"/>
+<node CREATED="1221131439453" FOLDED="true" ID="Freemind_Link_372645621" MODIFIED="1221131440984" TEXT="NOT">
+<node CREATED="1221131441562" ID="Freemind_Link_1070277105" MODIFIED="1221131444203" TEXT="Base Class"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131803515" FOLDED="true" ID="Freemind_Link_1120560617" MODIFIED="1221379641937" STYLE="bubble" TEXT="&quot;Abstract Base Class&quot;">
+<node COLOR="#000000" CREATED="1221131818906" FOLDED="true" ID="Freemind_Link_360969567" MODIFIED="1221379641953" STYLE="fork" TEXT="Behaviour">
+<node CREATED="1221131822468" FOLDED="true" ID="Freemind_Link_1179552667" MODIFIED="1221131839984" TEXT="NOT">
+<node CREATED="1221131840843" ID="Freemind_Link_1015039647" MODIFIED="1221131843468" TEXT="Fully Defined"/>
+</node>
+<node CREATED="1221131847500" FOLDED="true" ID="Freemind_Link_1707438966" MODIFIED="1221131856187" TEXT="Requires">
+<node CREATED="1221131857281" FOLDED="true" ID="Freemind_Link_1523757616" MODIFIED="1221131862906" TEXT="Derived Class">
+<node CREATED="1221131863750" ID="Freemind_Link_1993680858" MODIFIED="1221131868062" TEXT="To Complete"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221131446500" FOLDED="true" ID="Freemind_Link_1326895388" MODIFIED="1221379641953" TEXT="EG">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131449093" ID="Freemind_Link_52123139" MODIFIED="1221379641953" STYLE="bubble" TEXT="class BaseClass:&#xa;    def delegatemethod ( self ):&#xa;        self.action ( )    # Not defined in base class.&#xa;class DerivedClass ( BaseClass ):&#xa;    def action ( self ):&#xa;        print &apos;In the action method&apos;&#xa;&#xa;x = DerivedClass ( )&#xa;x.delegatemethod ( )    =&gt;    In the action method"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221131905328" FOLDED="true" ID="Freemind_Link_1818524022" MODIFIED="1221379641953" TEXT="If">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221131907140" FOLDED="true" ID="Freemind_Link_396363993" MODIFIED="1221379641953" STYLE="bubble" TEXT="Required Method">
+<node COLOR="#000000" CREATED="1221131931796" FOLDED="true" ID="Freemind_Link_1645374538" MODIFIED="1221379641953" STYLE="fork" TEXT="Not Defined">
+<node CREATED="1221131936015" FOLDED="true" ID="Freemind_Link_1490615472" MODIFIED="1221131936734" TEXT="In">
+<node CREATED="1221131937156" ID="Freemind_Link_437909428" MODIFIED="1221131940250" TEXT="Derived Class"/>
+</node>
+<node CREATED="1221131941312" FOLDED="true" ID="Freemind_Link_1397144619" MODIFIED="1221131953515" TEXT="Undefined Name Exception">
+<node CREATED="1221131995187" FOLDED="true" ID="Freemind_Link_1382367774" MODIFIED="1221131998218" TEXT="Alternative">
+<node CREATED="1221131999203" FOLDED="true" ID="Freemind_Link_1697753139" MODIFIED="1221132001781" TEXT="assert">
+<node CREATED="1221132002812" FOLDED="true" ID="Freemind_Link_1289861328" MODIFIED="1221132004703" TEXT="In">
+<node CREATED="1221132005765" FOLDED="true" ID="Freemind_Link_922501999" MODIFIED="1221132007984" TEXT="Base Class">
+<node CREATED="1221132008937" ID="Freemind_Link_1291120759" MODIFIED="1221132012578" TEXT="Stub Method"/>
+</node>
+</node>
+<node CREATED="1221132013968" FOLDED="true" ID="Freemind_Link_1964680728" MODIFIED="1221132015250" TEXT="EG">
+<node COLOR="#000000" CREATED="1221131449093" ID="Freemind_Link_1380013483" MODIFIED="1221132219562" STYLE="fork" TEXT="class BaseClass:&#xa;    def delegatemethod ( self ):&#xa;        self.action ( )    # Not defined in base class.&#xa;    def action ( self ):&#xa;        assert 0, &quot;action method is not defined.&quot;">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1221112162360" ID="Freemind_Link_314760601" MODIFIED="1221114402190" POSITION="right" STYLE="bubble" TEXT="Attribute Inheritance Search">
+<cloud/>
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221112786258" FOLDED="true" ID="Freemind_Link_1949247172" MODIFIED="1221114376472" TEXT="When">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221112794336" FOLDED="true" ID="Freemind_Link_368417912" MODIFIED="1221114376472" TEXT="Reference">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221112798148" FOLDED="true" ID="Freemind_Link_284318801" MODIFIED="1221114376488" TEXT="Attribute">
+<node COLOR="#000000" CREATED="1221112803648" FOLDED="true" ID="Freemind_Link_355008513" MODIFIED="1221114376488" STYLE="fork" TEXT="In">
+<node CREATED="1221112805680" ID="Freemind_Link_1857211944" MODIFIED="1221112812758" TEXT="Instance"/>
+<node CREATED="1221112813008" ID="Freemind_Link_244020614" MODIFIED="1221112816523" TEXT="Derived Class"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221112830648" FOLDED="true" ID="Freemind_Link_663627076" MODIFIED="1221114376503" TEXT="Search">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221112896210" FOLDED="true" ID="Freemind_Link_700480420" MODIFIED="1221114376503" TEXT="For">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221112897460" FOLDED="true" ID="Freemind_Link_76483700" MODIFIED="1221114376503" TEXT="Attribute">
+<node COLOR="#000000" CREATED="1221112905616" ID="Freemind_Link_1326753571" MODIFIED="1221114376503" STYLE="fork" TEXT="First Occurrence"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221113015661" FOLDED="true" ID="Freemind_Link_1858326115" MODIFIED="1221114376519" TEXT="Tree">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221113018692" FOLDED="true" ID="Freemind_Link_543572027" MODIFIED="1221114376519" TEXT="Instance">
+<node COLOR="#000000" CREATED="1221113022614" ID="Freemind_Link_1328763229" MODIFIED="1221114376519" STYLE="fork" TEXT="Bottom"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221113027817" FOLDED="true" ID="Freemind_Link_608762952" MODIFIED="1221114376534" TEXT="Class">
+<node COLOR="#000000" CREATED="1221113036255" ID="Freemind_Link_672953663" MODIFIED="1221114376534" STYLE="fork" TEXT="Above"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221113039380" FOLDED="true" ID="Freemind_Link_945281280" MODIFIED="1221114376550" TEXT="Base Classes">
+<node COLOR="#000000" CREATED="1221113045895" ID="Freemind_Link_131665945" MODIFIED="1221114376550" STYLE="fork" TEXT="Top"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221112917163" FOLDED="true" ID="Freemind_Link_966422909" MODIFIED="1221114376550" TEXT="Order">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221113090598" FOLDED="true" ID="Freemind_Link_348876141" MODIFIED="1221299342718" TEXT="Tree">
+<node COLOR="#000000" CREATED="1221299342687" FOLDED="true" ID="Freemind_Link_1931928614" MODIFIED="1221299358843" STYLE="fork" TEXT="Upwards">
+<node COLOR="#000000" CREATED="1221112995630" FOLDED="true" ID="Freemind_Link_1426783498" MODIFIED="1221114376566" STYLE="fork" TEXT="From">
+<node CREATED="1221112922147" FOLDED="true" ID="Freemind_Link_651020652" MODIFIED="1221112941428" TEXT="Object">
+<node CREATED="1221112942850" FOLDED="true" ID="Freemind_Link_83920558" MODIFIED="1221112975412" TEXT="Attribute">
+<node CREATED="1221112945787" ID="Freemind_Link_1486859173" MODIFIED="1221112982302" TEXT="Called On"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1221113108394" FOLDED="true" ID="Freemind_Link_1459338026" MODIFIED="1221114376566" STYLE="fork" TEXT="To">
+<node CREATED="1221113110410" ID="Freemind_Link_111667046" MODIFIED="1221113111551" TEXT="Top"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1221113118035" FOLDED="true" ID="Freemind_Link_1387948153" MODIFIED="1221114376566" STYLE="fork" TEXT="If">
+<node CREATED="1221113120847" FOLDED="true" ID="Freemind_Link_688731389" MODIFIED="1221113129785" TEXT="Multiple Base Classes">
+<node CREATED="1221113131457" ID="Freemind_Link_1878019571" MODIFIED="1221113138269" TEXT="Left to Right"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221113194034" FOLDED="true" ID="Freemind_Link_367518507" MODIFIED="1221114376581" TEXT="EG">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221113454156" ID="Freemind_Link_571712691" MODIFIED="1221114376597" TEXT="class BaseClass1:&#xa;    x = 1&#xa;    z = 2&#xa;class BaseClass2:&#xa;    y = 3&#xa;    z = 4&#xa;class DerivedClass1 ( BaseClass1, BaseClass2 ):&#xa;    w = 5&#xa;    x = 6&#xa;# Note order of base classes is reversed.&#xa;class DerivedClass2 ( BaseClass2, BaseClass1 ):&#xa;    w = 7&#xa;    x = 8&#xa;&#xa;instance1 = DerivedClass1 ( )&#xa;instance1.a = 9&#xa;instance2 = DerivedClass2 ( )&#xa;instance2.a = 10&#xa;&#xa;instance1.a    =&gt;    9    # From instance1 object&#xa;instance2.a    =&gt;    10    # From instance2 object&#xa;instance1.w    =&gt;    5    # From DerivedClass1 object&#xa;instance2.w    =&gt;    7    # From DerivedClass2 object&#xa;instance1. x   =&gt;    6    # From DerivedClass1 object&#xa;instance2. x   =&gt;    8    # From DerivedClass2 object&#xa;instance1.y    =&gt;    3    # From BaseClass2 object&#xa;instance2.y    =&gt;    3    # From BaseClass2 object&#xa;instance1.z    =&gt;    2    # From BaseClass1 object - first in search order for DerivedClass1&#xa;instance2.z    =&gt;    4    # From BaseClass2 object - first in search order for DerivedClass2"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1204412875046" ID="Freemind_Link_1058997298" MODIFIED="1221379888468" POSITION="left" STYLE="bubble" TEXT="Base Class">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221379888375" FOLDED="true" ID="Freemind_Link_17330449" MODIFIED="1221379926390" TEXT="Specified As">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1204412922890" FOLDED="true" ID="Freemind_Link_658606033" MODIFIED="1221379926406" STYLE="bubble" TEXT="Parameter">
+<font NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1204412929625" FOLDED="true" ID="Freemind_Link_238638493" MODIFIED="1221379926406" TEXT="Of">
+<node COLOR="#000000" CREATED="1204412933468" ID="Freemind_Link_721171477" MODIFIED="1221379926406" STYLE="fork" TEXT="Class Definition"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1204923339937" FOLDED="true" ID="Freemind_Link_1506253481" MODIFIED="1221379926421" STYLE="bubble" TEXT="EG">
+<font NAME="SansSerif" SIZE="12"/>
+<node COLOR="#000000" CREATED="1204412940718" ID="Freemind_Link_796702264" MODIFIED="1221379926421" STYLE="fork" TEXT="class DerivedClass ( BaseClass ) :">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1204412995500" ID="Freemind_Link_402711025" MODIFIED="1221379642000" POSITION="left" STYLE="bubble" TEXT="Base Class Constructor">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1204413007171" FOLDED="true" ID="Freemind_Link_732535741" MODIFIED="1221379642000" STYLE="bubble" TEXT="Call Explicitly">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1204923345296" FOLDED="true" ID="Freemind_Link_1393572325" MODIFIED="1221379642000" TEXT="EG">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1204413016609" ID="Freemind_Link_1701381673" MODIFIED="1221379642000" STYLE="bubble" TEXT="def __init__(self, r=1, x=0, y=0):&#xa;    BaseClass.__init__(self, x, y)&#xa;    self.radius = r"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205059617968" ID="Freemind_Link_734203090" MODIFIED="1221379642000" POSITION="left" STYLE="bubble" TEXT="Base Class Destructor">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205059624218" ID="Freemind_Link_762410446" MODIFIED="1221379642000" STYLE="bubble" TEXT="Call Explicitly">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205057889093" ID="Freemind_Link_1053614751" MODIFIED="1221379642000" POSITION="left" STYLE="bubble" TEXT="Instance Variables">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205057895437" FOLDED="true" ID="Freemind_Link_1356481566" MODIFIED="1221379642015" STYLE="bubble" TEXT="Set In">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205057900484" ID="Freemind_Link_1315860224" MODIFIED="1221379642015" TEXT="Derived Class"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205057907500" ID="Freemind_Link_1685080652" MODIFIED="1221379758359" POSITION="left" STYLE="bubble" TEXT="Base Class Variables">
+<cloud/>
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205057922515" FOLDED="true" ID="Freemind_Link_1029845370" MODIFIED="1221379926437" STYLE="bubble" TEXT="Set">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205057924234" FOLDED="true" ID="Freemind_Link_1546173112" MODIFIED="1221379926437" STYLE="bubble" TEXT="Only In">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205057926765" ID="Freemind_Link_247429708" MODIFIED="1221379926453" TEXT="Base Class"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205057937437" FOLDED="true" ID="Freemind_Link_90396368" MODIFIED="1221379926453" STYLE="bubble" TEXT="If Attempt">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205057948281" FOLDED="true" ID="Freemind_Link_1496655167" MODIFIED="1221379926468" TEXT="In">
+<node COLOR="#000000" CREATED="1205057950468" FOLDED="true" ID="Freemind_Link_1089643695" MODIFIED="1221379926468" STYLE="fork" TEXT="Derived Class">
+<node CREATED="1205057981953" FOLDED="true" ID="Freemind_Link_893858788" MODIFIED="1205057984703" TEXT="Creates">
+<node CREATED="1205057985375" FOLDED="true" ID="Freemind_Link_1000202439" MODIFIED="1205058010609" TEXT="Class Variable">
+<node CREATED="1205058011375" ID="Freemind_Link_1585505895" MODIFIED="1205058016828" TEXT="Different"/>
+<node CREATED="1205058017562" FOLDED="true" ID="Freemind_Link_609282101" MODIFIED="1205058018609" TEXT="In">
+<node CREATED="1205058018953" ID="Freemind_Link_1205670900" MODIFIED="1205058021312" TEXT="Derived Class"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1205058044578" FOLDED="true" ID="Freemind_Link_661918536" MODIFIED="1221379926468" STYLE="fork" TEXT="Instance">
+<node CREATED="1205058047593" FOLDED="true" ID="Freemind_Link_557951621" MODIFIED="1205058048437" TEXT="Of">
+<node CREATED="1205058048828" FOLDED="true" ID="Freemind_Link_1174677796" MODIFIED="1205058051265" TEXT="Derived Class">
+<node CREATED="1205058052437" FOLDED="true" ID="Freemind_Link_864981535" MODIFIED="1205058054718" TEXT="Creates">
+<node CREATED="1205058061093" ID="Freemind_Link_1954872888" MODIFIED="1205058065953" TEXT="Instance Variable"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205058081718" FOLDED="true" ID="Freemind_Link_1994412450" MODIFIED="1221379926484" STYLE="bubble" TEXT="EG">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205058083531" ID="Freemind_Link_104617835" MODIFIED="1221379926484" STYLE="bubble" TEXT="class P:&#xa;    z = &quot;Hello&quot;&#xa;&#xa;class C(P):&#xa;    pass&#xa;&#xa;c = C( )&#xa;print &quot;%s, %s, %s&quot; % c.z, C.z, P.z    =&gt;    &quot;Hello&quot;, &quot;Hello&quot;, &quot;Hello&quot;&#xa;C.z = &quot;Goodbye&quot;    # Creates new class variable in derived class.&#xa;print &quot;%s, %s, %s&quot; % c.z, C.z, P.z    =&gt;    &quot;Goodbye&quot;, &quot;Goodbye&quot;, &quot;Hello&quot;&#xa;c.z = &quot;Hi&quot;    # Creates new instance variable in instance of derived class.&#xa;print &quot;%s, %s, %s&quot; % c.z, C.z, P.z    =&gt;    &quot;Hi&quot;, &quot;Goodbye&quot;, &quot;Hello&quot;"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1205059849125" ID="Freemind_Link_584790238" MODIFIED="1221379641843" POSITION="left" STYLE="bubble" TEXT="Multiple Inheritance">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205059859375" ID="Freemind_Link_1455369821" MODIFIED="1221379641843" STYLE="bubble" TEXT="Allowed">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1205059870828" FOLDED="true" ID="Freemind_Link_763915125" MODIFIED="1221379641843" STYLE="bubble" TEXT="Duplicate Names">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1205059867546" FOLDED="true" ID="Freemind_Link_1325311168" MODIFIED="1221379641843" TEXT="Resolving">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1205059919937" FOLDED="true" ID="Freemind_Link_1404476243" MODIFIED="1221379641843" STYLE="bubble" TEXT="Checks">
+<node COLOR="#000000" CREATED="1205059979984" FOLDED="true" ID="Freemind_Link_721564702" MODIFIED="1221379641859" STYLE="fork" TEXT="First">
+<node CREATED="1205059971375" ID="Freemind_Link_1001424059" MODIFIED="1205059979296" TEXT="Derived Class"/>
+</node>
+<node COLOR="#000000" CREATED="1205059994640" FOLDED="true" ID="Freemind_Link_904220272" MODIFIED="1221379641859" STYLE="fork" TEXT="Then">
+<node CREATED="1205059996828" FOLDED="true" ID="Freemind_Link_1209934515" MODIFIED="1205060001390" TEXT="Base Classes">
+<node CREATED="1205060002343" FOLDED="true" ID="Freemind_Link_1030106439" MODIFIED="1205060013593" TEXT="Left -&gt; Right">
+<node CREATED="1221099484522" FOLDED="true" ID="_" MODIFIED="1221099492616" TEXT="From">
+<node CREATED="1221099493506" FOLDED="true" ID="Freemind_Link_1768670630" MODIFIED="1221099502444" TEXT="Class Declaration">
+<node CREATED="1221099506725" ID="Freemind_Link_283154890" MODIFIED="1221099522834" TEXT="class DerivedClass ( BaseClass1, BaseClass2 )"/>
+</node>
+</node>
+</node>
+<node CREATED="1205060030593" FOLDED="true" ID="Freemind_Link_1551106032" MODIFIED="1205060035093" TEXT="Checks">
+<node CREATED="1205060035875" FOLDED="true" ID="Freemind_Link_1846169888" MODIFIED="1205060038437" TEXT="Base Class">
+<node CREATED="1205060039218" ID="Freemind_Link_1091775543" MODIFIED="1205060041328" TEXT="Ancestors"/>
+<node CREATED="1205060045234" FOLDED="true" ID="Freemind_Link_914008983" MODIFIED="1205060047640" TEXT="Before">
+<node CREATED="1205060048265" FOLDED="true" ID="Freemind_Link_1113173095" MODIFIED="1205060050109" TEXT="Next">
+<node CREATED="1205060050875" ID="Freemind_Link_704631035" MODIFIED="1205060052812" TEXT="Base Class"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221299416390" FOLDED="true" ID="Freemind_Link_1497181551" MODIFIED="1221379641859" TEXT="Useful For">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221299422921" FOLDED="true" ID="Freemind_Link_1844761462" MODIFIED="1221379641859" TEXT="Objects">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221299439015" FOLDED="true" ID="Freemind_Link_543279803" MODIFIED="1221379641859" STYLE="bubble" TEXT="Member">
+<node COLOR="#000000" CREATED="1221299442359" FOLDED="true" ID="Freemind_Link_847423891" MODIFIED="1221379641859" STYLE="fork" TEXT="Multiple Sets">
+<node CREATED="1221299457031" FOLDED="true" ID="Freemind_Link_1845847011" MODIFIED="1221299460250" TEXT="EG">
+<node CREATED="1221299470765" FOLDED="true" ID="Freemind_Link_721185351" MODIFIED="1221299474078" TEXT="Person">
+<node CREATED="1221299475500" FOLDED="true" ID="Freemind_Link_537752892" MODIFIED="1221299480984" TEXT="Is A">
+<node CREATED="1221299483218" ID="Freemind_Link_1806898980" MODIFIED="1221299486453" TEXT="Engineer"/>
+<node CREATED="1221299486765" ID="Freemind_Link_1313104794" MODIFIED="1221299496375" TEXT="Musician"/>
+<node CREATED="1221299497046" ID="Freemind_Link_1085796351" MODIFIED="1221299499921" TEXT="Blogger"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221300184484" FOLDED="true" ID="Freemind_Link_1474938448" MODIFIED="1221379641859" TEXT="Mix-in Classes">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221300203046" FOLDED="true" ID="Freemind_Link_1031122557" MODIFIED="1221379641859" STYLE="bubble" TEXT="Utility Classes">
+<node COLOR="#000000" CREATED="1221300208281" FOLDED="true" ID="Freemind_Link_1020431356" MODIFIED="1221379641875" STYLE="fork" TEXT="EG">
+<node CREATED="1221300209781" FOLDED="true" ID="Freemind_Link_1012728916" MODIFIED="1221300212734" TEXT="Formatting">
+<node CREATED="1221300213562" FOLDED="true" ID="Freemind_Link_1052203276" MODIFIED="1221300234390" TEXT="Instance Object">
+<node CREATED="1221300235250" FOLDED="true" ID="Freemind_Link_1903419347" MODIFIED="1221300236125" TEXT="For">
+<node CREATED="1221300237031" ID="Freemind_Link_387303558" MODIFIED="1221300241078" TEXT="Printing"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221300252359" FOLDED="true" ID="Freemind_Link_1586039600" MODIFIED="1221379641875" STYLE="bubble" TEXT="Apply">
+<node COLOR="#000000" CREATED="1221300254265" FOLDED="true" ID="Freemind_Link_1852903301" MODIFIED="1221379641875" STYLE="fork" TEXT="Functionality">
+<node CREATED="1221300258312" FOLDED="true" ID="Freemind_Link_431555611" MODIFIED="1221300259437" TEXT="Via">
+<node CREATED="1221300260500" ID="Freemind_Link_1806766267" MODIFIED="1221300262906" TEXT="Ineritance"/>
+<node CREATED="1221300264046" FOLDED="true" ID="Freemind_Link_1441431096" MODIFIED="1221300266468" TEXT="If">
+<node CREATED="1221300267906" FOLDED="true" ID="Freemind_Link_1315609360" MODIFIED="1221300275250" TEXT="Base Class">
+<node CREATED="1221300276000" FOLDED="true" ID="Freemind_Link_1225159971" MODIFIED="1221300280593" TEXT="Exists">
+<node CREATED="1221300281187" ID="Freemind_Link_417936762" MODIFIED="1221300283062" TEXT="Already"/>
+</node>
+<node CREATED="1221300288406" FOLDED="true" ID="Freemind_Link_426372963" MODIFIED="1221300289421" TEXT="Then">
+<node CREATED="1221300290328" FOLDED="true" ID="Freemind_Link_1477451983" MODIFIED="1221300300734" TEXT="Multiple Inheritance">
+<node CREATED="1221300302296" FOLDED="true" ID="Freemind_Link_1411016124" MODIFIED="1221300303671" TEXT="Add">
+<node CREATED="1221300318484" ID="Freemind_Link_1108111359" MODIFIED="1221300322250" TEXT="Mix-in Class"/>
+<node CREATED="1221300325250" FOLDED="true" ID="Freemind_Link_1105932649" MODIFIED="1221300326546" TEXT="To">
+<node CREATED="1221300327312" ID="Freemind_Link_1117333428" MODIFIED="1221300332640" TEXT="Base Class List"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221367145078" FOLDED="true" ID="Freemind_Link_1477372285" MODIFIED="1221379641875" TEXT="WARNINGS">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221367149296" FOLDED="true" ID="Freemind_Link_87335681" MODIFIED="1221379641875" TEXT="Order">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221367152296" FOLDED="true" ID="Freemind_Link_1850742848" MODIFIED="1221379641875" STYLE="bubble" TEXT="Base Classes">
+<node COLOR="#000000" CREATED="1221367156828" FOLDED="true" ID="Freemind_Link_184407050" MODIFIED="1221379641875" STYLE="fork" TEXT="In">
+<node CREATED="1221367158609" ID="Freemind_Link_1130826893" MODIFIED="1221367166500" TEXT="class Declaration"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221367170093" ID="Freemind_Link_722161405" MODIFIED="1221379641875" STYLE="bubble" TEXT="Matters"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221367205390" FOLDED="true" ID="Freemind_Link_1013822420" MODIFIED="1221379641875" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1221367207281" FOLDED="true" ID="Freemind_Link_645192495" MODIFIED="1221379641890" STYLE="fork" TEXT="See">
+<node CREATED="1221367209640" ID="Freemind_Link_326445422" MODIFIED="1221367218703" TEXT="Attribute Inheritance Example"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221367388078" FOLDED="true" ID="Freemind_Link_1032026656" MODIFIED="1221379641890" TEXT="Complex">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221367403218" ID="Freemind_Link_1209761524" MODIFIED="1221379641890" STYLE="bubble" TEXT="Minimize"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221367418234" FOLDED="true" ID="Freemind_Link_827176393" MODIFIED="1221379641890" TEXT="Names">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221367421109" FOLDED="true" ID="Freemind_Link_1181028871" MODIFIED="1221379641890" STYLE="bubble" TEXT="Base Classes">
+<node COLOR="#000000" CREATED="1221367428656" FOLDED="true" ID="Freemind_Link_1252431770" MODIFIED="1221379641890" STYLE="fork" TEXT="May">
+<node CREATED="1221367436828" FOLDED="true" ID="Freemind_Link_1367575008" MODIFIED="1221367438234" TEXT="Clash">
+<node CREATED="1221367440265" FOLDED="true" ID="Freemind_Link_594151816" MODIFIED="1221367455546" TEXT="Avoid">
+<node CREATED="1221367455375" FOLDED="true" ID="Freemind_Link_1835569334" MODIFIED="1221367457218" TEXT="Via">
+<node CREATED="1221367447687" ID="Freemind_Link_1230484934" MODIFIED="1221367452375" TEXT="Name Mangling"/>
+<node CREATED="1221367458375" FOLDED="true" ID="Freemind_Link_1639683257" MODIFIED="1221367466437" TEXT="Minimize">
+<node CREATED="1221367467421" FOLDED="true" ID="Freemind_Link_1247812576" MODIFIED="1221367468734" TEXT="Names">
+<node CREATED="1221367469687" FOLDED="true" ID="Freemind_Link_1858188782" MODIFIED="1221367470468" TEXT="In">
+<node CREATED="1221367470859" ID="Freemind_Link_1653501582" MODIFIED="1221367474890" TEXT="Base Classes"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1221112251812" ID="Freemind_Link_344457129" MODIFIED="1221379791312" POSITION="left" STYLE="bubble" TEXT="__bases__ Attribute">
+<cloud/>
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221112263468" FOLDED="true" ID="Freemind_Link_1860200701" MODIFIED="1221379641890" TEXT="Of">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221112286139" ID="Freemind_Link_876260930" MODIFIED="1221379641890" TEXT="Class"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221112701197" FOLDED="true" ID="Freemind_Link_1811254170" MODIFIED="1221379641890" TEXT="NOT">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1221112704040" ID="Freemind_Link_156572187" MODIFIED="1221379641906" STYLE="bubble" TEXT="Instance"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221112290077" ID="Freemind_Link_948556593" MODIFIED="1221379641906" TEXT="Tuple">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1221112292592" FOLDED="true" ID="Freemind_Link_1674839176" MODIFIED="1221379641906" TEXT="Lists">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1221112296295" ID="Freemind_Link_1662664840" MODIFIED="1221379641906" TEXT="Base Classes"/>
+</node>
+</node>
+</node>
+</map>

@@ -1,0 +1,637 @@
+How FitSharp Works: Slim
+========================
+Simon Elms, 8 Jun 2017
+
+COMMON_PATTERN fitSharp.Slim.Service.Runner
+-------------------------------------------
+
+fitSharp.Runner.Program:
+------------------------
+static int Main(string[] arguments)
+{
+	return new Shell(new ConsoleReporter(), new FileSystemModel()).Run(arguments);
+}
+
+fitSharp.Machine.Application.Shell:
+-----------------------------------
+
+//## NOTE: TypeDictionary.GetItem checks if item exists and, if it doesn't, creates it 
+//##	by calling default constructor of type.
+
+readonly Memory memory = new TypeDictionary();
+
+public Shell(ProgressReporter progressReporter, FolderModel folderModel)
+{
+	this.progressReporter = progressReporter;
+	this.folderModel = folderModel;
+}
+
+//## At this point memory not set so will RunInNewDomain and add AppDomainSetup to memoryProcessFlowRow(Tree<Cell> table, int rowNumber)
+public int Run(IList<string> commandLineArguments)
+{
+	try
+	{
+		ParseArguments(commandLineArguments);
+		return !memory.HasItem<AppDomainSetup>()
+			? RunInCurrentDomain()
+			: RunInNewDomain(memory.GetItem<AppDomainSetup>(), commandLineArguments);
+	}
+	catch (System.Exception e)
+	{
+		progressReporter.Write(string.Format("{0}\n", e));
+		return 1;
+	}
+}
+
+//## Parse runs the ArgumentHandlers that have been added to the ArgumentParser.
+//## "a": Authentication: adds item to memory
+//## "c": Command: Invokes a BasicProcessor on each XML element that is a grandchild of the document node
+//## "r": FitNesse Root directory: add items to memory.
+//## "f": Loads config file
+void ParseArguments(IList<string> commandLineArguments)
+{
+	var argumentParser = new ArgumentParser();
+	argumentParser.AddArgumentHandler("a", value => memory.GetItem<AppDomainSetup>().ConfigurationFile = value);
+	argumentParser.AddArgumentHandler("c",
+		value => new SuiteConfiguration(memory).LoadXml(folderModel.GetPageContent(value)));
+	argumentParser.AddArgumentHandler("r", value => memory.GetItem<Settings>().Runner = value);
+	argumentParser.AddArgumentHandler("f", InitializeAndAddFolders);
+	argumentParser.SetUnusedHandler(value => extraArguments.Add(value));
+	argumentParser.Parse(commandLineArguments);
+}
+
+RunInNewDomain(AppDomainSetup appDomainSetup, IList<string> commandLineArguments):
+	Creates new AppDomain "fitSharp.Machine"
+	Calls RunInCurrentDomain(commandLineArguments) in new domain
+	
+RunInCurrentDomain(IList<string> commandLineArguments):
+	ParseArguments(commandLineArguments);
+    return RunInCurrentDomain();
+	
+RunInCurrentDomain():
+	ValidateArguments() - fails if string.IsNullOrEmpty(memory.GetItem<Settings>().Runner) but Runner set in command line (see above) 
+	Execute()
+	
+Execute():
+	var tokens = memory.GetItem<Settings>().Runner.Split(',');  //## fitSharp.Slim.Service.Runner
+	Runner = new BasicProcessor().Create(tokens[0]).GetValue<Runnable>();  //## Instance of fitSharp.Slim.Service.Runner - see below
+	ExecuteInApartment();
+	
+ExecuteInApartment():
+	Either executes Run() method directly or on a new thread, depending on the value of memory.GetItem<Settings>().ApartmentState
+	
+Run():
+	result = Runner.Run(extraArguments.ToArray(), memory, progressReporter);
+	
+//################################################################################################################################													
+//## We've created an instance of the Runner.  For Slim this is a fitSharp.Slim.Service.Runner object
+//################################################################################################################################	
+
+In fitSharp.Slim.Service.Runner:
+	public int Run(IList<string> commandLineArguments, Memory memory, ProgressReporter reporter)
+	{
+		service = new Service(memory);
+		//####################
+		In fitSharp.Slim.Service.Service:
+		
+			private readonly SlimOperators operators;
+			private readonly Stack<TypedValue> libraryInstances = new Stack<TypedValue>();
+		
+			public Service(Memory memory) : base(memory)
+			{
+				//## Operators in memory populated here.  Three lists of operators:
+				//##	0: 19 operators
+				//##	1: 0 perators
+				//##	2: 1 operator
+				operators = memory.GetItem<SlimOperators>();
+				operators.Processor = this;
+
+				Memory.GetItem<SavedInstances>();
+				Memory.GetItem<Symbols>();
+
+				PushLibraryInstance(new TypedValue(new Actors(this)));
+				PushLibraryInstance(new TypedValue(new SlimFunctions(this)));
+			}
+
+			public void PushLibraryInstance(TypedValue instance)
+			{
+				libraryInstances.Push(instance);
+			}
+		//####################
+		ParseCommandLine(commandLineArguments, memory);
+		new Interpreter(messenger, assemblyPaths, service).ProcessInstructions();
+		return 0;
+	}
+	
+	//## ComandLineArguments:
+	//##	0: "C:\Users\simone\Documents\SimonsDocuments\IT\C#\DemoCode\FitNesseDEMO\FitNesseDEMO\bin\Debug\FitNesseDEMO.dll"
+	//##	1: "1"
+	private void ParseCommandLine(IList<string> commandLineArguments, Memory memory)
+	{
+		messenger = Messenger.Make(int.Parse(commandLineArguments[commandLineArguments.Count - 1]), memory);
+		if (commandLineArguments.Count > 1)
+		{
+			assemblyPaths = commandLineArguments[0];
+		}
+	}
+	//####################
+	In fitSharp.Slim.Service.Messenger:
+		//## port: 1
+		public static Messenger Make(int port, Memory memory)
+        {
+            if (port == 1)
+            {
+                return new Messenger(new ConsoleSession(memory));
+				//####################
+				In fitSharp.Slim.Service.ConsoleSession:
+					public ConsoleSession(Memory memory)
+					{
+						this.memory = memory;
+						saveOut = Console.Out;
+						saveError = Console.Error;
+						CaptureConsole();
+					}
+					
+					void CaptureConsole()
+					{
+						captureOut = new StringWriter();
+						captureError = new StringWriter();
+						Console.SetOut(captureOut);
+						Console.SetError(captureError);
+					}
+				//####################
+            }
+            var listener = new TcpListener(IPAddress.Any, port);
+            listener.Start();
+            var socket = listener.AcceptSocket();
+            listener.Stop();
+            return new Messenger(new SocketSession(new SocketModelImpl(socket)));
+        }
+		
+		public string Read()
+        {
+            var lengthString = string.Empty;
+            while (true)
+            {
+				//## Builds up string representing length of data to parse, one character at a time.
+                var lengthCharacter = session.Read(1);
+                if (lengthCharacter == ":") break;
+                lengthString += lengthCharacter;
+            }
+			//## In this case: 1035
+            var messageByteLength = int.Parse(lengthString);
+			//## The message from FitNesse server:
+			/*
+			[000009:000100:[000004:000017:decisionTable_0_0:000004:make:000015:decisionTable_0:000023:HelloWorld.OurFirstTest:]:000228:[000005:000017:decisionTable_0_1:000004:call:000015:decisionTable_0:000005:table:000138:[000002:000059:[000003:000007:string1:000007:string2:000012:Concatenate?:]:000054:[000003:000005:Hello:000005:World:000011:Hello World:]:]:]:000087:[000004:000017:decisionTable_0_2:000004:call:000015:decisionTable_0:000010:beginTable:]:000082:[000004:000017:decisionTable_0_3:000004:call:000015:decisionTable_0:000005:reset:]:000100:[000005:000017:decisionTable_0_4:000004:call:000015:decisionTable_0:000010:setString1:000005:Hello:]:000100:[000005:000017:decisionTable_0_5:000004:call:000015:decisionTable_0:000010:setString2:000005:World:]:000084:[000004:000017:decisionTable_0_6:000004:call:000015:decisionTable_0:000007:execute:]:000088:[000004:000017:decisionTable_0_7:000004:call:000015:decisionTable_0:000011:Concatenate:]:000085:[000004:000017:decisionTable_0_8:000004:call:000015:decisionTable_0:000008:endTable:]:]
+			*/
+            var message = session.Read(messageByteLength);
+			//## message NOT "bye" so skips this block and returns message.
+            if (EndIdentifier.Matches(message))
+            {
+                IsEnd = true;
+                session.Close();
+                return null;
+            }
+            return message;
+        }
+
+        public void Write(string message)
+        {
+            session.Write(message, "{0:000000}:");
+        }
+		
+		static readonly IdentifierName EndIdentifier = new IdentifierName("bye");
+	//####################
+	In fitSharp.Slim.Service.Interpreter:
+		//## messenger: As created above, taking ConsoleSession as argument in constructor.
+		//## assemblyPaths: "C:\Users\simone\Documents\SimonsDocuments\IT\C#\DemoCode\FitNesseDEMO\FitNesseDEMO\bin\Debug\FitNesseDEMO.dll"
+		//## processor: fitSharp.Slim.Service.Service
+		public Interpreter(Messenger messenger, string assemblyPaths, Service processor)
+        {
+            this.messenger = messenger;
+            this.assemblyPaths = assemblyPaths;
+            this.processor = processor;
+        }
+
+        public void ProcessInstructions()
+        {
+            while (true)
+            {
+				//## See above for messenger.Read details.
+                var instruction = messenger.Read();
+				//## false for first message.
+                if (messenger.IsEnd) break;
+                var results = processor.RunTest(() => Execute(instruction));
+				//####################
+				In fitSharp.Machine.Engine.ProcessorExtension:
+					public static V RunTest<T, V>(this Processor<T> processor, Func<V> action)
+					{
+						processor.Memory.Apply(i => i.As<SetUpTearDown>(s => s.SetUp()));
+						//## Calls fitSharp.Slim.Service.Interpreter.Execute.  See below.
+						var result = action();
+						processor.Memory.Apply(i => i.As<SetUpTearDown>(s => s.TearDown()));
+						return result;
+					}
+				//####################
+                messenger.Write(results);
+            }
+        }		
+
+        private string Execute(string instruction)
+        {
+            try
+            {
+                AddAssemblies();
+                return ExecuteInstruction(instruction);
+            }
+            catch (System.Exception e)
+            {
+                return FormatException(e);
+            }
+        }
+
+        private string ExecuteInstruction(string instruction)
+        {
+            var document = Document.Parse(instruction);
+			//####################
+			In fitSharp.Slim.Service.Document:
+				public static Document Parse(string input)
+				{
+					return new Document(Read(input));
+				}
+				
+				static Tree<string> Read(string input)
+				{
+					//## For input "[000009:000100:[000004:000017:decisionTable_0_0:000004:...:000015:decisionTable_0:000008:endTable:]:]"
+					//## 	IsList is true
+					//## For input "[000004:000017:decisionTable_0_0:000004:make:000015:decisionTable_0:000023:HelloWorld.OurFirstTest:]"
+					//##	IsList is true
+					//## For input "decisionTable_0_0" IsList is false, returns SLimLeaf object.
+					//## input.SubString... strips off outermost "[ ]"
+					if (IsList(input)) return ReadList(new DelimitedString(input.Substring(1, input.Length - 2)));
+					return new SlimLeaf(input);
+				}
+
+				static bool IsList(string input)
+				{
+					int result;
+					return input.StartsWith("[")
+						   && input.Length > 8
+						   && input.Substring(7, 1) == ":"
+						   && input.EndsWith("]")
+						   && int.TryParse(input.Substring(1, 6), out result);
+				}
+
+				static SlimTree ReadList(DelimitedString input)
+				{
+					//## For whole document count = 9
+					//## For first sub-document count = 4
+					var count = int.Parse(input.ReadTo(":"));
+					var result = new SlimTree();
+					for (var i = 0; i < count; i++)
+					{
+						/* 
+						For the whole document the first element after the count element: 000100
+						For itemLength 100 input.Read 
+							returns "[000004:000017:decisionTable_0_0:000004:make:000015:decisionTable_0:000023:HelloWorld.OurFirstTest:]"
+						First sub-document, the first element after the count: 000017
+							returns "decisionTable_0_0"
+						Recursively calls Read, above.
+						After adding branch "decisionTable_0_0" to tree, 
+							input is "000004:000017:decisionTable_0_0:000004:make:000015:decisionTable_0:000023:HelloWorld.OurFirstTest:"
+							itemLength 4, reads "make"
+						After adding branch "make" to tree, 
+							input is unchanged, itemLength 15, reads "decisionTable_0"
+						After adding branch "decisionTable_0" to tree, 
+							input is unchanged, itemLength 23, reads "HelloWorld.OurFirstTest"
+						After adding branch "HelloWorld.OurFirstTest" to tree, have parsed 4 items so exits first sub-document out to main one
+						Adds branch of 4 sub-branches to outer tree
+						itemLength 228, 
+							returns "[000005:000017:decisionTable_0_1:000004:call:000015:decisionTable_0:000005:table:000138:[000002:000059:[000003:000007:string1:000007:string2:000012:Concatenate?:]:000054:[000003:000005:Hello:000005:World:000011:Hello World:]:]:]"
+						Adds branch of 5 sub-branches to outer tree (some are sub-sub-branches)
+						itemLength 87,
+							returns "[000004:000017:decisionTable_0_2:000004:call:000015:decisionTable_0:000010:beginTable:]"
+						Adds branch of 4 sub-branches to outer tree 
+						itemLength 82,
+							returns "[000004:000017:decisionTable_0_3:000004:call:000015:decisionTable_0:000005:reset:]"
+						Adds branch of 4 sub-branches to outer tree 
+						itemLength 100,
+							returns "[000005:000017:decisionTable_0_4:000004:call:000015:decisionTable_0:000010:setString1:000005:Hello:]"
+						Adds branch of 5 sub-branches to outer tree 
+						itemLength 100,
+							returns "[000005:000017:decisionTable_0_5:000004:call:000015:decisionTable_0:000010:setString2:000005:World:]"
+						Adds branch of 5 sub-branches to outer tree 
+						itemLength 84,
+							returns "[000004:000017:decisionTable_0_6:000004:call:000015:decisionTable_0:000007:execute:]"
+						Adds branch of 4 sub-branches to outer tree 
+						itemLength 88,
+							returns "[000004:000017:decisionTable_0_7:000004:call:000015:decisionTable_0:000011:Concatenate:]"
+						Adds branch of 4 sub-branches to outer tree 
+						itemLength 85,
+							returns "[000004:000017:decisionTable_0_8:000004:call:000015:decisionTable_0:000008:endTable:]"
+						*/
+						var itemLength = int.Parse(input.ReadTo(":"));
+						result.AddBranch(Read(input.Read(itemLength, 1)));
+						/* 
+						Adds following branches to outermost tree (leaves, as opposed to sub-branches, are all SlimLeaf objects):
+							Adds following branches to sub-tree:
+								decisionTable_0_0
+								make
+								decisionTable_0
+								HelloWorld.OurFirstTest
+							Adds following branches to sub-tree:
+								decisionTable_0_1
+								call
+								decisionTable_0
+								table
+								Adds following branches to sub-tree:
+									Adds following branches to sub-tree:
+										string1
+										string2
+										Concatenate?								
+									Adds following branches to sub-tree:
+										Hello
+										World
+										Hello World
+							Adds following branches to sub-tree:
+								decisionTable_0_2
+								call
+								decisionTable_0
+								beginTable
+							Adds following branches to sub-tree:
+								decisionTable_0_3
+								call
+								decisionTable_0
+								reset
+							Adds following branches to sub-tree:
+								decisionTable_0_4
+								call
+								decisionTable_0
+								setString1
+								Hello
+							Adds following branches to sub-tree:
+								decisionTable_0_5
+								call
+								decisionTable_0
+								setString2
+								World
+							Adds following branches to sub-tree:
+								decisionTable_0_6
+								call
+								decisionTable_0
+								execute
+							Adds following branches to sub-tree:
+								decisionTable_0_7
+								call
+								decisionTable_0
+								Concatenate
+							Adds following branches to sub-tree:
+								decisionTable_0_8
+								call
+								decisionTable_0
+								endTable
+						*/
+					}
+					return result;
+				}
+				//####################
+				In fitSharp.Slim.Model.SlimTree:
+					
+					readonly TreeList<string> tree = new TreeList<string>();
+					
+					public SlimTree AddBranch(Tree<string> value)
+					{
+						tree.AddBranch(value);
+						return this;
+					}
+				//####################
+				
+				class DelimitedString
+				{
+					public DelimitedString(string content)
+					{
+						this.content = content;
+						position = 0;
+					}
+
+					public string ReadTo(string terminator)
+					{
+						var end = content.IndexOf(terminator, position, StringComparison.Ordinal);
+						if (end < 0) throw new InvalidOperationException("no terminator");
+						var result = content.Substring(position, end - position);
+						position = end + terminator.Length;
+						return result;
+					}
+
+					public string Read(int length, int skip)
+					{
+						var result = content.Substring(position, length);
+						position += length + skip;
+						return result;
+					}
+
+					readonly string content;
+					int position;
+				}
+			//####################
+            var results = ExecuteInstructions(document.Content);
+            return new Document(results).ToString();
+        }
+
+        private void AddAssemblies()
+        {
+            if (string.IsNullOrEmpty(assemblyPaths)) return;
+            foreach (var path in assemblyPaths.Split(';').Where(path => path.Length != 0))
+            {
+				//## Adds "C:\Users\simone\Documents\SimonsDocuments\IT\C#\DemoCode\FitNesseDEMO\FitNesseDEMO\bin\Debug\FitNesseDEMO.dll"
+				//## to ApplicationUnderTest.assemblies.
+                processor.ApplicationUnderTest.AddAssembly(path);
+            }
+            assemblyPaths = null;
+        }
+
+        private static string FormatException(System.Exception e)
+        {
+            // this format is hardcoded in case there is an exception in the general formatting code
+            var exception = string.Format(ComposeException.ExceptionResult, e);
+            var step = string.Format("[000002:000005:error:{0:000000}:{1}:]", exception.Length, exception);
+            return string.Format("[000001:{0:000000}:{1}:]", step.Length, step);
+        }
+
+		//## instructions: Parsed tree, see above.
+        private Tree<string> ExecuteInstructions(Tree<string> instructions)
+        {
+            var results = new SlimTree();
+            foreach (var statement in instructions.Branches)
+            {
+				/*
+				Results for each sub-branch (ie statement):
+					0: decisionTable_0_0 - make - decisionTable_0 - HelloWorld.OurFirstTest: 
+						Return SlimTree with 2 branches: 
+						0: "decisionTable_0_0"
+						1: "OK"
+					1: decisionTable_0_1 - call - decisionTable_0 - table
+						- Sub-branch: string1 - string2 - Concatenate?
+						- Sub-branch: Hello - World - Hello World
+				*/
+                var result =
+                    processor.Invoke(new SlimInstruction(), new MemberName(string.Empty), statement)
+                        .GetValue<Tree<string>>();
+				//####################
+				In fitSharp.Machine.Engine.ProcessorExtension:
+					public static TypedValue Invoke<T>(this Processor<T> processor, object instance, MemberName memberName,
+						Tree<T> parameters)
+					{
+						return processor.Invoke(new TypedValue(instance), memberName, parameters);
+					}
+					//####################
+					In fitSharp.Machine.Engine.ProcessorBase:
+						public TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<T> parameters)
+						{
+							return DoLoggedOperation(
+								instance.Type != typeof (Logging)
+									? string.Format("invoke {0} {1}", instance.ValueString, memberName)
+									: string.Empty,
+								logging =>
+								{
+									var result = TypedValue.Void;
+									Operators.Do<InvokeOperator<T>>(
+										o => o.CanInvoke(instance, memberName, parameters),
+										o =>
+										{
+											result = o.Invoke(instance, memberName, parameters);
+											logging.LogResult(o, result);
+										});
+									return result;
+								});
+						}
+					//####################
+					fitSharp.Slim.Operators.ExecuteCall doesn't have an Invoke method 
+					so calls base fitSharp.Slim.Operators.InvokeInstructionBase:
+						public TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<string> parameters)
+						{
+							try
+							{
+								return new TypedValue(ExecuteOperation(parameters));
+							}
+							catch (System.Exception e)
+							{
+								return new TypedValue(Result(parameters, Processor.Compose(e)));
+							}
+						}
+						//####################
+						In fitSharp.Slim.Operators.ExecuteCall:
+							//## parameters = tree of, for first call, 4 branches:
+							//##	decisionTable_0_0; make; decisionTable_0; HelloWorld.OurFirstTest
+							protected override Tree<string> ExecuteOperation(Tree<string> parameters)
+							{
+								TypedValue result = InvokeMember(parameters, 2);
+								return Result(parameters, Processor.Compose(result));
+							}
+						//####################
+						In fitSharp.Slim.Operators.InvokeInstructionBase:
+							protected TypedValue InvokeMember(Tree<string> parameters, int memberIndex)
+							{
+								//## For first call: 1 saved instance, Key: "decisionTable_0", Value: HelloWorld.OurFirstTest object.
+								var savedInstances = Processor.Get<SavedInstances>();
+								//## string.  instance: "decisionTable_0"
+								var instance = parameters.ValueAt(memberIndex);
+								object target = savedInstances.HasValue(instance) ? savedInstances.GetValue(instance) : new NullInstance();
+								//## For first call: 
+								//##	parameters.ValueAt(memberIndex + 1) = "table"
+								//##	ParameterTree(parameters, memberIndex + 2): Branch with two sub-branches:
+								/*
+											decisionTable_0_1 - call - decisionTable_0 - table
+											- Sub-branch: string1 - string2 - Concatenate?
+											- Sub-branch: Hello - World - Hello World
+								*/
+								TypedValue result = Processor.Invoke(target, new MemberName(parameters.ValueAt(memberIndex + 1)),
+									ParameterTree(parameters, memberIndex + 2));
+								//####################
+								Calls down into fitSharp.Slim.Operators.InvokeLibrary:
+									public TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<string> parameters)
+									{
+										var runtime = new InvokeDefault<string, Processor<string>> {Processor = Processor};
+										//## result: fitSharp.Machine.Exception.MemberMissingException: Member 'table' with 1 parameter(s) not found for type 'HelloWorld.OurFirstTest'.
+										var result = runtime.Invoke(instance, memberName, parameters);
+										//####################
+										In fitSharp.Machine.Engine.InvokeDefault<T, P>: 
+											public TypedValue Invoke(TypedValue instance, MemberName memberName, Tree<T> parameters)
+											{
+												RuntimeMember member;
+												var parameterNames = new List<string>();
+												int parameterCount;
+												
+												//## HasNamedParameters = false
+												if (memberName.HasNamedParameters)
+												{
+													parameterNames = parameters.Branches.Alternate().Aggregate(new List<string>(),
+														(names, parameter) =>
+														{
+															names.Add(Processor.ParseTree<T, string>(parameter));
+															return names;
+														});
+													parameterCount = parameterNames.Count;
+													member = MemberQuery.FindInstance(Processor.FindMember, instance.Value,
+														new MemberSpecification(memberName).WithParameterNames(parameterNames));
+												}
+												else
+												{
+													parameterCount = parameters.Branches.Count;
+													member = MemberQuery.FindInstance(Processor.FindMember, instance.Value,
+														new MemberSpecification(memberName, parameterCount));
+												}
+												
+												//## member = null
+												if (member == null)
+													return TypedValue.MakeInvalid(new MemberMissingException(instance.Type, memberName.Name, parameterCount));
+
+												var parameterList = memberName.HasNamedParameters
+													? new ParameterList<T>(Processor).GetNamedParameterList(instance, parameters, member, parameterNames)
+													: new ParameterList<T>(Processor).GetParameterList(instance, parameters, member);
+												try
+												{
+													return member.Invoke(parameterList);
+												}
+												catch (TargetInvocationException e)
+												{
+													return TypedValue.MakeInvalid(e.InnerException);
+												}
+												catch (ValidationException e)
+												{
+													return TypedValue.MakeInvalid(e);
+												}
+											}
+										//####################
+										if (!IsMemberMissing(result)) return result;
+
+										foreach (var libraryInstance in Processor.LibraryInstances)
+										{
+											var libraryResult = runtime.Invoke(libraryInstance, memberName, parameters);
+											if (!IsMemberMissing(libraryResult)) return libraryResult;
+										}
+										return result;
+									}
+								//####################
+								result.ThrowExceptionIfNotValid();
+								return result;
+							}
+							
+							protected static Tree<string> ParameterTree(Tree<string> input, int startingIndex)
+							{
+								var result = new SlimTree();
+								for (int i = startingIndex; i < input.Branches.Count; i++)
+								{
+									result.AddBranch(input.Branches[i]);
+								}
+								return result;
+							}
+						//####################
+					//####################
+				//####################
+                results.AddBranchValue(result);
+                if (ComposeException.WasAborted(result.ValueAt(1))) break;
+            }
+            return results;
+        }
+	//####################

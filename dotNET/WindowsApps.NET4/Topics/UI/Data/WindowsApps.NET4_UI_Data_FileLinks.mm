@@ -1,0 +1,1059 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1336395752874" ID="ID_1136101359" MODIFIED="1385183654291" STYLE="bubble">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: center">
+      DESIGNING .NET 4&#xa0;<br/>WINDOWS APPLICATIONS:<br/>PRESENTATION LAYER
+    </p>
+    <p style="text-align: center">
+      - DATA PRESENTATION
+    </p>
+    <p style="text-align: center">
+      AND INPUT
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="16"/>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1348801947616" ID="ID_1118189004" MODIFIED="1349126832940" POSITION="left" STYLE="bubble" TEXT="DATA VALIDATION">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348914356028" ID="ID_1368079340" MODIFIED="1385183668169" STYLE="bubble" TEXT="Techniques">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348914360604" FOLDED="true" ID="ID_1967117060" MODIFIED="1349126832299" STYLE="bubble">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Data Type
+    </p>
+    <p>
+      Validation
+    </p>
+  </body>
+</html></richcontent>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914406203" FOLDED="true" ID="ID_1340030165" MODIFIED="1349126832299" STYLE="bubble" TEXT="Check">
+<node COLOR="#000000" CREATED="1348914408490" FOLDED="true" ID="ID_336622541" MODIFIED="1349126832299" STYLE="fork" TEXT="Data">
+<node CREATED="1348914410266" ID="ID_1967121629" MODIFIED="1349125811851" TEXT="Type"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914519799" ID="ID_1255982074" MODIFIED="1349125811852" STYLE="bubble" TEXT="Simplest Technique"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914542342" FOLDED="true" ID="ID_1151697285" MODIFIED="1349126832299" STYLE="bubble" TEXT="Can Perform">
+<node COLOR="#000000" CREATED="1348914546262" FOLDED="true" ID="ID_1094429000" MODIFIED="1349126832299" STYLE="fork" TEXT="Within">
+<node CREATED="1348914549878" ID="ID_1113718389" MODIFIED="1349125811852" TEXT="UI"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914420218" FOLDED="true" ID="ID_1677950050" MODIFIED="1349126832299" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1348914422058" FOLDED="true" ID="ID_1292946325" MODIFIED="1349126832299" STYLE="fork" TEXT="Expect">
+<node CREATED="1348914485592" FOLDED="true" ID="ID_260159927" MODIFIED="1349126832299" TEXT="Numeric Value">
+<node CREATED="1348914494088" FOLDED="true" ID="ID_539904366" MODIFIED="1349126832299" TEXT="Parse">
+<node CREATED="1348914496408" FOLDED="true" ID="ID_1986727109" MODIFIED="1349126832299" TEXT="Into">
+<node CREATED="1348914498295" FOLDED="true" ID="ID_561445805" MODIFIED="1349126832299" TEXT="Either">
+<node CREATED="1348914500776" ID="ID_943314592" MODIFIED="1349125811853" TEXT="Integer"/>
+<node CREATED="1348914502711" ID="ID_1785368442" MODIFIED="1349125811853" TEXT="Decimal"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348914380075" FOLDED="true" ID="ID_83071378" MODIFIED="1349126832300" STYLE="bubble" TEXT="Range Checking">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914556407" FOLDED="true" ID="ID_530826898" MODIFIED="1349126832300" STYLE="bubble" TEXT="Check">
+<node COLOR="#000000" CREATED="1348914564006" ID="ID_170137696" MODIFIED="1349125811854" STYLE="fork" TEXT="Data Type"/>
+<node COLOR="#000000" CREATED="1348914589845" FOLDED="true" ID="ID_338455121" MODIFIED="1349126832300" STYLE="fork" TEXT="Value">
+<node CREATED="1348914593446" FOLDED="true" ID="ID_1092875570" MODIFIED="1349126832300" TEXT="Falls">
+<node CREATED="1348914596549" FOLDED="true" ID="ID_1593647218" MODIFIED="1349126832299" TEXT="In">
+<node CREATED="1348914599797" ID="ID_402210193" MODIFIED="1349125811855" TEXT="Acceptable Range"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914542342" FOLDED="true" ID="ID_658275701" MODIFIED="1349126832300" STYLE="bubble" TEXT="Can Perform">
+<node COLOR="#000000" CREATED="1348914546262" FOLDED="true" ID="ID_483925435" MODIFIED="1349126832300" STYLE="fork" TEXT="Within">
+<node CREATED="1348914549878" ID="ID_992333599" MODIFIED="1349125811855" TEXT="UI"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348914383386" FOLDED="true" ID="ID_1347509251" MODIFIED="1349126832301" STYLE="bubble" TEXT="Lookup Validation">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914625861" FOLDED="true" ID="ID_1733602199" MODIFIED="1349126832300" STYLE="bubble" TEXT="Data">
+<node COLOR="#000000" CREATED="1348914628388" FOLDED="true" ID="ID_525505619" MODIFIED="1349126832300" STYLE="fork" TEXT="Must Take">
+<node CREATED="1348914632661" FOLDED="true" ID="ID_245368421" MODIFIED="1349126832300" TEXT="One Of">
+<node CREATED="1348914636340" ID="ID_1551246355" MODIFIED="1349125811856" TEXT="Set List Of Values"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914657524" FOLDED="true" ID="ID_467955614" MODIFIED="1349126832300" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1348914659364" FOLDED="true" ID="ID_1836522920" MODIFIED="1349126832300" STYLE="fork" TEXT="Serial Number">
+<node CREATED="1348914661892" FOLDED="true" ID="ID_1483890426" MODIFIED="1349126832300" TEXT="Input">
+<node CREATED="1348914673267" FOLDED="true" ID="ID_548499629" MODIFIED="1349126832300" TEXT="Must Match">
+<node CREATED="1348914907742" FOLDED="true" ID="ID_1998489714" MODIFIED="1349126832300" TEXT="Existing Serial Number">
+<node CREATED="1348914928317" FOLDED="true" ID="ID_546962260" MODIFIED="1349126832300" TEXT="In">
+<node CREATED="1348914929613" ID="ID_190347778" MODIFIED="1349125811857" TEXT="Database"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348914951212" FOLDED="true" ID="ID_44120114" MODIFIED="1349126832301" STYLE="bubble" TEXT="Lookup Table">
+<node COLOR="#000000" CREATED="1348915250229" FOLDED="true" ID="ID_767849578" MODIFIED="1349126832301" STYLE="fork" TEXT="Either">
+<node CREATED="1348915254853" ID="ID_1579473040" MODIFIED="1349125811858" TEXT="Static"/>
+<node CREATED="1348915264597" FOLDED="true" ID="ID_785737457" MODIFIED="1349126832301" TEXT="Dynamic">
+<node CREATED="1348915268708" FOLDED="true" ID="ID_247108563" MODIFIED="1349126832301" TEXT="Data">
+<node CREATED="1348915269892" FOLDED="true" ID="ID_759035364" MODIFIED="1349126832301" TEXT="Changes">
+<node CREATED="1348915271764" FOLDED="true" ID="ID_823542056" MODIFIED="1349126832300" TEXT="Over">
+<node CREATED="1348915274884" ID="ID_557943614" MODIFIED="1349125811858" TEXT="Time"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348914394907" FOLDED="true" ID="ID_834837804" MODIFIED="1349126832301" STYLE="bubble" TEXT="Complex Validation">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348915285604" ID="ID_857184156" MODIFIED="1349125811859" STYLE="bubble" TEXT="Separate Business Rules"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348915357474" ID="ID_435026012" MODIFIED="1385183668173" STYLE="bubble" TEXT="Do Twice">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348915362722" FOLDED="true" ID="ID_1242452302" MODIFIED="1349126832302" STYLE="bubble" TEXT="Client">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348915366594" FOLDED="true" ID="ID_1325754701" MODIFIED="1349126832301" STYLE="bubble" TEXT="For">
+<node COLOR="#000000" CREATED="1348915367810" ID="ID_851832290" MODIFIED="1349125811860" STYLE="fork" TEXT="Responsiveness"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348915403985" FOLDED="true" ID="ID_1864234531" MODIFIED="1349126832302" STYLE="bubble" TEXT="Not Secure">
+<node COLOR="#000000" CREATED="1348915425633" FOLDED="true" ID="ID_1793364269" MODIFIED="1349126832302" STYLE="fork" TEXT="Attacker Can Bypass">
+<node CREATED="1348915473919" FOLDED="true" ID="ID_1822802784" MODIFIED="1349126832302" TEXT="Either">
+<node CREATED="1348915479023" ID="ID_1974467659" MODIFIED="1349125811861" TEXT="Modify Application"/>
+<node CREATED="1348915490271" FOLDED="true" ID="ID_793660221" MODIFIED="1349126832301" TEXT="Alter Data">
+<node CREATED="1348915495615" FOLDED="true" ID="ID_672851170" MODIFIED="1349126832301" TEXT="After">
+<node CREATED="1348915496958" FOLDED="true" ID="ID_725683994" MODIFIED="1349126832301" TEXT="Sent">
+<node CREATED="1348915498399" FOLDED="true" ID="ID_1559294560" MODIFIED="1349126832301" TEXT="By">
+<node CREATED="1348915500222" ID="ID_452371207" MODIFIED="1349125811862" TEXT="Application"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348915506447" FOLDED="true" ID="ID_1282831068" MODIFIED="1349126832301" TEXT="Fake Application">
+<node CREATED="1348915526798" FOLDED="true" ID="ID_774621199" MODIFIED="1349126832301" TEXT="Connects To">
+<node CREATED="1348915530750" ID="ID_936539947" MODIFIED="1349125811862" TEXT="Server"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348915373474" FOLDED="true" ID="ID_1373731399" MODIFIED="1349126832302" STYLE="bubble" TEXT="Server">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348915376370" FOLDED="true" ID="ID_1293306568" MODIFIED="1349126832302" STYLE="bubble" TEXT="For">
+<node COLOR="#000000" CREATED="1348915379282" ID="ID_1894230830" MODIFIED="1349125811862" STYLE="fork" TEXT="Security"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348922279867" ID="ID_1868257987" MODIFIED="1385183668177" STYLE="bubble" TEXT="Client-side">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348916183444" FOLDED="true" ID="ID_1334435053" MODIFIED="1349126832304" STYLE="bubble">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Windows Form
+    </p>
+    <p>
+      Application
+    </p>
+  </body>
+</html></richcontent>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348915542750" FOLDED="true" ID="ID_902715980" MODIFIED="1349126832304" STYLE="bubble" TEXT="Via">
+<node COLOR="#000000" CREATED="1348915544541" FOLDED="true" ID="ID_380832487" MODIFIED="1349126832304" STYLE="fork" TEXT="Validating Event">
+<node CREATED="1348915561837" FOLDED="true" ID="ID_33922540" MODIFIED="1349126832302" TEXT="Occurs">
+<node CREATED="1348915567628" FOLDED="true" ID="ID_1112442257" MODIFIED="1349126832302" TEXT="Before">
+<node CREATED="1348915569292" FOLDED="true" ID="ID_1692011390" MODIFIED="1349126832302" TEXT="Control">
+<node CREATED="1348915571853" FOLDED="true" ID="ID_981414035" MODIFIED="1349126832302" TEXT="Loses">
+<node CREATED="1348915574029" ID="ID_712058365" MODIFIED="1349125811875" TEXT="Focus"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348915583693" FOLDED="true" ID="ID_1819045254" MODIFIED="1349126832303" TEXT="Raised">
+<node CREATED="1348915586829" FOLDED="true" ID="ID_1142074411" MODIFIED="1349126832303" TEXT="Only If">
+<node CREATED="1348915596092" FOLDED="true" ID="ID_745008560" MODIFIED="1349126832303" TEXT="CausesValidation Property">
+<node CREATED="1348915604957" FOLDED="true" ID="ID_1745080206" MODIFIED="1349126832302" TEXT="Of">
+<node CREATED="1348915608156" FOLDED="true" ID="ID_1435174323" MODIFIED="1349126832302" TEXT="Controls">
+<node CREATED="1348915610428" FOLDED="true" ID="ID_1527826096" MODIFIED="1349126832302" TEXT="About To Receive">
+<node CREATED="1348915617931" ID="ID_1916931226" MODIFIED="1349125811875" TEXT="Focus"/>
+</node>
+<node CREATED="1348915666970" ID="ID_778761229" MODIFIED="1349125811875" TEXT="To Validate"/>
+</node>
+</node>
+<node CREATED="1348915621131" FOLDED="true" ID="ID_1125793858" MODIFIED="1349126832303" TEXT="True">
+<node CREATED="1348915687370" FOLDED="true" ID="ID_379007091" MODIFIED="1349126832303" TEXT="Default">
+<node CREATED="1348915690154" FOLDED="true" ID="ID_1626606481" MODIFIED="1349126832303" TEXT="When">
+<node CREATED="1348915737420" FOLDED="true" ID="ID_677377259" MODIFIED="1349126832303" TEXT="Control">
+<node CREATED="1348915729115" FOLDED="true" ID="ID_375942431" MODIFIED="1349126832303" TEXT="Created">
+<node CREATED="1348915696778" FOLDED="true" ID="ID_863847185" MODIFIED="1349126832302" TEXT="At">
+<node CREATED="1348915698522" ID="ID_1038248456" MODIFIED="1349125811876" TEXT="Design-time"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348915772136" FOLDED="true" ID="ID_1969228695" MODIFIED="1349126832303" TEXT="Allows">
+<node CREATED="1348915774776" ID="ID_795060513" MODIFIED="1349125811876" TEXT="Complex Validation"/>
+</node>
+<node CREATED="1348915802215" FOLDED="true" ID="ID_1910330866" MODIFIED="1349126832304" TEXT="Handler">
+<node CREATED="1348915822838" FOLDED="true" ID="ID_99185929" MODIFIED="1349126832304" TEXT="Parameter">
+<node CREATED="1348915831894" FOLDED="true" ID="ID_1078723172" MODIFIED="1349126832303" TEXT="CancelEventArgs Object">
+<node CREATED="1348915839894" FOLDED="true" ID="ID_1866844295" MODIFIED="1349126832303" TEXT="Cancel Property">
+<node CREATED="1348915874597" FOLDED="true" ID="ID_1921666751" MODIFIED="1349126832303" TEXT="Set True">
+<node CREATED="1348915879125" FOLDED="true" ID="ID_1990705832" MODIFIED="1349126832303" TEXT="Cancels">
+<node CREATED="1348915888790" ID="ID_193283182" MODIFIED="1349125811877" TEXT="Validating Event"/>
+</node>
+<node CREATED="1348915907829" FOLDED="true" ID="ID_1196452116" MODIFIED="1349126832303" TEXT="Focus">
+<node CREATED="1348915914068" FOLDED="true" ID="ID_871844635" MODIFIED="1349126832303" TEXT="Returned To">
+<node CREATED="1348915918340" ID="ID_720049728" MODIFIED="1349125811877" TEXT="Control"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348916466055" FOLDED="true" ID="ID_1436728389" MODIFIED="1349126832304">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      EG
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1348916478375" ID="ID_1868375621" MODIFIED="1349125811878">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">private void textBox1_Validating(object sender, </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;System.ComponentModel.CancelEventArgs e) </font>
+    </p>
+    <p>
+      <font face="Consolas">{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;if (string.IsNullOrEmpty(textBox1.Text)) </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;e.Cancel = true; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;} </font>
+    </p>
+    <p>
+      <font face="Consolas">}</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348916045025" FOLDED="true" ID="ID_772990358" MODIFIED="1349126832304" STYLE="fork" TEXT="Validated Event">
+<node CREATED="1348916049201" FOLDED="true" ID="ID_315925219" MODIFIED="1349126832304" TEXT="Fires">
+<node CREATED="1348916051905" FOLDED="true" ID="ID_602791790" MODIFIED="1349126832304" TEXT="After">
+<node CREATED="1348916055073" FOLDED="true" ID="ID_1635760135" MODIFIED="1349126832304" TEXT="Validation">
+<node CREATED="1348916059185" ID="ID_1695704756" MODIFIED="1349125811882" TEXT="Successful"/>
+</node>
+</node>
+</node>
+<node CREATED="1348916084592" FOLDED="true" ID="ID_157339264" MODIFIED="1349126832304" TEXT="For">
+<node CREATED="1348916086352" FOLDED="true" ID="ID_1267470574" MODIFIED="1349126832304" TEXT="Performing Actions">
+<node CREATED="1348916090912" FOLDED="true" ID="ID_61353797" MODIFIED="1349126832304" TEXT="On">
+<node CREATED="1348916092080" ID="ID_1139926665" MODIFIED="1349125811882" TEXT="Validated Input"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348916212861" FOLDED="true" ID="ID_459564537" MODIFIED="1349126832310" STYLE="bubble" TEXT="WPF Applicaiton">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348916689410" FOLDED="true" ID="ID_231024467" MODIFIED="1349126832307" STYLE="bubble" TEXT="ValidationRules">
+<node COLOR="#000000" CREATED="1348916655106" FOLDED="true" ID="ID_8037300" MODIFIED="1349126832305" STYLE="fork" TEXT="Collections">
+<node CREATED="1348916663826" FOLDED="true" ID="ID_315782499" MODIFIED="1349126832305" TEXT="Of">
+<node CREATED="1348916665010" ID="ID_748773970" MODIFIED="1349125811895" TEXT="Binding Objects"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348917028558" FOLDED="true" ID="ID_999816313" MODIFIED="1349126832305" STYLE="fork" TEXT="Adding">
+<node CREATED="1348916694706" FOLDED="true" ID="ID_1391943156" MODIFIED="1349126832305" TEXT="EG">
+<node CREATED="1348916478375" ID="ID_1898816300" MODIFIED="1349125811896">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;TextBox&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;TextBox.Text&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;Binding Path="CandyBars"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;Binding.ValidationRules&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<b>&#xa0;&lt;local:CandyBarValidationRule /&gt; </b></font>
+    </p>
+    <p>
+      <font face="Consolas"><b>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;local:SweetTreatsValidationRule /&gt; </b></font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Binding.ValidationRules&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Binding&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/TextBox.Text&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/TextBox&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348917034761" FOLDED="true" ID="ID_1370144618" MODIFIED="1349126832305" STYLE="fork" TEXT="Evaluated">
+<node CREATED="1348917045544" FOLDED="true" ID="ID_1400187075" MODIFIED="1349126832305" TEXT="In Order">
+<node CREATED="1348917049641" ID="ID_1662703100" MODIFIED="1349125811900" TEXT="Declared"/>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348917435664" FOLDED="true" ID="ID_883687225" MODIFIED="1349126832306" STYLE="fork" TEXT="If One Violated">
+<node CREATED="1348917446879" FOLDED="true" ID="ID_384548421" MODIFIED="1349126832305" TEXT="Element">
+<node CREATED="1348917449167" ID="ID_668071721" MODIFIED="1349125811901" TEXT="Violating Rule"/>
+<node CREATED="1348917453135" FOLDED="true" ID="ID_348976593" MODIFIED="1349126832305" TEXT="Outlined">
+<node CREATED="1348917456462" ID="ID_795056101" MODIFIED="1349125811901" TEXT="Red"/>
+</node>
+</node>
+<node CREATED="1348917461039" FOLDED="true" ID="ID_25942699" MODIFIED="1349126832305" TEXT="Validation.HasError Property">
+<node CREATED="1348917484430" ID="ID_319489534" MODIFIED="1349125811901" TEXT="Set True"/>
+</node>
+<node CREATED="1348917511421" FOLDED="true" ID="ID_561784216" MODIFIED="1349126832305" TEXT="ValidationError Object">
+<node CREATED="1348917522893" ID="ID_1424209202" MODIFIED="1349125811901" TEXT="Created"/>
+<node CREATED="1348917524685" FOLDED="true" ID="ID_1201143174" MODIFIED="1349126832305" TEXT="Added To">
+<node CREATED="1348917527917" ID="ID_1490789346" MODIFIED="1349125811901" TEXT="Validation.Errors Collection"/>
+</node>
+</node>
+<node CREATED="1348917565516" FOLDED="true" ID="ID_660818227" MODIFIED="1349126832306" TEXT="Validation.Error Event">
+<node CREATED="1348917575452" FOLDED="true" ID="ID_449779988" MODIFIED="1349126832306" TEXT="Raised">
+<node CREATED="1348917581436" FOLDED="true" ID="ID_1823574704" MODIFIED="1349126832305" TEXT="If">
+<node CREATED="1348917583580" FOLDED="true" ID="ID_910320128" MODIFIED="1349126832305" TEXT="Binding.NotifyOnValidationError Property">
+<node CREATED="1348917860246" ID="ID_220547567" MODIFIED="1349125811902" TEXT="True"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348917869669" FOLDED="true" ID="ID_630655937" MODIFIED="1349126832306" TEXT="Data Binding Source">
+<node CREATED="1348917877189" FOLDED="true" ID="ID_1979393630" MODIFIED="1349126832306" TEXT="NOT">
+<node CREATED="1348917878885" FOLDED="true" ID="ID_1812954980" MODIFIED="1349126832306" TEXT="Updated">
+<node CREATED="1348917884468" FOLDED="true" ID="ID_73000158" MODIFIED="1349126832306" TEXT="With">
+<node CREATED="1348917887172" ID="ID_184586984" MODIFIED="1349125811902" TEXT="Invalid Value"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348918050993" FOLDED="true" ID="ID_653908766" MODIFIED="1349126832307" STYLE="fork" TEXT="Creating">
+<node CREATED="1348918107440" FOLDED="true" ID="ID_211678688" MODIFIED="1349126832307" TEXT="Create Class">
+<node CREATED="1348918111967" FOLDED="true" ID="ID_1991748360" MODIFIED="1349126832306" TEXT="Inherit">
+<node CREATED="1348918115664" ID="ID_750467961" MODIFIED="1349125811903" TEXT="ValidationRule Abstract Class"/>
+</node>
+<node CREATED="1348918196173" FOLDED="true" ID="ID_1950410534" MODIFIED="1349126832307" TEXT="Validate Method">
+<node CREATED="1348919666057" ID="ID_767586161" MODIFIED="1349125811903" TEXT="Override"/>
+<node CREATED="1348918237916" FOLDED="true" ID="ID_696222786" MODIFIED="1349126832306" TEXT="Parameter">
+<node CREATED="1348918242780" FOLDED="true" ID="ID_1783398847" MODIFIED="1349126832306" TEXT="Object">
+<node CREATED="1348918244493" FOLDED="true" ID="ID_527885562" MODIFIED="1349126832306" TEXT="To">
+<node CREATED="1348918245724" ID="ID_397418088" MODIFIED="1349125811903" TEXT="Evaluate"/>
+</node>
+</node>
+</node>
+<node CREATED="1348918254700" FOLDED="true" ID="ID_1101671300" MODIFIED="1349126832307" TEXT="Returns">
+<node CREATED="1348918257083" FOLDED="true" ID="ID_958033662" MODIFIED="1349126832307" TEXT="ValidationResult Object">
+<node CREATED="1348918268028" FOLDED="true" ID="ID_1863913859" MODIFIED="1349126832307" TEXT="Properties">
+<node CREATED="1348918274236" FOLDED="true" ID="ID_296669355" MODIFIED="1349126832307" TEXT="IsValid">
+<node CREATED="1348919324226" FOLDED="true" ID="ID_1486029172" MODIFIED="1349126832306" TEXT="If">
+<node CREATED="1348919325841" FOLDED="true" ID="ID_1181848309" MODIFIED="1349126832306" TEXT="False">
+<node CREATED="1348919327666" FOLDED="true" ID="ID_899117320" MODIFIED="1349126832306" TEXT="ValidationError">
+<node CREATED="1348919334658" ID="ID_850668938" MODIFIED="1349125811904" TEXT="Created"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348918278267" FOLDED="true" ID="ID_1504705883" MODIFIED="1349126832307" TEXT="ErrorCondition">
+<node CREATED="1348919291378" ID="ID_202423741" MODIFIED="1349125811904" TEXT="Error Description"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348919345585" FOLDED="true" ID="ID_413264705" MODIFIED="1349126832307" TEXT="EG">
+<node CREATED="1348916478375" ID="ID_1881283025" MODIFIED="1349125811904">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">public class NoEmptyStringsValidator : ValidationRule </font>
+    </p>
+    <p>
+      <font face="Consolas">{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;public override ValidationResult Validate(object value, </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;System.Globalization.CultureInfo cultureInfo) </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;string textValue = value.ToString(); </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;if (textValue == "") </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return new ValidationResult(false, </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"String cannot be empty"); </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;} </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;return new ValidationResult(true, null); </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;} </font>
+    </p>
+    <p>
+      <font face="Consolas">}</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348920057873" FOLDED="true" ID="ID_655984062" MODIFIED="1349126832310" STYLE="bubble" TEXT="Validation.Error Event">
+<node COLOR="#000000" CREATED="1348920643778" FOLDED="true" ID="ID_1946439312" MODIFIED="1349126832308" STYLE="fork" TEXT="Raised">
+<node CREATED="1348917581436" FOLDED="true" ID="ID_1353205404" MODIFIED="1349126832307" TEXT="Only If">
+<node CREATED="1348917583580" FOLDED="true" ID="ID_1608208509" MODIFIED="1349126832307" TEXT="Binding.NotifyOnValidationError Property">
+<node CREATED="1348917860246" ID="ID_1062643712" MODIFIED="1349125811912" TEXT="True"/>
+<node CREATED="1348920996237" FOLDED="true" ID="ID_408981482" MODIFIED="1349126832307" TEXT="EG">
+<node CREATED="1348916478375" ID="ID_1207491553" MODIFIED="1349125811912">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Binding <b>NotifyOnValidationError="True"</b>&#xa0;Mode="TwoWay" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;Source="{StaticResource StringCollection}" Path="name"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;Binding.ValidationRules&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;local:NoEmptyStringsValidator /&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Binding.ValidationRules&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Binding&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348921114358" FOLDED="true" ID="ID_474535668" MODIFIED="1349126832308" TEXT="On">
+<node CREATED="1348921117014" FOLDED="true" ID="ID_1659243436" MODIFIED="1349126832308" TEXT="Validation Error">
+<node CREATED="1348921120406" FOLDED="true" ID="ID_1423937724" MODIFIED="1349126832308" TEXT="New">
+<node CREATED="1348921121686" ID="ID_430518516" MODIFIED="1349125811915" TEXT="Created"/>
+</node>
+<node CREATED="1348921133415" FOLDED="true" ID="ID_1766683154" MODIFIED="1349126832308" TEXT="Old">
+<node CREATED="1348921135125" ID="ID_145314042" MODIFIED="1349125811915" TEXT="Cleared"/>
+</node>
+<node CREATED="1348921583483" FOLDED="true" ID="ID_1669944102" MODIFIED="1349126832308" TEXT="Check">
+<node CREATED="1348921586651" FOLDED="true" ID="ID_1963802149" MODIFIED="1349126832308" TEXT="e.Action">
+<node CREATED="1348921609130" FOLDED="true" ID="ID_66984450" MODIFIED="1349126832308" TEXT="Indicates">
+<node CREATED="1348921640090" FOLDED="true" ID="ID_552192" MODIFIED="1349126832308" TEXT="Whether">
+<node CREATED="1348921645402" ID="ID_622250503" MODIFIED="1349125811916" TEXT="Created"/>
+<node CREATED="1348921648186" ID="ID_1241932066" MODIFIED="1349125811916" TEXT="Cleared"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348921028361" FOLDED="true" ID="ID_1652156064" MODIFIED="1349126832308" STYLE="fork" TEXT="Bubbles Up">
+<node CREATED="1348921034856" FOLDED="true" ID="ID_1164808857" MODIFIED="1349126832308" TEXT="Through">
+<node CREATED="1348921036584" FOLDED="true" ID="ID_1375360817" MODIFIED="1349126832308" TEXT="Visual Tree">
+<node CREATED="1348921054072" FOLDED="true" ID="ID_515509497" MODIFIED="1349126832308" TEXT="Until">
+<node CREATED="1348921056072" ID="ID_134279790" MODIFIED="1349125811917" TEXT="Handled"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348920074416" FOLDED="true" ID="ID_538842073" MODIFIED="1349126832310" STYLE="fork" TEXT="Handling">
+<node CREATED="1348920281050" FOLDED="true" ID="ID_660212821" MODIFIED="1349126832310" TEXT="ValidationErrorEventArgs">
+<node CREATED="1348920302970" FOLDED="true" ID="ID_1045993799" MODIFIED="1349126832310" TEXT="Properties">
+<node CREATED="1348920307545" FOLDED="true" ID="ID_371828260" MODIFIED="1349126832309" TEXT="Action">
+<node CREATED="1348920323994" FOLDED="true" ID="ID_1202980113" MODIFIED="1349126832309" TEXT="Indicates">
+<node CREATED="1348920327097" FOLDED="true" ID="ID_197411571" MODIFIED="1349126832308" TEXT="Error">
+<node CREATED="1348920329818" ID="ID_899461540" MODIFIED="1349125811917" TEXT="New"/>
+<node CREATED="1348920336698" FOLDED="true" ID="ID_1079737692" MODIFIED="1349126832308" TEXT="Old">
+<node CREATED="1348920339161" FOLDED="true" ID="ID_908588920" MODIFIED="1349126832308" TEXT="Being">
+<node CREATED="1348920340745" ID="ID_177848539" MODIFIED="1349125811918" TEXT="Cleared"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348920310314" FOLDED="true" ID="ID_1237901935" MODIFIED="1349126832310" TEXT="Error">
+<node CREATED="1348920387725" FOLDED="true" ID="ID_471826144" MODIFIED="1349126832310" TEXT="Object">
+<node CREATED="1348920351737" FOLDED="true" ID="ID_1944735893" MODIFIED="1349126832309" TEXT="Information">
+<node CREATED="1348920354569" FOLDED="true" ID="ID_576743145" MODIFIED="1349126832309" TEXT="About">
+<node CREATED="1348920356025" ID="ID_1739522779" MODIFIED="1349125811918" TEXT="Error"/>
+</node>
+</node>
+<node CREATED="1348920394776" FOLDED="true" ID="ID_334606519" MODIFIED="1349126832310" TEXT="Properties">
+<node CREATED="1348920399192" FOLDED="true" ID="ID_687833924" MODIFIED="1349126832309" TEXT="BindingInError">
+<node CREATED="1348920458870" FOLDED="true" ID="ID_62463528" MODIFIED="1349126832309" TEXT="Reference">
+<node CREATED="1348920465926" FOLDED="true" ID="ID_707263437" MODIFIED="1349126832309" TEXT="To">
+<node CREATED="1348920467014" FOLDED="true" ID="ID_1533232516" MODIFIED="1349126832309" TEXT="Binding Object">
+<node CREATED="1348920475526" FOLDED="true" ID="ID_1761341145" MODIFIED="1349126832309" TEXT="Caused">
+<node CREATED="1348920479013" ID="ID_951480228" MODIFIED="1349125811919" TEXT="Validation Error"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348920402167" FOLDED="true" ID="ID_1160528745" MODIFIED="1349126832309" TEXT="ErrorContent">
+<node CREATED="1348920554165" FOLDED="true" ID="ID_1338533433" MODIFIED="1349126832309" TEXT="String">
+<node CREATED="1348920557396" FOLDED="true" ID="ID_1750932785" MODIFIED="1349126832309" TEXT="Set By">
+<node CREATED="1348920561332" FOLDED="true" ID="ID_1689549890" MODIFIED="1349126832309" TEXT="ValidationRule Object">
+<node CREATED="1348920568404" FOLDED="true" ID="ID_71432234" MODIFIED="1349126832309" TEXT="Returning">
+<node CREATED="1348920575731" ID="ID_864689619" MODIFIED="1349125811919" TEXT="Validation Error"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348920405351" FOLDED="true" ID="ID_1366896104" MODIFIED="1349126832309" TEXT="Exception">
+<node CREATED="1348920601315" FOLDED="true" ID="ID_664583502" MODIFIED="1349126832309" TEXT="Caused By">
+<node CREATED="1348920604626" ID="ID_722236769" MODIFIED="1349125811919" TEXT="Validation Error"/>
+</node>
+</node>
+<node CREATED="1348920409912" FOLDED="true" ID="ID_1456222431" MODIFIED="1349126832310" TEXT="RuleInError">
+<node CREATED="1348920614355" FOLDED="true" ID="ID_1389616280" MODIFIED="1349126832310" TEXT="ValidationRule">
+<node CREATED="1348920619570" FOLDED="true" ID="ID_1958811775" MODIFIED="1349126832310" TEXT="Caused">
+<node CREATED="1348920624050" ID="ID_1502712731" MODIFIED="1349125811920" TEXT="Validation Error"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1348921728711" FOLDED="true" ID="ID_475030885" MODIFIED="1349126832310" TEXT="EG">
+<node CREATED="1348916478375" ID="ID_1242084113" MODIFIED="1349125811920">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">private void Grid_Error(object sender, </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;ValidationErrorEventArgs e) </font>
+    </p>
+    <p>
+      <font face="Consolas">{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;if (e.Action == ValidationErrorEventAction.Added) </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;MessageBox.Show(e.Error.ErrorContent.ToString()); </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;} </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;else </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;{ </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;System.Diagnostics.Trace.WriteLine( </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"Validation error cleared"); </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;}</font>
+    </p>
+    <p>
+      <font face="Consolas">}</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1348801955439" ID="ID_1825332970" MODIFIED="1349126832942" POSITION="right" STYLE="bubble" TEXT="DATA BINDING">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348922422263" ID="ID_677926652" MODIFIED="1385183668181" STYLE="bubble" TEXT="Binding">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348922455831" ID="ID_1454342526" MODIFIED="1349125811714" STYLE="bubble" TEXT="Presentation Controls"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348922467350" FOLDED="true" ID="ID_307383166" MODIFIED="1349126832311" STYLE="bubble" TEXT="To">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348922483349" FOLDED="true" ID="ID_1353976650" MODIFIED="1349126832311" STYLE="bubble" TEXT="Copy">
+<node COLOR="#000000" CREATED="1348922491685" FOLDED="true" ID="ID_494236520" MODIFIED="1349126832311" STYLE="fork" TEXT="Of">
+<node CREATED="1348922493045" FOLDED="true" ID="ID_656335419" MODIFIED="1349126832311" TEXT="Data">
+<node CREATED="1348922497877" ID="ID_1889051396" MODIFIED="1349125811716" TEXT="Cached"/>
+<node CREATED="1348922469270" ID="ID_1708700886" MODIFIED="1349125811716" TEXT="Client-side"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348922533924" ID="ID_966177269" MODIFIED="1385183668183" STYLE="bubble" TEXT="Strategy">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348922604691" FOLDED="true" ID="ID_358726835" MODIFIED="1349126832311" STYLE="bubble" TEXT="Based On">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348922652017" FOLDED="true" ID="ID_1658752486" MODIFIED="1349126832311" STYLE="bubble" TEXT="Local Data">
+<node COLOR="#000000" CREATED="1348922643425" ID="ID_264970158" MODIFIED="1349125811718" STYLE="fork" TEXT="How Store"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348922668465" FOLDED="true" ID="ID_284911869" MODIFIED="1349126832311" STYLE="bubble" TEXT="Connection Component">
+<node COLOR="#000000" CREATED="1348922674865" FOLDED="true" ID="ID_1921828252" MODIFIED="1349126832311" STYLE="fork" TEXT="Used To">
+<node CREATED="1348922679025" FOLDED="true" ID="ID_1598378757" MODIFIED="1349126832311" TEXT="Connect">
+<node CREATED="1348922681553" ID="ID_1016827422" MODIFIED="1349125811719" TEXT="Presentation Logic"/>
+<node CREATED="1348922691265" ID="ID_1606418158" MODIFIED="1349125811719" TEXT="Local Data"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348922762255" ID="ID_1378690777" MODIFIED="1385183668187" STYLE="bubble" TEXT="Windows Forms">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348922843421" FOLDED="true" ID="ID_426321750" MODIFIED="1349126832311" STYLE="bubble" TEXT="Local Data">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348922851645" ID="ID_1014489581" MODIFIED="1349125811728" STYLE="bubble" TEXT="DataSet Object"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348922892843" FOLDED="true" ID="ID_549565272" MODIFIED="1349126832313" STYLE="bubble" TEXT="Connection Component">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348922902891" FOLDED="true" ID="ID_307931264" MODIFIED="1349126832313" STYLE="bubble" TEXT="BindingSource">
+<node COLOR="#000000" CREATED="1348922944922" FOLDED="true" ID="ID_1549457556" MODIFIED="1349126832311" STYLE="fork" TEXT="Best Approach">
+<node CREATED="1348923246324" FOLDED="true" ID="ID_696681206" MODIFIED="1349126832311" TEXT="Better Than">
+<node CREATED="1348923251540" FOLDED="true" ID="ID_111891691" MODIFIED="1349126832311" TEXT="Binding To">
+<node CREATED="1348923262211" FOLDED="true" ID="ID_1420129333" MODIFIED="1349126832311" TEXT="DataSet">
+<node CREATED="1348923268195" ID="ID_46530334" MODIFIED="1349125811739" TEXT="Directly"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348922989593" FOLDED="true" ID="ID_765164620" MODIFIED="1349126832312" STYLE="fork" TEXT="Handles">
+<node CREATED="1348923001769" FOLDED="true" ID="ID_1410882658" MODIFIED="1349126832312" TEXT="Navigating">
+<node CREATED="1348923061720" ID="ID_184951293" MODIFIED="1349125811739" TEXT="Data Source"/>
+</node>
+<node CREATED="1348923078683" FOLDED="true" ID="ID_441245664" MODIFIED="1349126832312" TEXT="Managing">
+<node CREATED="1348923067047" FOLDED="true" ID="ID_5324593" MODIFIED="1349126832312" TEXT="Data">
+<node CREATED="1348923073431" ID="ID_490545116" MODIFIED="1349125811740" TEXT="Currency"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348923151509" FOLDED="true" ID="ID_539719194" MODIFIED="1349126832312" STYLE="fork" TEXT="Passes">
+<node CREATED="1348923156118" FOLDED="true" ID="ID_1008302169" MODIFIED="1349126832312" TEXT="To">
+<node CREATED="1348923157173" ID="ID_35503403" MODIFIED="1349125811740" TEXT="Control"/>
+</node>
+<node CREATED="1348923161990" FOLDED="true" ID="ID_298403787" MODIFIED="1349126832312" TEXT="Reference">
+<node CREATED="1348923167637" FOLDED="true" ID="ID_1991088050" MODIFIED="1349126832312" TEXT="To">
+<node CREATED="1348923187781" FOLDED="true" ID="ID_1040524261" MODIFIED="1349126832312" TEXT="DataTable">
+<node CREATED="1348923192005" FOLDED="true" ID="ID_1088700270" MODIFIED="1349126832312" TEXT="In">
+<node CREATED="1348923193317" ID="ID_94135066" MODIFIED="1349125811741" TEXT="DataSet"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348923236099" FOLDED="true" ID="ID_171299058" MODIFIED="1349126832312" STYLE="fork" TEXT="Allows">
+<node CREATED="1348923239284" FOLDED="true" ID="ID_1927842701" MODIFIED="1349126832312" TEXT="Redirecting">
+<node CREATED="1348923276115" FOLDED="true" ID="ID_1385412069" MODIFIED="1349126832312" TEXT="To">
+<node CREATED="1348923277218" ID="ID_492088397" MODIFIED="1349125811742" TEXT="Another Data Source"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348923301890" FOLDED="true" ID="ID_303986957" MODIFIED="1349126832312" STYLE="fork" TEXT="EG">
+<node CREATED="1348916478375" ID="ID_530502141" MODIFIED="1349125811742">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">// Bind to Customers table of NorthWindDataSet1. </font>
+    </p>
+    <p>
+      <font face="Consolas">BindingSource customerBindingSource = </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;new BindingSource(NorthWindDataSet1, "Customers");</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1348923638381" FOLDED="true" ID="ID_399568552" MODIFIED="1349126832313" STYLE="fork" TEXT="Data Sources">
+<node CREATED="1348923719707" FOLDED="true" ID="ID_1647421283" MODIFIED="1349126832312" TEXT="Other Than">
+<node CREATED="1348923729882" ID="ID_1056738926" MODIFIED="1349125811745" TEXT="DataSets"/>
+</node>
+<node CREATED="1348923751161" FOLDED="true" ID="ID_1067295124" MODIFIED="1349126832312" TEXT="Exposed As">
+<node CREATED="1348923754522" ID="ID_573644490" MODIFIED="1349125811745" TEXT="IBindingList Interface"/>
+</node>
+<node CREATED="1348923818872" FOLDED="true" ID="ID_1439240886" MODIFIED="1349126832313" TEXT="Bind Via">
+<node CREATED="1348923823912" FOLDED="true" ID="ID_1355557129" MODIFIED="1349126832313" TEXT="DataSource Property">
+<node CREATED="1348923878903" ID="ID_732291492" MODIFIED="1349125811746">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table style="border-left-style: solid; border-left-width: 0; border-right-width: 0; border-top-width: 0; width: 80%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 0; border-right-style: solid" border="0">
+      <tr>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            <b>DataSource Property </b>
+          </p>
+        </td>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            <b>List Results</b>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            Nothing
+          </p>
+        </td>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            Empty IBindingList of objects.&#xa0;&#xa0;Adding item sets type of list to type of item.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            Nothing, DataMember set
+          </p>
+        </td>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            ArgumentException raised
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            Non-list type
+          </p>
+        </td>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            Empty IBindingList of that type
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            Array instance
+          </p>
+        </td>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            IBindingList containing array elements
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            IEnumerable instance
+          </p>
+        </td>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            IBindingList containing IEnumerable elements
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            List of type T
+          </p>
+        </td>
+        <td style="border-left-style: solid; border-left-width: 1; border-right-width: 1; border-top-width: 1; width: 50%; border-bottom-style: solid; border-top-style: solid; border-bottom-width: 1; border-right-style: solid" valign="top">
+          <p style="margin-left: 1; margin-bottom: 1; margin-right: 1; margin-top: 1">
+            IBindingList of type T, containing list elements
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1348922766703" ID="ID_1476546360" LINK="WindowsApps.NET4_UI_Data_WpfDataBinding.mm" MODIFIED="1385183668193" STYLE="bubble" TEXT="WPF">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349056630282" ID="ID_1566122692" MODIFIED="1349126613503" STYLE="bubble" TEXT="Can Bind To"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349056753503" ID="ID_161017694" MODIFIED="1349126619454" STYLE="bubble" TEXT="Static Binding"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349057104306" ID="ID_955780442" MODIFIED="1349126624830" STYLE="bubble" TEXT="Dynamic Binding"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349058178616" ID="ID_1838251376" MODIFIED="1349126629318" STYLE="bubble" TEXT="Navigating Data"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349058965451" ID="ID_231922487" MODIFIED="1349126662167" STYLE="bubble" TEXT="Binding to XML"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349061060528" ID="ID_916377831" MODIFIED="1349126679200" STYLE="bubble" TEXT="Data Templates"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1348802018589" ID="ID_508975741" MODIFIED="1349126832943" POSITION="right" STYLE="bubble">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      DATA SHARED
+    </p>
+    <p>
+      BETWEEN FORMS
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1349062894955" ID="ID_197780496" MODIFIED="1385183668193" STYLE="bubble" TEXT="Best Way">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349062927737" FOLDED="true" ID="ID_302882761" MODIFIED="1349126832313" STYLE="bubble" TEXT="Application-Scoped Variables">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349062960735" FOLDED="true" ID="ID_1092793405" MODIFIED="1349126832313" STYLE="bubble" TEXT="Representing">
+<node COLOR="#000000" CREATED="1349062902716" ID="ID_604404181" MODIFIED="1349125811925" STYLE="fork" TEXT="Data Objects"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1349062998251" ID="ID_1883774269" MODIFIED="1385183668210" STYLE="bubble" TEXT="Application Variables">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349063026329" FOLDED="true" ID="ID_1233900706" MODIFIED="1349126832314" STYLE="bubble" TEXT="Windows Forms">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349063074065" FOLDED="true" ID="ID_621371040" MODIFIED="1349126832314" STYLE="bubble" TEXT="Variable">
+<node COLOR="#000000" CREATED="1349063084617" ID="ID_43798262" MODIFIED="1349125811929" STYLE="fork" TEXT="public"/>
+<node COLOR="#000000" CREATED="1349063086757" ID="ID_588959705" MODIFIED="1349125811930" STYLE="fork" TEXT="static"/>
+<node COLOR="#000000" CREATED="1349063089427" FOLDED="true" ID="ID_550534348" MODIFIED="1349126832314" STYLE="fork" TEXT="In">
+<node CREATED="1349063098467" FOLDED="true" ID="ID_1301770218" MODIFIED="1349126832314" TEXT="Class">
+<node CREATED="1349063133032" FOLDED="true" ID="ID_291008370" MODIFIED="1349126832314" TEXT="Containing">
+<node CREATED="1349063135662" FOLDED="true" ID="ID_953314684" MODIFIED="1349126832314" TEXT="Main Method">
+<node CREATED="1349063139892" FOLDED="true" ID="ID_1343516934" MODIFIED="1349126832314" TEXT="Application">
+<node CREATED="1349063146951" ID="ID_1895679406" MODIFIED="1349125811930" TEXT="Entry Point"/>
+</node>
+</node>
+</node>
+<node CREATED="1349063154948" FOLDED="true" ID="ID_795998328" MODIFIED="1349126832314" TEXT="Usually">
+<node CREATED="1349063157548" ID="ID_782958557" MODIFIED="1349125811930" TEXT="Program.cs"/>
+</node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1349063525585" FOLDED="true" ID="ID_324283505" MODIFIED="1349126832314" STYLE="fork" TEXT="Accessing">
+<node CREATED="1349063528394" FOLDED="true" ID="ID_768469169" MODIFIED="1349126832314" TEXT="Other Classes">
+<node CREATED="1349063533825" FOLDED="true" ID="ID_339619709" MODIFIED="1349126832314" TEXT="Prefix With">
+<node CREATED="1349063545186" ID="ID_1345005189" MODIFIED="1349125811931" TEXT="Class Name"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349063024059" FOLDED="true" ID="ID_1683660685" MODIFIED="1349126832315" STYLE="bubble" TEXT="WPF">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349063563963" FOLDED="true" ID="ID_490469036" MODIFIED="1349126832314" STYLE="bubble" TEXT="Application Resource">
+<node COLOR="#000000" CREATED="1349063591932" FOLDED="true" ID="ID_708481612" MODIFIED="1349126832314" STYLE="fork" TEXT="Create In">
+<node CREATED="1349063574579" FOLDED="true" ID="ID_537362034" MODIFIED="1349126832314" TEXT="App.xaml FIle">
+<node CREATED="1349063600564" ID="ID_737477053" MODIFIED="1349125811932" TEXT="Application.Resources"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1348791814423" FOLDED="true" ID="ID_1453793077" MODIFIED="1349126832314" STYLE="bubble" TEXT="EG">
+<node COLOR="#000000" CREATED="1348786847546" ID="ID_1566464435" MODIFIED="1349125811931" STYLE="fork">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Consolas">&lt;Application x:Class="WpfApplication2.App" </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"&#xa0;&#xa0;&#xa0; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&#xa0;&#xa0; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;StartupUri="Windows1.xaml"&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;Application.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&lt;SolidColorBrush x:Key="appBrush" Color="PapayaWhip" /&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&#xa0;&#xa0;&#xa0;&#xa0;&lt;/Application.Resources&gt; </font>
+    </p>
+    <p>
+      <font face="Consolas">&lt;/Application&gt;</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ffff66" COLOR="#000000" CREATED="1348827600043" ID="ID_748276964" MODIFIED="1349126832944" POSITION="right" STYLE="bubble" TEXT="MANAGING MEDIA">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1349063764832" ID="ID_1894198048" MODIFIED="1349125811933" STYLE="bubble" TEXT="Simple Audio">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1349063784894" ID="ID_734277578" MODIFIED="1385183668210" STYLE="bubble" TEXT="Complex">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348913975366" ID="ID_329425938" MODIFIED="1349125811934" STYLE="bubble" TEXT="Audio"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1348913980277" ID="ID_1513872053" MODIFIED="1349125811934" STYLE="bubble" TEXT="Video"/>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1349063732777" ID="ID_1821188015" MODIFIED="1385183668210" STYLE="bubble" TEXT="SoundPlayer Class">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349125284842" ID="ID_88254357" MODIFIED="1349125811934" STYLE="bubble" TEXT="Lightweight"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349125295857" ID="ID_1304837501" MODIFIED="1349125811935" STYLE="bubble" TEXT="Audio Player"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349125303601" FOLDED="true" ID="ID_447067581" MODIFIED="1349126832315" STYLE="bubble" TEXT="Limitations">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125416878" ID="ID_663878219" MODIFIED="1349125811935" STYLE="bubble" TEXT="Very Basic"/>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125350458" FOLDED="true" ID="ID_213560930" MODIFIED="1349126832315" STYLE="bubble" TEXT="Audio Formats">
+<node COLOR="#000000" CREATED="1349125361019" ID="ID_1192184792" MODIFIED="1349125811935" STYLE="fork" TEXT="Supported"/>
+<node COLOR="#000000" CREATED="1349125329426" FOLDED="true" ID="ID_1592288676" MODIFIED="1349126832315" STYLE="fork" TEXT="Uncompressed .wav Files">
+<node CREATED="1349125341162" ID="ID_1770376113" MODIFIED="1349125811936" TEXT="Only"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125389476" FOLDED="true" ID="ID_832959783" MODIFIED="1349126832315" STYLE="bubble" TEXT="No Controls">
+<node COLOR="#000000" CREATED="1349125394365" ID="ID_1767709699" MODIFIED="1349125811936" STYLE="fork" TEXT="Volume"/>
+<node COLOR="#000000" CREATED="1349125396909" ID="ID_855618327" MODIFIED="1349125811936" STYLE="fork" TEXT="Balance"/>
+<node COLOR="#000000" CREATED="1349125399485" ID="ID_408798633" MODIFIED="1349125811936" STYLE="fork" TEXT="Playback Speed"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#99ff99" COLOR="#000000" CREATED="1349125435759" ID="ID_513730591" MODIFIED="1385183668210" STYLE="bubble" TEXT="Media Player Classes">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349125459407" FOLDED="true" ID="ID_1127995741" MODIFIED="1349126832315" STYLE="bubble" TEXT="Based On">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125464320" ID="ID_1790346222" MODIFIED="1349125811938" STYLE="bubble" TEXT="Windows Media Player 10"/>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349125573719" FOLDED="true" ID="ID_1087698510" MODIFIED="1349126832316" STYLE="bubble" TEXT="Limitations">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125579228" FOLDED="true" ID="ID_277839915" MODIFIED="1349126832315" STYLE="bubble" TEXT="Requires">
+<node COLOR="#000000" CREATED="1349125464320" FOLDED="true" ID="ID_1876979736" MODIFIED="1349126832315" STYLE="fork" TEXT="Windows Media Player 10">
+<node CREATED="1349125590973" ID="ID_1063487089" MODIFIED="1349125811939" TEXT="Or Greater"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125603774" FOLDED="true" ID="ID_1789864693" MODIFIED="1349126832316" STYLE="bubble" TEXT="Windows XP">
+<node COLOR="#000000" CREATED="1349125614214" FOLDED="true" ID="ID_702122747" MODIFIED="1349126832316" STYLE="fork" TEXT="Windows Media Player">
+<node CREATED="1349125662657" FOLDED="true" ID="ID_1592365087" MODIFIED="1349126832315" TEXT="Default Installation">
+<node CREATED="1349125627055" ID="ID_1065037087" MODIFIED="1349125811940" TEXT="Too Old"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349125477032" FOLDED="true" ID="ID_1578097431" MODIFIED="1349126832316" STYLE="bubble" TEXT="MediaPlayer Class">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125512954" FOLDED="true" ID="ID_1211168150" MODIFIED="1349126832316" STYLE="bubble" TEXT="Plays">
+<node COLOR="#000000" CREATED="1349125525442" ID="ID_351267775" MODIFIED="1349125811940" STYLE="fork" TEXT="Audio"/>
+<node COLOR="#000000" CREATED="1349125527090" ID="ID_844511785" MODIFIED="1349125811940" STYLE="fork" TEXT="Video"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125529722" FOLDED="true" ID="ID_96825454" MODIFIED="1349126832316" STYLE="bubble" TEXT="No Visual Interface">
+<node COLOR="#000000" CREATED="1349125544411" FOLDED="true" ID="ID_1072340025" MODIFIED="1349126832316" STYLE="fork" TEXT="Cannot Display">
+<node CREATED="1349125549123" ID="ID_1204240295" MODIFIED="1349125811941" TEXT="Video"/>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125688441" FOLDED="true" ID="ID_459719349" MODIFIED="1349126832316" STYLE="bubble" TEXT="Difficult">
+<node COLOR="#000000" CREATED="1349125693698" FOLDED="true" ID="ID_1209603795" MODIFIED="1349126832316" STYLE="fork" TEXT="Use">
+<node CREATED="1349125696658" ID="ID_1334899808" MODIFIED="1349125811941" TEXT="XAML"/>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#bbffff" COLOR="#000000" CREATED="1349125487272" FOLDED="true" ID="ID_846876001" MODIFIED="1349126832316" STYLE="bubble" TEXT="MediaElement Class">
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125512954" FOLDED="true" ID="ID_1335594753" MODIFIED="1349126832316" STYLE="bubble" TEXT="Plays">
+<node COLOR="#000000" CREATED="1349125525442" ID="ID_1118732755" MODIFIED="1349125811942" STYLE="fork" TEXT="Audio"/>
+<node COLOR="#000000" CREATED="1349125527090" ID="ID_460026845" MODIFIED="1349125811942" STYLE="fork" TEXT="Video"/>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125723835" FOLDED="true" ID="ID_997226283" MODIFIED="1349126832316" STYLE="bubble" TEXT="Wraps">
+<node COLOR="#000000" CREATED="1349125726371" FOLDED="true" ID="ID_1420692616" MODIFIED="1349126832316" STYLE="fork" TEXT="Windows Media Player">
+<node CREATED="1349125731523" FOLDED="true" ID="ID_536123992" MODIFIED="1349126832316" TEXT="Visual Interface">
+<node CREATED="1349125738547" FOLDED="true" ID="ID_1988127328" MODIFIED="1349126832316" TEXT="View">
+<node CREATED="1349125742780" ID="ID_1306941618" MODIFIED="1349125811943" TEXT="Videos"/>
+</node>
+</node>
+</node>
+</node>
+<node BACKGROUND_COLOR="#ddddff" COLOR="#000000" CREATED="1349125747868" FOLDED="true" ID="ID_1817842312" MODIFIED="1349126832316" STYLE="bubble" TEXT="XAML">
+<node COLOR="#000000" CREATED="1349125752427" ID="ID_118240394" MODIFIED="1349125811943" STYLE="fork" TEXT="Works Well"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>
