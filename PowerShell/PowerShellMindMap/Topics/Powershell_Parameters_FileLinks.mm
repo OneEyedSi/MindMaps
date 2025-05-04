@@ -425,7 +425,7 @@
 <font NAME="Consolas" SIZE="10" BOLD="false"/>
 <edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 </node>
-<node ID="ID_1740957507" CREATED="1427917506240" MODIFIED="1736049315030" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true" MAX_WIDTH="20 cm"><richcontent TYPE="NODE">
+<node ID="ID_1740957507" CREATED="1427917506240" MODIFIED="1746252995954" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true" MAX_WIDTH="20 cm"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -442,10 +442,11 @@
       <font color="#006633"># Note the use of &quot;@&quot;, not &quot;$&quot;, as variable prefix.</font>
     </p>
     <p>
-      Copy-Item <font color="#000000" size="3"><b>@</b></font>ArrayArguments
+      Copy-Item <font color="#9900ff" size="3"><b>@</b></font>ArrayArguments
     </p>
   </body>
 </html>
+
 </richcontent>
 <font NAME="Consolas" SIZE="10" BOLD="false"/>
 <edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
@@ -474,7 +475,7 @@
 <font NAME="Consolas" SIZE="10" BOLD="false"/>
 <edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 </node>
-<node ID="ID_174976376" CREATED="1427917506240" MODIFIED="1736049315060" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true" MAX_WIDTH="20 cm"><richcontent TYPE="NODE">
+<node ID="ID_174976376" CREATED="1427917506240" MODIFIED="1746253009758" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" BORDER_WIDTH_LIKE_EDGE="true" MAX_WIDTH="20 cm"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -482,7 +483,19 @@
   </head>
   <body>
     <p>
-      $HashArguments = @{ Path = &quot;test.txt&quot;; Destination = &quot;test2.txt&quot;; WhatIf = $true }
+      $HashArguments = @{
+    </p>
+    <p>
+      &#xa0;&#xa0;&#xa0;&#xa0;Path = &quot;test.txt&quot;
+    </p>
+    <p>
+      &#xa0;&#xa0;&#xa0;&#xa0;Destination = &quot;test2.txt&quot;
+    </p>
+    <p>
+      &#xa0;&#xa0;&#xa0;&#xa0;WhatIf = $true
+    </p>
+    <p>
+      }
     </p>
     <p>
       
@@ -491,10 +504,11 @@
       <font color="#006633"># Note the use of &quot;@&quot;, not &quot;$&quot;, as variable prefix.</font>
     </p>
     <p>
-      Copy-Item <b><font color="#000000" size="3">@</font></b>HashArguments
+      Copy-Item <b><font color="#9900ff" size="3">@</font></b>HashArguments
     </p>
   </body>
 </html>
+
 </richcontent>
 <font NAME="Consolas" SIZE="10" BOLD="false"/>
 <edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
@@ -575,17 +589,17 @@
 <edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 </node>
 <node TEXT="EG" FOLDED="true" ID="ID_419320324" CREATED="1736048777528" MODIFIED="1736049315119" COLOR="#000000" BACKGROUND_COLOR="#b5d7ff" STYLE="bubble" MAX_WIDTH="30 cm">
-<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 <font NAME="SansSerif" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 <node TEXT="function MyFunction (&#xa;    [string]$FirstArg,&#xa;    [string]$SecondArg,&#xa;    [string]$ThirdArg&#xa;)&#xa;{&#xa;    Write-Host &quot;FirstArg: $FirstArg&quot;&#xa;    Write-Host &quot;SecondArg: $SecondArg&quot;&#xa;    Write-Host &quot;ThirdArg: $ThirdArg&quot;&#xa;    Write-Host&#xa;}&#xa;&#xa;$array = @( &apos;one&apos;, &apos;two&apos; )&#xa;$hashtable = @{ SecondArg = &apos;one&apos;; ThirdArg = &apos;two&apos; }&#xa;&#xa;MyFunction &apos;zero&apos; @array&#xa;MyFunction &apos;zero&apos; @hashtable&#xa;MyFunction -FirstArg &apos;zero&apos; @array&#xa;MyFunction -FirstArg &apos;zero&apos; @hashtable" FOLDED="true" ID="ID_375231013" CREATED="1736048780090" MODIFIED="1736049315183" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
-<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 <font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 <node TEXT="Result:" FOLDED="true" POSITION="bottom_or_right" ID="ID_611058617" CREATED="1736048829018" MODIFIED="1736049315193" COLOR="#000000" BACKGROUND_COLOR="#ffffdb" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
-<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 <font NAME="SansSerif" SIZE="10" BOLD="false"/>
-<node TEXT="FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two&#xa;&#xa;FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two&#xa;&#xa;FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two&#xa;&#xa;FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two" ID="ID_1211555749" CREATED="1736049104250" MODIFIED="1736049315217" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
 <edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
+<node TEXT="FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two&#xa;&#xa;FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two&#xa;&#xa;FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two&#xa;&#xa;FirstArg: zero&#xa;SecondArg: one&#xa;ThirdArg: two" ID="ID_1211555749" CREATED="1736049104250" MODIFIED="1736049315217" COLOR="#000000" BACKGROUND_COLOR="#ededed" STYLE="fork" MAX_WIDTH="20 cm" BORDER_WIDTH_LIKE_EDGE="true">
 <font NAME="Consolas" SIZE="10" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#6198bc" WIDTH="2"/>
 </node>
 </node>
 </node>

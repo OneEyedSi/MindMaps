@@ -18,7 +18,7 @@
 </richcontent>
 <font NAME="SansSerif" SIZE="16" BOLD="true"/>
 <hook NAME="MapStyle" background="#ffffdb">
-    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#808080ff,#808080ff,#808080ff,#808080ff"/>
+    <properties edgeColorConfiguration="#808080ff,#808080ff,#808080ff,#808080ff,#808080ff" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -1748,21 +1748,21 @@
 </node>
 </node>
 <node TEXT="FILTERS" POSITION="bottom_or_right" ID="ID_418369186" CREATED="1744460016965" MODIFIED="1744460100488" COLOR="#000000" BACKGROUND_COLOR="#fb9a98" STYLE="bubble" MAX_WIDTH="30 cm">
-<edge STYLE="sharp_bezier" COLOR="#ee4444" WIDTH="4"/>
 <font NAME="SansSerif" SIZE="14" BOLD="true"/>
+<edge STYLE="sharp_bezier" COLOR="#ee4444" WIDTH="4"/>
 <node TEXT="See" ID="ID_1390336568" CREATED="1744460021345" MODIFIED="1744460100492" COLOR="#000000" BACKGROUND_COLOR="#fb9a98" STYLE="bubble" MAX_WIDTH="30 cm">
-<edge STYLE="bezier" COLOR="#ee4444" WIDTH="2"/>
 <font NAME="SansSerif" SIZE="12" BOLD="true"/>
-<node TEXT="Handling Piped Input" ID="ID_1211572280" CREATED="1744460048374" MODIFIED="1744460100495" LINK="Powershell_Functions_PipedInput.mm" COLOR="#000000" BACKGROUND_COLOR="#fb9a98" STYLE="bubble" MAX_WIDTH="30 cm">
 <edge STYLE="bezier" COLOR="#ee4444" WIDTH="2"/>
+<node TEXT="Handling Piped Input" ID="ID_1211572280" CREATED="1744460048374" MODIFIED="1744460100495" LINK="Powershell_Functions_PipedInput.mm" COLOR="#000000" BACKGROUND_COLOR="#fb9a98" STYLE="bubble" MAX_WIDTH="30 cm">
 <font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#ee4444" WIDTH="2"/>
 </node>
 </node>
 </node>
 <node TEXT="COMPARED" POSITION="top_or_left" ID="ID_1884862231" CREATED="1426284438553" MODIFIED="1744460100499" COLOR="#ffffff" BACKGROUND_COLOR="#8080b3" STYLE="bubble" MAX_WIDTH="30 cm">
 <font NAME="SansSerif" SIZE="14" BOLD="true"/>
 <edge STYLE="sharp_bezier" COLOR="#cbcbff" WIDTH="4"/>
-<node TEXT="To" FOLDED="true" ID="ID_107835162" CREATED="1426284444217" MODIFIED="1744460100502" LINK="Powershell_Parameters_FileLinks.mm" COLOR="#ffffff" BACKGROUND_COLOR="#8080b3" STYLE="bubble" MAX_WIDTH="30 cm">
+<node TEXT="To" ID="ID_107835162" CREATED="1426284444217" MODIFIED="1746253423813" COLOR="#ffffff" BACKGROUND_COLOR="#8080b3" STYLE="bubble" MAX_WIDTH="30 cm">
 <font NAME="SansSerif" SIZE="12" BOLD="true"/>
 <edge STYLE="bezier" COLOR="#cbcbff" WIDTH="2"/>
 <node TEXT="Cmdlets" ID="ID_582967567" CREATED="1426284445914" MODIFIED="1744460100504" COLOR="#ffffff" BACKGROUND_COLOR="#8080b3" STYLE="bubble" MAX_WIDTH="30 cm">
