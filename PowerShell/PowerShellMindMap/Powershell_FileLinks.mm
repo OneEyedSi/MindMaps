@@ -815,6 +815,15 @@
 <font NAME="SansSerif" SIZE="12" BOLD="true"/>
 <edge STYLE="bezier" COLOR="#aedd68" WIDTH="2"/>
 <node TEXT="Pipeline Functions" POSITION="top_or_left" ID="ID_1196844718" CREATED="1735860034308" MODIFIED="1735860067456" LINK="Topics/Powershell_Functions_PipedInput.mm" COLOR="#ffffff" BACKGROUND_COLOR="#8aaf3e" STYLE="bubble" MAX_WIDTH="30 cm">
+<node TEXT="Pipeline Functions" POSITION="top_or_left" ID="ID_1196844718" CREATED="1735860034308" MODIFIED="1746253530801" LINK="Topics/Powershell_Functions_PipedInput.mm" COLOR="#ffffff" BACKGROUND_COLOR="#8aaf3e" STYLE="bubble" MAX_WIDTH="30 cm">
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+<edge STYLE="bezier" COLOR="#aedd68" WIDTH="2"/>
+</node>
+<node TEXT="Function Parameters" POSITION="top_or_left" ID="ID_1100125430" CREATED="1746253469756" MODIFIED="1746253530804" LINK="Topics/Powershell_Functions_Parameters_FileLinks.mm" COLOR="#ffffff" BACKGROUND_COLOR="#8aaf3e" STYLE="bubble" MAX_WIDTH="30 cm">
+<edge STYLE="bezier" COLOR="#aedd68" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="false"/>
+</node>
+<node TEXT="Providing Help" POSITION="top_or_left" ID="ID_1283599210" CREATED="1746253490087" MODIFIED="1746253530829" LINK="Topics/Powershell_Functions_Help.mm" COLOR="#ffffff" BACKGROUND_COLOR="#8aaf3e" STYLE="bubble" MAX_WIDTH="30 cm">
 <edge STYLE="bezier" COLOR="#aedd68" WIDTH="2"/>
 <font NAME="SansSerif" SIZE="12" BOLD="false"/>
 </node>
