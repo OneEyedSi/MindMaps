@@ -775,6 +775,10 @@
 <font NAME="SansSerif" SIZE="12" BOLD="true"/>
 <edge STYLE="bezier" COLOR="#fa98ff" WIDTH="2"/>
 </node>
+<node TEXT="PSCustomObjects" ID="ID_1260355442" CREATED="1746252472892" MODIFIED="1746253530752" LINK="Topics/Powershell_Types_CustomObjects.mm" COLOR="#ffffff" BACKGROUND_COLOR="#b863a7" STYLE="bubble" MAX_WIDTH="30 cm">
+<edge STYLE="bezier" COLOR="#fa98ff" WIDTH="2"/>
+<font NAME="SansSerif" SIZE="12" BOLD="true"/>
+</node>
 </node>
 <node TEXT="COLLECTIONS" POSITION="top_or_left" ID="ID_1711760201" CREATED="1427543302769" MODIFIED="1735860067398" LINK="Topics/Powershell_Collections_FileLinks.mm" COLOR="#ffffff" BACKGROUND_COLOR="#ed4497" STYLE="bubble" MAX_WIDTH="30 cm">
 <font NAME="SansSerif" SIZE="14" BOLD="true"/>
